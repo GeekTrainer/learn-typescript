@@ -20,7 +20,7 @@ There are many compiler options that you can use with the `tsc` command to contr
 
 The `--noImplicitAny` option instructs the compiler to raise errors on expressions and declarations with an implied `any` type. For example:
 
-`tsc utility_functions.ts --target "ES5"`
+`tsc utility_functions.ts --noImplicitAny`
 
 The `--target "ES5"` option specifies the ECMAScript target version for the JavaScript file. This example compiles an ECMAScript 5-compliant JavaScript file: 
 
