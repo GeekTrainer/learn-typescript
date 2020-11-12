@@ -1,3 +1,5 @@
+# Get started with TypeScript #
+
 This module introduces you to the TypeScript language, why it was created, and how you can benefit by using it for JavaScript development. You'll also set up a TypeScript development environment to prepare you to complete future exercises.
 
 In this module, you will:
