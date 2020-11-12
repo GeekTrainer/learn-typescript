@@ -10,24 +10,24 @@ Create a new project workspace in VS Code and initialize the project.
 
 2. On the Welcome screen, select **Add workspace folder**.
 
-![Visual Studio Code Welcome screen with the Add workspace folder highlighted.](../media/m01_vscode_1.jpg)
+   ![Visual Studio Code Welcome screen with the Add workspace folder highlighted.](../media/m01_vscode_1.jpg)
 
 
 3. Create a new project folder and then select **Add**.
 
 4. Select the **Explorer** icon.
 
-![Visual Studio Code with the Explorer icon highlighted.](../media/m01_vscode_2.jpg)
+   ![Visual Studio Code with the Explorer icon highlighted.](../media/m01_vscode_2.jpg)
 
 
 5. In the Explorer, select the **New File** icon.
 
-![Visual Studio Code with the New File icon highlighted.](../media/m01_vscode_3.jpg)
+   ![Visual Studio Code with the New File icon highlighted.](../media/m01_vscode_3.jpg)
 
 
 6. Type the file name `module01.ts` and press **Enter**. The TypeScript file appears in a new code editor.
 
-![Visual Studio Code with the new TypeScript file displayed in the code editor.](../media/m01_vscode_4.jpg)
+   ![Visual Studio Code with the new TypeScript file displayed in the code editor.](../media/m01_vscode_4.jpg)
 
 
 ## Step 2: Generate a `tsconfig.json` file
@@ -75,7 +75,7 @@ console.log(AddNumbers(3, 6));
 
 2. Notice that even though you haven't yet compiled the code, VS Code has used its built-TypeScript support to type check it. As before, there are type errors in the two parameters of the `AddNumbers` function.
 
-![Visual Studio Code editor with Intellisense  indicating that there is a type checking error on the first parameter of the AddNumbers function.](../media/m01_vscode_5.jpg)
+   ![Visual Studio Code editor with Intellisense  indicating that there is a type checking error on the first parameter of the AddNumbers function.](../media/m01_vscode_5.jpg)
 
 
 3. Save the TypeScript file. The TypeScript compiler only works on the saved version of the file.
