@@ -1,3 +1,5 @@
+# Exercise - Select a TypeScript editor #
+
 You can write TypeScript code in any text editor or IDE of your choice.
 
 In this exercise, you'll learn about your options and then setup Visual Studio Code so you can complete the remaining exercises in this course.
@@ -46,11 +48,11 @@ To install VS Code:
 
 1. If you need additional setup guidance, visit the installation page for your operating system:
 
-  - [Linux](https://code.visualstudio.com/docs/setup/linux)
+    - [Linux](https://code.visualstudio.com/docs/setup/linux)
 
-  - [macOS](https://code.visualstudio.com/docs/setup/mac)
+    - [macOS](https://code.visualstudio.com/docs/setup/mac)
 
-  - [Windows](https://code.visualstudio.com/docs/setup/windows)
+    - [Windows](https://code.visualstudio.com/docs/setup/windows)
 
 Now that you have a code editor, you're ready to install TypeScript.
 
