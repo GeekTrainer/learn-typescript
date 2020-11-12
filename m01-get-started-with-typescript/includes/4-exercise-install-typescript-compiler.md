@@ -1,3 +1,5 @@
+# Exercise - Install the TypeScript compiler #
+
 Your code editor may have built-in language support for TypeScript but, to transform TypeScript code into JavaScript that a browser will understand, you need to first install the TypeScript compiler (also referred to as `tsc`.)
 
 TypeScript can be installed *globally* (available anywhere in your file system) or *locally* (only available at the project level). In this exercise, you will install TypeScript globally. As you work more with TypeScript in larger and more complex codebases, you will likely switch to a per-project installation to have more control over the consistency of your projects.
@@ -10,9 +12,9 @@ If TypeScript is not installed, you'll see an error that the command is not reco
 
 ## Step 2: Install Node Package Manager (npm)
 
-You'll need a copy of Node.js as an environment to run the TypeScript package. Node.js, a JavaScript library for server-side applications, is not required to learn TypeScript. But by installing it, you also get Node Package Manager (``npm``), the package manager for the JavaScript language. You'll then use `npm` to install the TypeScript package.
+You'll need a copy of Node.js as an environment to run the TypeScript package. Node.js, a JavaScript library for server-side applications, is not required to learn TypeScript. But by installing it, you also get Node Package Manager (`npm`), the package manager for the JavaScript language. You'll then use `npm` to install the TypeScript package.
 
-If you're a JavaScript developer, `npm` will likely be installed on your machine. You can verify this by opening the Command Prompt and entering `npm version`. If npm is installed, you'll see the version and a list of compiler commands, and you're ready to use `npm`.
+If you're a JavaScript developer, `npm` will likely be installed on your machine. You can verify this by opening the Command Prompt and entering `npm version`. If 'npm' is installed, you'll see the version and a list of compiler commands, and you're ready to use `npm`.
 
 If `npm` is not installed, you'll see an error that the command is not recognized. To install Node.js:
 
@@ -24,7 +26,7 @@ If `npm` is not installed, you'll see an error that the command is not recognize
 
 ## Step 3: Install TypeScript
 
-TypeScript is available as a package on the `npm` registry as `"typescript`".
+TypeScript is available as a package on the `npm` registry as `"typescript"`.
 
 To install the latest version of TypeScript:
 
