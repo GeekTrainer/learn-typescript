@@ -1,3 +1,5 @@
+# Overview of TypeScript #
+
 JavaScript, one of the world’s most used tools, has become the official language of the web, enabling developers to write cross-platform applications that can run on any platform and in any browser.
 
 But while JavaScript is the only way to create cross-platform apps, it wasn't conceived for large apps involving thousands, or even millions of lines of code. JavaScript lacks some of the features of more mature languages that power today's sophisticated integrated development editors (IDEs) so it can be difficult to maintain these large code bases.
@@ -20,7 +22,7 @@ Writing types can be optional in TypeScript, because *type inference* allows you
 
 Let's look at a simple example to demonstrate the use of types.
 
-1. Open the TypeScript Playground at [https://www.typescriptlang.org/play](https://www.typescriptlang.org/play). (You'll learn more about the Playground later in this module.)
+1. Open the TypeScript [Playground](https://www.typescriptlang.org/play). (You'll learn more about the Playground later in this module.)
 
 1. Copy and paste the following JavaScript code sample into the TypeScript (left) pane of the Playground:
 
@@ -35,7 +37,7 @@ console.log(AddNumbers(3, 6));
 
 ```
 
-1. Notice that the same code appears in the **JS** pane on the right side. This is the JavaScript code that TypeScript will generate after it's compiled.
+3. Notice that the same code appears in the **JS** pane on the right side. This is the JavaScript code that TypeScript will generate after it's compiled.
 
 1. Select **Run** to execute the JavaScript code. Then, select the **Logs** tab and notice that the value `9` is logged to the console. JavaScript has assigned the `number` type to the parameters `num1` and `num2` and the function returned a number.
 
