@@ -17,6 +17,10 @@ If the compiler finds errors in the code, it will display them in the command wi
 ### Compiler options
 
 There are many compiler options that you can use with the tsc command to control the compilation to your preference. Some common options are:
+- '--noImplicitAny' - This option instructs the compiler to raise errors on expressions and declarations with an implied 'any' type. For example: `tsc utility_functions.ts --noImplicitAny'
+- '--target "ES5"' - This option specifies the ECMAScript target version for the JavaScript file. This example compiles an ECMAScript 5-compliant JavaScript file: 'tsc utlity_functions.ts --target "ES5"'
+
+
 
 | Option| Description|
 | :--- | :--- |
