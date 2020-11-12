@@ -11,19 +11,19 @@ Create a new project workspace in VS Code and initialize the project.
 ![Visual Studio Code Welcome screen with the Add workspace folder highlighted.](../media/m01_vscode_1.jpg)
 
 
-1. Create a new project folder and then select **Add**.
+3. Create a new project folder and then select **Add**.
 
-1. Select the **Explorer** icon.
+4. Select the **Explorer** icon.
 
 ![Visual Studio Code with the Explorer icon highlighted.](../media/m01_vscode_2.jpg)
 
 
-1. In the Explorer, select the **New File** icon.
+5. In the Explorer, select the **New File** icon.
 
 ![Visual Studio Code with the New File icon highlighted.](../media/m01_vscode_3.jpg)
 
 
-1. Type the file name `module01.ts` and press **Enter**. The TypeScript file appears in a new code editor.
+6. Type the file name `module01.ts` and press **Enter**. The TypeScript file appears in a new code editor.
 
 ![Visual Studio Code with the new TypeScript file displayed in the code editor.](../media/m01_vscode_4.jpg)
 
@@ -71,24 +71,24 @@ console.log(AddNumbers(3, 6));
 
 ```
 
-1. Notice that even though you haven't yet compiled the code, VS Code has used its built-TypeScript support to type check it. As before, there are type errors in the two parameters of the `AddNumbers` function.
+2. Notice that even though you haven't yet compiled the code, VS Code has used its built-TypeScript support to type check it. As before, there are type errors in the two parameters of the `AddNumbers` function.
 
 ![Visual Studio Code editor with Intellisense  indicating that there is a type checking error on the first parameter of the AddNumbers function.](../media/m01_vscode_5.jpg)
 
 
-1. Save the TypeScript file. The TypeScript compiler only works on the saved version of the file.
+3. Save the TypeScript file. The TypeScript compiler only works on the saved version of the file.
 
-1. Open a new terminal by selecting **Terminal**, **New Terminal**.
+4. Open a new terminal by selecting **Terminal**, **New Terminal**.
 
-1. At the Terminal command prompt, enter `tsc module01.ts`. The compiler should run without errors.
+5. At the Terminal command prompt, enter `tsc module01.ts`. The compiler should run without errors.
 
-1. Notice that a new JavaScript file has been added to the `build` folder in the Explorer. (You may need to refresh the Explorer to see the file.)
+6. Notice that a new JavaScript file has been added to the `build` folder in the Explorer. (You may need to refresh the Explorer to see the file.)
 
-1. Open the `module01.js` file and then select the **Split Editor Right** icon in the upper right corner of VS Code to open a new editor view. You should now be able to see the .ts and .js files side by side and that they are identical.
+7. Open the `module01.js` file and then select the **Split Editor Right** icon in the upper right corner of VS Code to open a new editor view. You should now be able to see the .ts and .js files side by side and that they are identical.
 
-1. Update the TypeScript code to specify a type for each parameter. Replace `num1` with `num1: number` and `num2` with `num2: number`.
+8. Update the TypeScript code to specify a type for each parameter. Replace `num1` with `num1: number` and `num2` with `num2: number`.
 
-1. Save the file and then run the compiler again. What do you notice about the JavaScript file?
+9. Save the file and then run the compiler again. What do you notice about the JavaScript file?
 
 1. At the Terminal command prompt, enter `node module01.js`. This will run the JavaScript and display the result in the console log.
 
@@ -133,7 +133,7 @@ As a final step, add an HTML file to the project so you can run and test the Jav
 
 ```
 
-1. In the Explorer, right-click `module01.html` and select **Open in Default Browser**.
+4. In the Explorer, right-click `module01.html` and select **Open in Default Browser**.
 
-1. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
+5. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
 
