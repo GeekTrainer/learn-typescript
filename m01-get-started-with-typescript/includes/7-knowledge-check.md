@@ -21,10 +21,10 @@ Why is it necessary to compile (or transpile) TypeScript code to JavaScript befo
 ()TypeScript code is considered valid JavaScript while JavaScript code is not valid TypeScript.{{This would make it unnecessary to compile TypeScript code to JavaScript.}}
 
 ## Multiple Choice
-What does the comand npm install -g typescript do?
+What does the comand `npm install -g typescript` do?
 
-(x)Installs the TypeScript compiler globally on the machine{{The npm command provides the way to install the TypeScript package on the machine. The -g parameter installs it globally.}}
+(x)Installs the TypeScript compiler globally on the machine.{{The npm command provides the way to install the TypeScript package on the machine. The -g parameter installs it globally.}}
 
-()Installs npm so you can install TypeScript{{npm must already be installed on the machine for this command to run.}}
+()Installs npm so you can install TypeScript.{{npm must already be installed on the machine for this command to run.}}
 
-()Installs Node.js and npm{{Node.js and npm must already be installed on the machine for this command to run.}}
+()Installs Node.js and npm.{{Node.js and npm must already be installed on the machine for this command to run.}}
