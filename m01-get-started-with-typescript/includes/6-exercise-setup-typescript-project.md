@@ -1,3 +1,5 @@
+# Exercise - Setup a TypeScript project #
+
 In this exercise, you’ll create a new TypeScript project. You'll then confirm that your development environment is set up correctly by running the compiler and verifying that the JavaScript file is generated.
 
 ## Step 1: Set up a new TypeScript project in VS Code
@@ -48,11 +50,11 @@ You can use the `init` option of the TypeScript compiler to generate a TSConfig 
 
    1. In the `tsconfig.json` file, locate the `outDir` option, remove the comment, and set the parameter to `"build`".
 
-   1. Save tsconfig.json.
+   1. Save `tsconfig.json`.
 
    1. At the command prompt, enter `tsc`. This resets the options for the project.
 
-To learn more about the TSConfig file, visit the [TSConfig Reference](https://www.staging-typescript.org/tsconfig).
+To learn more about the `tsconfig.json` file, visit the [TSConfig Reference](https://www.staging-typescript.org/tsconfig).
 
 ## Step 3: Compile TypeScript to JavaScript
 
@@ -78,17 +80,17 @@ console.log(AddNumbers(3, 6));
 
 3. Save the TypeScript file. The TypeScript compiler only works on the saved version of the file.
 
-4. Open a new terminal by selecting **Terminal**, **New Terminal**.
+1. Open a new terminal by selecting **Terminal**, **New Terminal**.
 
-5. At the Terminal command prompt, enter `tsc module01.ts`. The compiler should run without errors.
+1. At the Terminal command prompt, enter `tsc module01.ts`. The compiler should run without errors.
 
-6. Notice that a new JavaScript file has been added to the `build` folder in the Explorer. (You may need to refresh the Explorer to see the file.)
+1. Notice that a new JavaScript file has been added to the `build` folder in the Explorer. (You may need to refresh the Explorer to see the file.)
 
-7. Open the `module01.js` file and then select the **Split Editor Right** icon in the upper right corner of VS Code to open a new editor view. You should now be able to see the .ts and .js files side by side and that they are identical.
+1. Open the `module01.js` file and then select the **Split Editor Right** icon in the upper right corner of VS Code to open a new editor view. You should now be able to see the .ts and .js files side by side and that they are identical.
 
-8. Update the TypeScript code to specify a type for each parameter. Replace `num1` with `num1: number` and `num2` with `num2: number`.
+1. Update the TypeScript code to specify a type for each parameter. Replace `num1` with `num1: number` and `num2` with `num2: number`.
 
-9. Save the file and then run the compiler again. What do you notice about the JavaScript file?
+1. Save the file and then run the compiler again. What do you notice about the JavaScript file?
 
 1. At the Terminal command prompt, enter `node module01.js`. This will run the JavaScript and display the result in the console log.
 
@@ -135,5 +137,5 @@ As a final step, add an HTML file to the project so you can run and test the Jav
 
 4. In the Explorer, right-click `module01.html` and select **Open in Default Browser**.
 
-5. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
+1. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
 
