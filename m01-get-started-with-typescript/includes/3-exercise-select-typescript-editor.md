@@ -34,7 +34,8 @@ For more full-featured TypeScript editing and tools, there are many IDEs that su
 
 - [VIM](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support)
 
-For the current list of TypeScript editors, see [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
+> [!TIP]
+> For the current list of TypeScript editors, see [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
 
 While this course uses Visual Studio Code, you are encouraged use whatever tool you're most comfortable with.
 
