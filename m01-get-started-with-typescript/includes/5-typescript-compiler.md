@@ -1,4 +1,4 @@
-# The TypeScript compiler #
+## The TypeScript compiler
 
 As you learned earlier, TypeScript is a strict superset of [ECMAScript 2015](https://www.ecma-international.org/ecma-262/6.0/) (ECMAScript 6 or ES6). This means that all JavaScript code is also TypeScript code, and a TypeScript program can seamlessly consume JavaScript. In fact, you can convert a JavaScript file to a TypeScript file by simply renaming the extension from `.js` to `.ts`.
 
