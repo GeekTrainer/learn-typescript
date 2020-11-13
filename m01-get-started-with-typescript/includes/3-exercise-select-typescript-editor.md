@@ -1,10 +1,10 @@
-# Exercise - Select a TypeScript editor #
+## Exercise - Select a TypeScript editor 
 
 You can write TypeScript code in any text editor or IDE of your choice.
 
 In this exercise, you'll learn about your options and then setup Visual Studio Code so you can complete the remaining exercises in this course.
 
-## The Playground
+### The Playground
 
 Earlier, you wrote some simple TypeScript code in the [Playground](https://www.typescriptlang.org/play). The Playground is a place where you can write, share, and learn TypeScript. You can use it to:
 
@@ -16,7 +16,7 @@ Earlier, you wrote some simple TypeScript code in the [Playground](https://www.t
 
 In this course, we'll occasionally visit the Playground to try out new TypeScript concepts.
 
-## Integrated Development Editors (IDEs)
+### Integrated Development Editors (IDEs)
 
 For more full-featured TypeScript editing and tools, there are many IDEs that support TypeScript or have plugins or tooling packages developed to support it. Some of these IDEs include:
 
@@ -39,7 +39,7 @@ For more full-featured TypeScript editing and tools, there are many IDEs that su
 
 While this course uses Visual Studio Code, you are encouraged use whatever tool you're most comfortable with.
 
-## Step 1: Install Visual Studio Code
+### Step 1: Install Visual Studio Code
 
 Visual Studio Code (VS Code) is a free, lightweight source code editor that runs on your desktop on the macOS, Linux, and Windows operating systems. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages and runtimes.
 
@@ -47,7 +47,7 @@ To install VS Code:
 
 1. Open the [Visual Studio Code download](https://code.visualstudio.com/download) page and select the download option for your operating system.
 
-1. If you need additional setup guidance, visit the installation page for your operating system:
+2. If you need additional setup guidance, visit the installation page for your operating system:
 
     - [Linux](https://code.visualstudio.com/docs/setup/linux)
 
