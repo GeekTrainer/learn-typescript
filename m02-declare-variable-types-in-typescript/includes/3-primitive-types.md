@@ -101,13 +101,9 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define an `
 
     ```typescript
     enum contractStatus {
-
          Permanent,
-
          Temp,
-
          Apprentice
-
     }
 
     ```
@@ -125,13 +121,9 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define an `
 
     ```typescript
     enum contractStatus {
-
          Permanent = 1,
-
          Temp,
-
          Apprentice
-
     }
 
     ```
@@ -161,7 +153,6 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define a va
     let randomValue: any = 10;
 
     randomValue = true;
-
     randomValue = 'Mateo';
 
     ```
@@ -178,9 +169,7 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define a va
 
     ```typescript
     console.log(randomValue.name);  //* Logs "undefined" to the console
-
     randomValue();                  //* Returns "randomValue is not a function" error
-
     randomValue.toUpperCase();      //* Returns "randomValue is not a function" error
 
     ```
@@ -200,13 +189,10 @@ The `unknown` type is similar to the `any` type in that any value is assignable 
     let randomValue: unknown = 10;
 
     randomValue = true;
-
     randomValue = 'Mateo';
 
     console.log(randomValue.name);  //* Returns undefined.
-
     randomValue();                  //* Returns "randomValue is not a function" error
-
     randomValue.toUpperCase();      //* Returns "randomValue is not a function" error
 
     ```
@@ -233,17 +219,12 @@ The other version is the “angle-bracket” syntax:
     let randomValue: unknown = 10;
 
     randomValue = true;
-
     randomValue = 'Mateo';
 
     if (typeof randomValue === "string") {
-
         console.log((randomValue as string).toUpperCase());    //* Returns MATEO to the console.
-
     } else {
-
         console.log("Error - A string was expected here.");    //* Returns an error message.
-
     }
 
     ```
