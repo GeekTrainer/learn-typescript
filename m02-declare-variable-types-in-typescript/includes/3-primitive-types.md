@@ -49,7 +49,7 @@ let abc = 'abc';
 
 ```
 
-In TypeScript, you can also use template strings, which can span multiple lines and have embedded expressions. These strings are surrounded by the backtick/backquote character, and embedded expressions are of the form `${ expr }`.
+In TypeScript, you can also use template strings, which can span multiple lines and have embedded expressions. These strings are surrounded by the backtick/backquote (````) character, and embedded expressions are of the form `${ expr }`.
 
 For example:
 
@@ -112,14 +112,14 @@ enum contractStatus {
 
 ```
 
-1. Now, declare a variable for a new employee named `empStatus` of the type `contractStatus` and assign `"Temp"` to it:
+2. Now, declare a variable for a new employee named `empStatus` of the type `contractStatus` and assign `"Temp"` to it:
 
 ```typescript
 let empStatus: contractStatus = contractStatus.Temp;
 
 ```
 
-1. Log the value of `empStatus` to the console. What does it return?
+3. Log the value of `empStatus` to the console. What does it return?
 
 1. By default, `enum` values begin with a value of 0, so Permanent is 0, Temp is 1, and Apprentice is 2. If you want the values to start with a different value, in this case 1, specify that in the `enum` declaration. Make the following edits to have the `enum` start the values at 1.
 
@@ -136,7 +136,7 @@ enum contractStatus {
 
 ```
 
-1. When you log the value of `empStatus` to the console, it should now return 2. (You can also manually set all the values in the `enum` if they are not sequential.)
+5. When you log the value of `empStatus` to the console, it should now return 2. (You can also manually set all the values in the `enum` if they are not sequential.)
 
 1. Finally, you can go from a numeric value to the name of that value in the `enum`. This is helpful if you need to remember what it is. Enter the following to return the name associated with the value 2, in this case `"Temp"`:
 
@@ -166,15 +166,15 @@ randomValue = 'Mateo';
 
 ```
 
-1. Notice that the compiler doesn't throw an error because the `any` type encompasses values of every possible type.
+2. Notice that the compiler doesn't throw an error because the `any` type encompasses values of every possible type.
 
 1. The `any` type opts out of type checking and doesn't force you to do any checking before you call, construct, or access properties on these values. To test this, enter the following statements, which attempt to call:
 
-  - A property that doesn't exist for the type.
+      - A property that doesn't exist for the type.
 
-  - `randomValue` as a function.
+      - `randomValue` as a function.
 
-  - A method that only applies to a `string` type.
+      - A method that only applies to a `string` type.
 
 ```typescript
 console.log(randomValue.name);  //* Logs "undefined" to the console
@@ -211,7 +211,7 @@ randomValue.toUpperCase();      //* Returns "randomValue is not a function" erro
 
 ```
 
-1. You'll now see the errors in the code and can take appropriate action.
+2. You'll now see the errors in the code and can take appropriate action.
 
 #### Type assertion
 
@@ -248,7 +248,7 @@ if (typeof randomValue === "string") {
 
 ```
 
-1. Now, TypeScript assumes that you have made the necessary check. The type assertion says that `randomValue` should be treated as a `string` and then the `toUpperCase` method can be applied.
+2. Now, TypeScript assumes that you have made the necessary check. The type assertion says that `randomValue` should be treated as a `string` and then the `toUpperCase` method can be applied.
 
 ### Type guards
 
