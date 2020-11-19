@@ -28,7 +28,7 @@ After completing this module, you'll be able to:
 
 - Declare variables using union and intersection types.
 
-## Prerequisites
+### Prerequisites
 
 Familiarity with declaring variables using `let` and `const` in JavaScript.
 
