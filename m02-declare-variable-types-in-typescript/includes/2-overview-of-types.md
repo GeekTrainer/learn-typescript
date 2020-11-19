@@ -48,7 +48,7 @@ let z;           //* Declares z without initializing it
 
 1. Enter the variable name `y` followed by a period and you'll notice one more thing. Even though you didn't explicitly specify a type for the variable `y`, Intellisense is providing methods that only apply to a `number` type.
 
-1. Enter `z = 1` and `z="one"`. TypeScript accepted both but why? This works in the same way that it works in JavaScript because variable z can now accept `any` value assigned to it. (TypeScript has inferred the `z` is of type `any` because you did not assign a type or initialize it when it was declared. You'll learn more about the `any` type later.)
+1. Enter `z = 1` and `z = "one"`. TypeScript accepted both but why? This works in the same way that it works in JavaScript because variable z can now accept `any` value assigned to it. (TypeScript has inferred the `z` is of type `any` because you did not assign a type or initialize it when it was declared. You'll learn more about the `any` type later.)
 
 While you can implicitly infer types through type inference in TypeScript, should you? Through type inference, you do get some of the benefit of static type checking and Intellisense and it enables you to gradually migrate to explicit type declarations in your projects. But explicit type declarations also provide a way to better document the intention of your code and provide a more deliberate path going forward.
 
