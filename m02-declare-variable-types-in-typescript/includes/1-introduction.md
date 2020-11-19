@@ -1,3 +1,5 @@
+## Declare variable types using TypeScript
+
 JavaScript is a dynamically typed language. While this makes declaring variables easy, it can in some cases lead to unexpected results.
 
 The static type system in TypeScript enables you to describe the shape of an object, providing better documentation, and allowing TypeScript to validate that your code is working correctly. In TypeScript, declarations of namespaces, classes, properties, functions, variables, and other language entities associate types with those entities. The way that a type is formed and associated with a language entity depends on the kind of entity.
@@ -14,7 +16,7 @@ In this module, you will:
 
 - Declare variables using union and intersection types.
 
-## Learning objectives
+### Learning objectives
 
 After completing this module, you'll be able to:
 
