@@ -1,3 +1,5 @@
+## Summary and Resources
+
 Now that you have reviewed this module, you should be able to:
 
 - Explain the advantages of declaring typed variables in TypeScript.
@@ -8,7 +10,7 @@ Now that you have reviewed this module, you should be able to:
 
 - Declare variables using union and intersection types.
 
-## Resources
+### Resources
 
 Use these resources to discover more.
 
