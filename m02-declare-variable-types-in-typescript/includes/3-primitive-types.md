@@ -49,7 +49,7 @@ let abc = 'abc';
 
 ```
 
-In TypeScript, you can also use template strings, which can span multiple lines and have embedded expressions. These strings are surrounded by the backtick/backquote (````) character, and embedded expressions are of the form `${ expr }`.
+In TypeScript, you can also use template strings, which can span multiple lines and have embedded expressions. These strings are surrounded by the backtick/backquote ( \` ) character, and embedded expressions are of the form `${ expr }`.
 
 For example:
 
@@ -99,51 +99,51 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define an `
 
 1. Assume that you have field in a external database called `contractStatus`, which contains numbers 1, 2, or 3, that represent the following contact statuses: `Permanent`, `Temp`, and `Apprentice`. Create an `enum` to represent this by entering the following:
 
-```typescript
-enum contractStatus {
+    ```typescript
+    enum contractStatus {
 
-     Permanent,
+         Permanent,
 
-     Temp,
+         Temp,
 
-     Apprentice
+         Apprentice
 
-}
+    }
 
-```
+    ```
 
 2. Now, declare a variable for a new employee named `empStatus` of the type `contractStatus` and assign `"Temp"` to it:
 
-```typescript
-let empStatus: contractStatus = contractStatus.Temp;
+    ```typescript
+    let empStatus: contractStatus = contractStatus.Temp;
 
-```
+    ```
 
 3. Log the value of `empStatus` to the console. What does it return?
 
 1. By default, `enum` values begin with a value of 0, so Permanent is 0, Temp is 1, and Apprentice is 2. If you want the values to start with a different value, in this case 1, specify that in the `enum` declaration. Make the following edits to have the `enum` start the values at 1.
 
-```typescript
-enum contractStatus {
+    ```typescript
+    enum contractStatus {
 
-     Permanent = 1,
+         Permanent = 1,
 
-     Temp,
+         Temp,
 
-     Apprentice
+         Apprentice
 
-}
+    }
 
-```
+    ```
 
 5. When you log the value of `empStatus` to the console, it should now return 2. (You can also manually set all the values in the `enum` if they are not sequential.)
 
 1. Finally, you can go from a numeric value to the name of that value in the `enum`. This is helpful if you need to remember what it is. Enter the following to return the name associated with the value 2, in this case `"Temp"`:
 
-```typescript
-console.log(contractStatus[2]);
+    ```typescript
+    console.log(contractStatus[2]);
 
-```
+    ```
 
 ### Exercise - Define Any and Unknown types
 
@@ -157,14 +157,14 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define a va
 
 1. Enter the following variable declaration:
 
-```typescript
-let randomValue: any = 10;
+    ```typescript
+    let randomValue: any = 10;
 
-randomValue = true;
+    randomValue = true;
 
-randomValue = 'Mateo';
+    randomValue = 'Mateo';
 
-```
+    ```
 
 2. Notice that the compiler doesn't throw an error because the `any` type encompasses values of every possible type.
 
@@ -176,14 +176,14 @@ randomValue = 'Mateo';
 
       - A method that only applies to a `string` type.
 
-```typescript
-console.log(randomValue.name);  //* Logs "undefined" to the console
+    ```typescript
+    console.log(randomValue.name);  //* Logs "undefined" to the console
 
-randomValue();                  //* Returns "randomValue is not a function" error
+    randomValue();                  //* Returns "randomValue is not a function" error
 
-randomValue.toUpperCase();      //* Returns "randomValue is not a function" error
+    randomValue.toUpperCase();      //* Returns "randomValue is not a function" error
 
-```
+    ```
 
 > [!IMPORTANT]
 > Remember that all the convenience of any comes at the cost of losing type safety. Type safety is one of the main motivations for using TypeScript and you should try to avoid using any when it's not necessary.
@@ -196,20 +196,20 @@ The `unknown` type is similar to the `any` type in that any value is assignable 
 
 1. To see how this works, try changing the `any` type in the previous example to `unknown`:
 
-```typescript
-let randomValue: unknown = 10;
+    ```typescript
+    let randomValue: unknown = 10;
 
-randomValue = true;
+    randomValue = true;
 
-randomValue = 'Mateo';
+    randomValue = 'Mateo';
 
-console.log(randomValue.name);  //* Returns undefined.
+    console.log(randomValue.name);  //* Returns undefined.
 
-randomValue();                  //* Returns "randomValue is not a function" error
+    randomValue();                  //* Returns "randomValue is not a function" error
 
-randomValue.toUpperCase();      //* Returns "randomValue is not a function" error
+    randomValue.toUpperCase();      //* Returns "randomValue is not a function" error
 
-```
+    ```
 
 2. You'll now see the errors in the code and can take appropriate action.
 
@@ -229,24 +229,24 @@ The other version is the “angle-bracket” syntax:
 
 1. Let's remove the property, function, and method calls from the code example to eliminate the compiler errors. Then, we'll create a new statement that performs the necessary check to determine that `randomValue` is a `string` before calling the `toUpperCase` method using type assertion.
 
-```typescript
-let randomValue: unknown = 10;
+    ```typescript
+    let randomValue: unknown = 10;
 
-randomValue = true;
+    randomValue = true;
 
-randomValue = 'Mateo';
+    randomValue = 'Mateo';
 
-if (typeof randomValue === "string") {
+    if (typeof randomValue === "string") {
 
-    console.log((randomValue as string).toUpperCase());    //* Returns MATEO to the console.
+        console.log((randomValue as string).toUpperCase());    //* Returns MATEO to the console.
 
-} else {
+    } else {
 
-    console.log("Error - A string was expected here.");    //* Returns an error message.
+        console.log("Error - A string was expected here.");    //* Returns an error message.
 
-}
+    }
 
-```
+    ```
 
 2. Now, TypeScript assumes that you have made the necessary check. The type assertion says that `randomValue` should be treated as a `string` and then the `toUpperCase` method can be applied.
 
