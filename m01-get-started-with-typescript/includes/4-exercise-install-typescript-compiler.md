@@ -1,6 +1,6 @@
 Your code editor may have built-in language support for TypeScript but, to transform TypeScript code into JavaScript that a browser will understand, you need to first install the TypeScript compiler (also referred to as `tsc`.)
 
-TypeScript can be installed *globally* (available anywhere in your file system) or **locally** (only available at the project level). In this exercise, you will install TypeScript globally. As you work more with TypeScript in larger and more complex codebases, you will likely switch to a per-project installation to have more control over the consistency of your projects.
+TypeScript can be installed **globally** (available anywhere in your file system) or **locally** (only available at the project level). In this exercise, you will install TypeScript globally. As you work more with TypeScript in larger and more complex codebases, you will likely switch to a per-project installation to have more control over the consistency of your projects.
 
 ## Step 1: Test your TypeScript installation
 
