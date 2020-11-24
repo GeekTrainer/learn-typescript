@@ -46,12 +46,12 @@ Let's add some JavaScript code to the TypeScript file and then compile it.
 
 1. Copy and paste the following JavaScript code into the **module01.ts** editor.
 
-```javascript
-function addNumbers(num1, num2) {
-  return num1 + num2;
-}
-console.log(addNumbers(3, 6));
-```
+   ```javascript
+   function addNumbers(num1, num2) {
+     return num1 + num2;
+   }
+   console.log(addNumbers(3, 6));
+   ```
 
 2. Notice that even though you haven't yet compiled the code, VS Code has used its built-in TypeScript support to type check it. As before, there are type errors in the two parameters of the `addNumbers` function.
 
@@ -74,21 +74,21 @@ As a final step, add an HTML file to the project so you can run and test the Jav
 2. Type the file name **module01.html** and press **Enter**. The HTML file appears in a new code editor.
 3. Copy and paste the following HTML into the editor and then save the file.
 
-```html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-   <meta charset="UTF-8">
-   <title>Test JavaScript</title>
-</head>
-<body>
-   <h1>Test JavaScript</h1>
-   <p id="date"></p>
-   <p>This page calls the script module01.js and is used for testing.</p>
-   <script src="module01.js"></script>
-</body>
-</html>
-```
+   ```html
+   <!DOCTYPE html>
+   <html lang="en" dir="ltr">
+   <head>
+      <meta charset="UTF-8">
+      <title>Test JavaScript</title>
+   </head>
+   <body>
+      <h1>Test JavaScript</h1>
+      <p id="date"></p>
+      <p>This page calls the script module01.js and is used for testing.</p>
+      <script src="module01.js"></script>
+   </body>
+   </html>
+   ```
 
 4. In the Explorer, right-click **module01.html** and select **Open in Default Browser**.
 5. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
