@@ -4,7 +4,7 @@ Choose the best response for each of the questions below. Then select **Check yo
 ### Multiple Choice
 The `boolean`, `number`, `string`, and `enum` types are examples of which category of subtype of `any`?
 
-(x)Primitive types.{{The `boolean`, `number`, `string`, and `enum types are examples of the primitive subtype of the `any` type.}}
+(x)Primitive types.{{The `boolean`, `number`, `string`, and `enum` types are examples of the primitive subtype of the `any` type.}}
 
 ()Type parameters.{{Type parameters are their own subtype under the `any` type.}}
 
