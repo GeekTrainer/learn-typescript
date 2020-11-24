@@ -12,7 +12,7 @@ If TypeScript is not installed, you'll see an error that the command is not reco
 
 You'll need a copy of Node.js as an environment to run the TypeScript package. Node.js, a JavaScript library for server-side applications, is not required to learn TypeScript. But by installing it, you also get Node Package Manager (`npm`), the package manager for the JavaScript language. You'll then use `npm` to install the TypeScript package.
 
-If you're a JavaScript developer, `npm` will likely be installed on your machine. You can verify this by opening the Command Prompt and entering `npm version`. If 'npm' is installed, you'll see the version and a list of compiler commands, and you're ready to use `npm`.
+If you're a JavaScript developer, `npm` will likely be installed on your machine. You can verify this by opening the Command Prompt and entering `npm version`. If `npm` is installed, you'll see the version and a list of compiler commands, and you're ready to use `npm`.
 
 If `npm` is not installed, you'll see an error that the command is not recognized. To install Node.js:
 
