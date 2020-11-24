@@ -1,12 +1,10 @@
-## Overview of types
-
 The main benefit of Typescript is that it enables you to add static types to your JavaScript code. Types place static constraints on program entities, such as functions, variables, and properties, so that compilers and development tools can offer better verification and assistance during development.
 
 The TypeScript static compile-time type system closely models the dynamic run-time type system of JavaScript, enabling you  to accurately express the type relationships that are expected to exist when your programs run and have those assumptions pre-validated by the TypeScript compiler. The TypeScript type analysis occurs entirely at compile-time and adds no run-time overhead to program execution.
 
 Static types also provide a way to better document the intention of your code, which helps you and other developers understand it.
 
-### Declaring let and const variables
+## Declaring let and const variables
 
 [ECMAScript 2015](https://www.ecma-international.org/ecma-262/6.0/) added the `let` and `const` keywords for variable declaration in JavaScript, which eliminated some of the problems associated with the var keyword in previous versions. This change makes it possible to declare variables with block level scope and prevents you from declaring the same variable multiple times.
 
@@ -15,7 +13,7 @@ TypeScript encourages the use of the `let` and `const` keywords for variable dec
 > [!NOTE]
 > As a reminder, the difference between them is that let declarations can be done without initialization, whereas const declarations are always initialized with a value. And const declarations, once assigned, can never be reassigned.
 
-### Exercise - Type inference in TypeScript
+## Exercise - Type inference in TypeScript
 
 You can associate types with variables through explicit type annotations or through implicit type inference.
 
@@ -52,21 +50,21 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and see how thi
 
 While you can implicitly infer types through type inference in TypeScript, should you? Through type inference, you do get some of the benefit of static type checking and Intellisense and it enables you to gradually migrate to explicit type declarations in your projects. But explicit type declarations also provide a way to better document the intention of your code and provide a more deliberate path going forward.
 
-### Types and subtypes in TypeScript
+## Types and subtypes in TypeScript
 
 Before diving into using types for variable declaration, let's look at the types and subtypes in TypeScript.
 
-#### Any type
+### Any type
 
 All types in TypeScript are subtypes of a single top type called the `any` type. The any type is the one type that can represent any JavaScript value with no constraints. All other types are categorized as primitive types, object types, or type parameters. These types introduce various static constraints on their values.
 
 ![The TypeScript type hierarchy, with any s the top type, and primitive types (boolean, number, string, enum, void), object types (class, interface, array, and literals), and type parameters as subtypes. The primitive types null and undefined are subtypes of all other types.](../media/m02_types.jpg)
 
-#### Primitive types
+### Primitive types
 
 The primitive types are the `boolean`, `number`, `string`, `void`, `null`, and `undefined` types along with user-defined enumeration or `enum` types. The `void` type exists purely to indicate the absence of a value, such as in a function with no return value. The `null` and `undefined` types are subtypes of all other types. It is not possible to explicitly reference the null and undefined types—only the values of those types can be referenced, using the null and undefined literals.
 
-#### Object types and type parameters
+### Object types and type parameters
 
 The object types are all class, interface, array, and literal types (anything that is not a primitive type.)
 
