@@ -93,7 +93,7 @@ console.log(randomNumbers);
 
 ## Lab answers
 
-You can find the [answers to the exercises](https://www.typescriptlang.org/play?) on the Playground. REVIEWER NOTE: I WILL REPLACE THIS WITH A LINK TO THE VSCODE WORKSPACE.
+You can find the answers to the exercises in this Visual Studio Code workspace. **REVIEWER NOTE: I WILL ADD A LINK TO THE VSCODE WORKSPACE LATER.*
 
 ## Challenge yourself!
 
