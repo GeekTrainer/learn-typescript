@@ -7,22 +7,22 @@ You can use the TypeScript [Playground](https://www.typescriptlang.org/play) or 
 Modify the code to add types to the variable declarations. The resulting JavaScript should look the same as the original example when you're done.
 
 ```javascript
-let firstname;
-let lastname;
-let fullname;
+let firstName;
+let lastName;
+let fullName;
 let age;
 let ukCitizen;
 
-firstname = 'Rebecca';
-lastname = 'Smith';
+firstName = 'Rebecca';
+lastName = 'Smith';
 age = 42;
 ukCitizen = false;
-fullname = firstname + " " + lastname;
+fullName = firstname + " " + lastname;
 
 if (ukCitizen) {
-    console.log("My name is " + fullname + ", I'm " + age + ", and I'm a citizen of the United Kingdom.");
+    console.log("My name is " + fullName + ", I'm " + age + ", and I'm a citizen of the United Kingdom.");
 } else {
-    console.log("My name is " + fullname + ", I'm " + age + ", and I'm not a citizen of the United Kingdom.");
+    console.log("My name is " + fullName + ", I'm " + age + ", and I'm not a citizen of the United Kingdom.");
 }
 
 ```
