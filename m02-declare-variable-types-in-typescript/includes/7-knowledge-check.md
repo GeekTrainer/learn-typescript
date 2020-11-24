@@ -13,11 +13,11 @@ The `boolean`, `number`, `string`, and `enum` types are examples of which catego
 ### Multiple Choice
 Which of the following types is an example of an object type?
 
-()Void.{{Void is an example of a primitive type.}}
+()`void`.{{`void` is an example of a primitive type.}}
 
-(x)Array.{{Array is an example of an object type.}}
+(x)`Array`.{{`Array` is an example of an object type.}}
 
-()Type parameters.{{Type parameters are their own subtype under the any type.}}
+()Type parameters.{{Type parameters are their own subtype under the `any` type.}}
 
 ### Multiple Choice
 What is the primary difference between the `any` and `unknown` types?
