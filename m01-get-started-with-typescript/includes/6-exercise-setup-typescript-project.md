@@ -5,12 +5,12 @@ In this exercise, you’ll create a new TypeScript project. You'll then confirm 
 Create a new project workspace in VS Code and initialize the project.
 
 1. Open VS Code.
-2. On the Welcome screen, select **Add workspace folder**.
+1. On the Welcome screen, select **Add workspace folder**.
 
    ![Visual Studio Code Welcome screen with the Add workspace folder highlighted.](../media/m01_vscode_1.jpg)
 
 3. Create a new project folder and then select **Add**.
-4. Select the **Explorer** icon.
+1. Select the **Explorer** icon.
 
    ![Visual Studio Code with the Explorer icon highlighted.](../media/m01_vscode_2.jpg)
 
