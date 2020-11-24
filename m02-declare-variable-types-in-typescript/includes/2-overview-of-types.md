@@ -24,11 +24,11 @@ To imply the variable type through type inference, simply use the same format yo
 Let's open the [Playground](https://www.typescriptlang.org/play) and see how this works.
 
 1. Enter the following variable declarations:
-  ```typescript
-  let x: number;   //* Explicitly declares x as a number type
-  let y = 1;       //* Implicitly declares y as a number type
-  let z;           //* Declares z without initializing it
-  ```
+    ```typescript
+    let x: number;   //* Explicitly declares x as a number type
+    let y = 1;       //* Implicitly declares y as a number type
+    let z;           //* Declares z without initializing it
+    ```
 2. TypeScript now treats `x` as a `number` type. TypeScript also infers the type of `y` to be a number type because that is the type of the value used to initialize it. But what happens if you try to assign a different value type to it? And what happens to the variable z?
 1. Open the **Errors** tab in the Playground so you can monitor for any errors.
 1. Enter `x = 1`. This should work as expected with no errors.
