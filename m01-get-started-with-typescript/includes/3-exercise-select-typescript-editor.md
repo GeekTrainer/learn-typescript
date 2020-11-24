@@ -13,7 +13,7 @@ In this course, we'll occasionally visit the Playground to try out new TypeScrip
 
 ## Integrated Development Editors (IDEs)
 
-For more full-featured TypeScript editing and tools, there are [many IDEs that support TypeScript](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support) or have plugins or tooling packages developed to support it. In this module we will use [Visual Studio Code](https://code.visualstudio.com), however are free to use whatever editor you prefer.
+For more full-featured TypeScript editing and tools, there are [many IDEs that support TypeScript](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support) or have plugins or tooling packages developed to support it. In this module we will use [Visual Studio Code](https://code.visualstudio.com), however you are free to use whatever editor you prefer.
 
 ### Step 1: Install Visual Studio Code
 
