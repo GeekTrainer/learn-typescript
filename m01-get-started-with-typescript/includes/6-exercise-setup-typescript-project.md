@@ -33,10 +33,10 @@ You can use the `init` option of the TypeScript compiler to generate a TSConfig 
 3. Notice that the new **tsconfig.json** file has been added to the Explorer. (You may need to refresh the Explorer to see the file.)
 4. Open the **tsconfig.json** file in the code window. You'll see it has many options, most of which are commented out. Review the description of each enabled option.
 5. Update the options in the **tsconfig.json** file so the compiler saves all JavaScript files to a new folder.
-   a. In the Explorer, create a new folder in your project called **build**.
-   b. In the **tsconfig.json** file, locate the `outDir` option, remove the comment, and set the parameter to **build**.
-   c. Save **tsconfig.json**.
-   d. At the command prompt, enter `tsc`. This resets the options for the project.
+   1. In the Explorer, create a new folder in your project called **build**.
+   2. In the **tsconfig.json** file, locate the `outDir` option, remove the comment, and set the parameter to **build**.
+   3. Save **tsconfig.json**.
+   4. At the command prompt, enter `tsc`. This resets the options for the project.
 
 To learn more about the **tsconfig.json** file, visit the [TSConfig Reference](https://www.staging-typescript.org/tsconfig).
 
@@ -90,5 +90,5 @@ As a final step, add an HTML file to the project so you can run and test the Jav
 </html>
 ```
 
-1. In the Explorer, right-click **module01.html** and select **Open in Default Browser**.
-2. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
+4. In the Explorer, right-click **module01.html** and select **Open in Default Browser**.
+5. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
