@@ -24,13 +24,13 @@ Let's look at a simple example to demonstrate the use of types.
 
 2. Copy and paste the following JavaScript code sample into the TypeScript (left) pane of the Playground:
 
-```javascript
-function addNumbers(num1, num2) {
-  return num1 + num2;
-}
+  ```javascript
+  function addNumbers(num1, num2) {
+    return num1 + num2;
+  }
 
-console.log(addNumbers(3, 6));
-```
+  console.log(addNumbers(3, 6));
+  ```
 
 3. Notice that the same code appears in the **JS** pane on the right side. This is the JavaScript code that TypeScript will generate after it's compiled.
 
