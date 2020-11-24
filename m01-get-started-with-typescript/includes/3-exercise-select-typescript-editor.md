@@ -1,43 +1,19 @@
-## Exercise - Select a TypeScript editor 
-
 You can write TypeScript code in any text editor or IDE of your choice.
 
 In this exercise, you'll learn about your options and then setup Visual Studio Code so you can complete the remaining exercises in this course.
 
-### The Playground
+## The Playground
 
 Earlier, you wrote some simple TypeScript code in the [Playground](https://www.typescriptlang.org/play). The Playground is a place where you can write, share, and learn TypeScript. You can use it to:
 
 - Learn TypeScript in a place where nothing can break.
-
 - Experiment with TypeScript syntax and share the URLs with others.
-
 - Experiment with the different compiler features of TypeScript.
-
 In this course, we'll occasionally visit the Playground to try out new TypeScript concepts.
 
-### Integrated Development Editors (IDEs)
+## Integrated Development Editors (IDEs)
 
-For more full-featured TypeScript editing and tools, there are many IDEs that support TypeScript or have plugins or tooling packages developed to support it. Some of these IDEs include:
-
-- [Visual Studio](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-403)
-
-- [Visual Studio Code](https://code.visualstudio.com/Docs/languages/typescript)
-
-- [Sublime Text](https://github.com/Microsoft/TypeScript-Sublime-Plugin)
-
-- [Atom](https://atom.io/packages/atom-typescript)
-
-- [Eclipse](https://github.com/palantir/eclipse-typescript)
-
-- [Emacs](https://github.com/ananthakumaran/tide)
-
-- [VIM](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support)
-
-> [!TIP]
-> For the current list of TypeScript editors, see [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support).
-
-While this course uses Visual Studio Code, you are encouraged use whatever tool you're most comfortable with.
+For more full-featured TypeScript editing and tools, there are [many IDEs that support TypeScript](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support) or have plugins or tooling packages developed to support it. In this module we will use [Visual Studio Code](https://code.visualstudio.com), however are free to use whatever editor you prefer.
 
 ### Step 1: Install Visual Studio Code
 
@@ -46,14 +22,9 @@ Visual Studio Code (VS Code) is a free, lightweight source code editor that runs
 To install VS Code:
 
 1. Open the [Visual Studio Code download](https://code.visualstudio.com/download) page and select the download option for your operating system.
-
 2. If you need additional setup guidance, visit the installation page for your operating system:
-
     - [Linux](https://code.visualstudio.com/docs/setup/linux)
-
     - [macOS](https://code.visualstudio.com/docs/setup/mac)
-
     - [Windows](https://code.visualstudio.com/docs/setup/windows)
 
 Now that you have a code editor, you're ready to install TypeScript.
-

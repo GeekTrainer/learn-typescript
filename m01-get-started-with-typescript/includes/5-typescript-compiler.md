@@ -8,9 +8,9 @@ TypeScript code is transformed into JavaScript code using the TypeScript compile
 
 ### Compiling a TypeScript file
 
-You run the TypeScript compiler from the command line using the `tsc` command. For example, to compile a TypeScript file named `utility_functions.ts`, enter `tsc utility_functions.ts`. (Note that the .ts extension is optional.)
+You run the TypeScript compiler from the command line using the `tsc` command. For example, to compile a TypeScript file named **utility_functions.ts**, enter **tsc utility_functions.ts**. (Note that the .ts extension is optional.)
 
-If there are no compiler errors, the `tsc` command generates a JavaScript file named `utility_functions.js`.
+If there are no compiler errors, the `tsc` command generates a JavaScript file named **utility_functions.js**.
 
 If the compiler finds errors in the code, it will display them in the command window. Fix the errors in the TypeScript file and rerun the `tsc` command.
 
@@ -26,5 +26,4 @@ The `--target "ES5"` option specifies the ECMAScript target version for the Java
 
 `tsc utility_functions.ts --target "ES5"`
 
-You'll learn about other compiler options in later modules. See [tscCLI Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) for the complete list of options.
-
+You'll learn about other compiler options in later modules. See [tsc CLI Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) for the complete list of options.
