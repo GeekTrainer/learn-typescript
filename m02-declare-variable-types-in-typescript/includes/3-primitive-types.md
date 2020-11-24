@@ -70,7 +70,7 @@ Using enumerations:
 
 Let's open the [Playground](https://www.typescriptlang.org/play) and define an `enum`.
 
-1. Assume that you have field in a external database called `contractStatus`, which contains numbers 1, 2, or 3, that represent the following contact statuses: `Permanent`, `Temp`, and `Apprentice`. Create an `enum` to represent this by entering the following:
+1. Assume that you have field in a external database called **contractStatus**, which contains numbers 1, 2, or 3, that represent the following contact statuses: Permanent, Temp, and Apprentice. Create an `enum` to represent this by entering the following:
 
     ```typescript
     enum contractStatus {
@@ -88,7 +88,7 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define an `
 
 3. Log the value of `empStatus` to the console. What does it return?
 
-1. By default, `enum` values begin with a value of 0, so Permanent is 0, Temp is 1, and Apprentice is 2. If you want the values to start with a different value, in this case 1, specify that in the `enum` declaration. Make the following edits to have the `enum` start the values at 1.
+1. By default, `enum` values begin with a value of 0, so `Permanent` is 0, `Temp` is 1, and `Apprentice` is 2. If you want the values to start with a different value, in this case 1, specify that in the `enum` declaration. Make the following edits to have the `enum` start the values at 1.
 
     ```typescript
     enum contractStatus {
@@ -108,11 +108,11 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define an `
 
 ## Exercise - Define Any and Unknown types
 
-If you unsure of what a variable type will be, you can use the `any` or `unknown` types.
+If you are unsure of what a variable type will be, you can use the `any` or `unknown` types.
 
 ### Any type
 
-The `any` type is the one type that can represent any JavaScript value with no constraints. This can be useful when you're expecting a value from a third-party library or user inputs where the value is dynamic because the any type will allow you to reassign different types of values. And, as mentioned earlier, using the any type allows you to gradually migrate your JavaScript code to use static types in TypeScript.
+The `any` type is the one type that can represent any JavaScript value with no constraints. This can be useful when you're expecting a value from a third-party library or user inputs where the value is dynamic because the `any` type will allow you to reassign different types of values. And, as mentioned earlier, using the `any` type allows you to gradually migrate your JavaScript code to use static types in TypeScript.
 
 Let's open the [Playground](https://www.typescriptlang.org/play) and define a variable as `any`.
 
@@ -140,13 +140,13 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define a va
     ```
 
 > [!IMPORTANT]
-> Remember that all the convenience of any comes at the cost of losing type safety. Type safety is one of the main motivations for using TypeScript and you should try to avoid using any when it's not necessary.
+> Remember that all the convenience of `any` comes at the cost of losing type safety. Type safety is one of the main motivations for using TypeScript and you should try to avoid using `any` when it's not necessary.
 
 ### Unknown type
 
 While flexible, the `any` type can cause unexpected errors. To address this, TypeScript introduced the `unknown` type.
 
-The `unknown` type is similar to the `any` type in that any value is assignable to type unknown. However, you can't access any properties of an unknown type, nor can you call or construct them.
+The `unknown` type is similar to the `any` type in that any value is assignable to type `unknown`. However, you can't access any properties of an `unknown` type, nor can you call or construct them.
 
 1. To see how this works, try changing the `any` type in the previous example to `unknown`:
 
@@ -197,7 +197,7 @@ The other version is the “angle-bracket” syntax:
 
 ## Type guards
 
-The previous example demonstrates the use of `typeof` in the `if` block to examine the type of an expression at runtime. This is called a *type guard.*
+The previous example demonstrates the use of `typeof` in the `if` block to examine the type of an expression at runtime. This is called a *type guard*.
 
 You may be familiar with using `typeof` and `instanceof` in JavaScript to test for these conditions. TypeScript understands these conditions and will change type inference accordingly when used in an `if` block.
 
