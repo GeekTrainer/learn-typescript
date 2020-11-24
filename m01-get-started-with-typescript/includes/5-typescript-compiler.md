@@ -6,7 +6,7 @@ TypeScript code is transformed into JavaScript code using the TypeScript compile
 
 ## Compiling a TypeScript file
 
-You run the TypeScript compiler from the command line using the `tsc` command. For example, to compile a TypeScript file named **utility_functions.ts**, enter **tsc utility_functions.ts**. (Note that the .ts extension is optional.)
+You run the TypeScript compiler from the command line using the `tsc` command. For example, to compile a TypeScript file named **utility_functions.ts**, enter **tsc utility_functions.ts**. (Note that the **.ts** extension is optional.)
 
 If there are no compiler errors, the `tsc` command generates a JavaScript file named **utility_functions.js**.
 
