@@ -1,12 +1,10 @@
-## The TypeScript compiler
-
 As you learned earlier, TypeScript is a strict superset of [ECMAScript 2015](https://www.ecma-international.org/ecma-262/6.0/) (ECMAScript 6 or ES6). This means that all JavaScript code is also TypeScript code, and a TypeScript program can seamlessly consume JavaScript. In fact, you can convert a JavaScript file to a TypeScript file by simply renaming the extension from `.js` to `.ts`.
 
 However, not all TypeScript code is JavaScript code. This is because TypeScript adds new syntax to JavaScript that makes it easier to read and implements some features, like static typing. While this TypeScript code makes development easier and less error prone, not all browsers can understand it. For this reason, TypeScript requires a build step ([transpiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)) to transform it to JavaScript for your application to work.
 
 TypeScript code is transformed into JavaScript code using the TypeScript compiler (or a TypeScript-compatible transpiler, like [Babel](https://babeljs.io/), [swc](https://swc.rs/docs/installation/), or [Sucrase](https://github.com/alangpierce/sucrase).) This process removes the TypeScript-specific code (for example, type declarations and interfaces) and generates a clean JavaScript file that you can run from your web pages and is compatible with browsers.
 
-### Compiling a TypeScript file
+## Compiling a TypeScript file
 
 You run the TypeScript compiler from the command line using the `tsc` command. For example, to compile a TypeScript file named **utility_functions.ts**, enter **tsc utility_functions.ts**. (Note that the .ts extension is optional.)
 
@@ -14,7 +12,7 @@ If there are no compiler errors, the `tsc` command generates a JavaScript file n
 
 If the compiler finds errors in the code, it will display them in the command window. Fix the errors in the TypeScript file and rerun the `tsc` command.
 
-### Compiler options
+## Compiler options
 
 There are many compiler options that you can use with the `tsc` command to control the compilation to your preference.
 
