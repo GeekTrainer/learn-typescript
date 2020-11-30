@@ -16,12 +16,12 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and declare and
 
 1. Declare an interface named `IceCream` that includes two properties: `flavor` as a `string` and `scoops` as a `number.`
 
-        ```typescript
-        interface IceCream {
-                flavor: string;
-                scoops: number;
-        }
-        ```
+```typescript
+interface IceCream {
+        flavor: string;
+        scoops: number;
+}
+```
 
 2. Now, you can implement the new interface. Let's start by using the `IceCream` interface as a type in a variable declaration. Declare a new variable called `myIceCream` as type `IceCream` and then assign values to the required properties. Notice as you start to type the property names, Intellisense suggests the correct names and types. Check your work by returning the value of one of the properties to the console.
 
