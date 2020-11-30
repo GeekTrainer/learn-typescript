@@ -35,7 +35,7 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and declare and
 
         ```
 
-3. Next, let's create a function called `tooManyScoops` that uses the `IceCream` interface as parameter type. This function will check the number of scoops in the IceCream object and return a message based on the result. To test your work, pass in the object `{flavor: 'vanilla', scoops: 5}` as a parameter and check the result by returning it to the console.
+3. Next, let's create a function called `tooManyScoops` that uses the `IceCream` interface as parameter type. This function checks the number of scoops in the IceCream object and returns a message based on the result. To test your work, pass in the object `{flavor: 'vanilla', scoops: 5}` as a parameter and check the result by returning it to the console.
 
         ```typescript
         function tooManyScoops(dessert: IceCream) {
