@@ -65,7 +65,7 @@ console.log(loan2);     //* Returns "The conventional loan payment is 237.24" 
 
 1. Make any remaining updates to the implementation of the `convLoan` function and test your work.
 
-1. See [FILENAME] for the solution to the exercise.
+1. See [FILENAME (SOLUTION IS BELOW)] for the solution to the exercise.
 
 ```typescript
 interface Loan {
