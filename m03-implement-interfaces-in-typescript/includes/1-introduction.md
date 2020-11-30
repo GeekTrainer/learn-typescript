@@ -26,3 +26,4 @@ After completing this module, you will be able to:
 
 Familiarity with functions and arrays in JavaScript ES6/2015.
 
+ 
