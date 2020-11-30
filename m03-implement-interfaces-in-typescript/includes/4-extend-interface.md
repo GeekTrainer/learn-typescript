@@ -12,10 +12,10 @@ There are several types of desserts you can create from the ``IceCream`` interfa
 Continue your project in the [Playground](https://www.typescriptlang.org/play).
 
 1. Under the ``IceCream`` interface declaration, declare a new interface called ``Sundae`` that `extends` the IceCream interface. The Sundae interface includes four new properties:
-  - `sauce` of literal type `'chocolate' | 'caramel' | 'strawberry'`
-  - `nuts` of type `boolean` (optional)
-  - `whippedCream` of type `boolean` (optional)
-  - `instructions` of type `boolean` (optional)
+    - `sauce` of literal type `'chocolate' | 'caramel' | 'strawberry'`
+    - `nuts` of type `boolean` (optional)
+    - `whippedCream` of type `boolean` (optional)
+    - `instructions` of type `boolean` (optional)
 
 ```typescript
 interface Sundae extends IceCream {
