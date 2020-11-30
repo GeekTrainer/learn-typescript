@@ -86,9 +86,9 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and declare and
             }
         }
 
-let dessert1 = new SundaeOrder('vanilla', 3);
-console.log(tooManyScoops(dessert1));
-```
+        let dessert1 = new SundaeOrder('vanilla', 3);
+        console.log(tooManyScoops(dessert1));
+        ```
 
 So far, so good! But an ice cream sundae without toppings is just… ice cream. Next, we'll look at how to extend an interface.
 
