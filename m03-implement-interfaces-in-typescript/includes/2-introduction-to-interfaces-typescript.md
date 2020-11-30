@@ -10,42 +10,29 @@ This simple interface defines the two properties and a method of an `Employee` o
 
 ```typescript
 interface Employee {
-
     firstName: string;
-
     lastName: string;
-
     fullName(): string;
-
 }
-
 ```
 
 Notice that the interface doesn't initialize or implement the properties declared within it. That's because the only job of an interface is to describe a type. It defines what the code contract requires, while a variable, function, or class that implements the interface satisfies the contract by providing the required implementation details.
 
 After defining an interface, you can use it as a type and get all the benefits of type checking and Intellisense.
 
-This example implements the interface by declaring a variable of the type `Employee`. It fulfills the contract by passing in values for the ``firstName`` and ``lastName`` properties and specifying that the `fullName` method should combine the firstName and lastName properties and return the result.
+This example implements the interface by declaring a variable of the type `Employee`. It fulfills the contract by passing in values for the `firstName` and `lastName` properties and specifying that the `fullName` method should combine the `firstName` and `lastName` properties and return the result.
 
 ```typescript
 let employee: Employee = {
-
     firstName : "Emil",
-
     lastName: "Andersson",
-
     fullName(): string{
-
         return this.firstName + " " + this.lastName;
-
     }
-
 }
 
 employee.firstName = 10;             //* Error - Type 'number' is not assignable to type 'string'
-
 console.log(employee.fullName());    //* Returns "Emil Andersson"
-
 ```
 
 Type checking ensures that the number `10` is not assignable to `employee.firstName` because it is expecting a `string`.
@@ -59,10 +46,7 @@ Interfaces have no run-time representation—they are purely a compile-time cons
 Interfaces are often the key point of contact between any two pieces of TypeScript code, especially when working with existing JavaScript code or built-in JavaScript objects.
 
 You can use an interface to:
-
 - Create shorthand names for commonly used types. With even a simple interface like the one declared in the earlier example, you still get the benefit of Intellisense and type checking.
-
 - Drive consistency across a set of objects because every object that implements the interface operates under the same type definitions. This can be useful when you're working with a team of developers and you want to ensure that proper values are being passed into properties, constructors, or functions. For example, objects that implement an interface must implement all the *required* members of the interface. So, if you don't pass all the required parameters of the correct type, the TypeScript compiler will throw an error.
-
 - Describe existing JavaScript APIs and clarify function parameters and return types. This is especially useful when you're working with JavaScript libraries like jQuery. An interface can provide you with a clear understanding of what a function is expecting and what it will return without repeat visits to the documentation.
 
