@@ -62,5 +62,5 @@ showPosts();
 ```
 
 > [!TIP]
-> TIP To run this code example, you must target ES2015 or above when compiling it.
+> TIP A side note on using `fetch` with `async` and `await` in TypeScript. While ES3 doesn't support `async` and `await`, the TypeScript compiler is able to generate ES3 compatible code that implements this feature. This enables you to take advantage of the newer feature while still being able to target older browsers! In the Playground, copy and paste the example above, set the target to ES3, and check out the helper code that TypeScript generates to make this possible.
 
