@@ -1,16 +1,16 @@
-In this exercise, you’ll create a new TypeScript project. You'll then confirm that your development environment is set up correctly by running the compiler and verifying that the JavaScript file is generated.
+In this exercise, you'll create a new TypeScript project. You'll then confirm that your development environment is set up correctly by running the compiler and verifying that the JavaScript file is generated.
 
 ## Step 1: Set up a new TypeScript project in VS Code
 
 Create a new project workspace in VS Code and initialize the project.
 
 1. Open VS Code.
-1. On the Welcome screen, select **Add workspace folder**.
+2. On the Welcome screen, select **Add workspace folder**.
 
    ![Visual Studio Code Welcome screen with the Add workspace folder highlighted.](../media/m01_vscode_1.jpg)
 
 3. Create a new project folder and then select **Add**.
-1. Select the **Explorer** icon.
+4. Select the **Explorer** icon.
 
    ![Visual Studio Code with the Explorer icon highlighted.](../media/m01_vscode_2.jpg)
 
