@@ -1,8 +1,8 @@
 
 Choose the best response for each of the questions below. Then select **Check your answers**.
-## quiz title: Check your knowledge
 
 ## Multiple Choice
+
 What is the primary job of an interface?
 
 ()Define the implementation details for an object.{{A function or class that implements the interface are responsible for the implementation details.}}
@@ -12,6 +12,7 @@ What is the primary job of an interface?
 (x)Describe the properties and return types of an object.{{An interface describes the properties and return types, while a function or class define the implementation details.}}
 
 ## Multiple Choice
+
 How can you prevent the type system from raising an error when a property in an interface is omitted?
 
 ()Make the property required.{{TypeScript will raise an error when a required property is omitted.}}
@@ -21,6 +22,7 @@ How can you prevent the type system from raising an error when a property in an 
 (x)Make the property optional.{{Optional properties may be omitted without raising an error.}}
 
 ## Multiple Choice
+
 What happens when you extend one interface with another interface?
 
 (x)You must implement all the required properties from all interfaces.{{Any required properties in any of the interfaces must be implemented in the combined interface.}}

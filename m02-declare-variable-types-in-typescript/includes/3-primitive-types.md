@@ -165,7 +165,7 @@ The `unknown` type is similar to the `any` type in that any value is assignable 
 
 ### Type assertion
 
-If you want to instruct the type system to ignore an error, you can use a *type assertion*. A type assertion tells TypeScript that you have performed any special checks that you need before calling the statement. It tells the compiler “trust me, I know what I’m doing.”
+If you want to instruct the type system to ignore an error, you can use a *type assertion*. A type assertion tells TypeScript that you have performed any special checks that you need before calling the statement. It tells the compiler “trust me, I know what I’m doing."
 
 A type assertion is like a type cast in other languages, but it performs no special checking or restructuring of data. It has no runtime impact and is used purely by the compiler.
 
@@ -173,7 +173,8 @@ Type assertions have two forms. One is the `as`-syntax:
 
 `(randomValue as string).toUpperCase();`
 
-The other version is the “angle-bracket” syntax:
+The other version is the "angle-bracket" syntax:
+
 
 `(<string>randomValue).toUpperCase();`
 
@@ -213,4 +214,3 @@ You can use the following conditions to learn the type of a variable:
 | `array`| `Array.isArray(a)`|
 
 You'll see another use for type guards later in this module.
-

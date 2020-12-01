@@ -98,4 +98,3 @@ let loan2 = convLoan({principle: 30000, interestRate: 5, numMonths: 180});
 console.log(loan1);
 console.log(loan2);
 ```
-

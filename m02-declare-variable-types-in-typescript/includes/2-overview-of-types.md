@@ -32,8 +32,8 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and see how thi
 2. TypeScript now treats `x` as a `number` type. TypeScript also infers the type of `y` to be a number type because that is the type of the value used to initialize it. But what happens if you try to assign a different value type to it? And what happens to the variable z?
 1. Open the **Errors** tab in the Playground so you can monitor for any errors.
 1. Enter `x = 1`. This should work as expected with no errors.
-1. Enter `x = "one`". As expected, this raises the error **Type 'string' is not assignable to type 'number** because static type checking does not allow a `string` to be assigned to the variable.
-1. Enter `y = "one`. You'll see that the same error is raised. This is because TypeScript has inferred that y is of type `number`.
+1. Enter `x = "one"`". As expected, this raises the error **Type 'string' is not assignable to type 'number** because static type checking does not allow a `string` to be assigned to the variable.
+1. Enter `y = "one"`. You'll see that the same error is raised. This is because TypeScript has inferred that y is of type `number`.
 1. Enter the variable name `y` followed by a period and you'll notice one more thing. Even though you didn't explicitly specify a type for the variable `y`, Intellisense is providing methods that only apply to a `number` type.
 1. Enter `z = 1` and `z = "one"`. TypeScript accepted both but why? This works in the same way that it works in JavaScript because variable `z` can now accept any value assigned to it. (TypeScript has inferred the `z` is of type `any` because you did not assign a type or initialize it when it was declared. You'll learn more about the `any` type later.)
 
