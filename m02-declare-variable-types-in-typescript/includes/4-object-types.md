@@ -23,17 +23,20 @@ Having an array of the same value types is useful, but sometimes you have an arr
 Let's open the [Playground](https://www.typescriptlang.org/play) and define a Tuple.
 
 1. Enter the following code to create a Tuple that contains a `string` and a `number`:
+
     ```typescript
     let person1: [string, number] = ['Marcia', 35];
     ```
 
 2. Try to add another item to the array. For example:
+
     ```typescript
     let person1: [string, number] = ['Marcia', 35, true];
     ```
 
 3. You'll see that an error is raised because the elements in the Tuple `array` are fixed. The `person1` Tuple is an array that contains exactly one `string` value and one `numeric` value.
-1. Try switching the order of the items in the array. For example:
+4. Try switching the order of the items in the array. For example:
+
     ```typescript
     let person1: [string, number] = [35, 'Marcia'];
     ```
