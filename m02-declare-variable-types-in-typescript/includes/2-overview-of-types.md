@@ -19,7 +19,7 @@ You can associate types with variables through explicit type annotations or thro
 
 While recommended, explicit type annotations are optional in TypeScript. To do this, use the syntax `variableName: type`. This statement `let myVariable: number` declares the variable as a number type without initializing it. Alternatively, you can also initialize the variable by using  `let myVariable: number = 10`.
 
-To imply the variable type through type inference, simply use the same format you use in JavaScript. For example, `let myVariable = '10'`  infers that the variable is of type `number` because it is initialized with the value `10`.
+To imply the variable type through type inference, simply use the same format you use in JavaScript. For example, `let myVariable = 10`  infers that the variable is of type `number` because it is initialized with the value `10`.
 
 Let's open the [Playground](https://www.typescriptlang.org/play) and see how this works.
 
