@@ -1,4 +1,4 @@
-JavaScript, one of the world’s most used tools, has become the official language of the web, enabling developers to write cross-platform applications that can run on any platform and in any browser.
+JavaScript, one of the world's most used tools, has become the official language of the web, enabling developers to write cross-platform applications that can run on any platform and in any browser.
 
 But while JavaScript is the only way to create cross-platform apps, it wasn't conceived for large apps involving thousands, or even millions of lines of code. JavaScript lacks some of the features of more mature languages that power today's sophisticated integrated development editors (IDEs) so it can be difficult to maintain these large code bases.
 
@@ -50,7 +50,7 @@ Let's look at a simple example to demonstrate the use of types.
 
 ### Other code features of TypeScript
 
-TypeScript has additional coding features that you won’t find in JavaScript:
+TypeScript has additional coding features that you won't find in JavaScript:
 
 - Interfaces
 - Namespaces
