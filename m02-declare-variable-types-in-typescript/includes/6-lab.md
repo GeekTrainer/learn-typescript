@@ -1,4 +1,4 @@
-In this lab, you’ll write the JavaScript in each of the exercises below in TypeScript, strongly typing each of the variables.
+In this lab, you'll write the JavaScript in each of the exercises below in TypeScript, strongly typing each of the variables.
 
 You can use the TypeScript [Playground](https://www.typescriptlang.org/play) or Visual Studio Code for your work.
 
