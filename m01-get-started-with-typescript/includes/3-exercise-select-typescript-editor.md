@@ -9,6 +9,7 @@ Earlier, you wrote some simple TypeScript code in the [Playground](https://www.t
 - Learn TypeScript in a place where nothing can break.
 - Experiment with TypeScript syntax and share the URLs with others.
 - Experiment with the different compiler features of TypeScript.
+
 In this course, we'll occasionally visit the Playground to try out new TypeScript concepts.
 
 ## Integrated Development Editors (IDEs)
