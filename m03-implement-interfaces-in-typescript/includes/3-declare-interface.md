@@ -45,16 +45,16 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and declare and
                    return 'Your order will be ready soon!';
            }
    }
-
-console.log(tooManyScoops({flavor: 'vanilla', scoops: 5}));
-```
+   
+   console.log(tooManyScoops({flavor: 'vanilla', scoops: 5}));
+   ```
 
 4. After running the code, your output to the console should look like this.
 
-```console
-"vanilla"
-"5 is too many scoops!"
-```
+   ```console
+   "vanilla"
+   "5 is too many scoops!"
+   ```
 
 5. Open the JavaScript pane and notice the differences between the JavaScript code and the TypeScript code. The interface has no representation in the JavaScript code.
 
@@ -64,31 +64,31 @@ console.log(tooManyScoops({flavor: 'vanilla', scoops: 5}));
 
 1. You can also use an interface to ensure class instance shape. Class declarations may reference one or more interfaces in their `implements` clause to validate that they provide an implementation of the interfaces. (You'll learn more about classes in a later module.) Let's declare a simple class called `SundaeOrder` that implements the `IceCream` interface using the `implements` keyword and gets and sets its properties. Make sure that all the required properties in the `IceCream` interface are represented in the class. Test your work by declaring a variable of type `SundaeOrder` and then pass it as a parameter to the `tooManyScoops` function.
 
-```typescript
-class SundaeOrder implements IceCream {
-    _flavor: string;
-    _scoops: number;
-    constructor(flavor: string, scoops: number) {
-        this._flavor = flavor;
-        this._scoops = scoops;
-    }
-    get flavor() {
-        return this._flavor;
-    }
-    set flavor(flavor) {
-        this._flavor = flavor;
-    }
-    get scoops() {
-        return this._scoops;
-    }
-    set scoops(scoops) {
-        this._scoops = scoops;
-    }
-}
-
-let dessert1 = new SundaeOrder('vanilla', 3);
-console.log(tooManyScoops(dessert1));
-```
+   ```typescript
+   class SundaeOrder implements IceCream {
+       _flavor: string;
+       _scoops: number;
+       constructor(flavor: string, scoops: number) {
+           this._flavor = flavor;
+           this._scoops = scoops;
+       }
+       get flavor() {
+           return this._flavor;
+       }
+       set flavor(flavor) {
+           this._flavor = flavor;
+       }
+       get scoops() {
+           return this._scoops;
+       }
+       set scoops(scoops) {
+           this._scoops = scoops;
+       }
+   }
+   
+   let dessert1 = new SundaeOrder('vanilla', 3);
+   console.log(tooManyScoops(dessert1));
+   ```
 
 So far, so good! But an ice cream sundae without toppings is just… ice cream. Next, we'll look at how to extend an interface.
 
