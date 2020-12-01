@@ -139,6 +139,7 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define a va
       - `randomValue` as a function.
       - A method that only applies to a `string` type.
 
+
     ```typescript
     console.log(randomValue.name);  //* Logs "undefined" to the console
     randomValue();                  //* Returns "randomValue is not a function" error
