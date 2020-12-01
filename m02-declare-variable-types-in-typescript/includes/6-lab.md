@@ -91,11 +91,10 @@ console.log(randomNumbers);
 
 ```
 
-## Lab answers
-
-You can find the answers to the exercises in this Visual Studio Code workspace. **REVIEWER NOTE: I WILL ADD A LINK TO THE VSCODE WORKSPACE LATER.*
-
 ## Challenge yourself!
 
 For an added challenge, take some existing JavaScript that you may have written or that you find on the web and re-write it adding basic types using TypeScript. You can copy and paste the JavaScript into the Playground and edit it or use another editor like Visual Studio Code.
 
+## Lab answers
+
+You can find the answers to the exercises in this Visual Studio Code workspace. **REVIEWER NOTE: I WILL ADD A LINK TO THE VSCODE WORKSPACE LATER.*
