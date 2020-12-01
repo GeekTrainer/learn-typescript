@@ -91,4 +91,3 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and declare and
    ```
 
 So far, so good! But an ice cream sundae without toppings is just… ice cream. Next, we'll look at how to extend an interface.
-

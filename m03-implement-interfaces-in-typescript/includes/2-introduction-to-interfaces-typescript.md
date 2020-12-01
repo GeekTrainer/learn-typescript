@@ -1,8 +1,8 @@
-One of TypeScript’s core principles is that type checking focuses on the shape that values have. This is sometimes called “duck typing” or “structural subtyping”. In TypeScript, interfaces fill the role of naming these types, and are a powerful way of defining a "code contract" within your code as well as contracts with code outside of your project.
+One of TypeScript’s core principles is that type checking focuses on the shape that values have. This is sometimes called "duck typing" or "structural subtyping". In TypeScript, interfaces fill the role of naming these types, and are a powerful way of defining a "code contract" within your code as well as contracts with code outside of your project.
 
 Let's start with an overview of interfaces, including what they are and how you can use them in your TypeScript code.
 
-## What is an interface?
+## What is an interface
 
 You can use interfaces to describe an object, naming and parameterizing the object's types, and to compose existing named object types into new ones.
 
@@ -26,7 +26,7 @@ This example implements the interface by declaring a variable of the type `Emplo
 let employee: Employee = {
     firstName : "Emil",
     lastName: "Andersson",
-    fullName(): string{
+    fullName(): string {
         return this.firstName + " " + this.lastName;
     }
 }
@@ -46,7 +46,7 @@ Interfaces have no run-time representation—they are purely a compile-time cons
 Interfaces are often the key point of contact between any two pieces of TypeScript code, especially when working with existing JavaScript code or built-in JavaScript objects.
 
 You can use an interface to:
+
 - Create shorthand names for commonly used types. With even a simple interface like the one declared in the earlier example, you still get the benefit of Intellisense and type checking.
 - Drive consistency across a set of objects because every object that implements the interface operates under the same type definitions. This can be useful when you're working with a team of developers and you want to ensure that proper values are being passed into properties, constructors, or functions. For example, objects that implement an interface must implement all the *required* members of the interface. So, if you don't pass all the required parameters of the correct type, the TypeScript compiler will throw an error.
 - Describe existing JavaScript APIs and clarify function parameters and return types. This is especially useful when you're working with JavaScript libraries like jQuery. An interface can provide you with a clear understanding of what a function is expecting and what it will return without repeat visits to the documentation.
-
