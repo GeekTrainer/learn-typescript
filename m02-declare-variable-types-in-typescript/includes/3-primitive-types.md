@@ -5,6 +5,7 @@ Let's start by reviewing the most basic and common types you might encounter whe
 The most basic datatype is the simple `true` or `false` value, which JavaScript and TypeScript call a `boolean` value.
 
 For example:
+
 ```typescript
 let b: boolean;
 let yes = true;
@@ -16,6 +17,7 @@ let no = false;
 As in JavaScript, all numbers in TypeScript are either floating point values or BigIntegers. These floating-point numbers get the type `number`, while BigIntegers get the type `bigint`. In addition to hexadecimal and decimal literals, TypeScript also supports binary and octal literals introduced in ECMAScript 2015.
 
 For example:
+
 ```typescript
 let x: number;
 let y = 0;
@@ -28,6 +30,7 @@ let big: bigint = 100n;
 The `string` keyword represents sequences of characters stored as Unicode UTF-16 code units. Like JavaScript, TypeScript also uses double quotes (") or single quotes (') to surround string data.
 
 Some examples:
+
 ```typescript
 let s: string;
 let empty = "";
@@ -37,6 +40,7 @@ let abc = 'abc';
 In TypeScript, you can also use template strings, which can span multiple lines and have embedded expressions. These strings are surrounded by the backtick/backquote ( \` ) character, and embedded expressions are of the form `${ expr }`.
 
 For example:
+
 ```typescript
 let firstName: string = "Mateo";
 let sentence: string = `My name is ${firstName}.
@@ -45,6 +49,7 @@ console.log(sentence);
 ```
 
 This example produces the output: 
+
 ```console
 My name is Mateo.
     I am new to TypeScript.
@@ -63,6 +68,7 @@ Enumerations offer an easy way to work with sets of related constants. An `enum`
 Whenever a procedure accepts a limited set of variables, consider using an enumeration. Enumerations make for clearer and more readable code, particularly when meaningful names are used.
 
 Using enumerations:
+
 - Helps reduce errors caused by transposing or mistyping numbers.
 - Makes it easy to change values in the future.
 - Makes code easier to read, which means it is less likely that errors will creep into it.
@@ -88,7 +94,7 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define an `
 
 3. Log the value of `empStatus` to the console. What does it return?
 
-1. By default, `enum` values begin with a value of 0, so `Permanent` is 0, `Temp` is 1, and `Apprentice` is 2. If you want the values to start with a different value, in this case 1, specify that in the `enum` declaration. Make the following edits to have the `enum` start the values at 1.
+4. By default, `enum` values begin with a value of 0, so `Permanent` is 0, `Temp` is 1, and `Apprentice` is 2. If you want the values to start with a different value, in this case 1, specify that in the `enum` declaration. Make the following edits to have the `enum` start the values at 1.
 
     ```typescript
     enum contractStatus {
@@ -100,7 +106,7 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define an `
 
 5. When you log the value of `empStatus` to the console, it should now return 2. (You can also manually set all the values in the `enum` if they are not sequential.)
 
-1. Finally, you can go from a numeric value to the name of that value in the `enum`. This is helpful if you need to remember what it is. Enter the following to return the name associated with the value 2, in this case `"Temp"`:
+6. Finally, you can go from a numeric value to the name of that value in the `enum`. This is helpful if you need to remember what it is. Enter the following to return the name associated with the value 2, in this case `"Temp"`:
 
     ```typescript
     console.log(contractStatus[2]);
@@ -127,7 +133,7 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define a va
 
 2. Notice that the compiler doesn't throw an error because the `any` type encompasses values of every possible type.
 
-1. The `any` type opts out of type checking and doesn't force you to do any checking before you call, construct, or access properties on these values. To test this, enter the following statements, which attempt to call:
+3. The `any` type opts out of type checking and doesn't force you to do any checking before you call, construct, or access properties on these values. To test this, enter the following statements, which attempt to call:
 
       - A property that doesn't exist for the type.
       - `randomValue` as a function.
@@ -174,7 +180,6 @@ Type assertions have two forms. One is the `as`-syntax:
 `(randomValue as string).toUpperCase();`
 
 The other version is the "angle-bracket" syntax:
-
 
 `(<string>randomValue).toUpperCase();`
 
