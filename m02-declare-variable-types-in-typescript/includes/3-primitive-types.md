@@ -173,7 +173,8 @@ Type assertions have two forms. One is the `as`-syntax:
 
 `(randomValue as string).toUpperCase();`
 
-The other version is the “angle-bracket" syntax:
+The other version is the "angle-bracket" syntax:
+
 
 `(<string>randomValue).toUpperCase();`
 
@@ -213,4 +214,3 @@ You can use the following conditions to learn the type of a variable:
 | `array`| `Array.isArray(a)`|
 
 You'll see another use for type guards later in this module.
-
