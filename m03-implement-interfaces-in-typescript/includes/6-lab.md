@@ -22,30 +22,29 @@ You can either use the [Playground](https://www.typescriptlang.org/play) or your
 
 1. Copy and paste the JavaScript code into a new TypeScript file.
 
-```javascript
-function intOnlyLoan(principle, interestRate) {
-    // Calculates the monthly payment of an interest only loan
-    let intr = interestRate / 1200; // Calculates the Monthly Interest Rate of the loan
-    let pmt;
-    pmt = principle * intr;
-    return 'The interest only loan payment is ' + pmt.toFixed(2);
-}
-
-function convLoan(principle, interestRate, numMonths) {
-    // Calculates the monthly payment of a conventional loan
-    let intr = interestRate / 1200; // Calculates the Monthly Interest Rate of the loan
-    let pmt;
-    pmt = principle * intr / (1 - (Math.pow(1 / (1 + intr), numMonths)));
-    return 'The conventional loan payment is ' + pmt.toFixed(2);
-}
-
-let loan1 = intOnlyLoan(30000, 5);
-let loan2 = convLoan({30000, 5, 180);
-
-console.log(loan1);     //* Returns "The interest only loan payment is 125.00" 
-console.log(loan2);     //* Returns "The conventional loan payment is 237.24" 
-
-```
+   ```javascript
+   function intOnlyLoan(principle, interestRate) {
+       // Calculates the monthly payment of an interest only loan
+       let intr = interestRate / 1200; // Calculates the Monthly Interest Rate of the loan
+       let pmt;
+       pmt = principle * intr;
+       return 'The interest only loan payment is ' + pmt.toFixed(2);
+   }
+   
+   function convLoan(principle, interestRate, numMonths) {
+       // Calculates the monthly payment of a conventional loan
+       let intr = interestRate / 1200; // Calculates the Monthly Interest Rate of the loan
+       let pmt;
+       pmt = principle * intr / (1 - (Math.pow(1 / (1 + intr), numMonths)));
+       return 'The conventional loan payment is ' + pmt.toFixed(2);
+   }
+   
+   let loan1 = intOnlyLoan(30000, 5);
+   let loan2 = convLoan({30000, 5, 180);
+   
+   console.log(loan1);     //* Returns "The interest only loan payment is 125.00" 
+   console.log(loan2);     //* Returns "The conventional loan payment is 237.24" 
+   ```
 
 2. Declare an interface called `Loan` that defines two properties, `principle` and `interestRate`, as a `number`.
 
