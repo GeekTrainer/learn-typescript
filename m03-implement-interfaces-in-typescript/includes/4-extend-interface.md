@@ -48,42 +48,15 @@ Continue your project in the [Playground](https://www.typescriptlang.org/play).
    }
    ```
 
-5. Now, let's update the `SundaeOrder` class to implement the new `Sundae` interface. This generates the same error as before. Fix the error by adding the `sauce` property to the class definition.
+5. Now, try implementing the `Sundae` interface in the `tooManyScoops` function. You should not see any errors in the function itself, but the call to the function in the next line generates an error. This is because it is expecting three required parameters. Fix the error by adding the `sauce` property to the function call.
 
    ```typescript
-   class SundaeOrder implements Sundae {
-       _flavor: string;
-       _scoops: number;
-       _sauce: 'chocolate' | 'caramel' | 'strawberry';
-       constructor(flavor: string, scoops: number, sauce: 'chocolate' | 'caramel' | 'strawberry') {
-           this._flavor = flavor;
-           this._scoops = scoops;
-           this._sauce = sauce;
-       }
-       get flavor() {
-         return this._flavor;
-       }
-       set flavor(flavor) {
-         this._flavor = flavor;
-       }
-       get scoops() {
-         return this._scoops;
-       }
-       set scoops(scoops) {
-         this._scoops = scoops;
-       }
-       get sauce() {
-         return this._sauce;
-       }
-       set sauce(sauce) {
-         this._sauce = sauce;
-       }
+   function tooManyScoops(dessert: Sundae) {
+           if (dessert.scoops >= 4) {
+                   return dessert.scoops + ' is too many scoops!';
+           } else {
+                   return 'Your order will be ready soon!';
+           }
    }
-   ```
-
-6. Finally, resolve the last errors in the code. The `dessert1` variable declaration is raising an error, but the call to the `tooManyScoops` function looks good. Why? The `tooManyScoops` function is still using `IceCream` as its parameter type so it is only expecting the first two properties. The terms of this code contract have been met. Correct the errors in the variable declaration statements by adding a value for the required `sauce` property.
-
-   ```typescript
-   let dessert1 = new SundaeOrder('vanilla', 3, 'strawberry');
-   console.log(tooManyScoops(dessert1));
+   console.log(tooManyScoops({flavor: 'vanilla', scoops: 5, sauce: 'caramel'}));
    ```
