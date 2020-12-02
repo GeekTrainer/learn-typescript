@@ -62,32 +62,4 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and declare and
 
 7. Review the errors that appear in your code. To resolve them, you should add the `instructions` property to the implementation details of the variable declaration and add it as a parameter passed to the function. For now, make the `instructions` property optional by adding a question mark to the property name. All the errors should resolve because the `instructions` property is no longer required by the interface.
 
-8. You can also use an interface to ensure class instance shape. Class declarations may reference one or more interfaces in their `implements` clause to validate that they provide an implementation of the interfaces. (You'll learn more about classes in a later module.) Let's declare a simple class called `SundaeOrder` that implements the `IceCream` interface using the `implements` keyword and gets and sets its properties. Make sure that all the required properties in the `IceCream` interface are represented in the class. Test your work by declaring a variable of type `SundaeOrder` and then pass it as a parameter to the `tooManyScoops` function.
-
-   ```typescript
-   class SundaeOrder implements IceCream {
-       _flavor: string;
-       _scoops: number;
-       constructor(flavor: string, scoops: number) {
-           this._flavor = flavor;
-           this._scoops = scoops;
-       }
-       get flavor() {
-           return this._flavor;
-       }
-       set flavor(flavor) {
-           this._flavor = flavor;
-       }
-       get scoops() {
-           return this._scoops;
-       }
-       set scoops(scoops) {
-           this._scoops = scoops;
-       }
-   }
-   
-   let dessert1 = new SundaeOrder('vanilla', 3);
-   console.log(tooManyScoops(dessert1));
-   ```
-
 So far, so good! But an ice cream sundae without toppings is just… ice cream. Next, we'll look at how to extend an interface.
