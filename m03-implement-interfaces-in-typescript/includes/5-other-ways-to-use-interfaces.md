@@ -29,37 +29,31 @@ The `fetch` API is a native JavaScript function that you can use to interact wit
 
 ```typescript
 const fetchURL = 'https://jsonplaceholder.typicode.com/posts'
-
-// Interface describing the shape of the json data
+// Interface describing the shape of our json data
 interface Post {
     userId: number;
     id: number;
     title: string;
     body: string;
 }
-
-// Function to retrieve the data
-
-async function fetchResource<T>(request: RequestInfo): Promise<T> {
-  let response = await fetch(request);
+async function fetchPosts(url: string) {
+  let response = await fetch(url);
   let body = await response.json();
-  return body;
-}
-
-async function showPosts() {
-  let posts = await fetchResource<Post[]>(fetchURL);
-
+  return body as Post[];
+  }
+async function showPost() {
+  let posts = await fetchPosts(fetchURL);
   // Display the contents of the first item in the response
   let post = posts[0];
-  let pBody = post.body;
-  let pTitle = post.title;
-  let pID = post.id;
-  let pUserName = post.userId == 1 ? "Administrator" : post.userId.toString();
-  let msg = '<h2>Post #' + pID + ': (author: ' + pUserName + ')<br/>' + pTitle + '</h2><p>' + pBody + '</p>'
-  document.body.innerHTML = msg;
-}
+  console.log('Post #' + post.id)
+  // If the userId is 1, then display a note that it's an administrator
+  console.log('Author: ' + (post.userId == 1 ? "Administrator" : post.userId.toString()))
+  console.log('Title: ' + post.title)
+  console.log('Body: ' + post.body)
+  }
 
-showPosts();
+showPost();
+
 ```
 
 > [!TIP]
