@@ -58,11 +58,11 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and declare and
 
 5. Open the JavaScript pane and notice the differences between the JavaScript code and the TypeScript code. The interface has no representation in the JavaScript code.
 
-1. What happens if you add another property to the `IceCream` interface? Let's add a new property called `instructions` and assign it the `string` type.
+6. What happens if you add another property to the `IceCream` interface? Let's add a new property called `instructions` and assign it the `string` type.
 
-1. Review the errors that appear in your code. To resolve them, you should add the `instructions` property to the implementation details of the variable declaration and add it as a parameter passed to the function. For now, make the `instructions` property optional by adding a question mark to the property name. All the errors should resolve because the `instructions` property is no longer required by the interface.
+7. Review the errors that appear in your code. To resolve them, you should add the `instructions` property to the implementation details of the variable declaration and add it as a parameter passed to the function. For now, make the `instructions` property optional by adding a question mark to the property name. All the errors should resolve because the `instructions` property is no longer required by the interface.
 
-1. You can also use an interface to ensure class instance shape. Class declarations may reference one or more interfaces in their `implements` clause to validate that they provide an implementation of the interfaces. (You'll learn more about classes in a later module.) Let's declare a simple class called `SundaeOrder` that implements the `IceCream` interface using the `implements` keyword and gets and sets its properties. Make sure that all the required properties in the `IceCream` interface are represented in the class. Test your work by declaring a variable of type `SundaeOrder` and then pass it as a parameter to the `tooManyScoops` function.
+8. You can also use an interface to ensure class instance shape. Class declarations may reference one or more interfaces in their `implements` clause to validate that they provide an implementation of the interfaces. (You'll learn more about classes in a later module.) Let's declare a simple class called `SundaeOrder` that implements the `IceCream` interface using the `implements` keyword and gets and sets its properties. Make sure that all the required properties in the `IceCream` interface are represented in the class. Test your work by declaring a variable of type `SundaeOrder` and then pass it as a parameter to the `tooManyScoops` function.
 
    ```typescript
    class SundaeOrder implements IceCream {
