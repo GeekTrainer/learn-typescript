@@ -50,3 +50,17 @@ You can use an interface to:
 - Create shorthand names for commonly used types. With even a simple interface like the one declared in the earlier example, you still get the benefit of Intellisense and type checking.
 - Drive consistency across a set of objects because every object that implements the interface operates under the same type definitions. This can be useful when you're working with a team of developers and you want to ensure that proper values are being passed into properties, constructors, or functions. For example, objects that implement an interface must implement all the *required* members of the interface. So, if you don't pass all the required parameters of the correct type, the TypeScript compiler will throw an error.
 - Describe existing JavaScript APIs and clarify function parameters and return types. This is especially useful when you're working with JavaScript libraries like jQuery. An interface can provide you with a clear understanding of what a function is expecting and what it will return without repeat visits to the documentation.
+
+## How is an interface different from a type alias?
+
+The `Employee` interface above can also be expressed as a type alias using the `type` keyword:
+
+```typescript
+type Employee = {
+    firstName: string;
+    lastName: string;
+    fullName(): string;
+}
+```
+
+A type alias is a definition of a type of data, for example, a union, primitive, intersection, tuple, or any other type. Interfaces, on the other hand, are a way to describe data shapes, for example, an object. Type aliases can act like interfaces; however, there are some subtle differences. The key distinction is that a type alias cannot be re-opened to add new properties whereas an interface is always extendable. Also, you can only describe a union or tuple using a type alias. You'll learn more about extending an interface later in the module.
