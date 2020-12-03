@@ -1,5 +1,8 @@
 The object types are all class, interface, array, and literal types (anything that is not a primitive type.) For now, let's look at the array and literal types.
 
+## Type Aliases
+Type aliases create a new name for a type. Type aliases use the `type` keyword and can name primitives, unions, tuples, and any other types that you’d otherwise have to write by hand. A type alias doesn't create a new type. It simply creates a new name to refer to that type. 
+
 ## Array type
 
 TypeScript, like JavaScript, allows you to work with arrays of values. Array types can be written in one of two ways. In the first, you use the type of the elements followed by square brackets (`[]`) to denote an array of that element type:
