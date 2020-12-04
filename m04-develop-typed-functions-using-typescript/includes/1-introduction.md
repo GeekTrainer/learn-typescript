@@ -3,9 +3,7 @@ If you know how to write functions in JavaScript, you know how to write function
 In this module, you will:
 
 - Explain the benefits of using types in functions.
-
 - Write functions that have required, optional, default, and rest parameters.
-
 - Define function types using type aliases and interfaces.
 
 ## Learning objectives
@@ -13,9 +11,7 @@ In this module, you will:
 After completing this module, you'll be able to:
 
 - Explain the benefits of using types in functions.
-
 - Write functions that have required, optional, default, and rest parameters.
-
 - Define function types using type aliases interfaces.
 
 ## Prerequisites
