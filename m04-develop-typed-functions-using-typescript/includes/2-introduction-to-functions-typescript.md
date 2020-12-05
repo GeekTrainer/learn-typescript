@@ -16,12 +16,12 @@ Open the [Playground](https://www.typescriptlang.org/play) to try it out.
 
 1. Start by copying the following JavaScript function into the Playground. Notice that the parameter `msg` implicitly has an `any` type.
 
-```javascript
-function displayAlert(msg) {
-	alert('The message is ' + msg);
-}
-
-```
+   ```javascript
+   function displayAlert(msg) {
+   	alert('The message is ' + msg);
+   }
+   
+   ```
 
 2. Now, assign the `string` type to the `msg` parameter. This named function does not return a value so you can leave off the return type (you can also pass back `void` as the return type, but it is not necessary to do so.)
 
