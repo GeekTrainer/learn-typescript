@@ -58,7 +58,7 @@ Convert the functions to TypeScript with strongly typed parameters and return ty
 
 2. In the `BuildArray` function, add types to parameter list, return value, and variables.
 3. Convert the `sortDescending` and `sortAscending` functions to anonymous functions and assign them to variables of the same name. Add types to the parameter lists and return values for each function.
-4. Declare a new function type for the sortDescending` and `sortAscending` functions using either a type alias or an interface. Then, convert the `sortDescending` and `sortAscending` functions to anonymous functions, applying the new function type as the variable type.
+4. Declare a new function type for the `sortDescending` and `sortAscending` functions using either a type alias or an interface. Then, convert the `sortDescending` and `sortAscending` functions to anonymous functions, applying the new function type as the variable type.
 
 ## Exercise 2
 
