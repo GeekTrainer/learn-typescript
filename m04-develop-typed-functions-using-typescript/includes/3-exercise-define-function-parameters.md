@@ -1,7 +1,6 @@
 The TypeScript compiler assumes, by default, that all parameters defined in a function are required by it. When a function is called, the TypeScript compiler verifies that:
 
 - A value as been provided for each parameter.
-
 - Only parameters that the function requires are passed to it.
 
 This is different from JavaScript, which assumes that all parameters are optional and allows you to pass more (or fewer) arguments to the function than are defined by it.
@@ -17,9 +16,8 @@ let addThreeNums = (x: number, y: number, z: number): number => x + y + z;
 
 ```
 
-1. Try calling the function by entering `addThreeNums(10, 20`). TypeScript raises the error **Expected 3 arguments but got 2. An argument for 'z' was not provided.** When it runs, the function returns `NaN` because the third argument was passed as `undefined`, making the calculation invalid.
-
-1. What happens when you enter `addThreeNums(10, 20, 30, 40`)? TypeScript raises the error **Expected 3 arguments but got 4.** When it runs, the extra argument drops off and the function returns `60`.
+2. Try calling the function by entering `addThreeNums(10, 20)`. TypeScript raises the error **Expected 3 arguments but got 2. An argument for 'z' was not provided.** When it runs, the function returns `NaN` because the third argument was passed as `undefined`, making the calculation invalid.
+3. What happens when you enter `addThreeNums(10, 20, 30, 40)`? TypeScript raises the error **Expected 3 arguments but got 4.** When it runs, the extra argument drops off and the function returns `60`.
 
 ## Optional parameters
 
@@ -27,28 +25,22 @@ You can also define optional parameters by appending a question mark (?) to the 
 
 Continue the exercise in the Playground.
 
-1. In the function, tr`y` making the y parameter optional. What happens?
+1. In the function, try making the `y` parameter optional. What happens?
 
 ```typescript
 let addThreeNums = (x: number, y?: number, z: number): number => x + y + z;
 
 ```
 
-1. T``y``peScript raises an error because the position of the optional parameters matter. In the parameter list, optional parameters must follow all required parameters. Try moving the y parameter to the end of the parameter list. Also, for the function to return the correct value, you must also update it to address the possibility that y may now be passed as `undefined`. You should now be able to call the function using `addThreeNums(10, 20)` or `addThreeNums(10, 20, 30`).
+2. TypeScript raises an error because the position of the optional parameters matter. In the parameter list, optional parameters must follow all required parameters. Try moving the `y` parameter to the end of the parameter list. Also, for the function to return the correct value, you must also update it to address the possibility that `y` may now be passed as `undefined`. You should now be able to call the function using `addThreeNums(10, 20)` or `addThreeNums(10, 20, 30`).
 
 ```typescript
 let addThreeNums = (x: number, z: number, y?: number): number => {
-
     if((y === undefined)) {
-
         return x + z;
-
     } else {
-
         return x + y + z;
-
     }
-
 };
 
 ```
@@ -61,18 +53,17 @@ As with optional parameters, default parameters must come after required paramet
 
 Continue the exercise in the Playground.
 
-1. Make a cop`y` of the anonymous function and give the variable a new name. Assign a default value of `100` to the optional y parameter by replacing `y?: number` with `y = 100`.
+1. Make a copy of the anonymous function and give the variable a new name. Assign a default value of `100` to the optional `y` parameter by replacing `y?: number` with `y = 100`.
 
 ```typescript
 let addThreeNums2 = (x: number, z: number, y = 100): number => x + y + z;
 
 ```
 
-1. Try running the function with two and three arguments to test the result.
+2. Try running the function with two and three arguments to test the result.
 
 ```typescript
 addThreeNums2(10, 20);       // returns 130 because 'y' has been assigned the value 100
-
 addThreeNums2(10, 20, 15);   // returns 45
 
 ```
@@ -83,29 +74,19 @@ In the previous example, you worked with a function that has a fixed number of p
 
 If you want to work with multiple parameters as a group (in an array) or don't know how many parameters a function will ultimately take, you can use rest parameters. Rest parameters are treated as a boundless number of optional parameters. You may leave them off or have as many as you want.
 
-This example has one required parameter and an optional parameter called ``restOfNumbers`` that can accept any number of additional numbers. The ellipsis (…) before restOfNumbers tells the compiler to build an array of the arguments passed to the function and assigns the name that follows to it so you can use it in your function.
+This example has one required parameter and an optional parameter called `restOfNumbers` that can accept any number of additional numbers. The ellipsis (`…`) before restOfNumbers tells the compiler to build an array of the arguments passed to the function and assigns the name that follows to it so you can use it in your function.
 
 ```typescript
 let total3 = (firstNumber: number, ...restOfNumbers: number[]): number => {
-
     let total: number =  firstNumber;
-
     for(let i = 0; i < restOfNumbers.length; i++)
-
         {
-
         if(isNaN(restOfNumbers[i])){
-
-        continue;
-
-            }
-
-            total += Number(restOfNumbers[i]);
-
+           continue;
         }
-
+           total += Number(restOfNumbers[i]);
+        }
         return total;
-
 }
 
 ```
@@ -114,10 +95,7 @@ The function can now accept one or more values and return the result.
 
 ```typescript
 total3(1, 2, 3, 4, 5, 6, 7);  // returns 28
-
 total3(2);                    // returns 2
-
 total3(2, 3, "three");        // returns 5
 
 ```
-
