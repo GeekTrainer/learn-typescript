@@ -12,12 +12,11 @@ The number of arguments passed to a function must match the number of required p
 1. Enter this arrow function, which accepts three required parameters.
 
    ```typescript
-   let addThreeNums = (x: number, y: number, z: number): number => x + y + z;
-
+   let addThreeNumbers = (x: number, y: number, z: number): number => x + y + z;
    ```
 
-2. Try calling the function by entering `addThreeNums(10, 20)`. TypeScript raises the error **Expected 3 arguments but got 2. An argument for 'z' was not provided.** When it runs, the function returns `NaN` because the third argument was passed as `undefined`, making the calculation invalid.
-3. What happens when you enter `addThreeNums(10, 20, 30, 40)`? TypeScript raises the error **Expected 3 arguments but got 4.** When it runs, the extra argument drops off and the function returns `60`.
+2. Try calling the function by entering `addThreeNumbers(10, 20)`. TypeScript raises the error **Expected 3 arguments but got 2. An argument for 'z' was not provided.** When it runs, the function returns `NaN` because the third argument was passed as `undefined`, making the calculation invalid.
+3. What happens when you enter `addThreeNumbers(10, 20, 30, 40)`? TypeScript raises the error **Expected 3 arguments but got 4.** When it runs, the extra argument drops off and the function returns `60`.
 
 ## Optional parameters
 
@@ -28,21 +27,19 @@ Continue the exercise in the Playground.
 1. In the function, try making the `y` parameter optional. What happens?
 
    ```typescript
-   let addThreeNums = (x: number, y?: number, z: number): number => x + y + z;
-   
+   let addThreeNumbers = (x: number, y?: number, z: number): number => x + y + z;
    ```
 
-2. TypeScript raises an error because the position of the optional parameters matter. In the parameter list, optional parameters must follow all required parameters. Try moving the `y` parameter to the end of the parameter list. Also, for the function to return the correct value, you must also update it to address the possibility that `y` may now be passed as `undefined`. You should now be able to call the function using `addThreeNums(10, 20)` or `addThreeNums(10, 20, 30`).
+2. TypeScript raises an error because the position of the optional parameters matter. In the parameter list, optional parameters must follow all required parameters. Try moving the `y` parameter to the end of the parameter list. Also, for the function to return the correct value, you must also update it to address the possibility that `y` may now be passed as `undefined`. You should now be able to call the function using `addThreeNumbers(10, 20)` or `addThreeNumbers(10, 20, 30`).
 
    ```typescript
-   let addThreeNums = (x: number, z: number, y?: number): number => {
+   let addThreeNumbers = (x: number, z: number, y?: number): number => {
        if((y === undefined)) {
            return x + z;
        } else {
            return x + y + z;
        }
    };
-   
    ```
 
 ## Default parameters
@@ -56,16 +53,14 @@ Continue the exercise in the Playground.
 1. Make a copy of the anonymous function and give the variable a new name. Assign a default value of `100` to the optional `y` parameter by replacing `y?: number` with `y = 100`.
 
    ```typescript
-   let addThreeNums2 = (x: number, z: number, y = 100): number => x + y + z;
-   
+   let addThreeNumbers2 = (x: number, z: number, y = 100): number => x + y + z;
    ```
 
 2. Try running the function with two and three arguments to test the result.
 
    ```typescript
-   addThreeNums2(10, 20);       // returns 130 because 'y' has been assigned the value 100
-   addThreeNums2(10, 20, 15);   // returns 45
-   
+   addThreeNumbers2(10, 20);       // returns 130 because 'y' has been assigned the value 100
+   addThreeNumbers2(10, 20, 15);   // returns 45
    ```
 
 ## Rest Parameters
@@ -88,7 +83,6 @@ let total3 = (firstNumber: number, ...restOfNumbers: number[]): number => {
         }
         return total;
 }
-
 ```
 
 The function can now accept one or more values and return the result.
@@ -96,6 +90,5 @@ The function can now accept one or more values and return the result.
 ```typescript
 total3(1, 2, 3, 4, 5, 6, 7);  // returns 28
 total3(2);                    // returns 2
-total3(2, 3, "three");        // returns 5
-
+total3(2, 3, "three");        // error due to data type
 ```
