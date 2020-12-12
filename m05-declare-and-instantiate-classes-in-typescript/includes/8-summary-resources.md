@@ -8,5 +8,5 @@ Now that you have reviewed this module, you should be able to:
 
 Use these resources to discover more.
 
-- See ([TypeScript Handbook: Classes](https://www.typescriptlang.org/docs/handbook/classes.html)) to learn more about using classes.
+- See [TypeScript Handbook: Classes](https://www.typescriptlang.org/docs/handbook/classes.html) to learn more about using classes.
 
