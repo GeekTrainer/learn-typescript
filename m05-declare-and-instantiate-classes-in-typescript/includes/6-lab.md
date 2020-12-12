@@ -5,117 +5,70 @@ In this lab, you'll apply what you've learned about classes to convert a TypeScr
 The following TypeScript code contains three functions:
 
 - `BuildArray` builds an array of unique random numbers. It accepts an `items` parameter that determines the number of items in the array and a `sortOrder` parameter that determines whether the array is sorted in ascending or descending order.
-
 - `sortDecending` and `sortAscending` are comparison functions that tell the `sort()` method how to sort numbers in ascending or descending order.
 
 Convert the functions to a TypeScript class:
 
 1. Copy the TypeScript code into the [Playground](https://www.typescriptlang.org/play) or a TypeScript file in your Visual Studio Code workspace.
 
-```typescript
-// Comparison function that tells the sort method how to sort numbers in descending order
-
-let sortDescending = (a: number, b: number) => {
-
-    if (a > b) {
-
-        return -1;;
-
-    } else if (b > a) {
-
-        return 1;;
-
-    } else {
-
-        return 0;
-
-    }
-
-}
-
-// Comparison function that tells the sort method how to sort numbers in ascending order
-
-let sortAscending = (a: number, b: number) => {
-
-    if (a > b) {
-
-        return 1;
-
-    } else if (b > a) {
-
-        return -1;
-
-    } else {
-
-        return 0;
-
-    }
-
-}
-
-// This function builds an array of unique random numbers containing the number of items based on the number passed to it.
-
-// The sortOrder parameter determines whether to sort the array in ascending or decending order.
-
-function buildArray(items: number, sortOrder: 'ascending' | 'descending'): number[] {
-
-    let randomNumbers: number[] = [];
-
-    let nextNumber: number;
-
-    for (let i = 0; i < items; i++) {
-
-        nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
-
-        if (randomNumbers.indexOf(nextNumber) === -1) {
-
-            randomNumbers.push(nextNumber);
-
+    ```typescript
+    // Comparison function that tells the sort method how to sort numbers in descending order
+    let sortDescending = (a: number, b: number) => {
+        if (a > b) {
+            return -1;;
+        } else if (b > a) {
+            return 1;;
         } else {
-
-            i--;
-
+            return 0;
         }
-
     }
-
-    if (sortOrder === 'ascending') {
-
-        return randomNumbers.sort(sortAscending);
-
-    } else {
-
-        return randomNumbers.sort(sortDescending);
-
+    
+    // Comparison function that tells the sort method how to sort numbers in ascending order
+    let sortAscending = (a: number, b: number) => {
+        if (a > b) {
+            return 1;
+        } else if (b > a) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
+    
+    // This function builds an array of unique random numbers containing the number of items based on the number passed to it.
+    // The sortOrder parameter determines whether to sort the array in ascending or decending order.
+    
+    function buildArray(items: number, sortOrder: 'ascending' | 'descending'): number[] {
+        let randomNumbers: number[] = [];
+        let nextNumber: number;
+        for (let i = 0; i < items; i++) {
+            nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
+            if (randomNumbers.indexOf(nextNumber) === -1) {
+                randomNumbers.push(nextNumber);
+            } else {
+                i--;
+            }
+        }
+        if (sortOrder === 'ascending') {
+            return randomNumbers.sort(sortAscending);
+        } else {
+            return randomNumbers.sort(sortDescending);
+        }
+    }
+    
+    let testArray1 = buildArray(12, 'ascending');
+    let testArray2 = buildArray(8, 'descending');
+    console.log(testArray1);
+    console.log(testArray2);
+    ```
 
-}
-
-let testArray1 = buildArray(12, 'ascending');
-
-let testArray2 = buildArray(8, 'descending');
-
-console.log(testArray1);
-
-console.log(testArray2);
-
-```
-
-1. Create a new class called `BuildArray`.
-
-1. Define the properties in the class: `_items` and `_sortOrder`.
-
-1. Define the class `constructor` for the properties.
-
-1. Define the accessors for the `items` and `sortOrder` parameters.
-
-1. Convert the `sortAscending` and `sortDescending` functions to private methods in the class.
-
-1. Convert the `buildArray` function to a public method in the class.
-
-1. Update the `testArray1` and `testArray2` variable declarations to instantiate new `BuildArray` objects.
-
-1. Call the `buildArray` method on the objects and return the result to the console.
+2. Create a new class called `BuildArray`.
+3. Define the properties in the class: `_items` and `_sortOrder`.
+4. Define the class `constructor` for the properties.
+5. Define the accessors for the `items` and `sortOrder` parameters.
+6. Convert the `sortAscending` and `sortDescending` functions to `private` methods in the class.
+7. Convert the `buildArray` function to a `public` method in the class.
+8. Update the `testArray1` and `testArray2` variable declarations to instantiate new `BuildArray` objects.
+9. Call the `buildArray` method on the objects and return the result to the console.
 
 ## Lab answers
 
