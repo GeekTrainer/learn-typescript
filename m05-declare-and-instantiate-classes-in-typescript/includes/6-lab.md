@@ -66,9 +66,9 @@ Convert the functions to a TypeScript class:
 4. Define the class `constructor` for the properties.
 5. Define the accessors for the `items` and `sortOrder` parameters.
 6. Convert the `sortAscending2` and `sortDescending2` functions to `private` methods in the class.
-7. Convert the `buildArray` function to a `public` method in the class.
+7. Convert the `buildArray2` function to a `public` method in the class.
 8. Update the `testArray1` and `testArray2` variable declarations to instantiate new `BuildArray` objects.
-9. Call the `buildArray` method on the objects and return the result to the console.
+9. Call the `buildArray2` method on the objects and return the result to the console.
 
 ## Lab answers
 
