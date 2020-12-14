@@ -4,7 +4,7 @@ In this lab, you'll apply what you've learned about classes to convert a TypeScr
 
 The following TypeScript code contains three functions:
 
-- `BuildArray` builds an array of unique random numbers. It accepts an `items` parameter that determines the number of items in the array and a `sortOrder` parameter that determines whether the array is sorted in ascending or descending order.
+- `BuildArray2` builds an array of unique random numbers. It accepts an `items` parameter that determines the number of items in the array and a `sortOrder` parameter that determines whether the array is sorted in ascending or descending order.
 - `sortDecending2` and `sortAscending2` are comparison functions that tell the `sort()` method how to sort numbers in ascending or descending order.
 
 Convert the functions to a TypeScript class:
@@ -37,7 +37,7 @@ Convert the functions to a TypeScript class:
     // This function builds an array of unique random numbers containing the number of items based on the number passed to it.
     // The sortOrder parameter determines whether to sort the array in ascending or decending order.
     
-    function buildArray(items: number, sortOrder: 'ascending' | 'descending'): number[] {
+    function buildArray2(items: number, sortOrder: 'ascending' | 'descending'): number[] {
         let randomNumbers: number[] = [];
         let nextNumber: number;
         for (let i = 0; i < items; i++) {
@@ -49,14 +49,14 @@ Convert the functions to a TypeScript class:
             }
         }
         if (sortOrder === 'ascending') {
-            return randomNumbers.sort(sortAscending);
+            return randomNumbers.sort(sortAscending2);
         } else {
-            return randomNumbers.sort(sortDescending);
+            return randomNumbers.sort(sortDescending2);
         }
     }
     
-    let testArray1 = buildArray(12, 'ascending');
-    let testArray2 = buildArray(8, 'descending');
+    let testArray1 = buildArray2(12, 'ascending');
+    let testArray2 = buildArray2(8, 'descending');
     console.log(testArray1);
     console.log(testArray2);
     ```
