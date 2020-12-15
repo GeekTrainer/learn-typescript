@@ -58,7 +58,7 @@ For best results, follow the complete instructions for setting up your environme
     
        Type the intr and pmt variables as numbers.*/   
     
-    function intOnlyLoan(principle, interestRate) {
+   function intOnlyLoan(principle, interestRate) {
        // Calculates the monthly payment of an interest only loan
        let intr = interestRate / 1200; // Calculates the Monthly Interest Rate of the loan
        let pmt;
