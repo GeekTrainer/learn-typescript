@@ -93,3 +93,13 @@ As a final step, add an HTML file to the project so you can run and test the Jav
 
 4. In the Explorer, right-click **module01.html** and select **Open in Default Browser**.
 5. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
+
+## Exercise solution
+You can download the completed Visual Studio Code workspace at [LINK TO \code\module-01\m01-end]. To run the solution, you must first install the following software on your machine:
+
+1. Visual Studio Code (or IDE of your choice)
+2. Node Package Manager (npm)
+3. TypeScript Compiler (tsc)
+
+For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in this module. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.
+
