@@ -22,7 +22,7 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 1
 
-1. Copy and paste the following JavaScript code your TypeScript editor. 
+1. Copy and paste the following JavaScript code your TypeScript editor.
 2. Modify the code to add types to the variable declarations. The resulting JavaScript should look the same as the original example when you're done.
 
     ```javascript
@@ -47,8 +47,8 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 2
 
-1. Copy and paste the following JavaScript code your TypeScript editor. 
-2. You can use types to ensure operation outcomes. Run the code as is and then modify it to have strongly typed variables. 
+1. Copy and paste the following JavaScript code your TypeScript editor.
+2. You can use types to ensure operation outcomes. Run the code as is and then modify it to have strongly typed variables.
 3. Address any errors you find so that the result returned to a is `12`.
 
     ```javascript
@@ -65,8 +65,8 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 3
 
-1. Copy and paste the following JavaScript code your TypeScript editor. 
-2. Implement an `enum` type called `Season` that represents the constants `"Fall"`, `"Winter`", `"Spring`", and `"Summer`". 
+1. Copy and paste the following JavaScript code your TypeScript editor.
+2. Implement an `enum` type called `Season` that represents the constants `"Fall"`, `"Winter`", `"Spring`", and `"Summer`".
 3. Update the function so you can pass in the season by referencing an item in the `enum`, for example `Season.Fall`, instead of the literal string `"Fall"`.
 
     ```javascript
@@ -93,7 +93,7 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 4
 
-1. Copy and paste the following JavaScript code your TypeScript editor. 
+1. Copy and paste the following JavaScript code your TypeScript editor.
 2. Declare the array as the type to match the type of the items in the array.
 
     ```javascript
