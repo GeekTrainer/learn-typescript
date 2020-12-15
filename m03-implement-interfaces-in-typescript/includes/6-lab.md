@@ -11,16 +11,32 @@ The JavaScript code contains two functions: `intOnlyLoan`, which calculates the 
 In this exercise, you will:
 
 1. Declare an interface called `Loan` that defines two properties, `principle` and `interestRate`.
+2. Declare an interface called `ConvLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numMonths`.
+3. Update the two functions to implement the new interfaces and strongly type the parameters.
 
-1. Declare an interface called `ConvLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numMonths`.
+## Lab setup
 
-1. Update the two functions to implement the new interfaces and strongly type the parameters.
+You can use the TypeScript [Playground](https://www.typescriptlang.org/play) or Visual Studio Code to complete this lab.
 
-You can either use the [Playground](https://www.typescriptlang.org/play) or your VS Code workspace to complete the exercise.
+### Playground
+
+If you’re using the Playground, copy and paste the starting code into it as directed in the lab instructions.
+
+### Visual Studio Code
+
+If you’re using an existing Visual Studio Code workspace, add a new file named **module03.ts** to your project and copy and paste the starting code into it as directed in the lab instructions. 
+
+You can also download the starting workspace at [LINK TO \code\module-03\m03-start] and edit the file **module03.ts**. To run the solution, you must first set up your development environment by installing the following software on your machine:
+
+1. Visual Studio Code (or IDE of your choice)
+2. Node Package Manager (npm)
+3. TypeScript Compiler (tsc)
+
+For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in [LINK TO Module 01: Get started with TypeScript ]. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.
 
 ## Exercise 1 - Declare the interfaces
 
-1. Copy and paste the JavaScript code into a new TypeScript file.
+1. Copy and paste the following JavaScript code your TypeScript editor.
 
    ```javascript
    function intOnlyLoan(principle, interestRate) {
@@ -47,22 +63,17 @@ You can either use the [Playground](https://www.typescriptlang.org/play) or your
    ```
 
 2. Declare an interface called `Loan` that defines two properties, `principle` and `interestRate`, as a `number`.
-
-1. Declare an interface called `ConvLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numMonths`, as a `number`.
+3. Declare an interface called `ConvLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numMonths`, as a `number`.
 
 ## Exercise 2 - Implement the interfaces
 
 1. Replace the two parameters in the `intOnlyLoan` function with an object of type `Loan` (for example, `loanTerms: Loan`) and type the return value of the function as a `string`.
+2. You'll notice a couple of errors because TypeScript does not recognize the type of the parameters `interestRate` and `principle`. Replace the parameter names in the function with properties of the `Loan` object. (For example, `loanTerms.interestRate`).
+3. Type the `intr` and `pmt` variables as `numbers`.
+4. Test the `intOnlyLoan` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `Loan` object.
+5. Update the `convLoan` function, this time replacing the three parameters with an object of type `ConvLoan` and type the return value of the function as a `string`.
+6. Make any remaining updates to the implementation of the `convLoan` function and test your work.
 
-1. You'll notice a couple of errors because TypeScript does not recognize the type of the parameters `interestRate` and `principle`. Replace the parameter names in the function with properties of the `Loan` object. (For example, `loanTerms.interestRate`).
+## Lab solution
 
-1. Type the `intr` and `pmt` variables as `numbers`.
-
-1. Test the `intOnlyLoan` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `Loan` object.
-
-1. Update the `convLoan` function, this time replacing the three parameters with an object of type `ConvLoan` and type the return value of the function as a `string`.
-
-1. Make any remaining updates to the implementation of the `convLoan` function and test your work.
-
-1. See [FILENAME (SOLUTION IS BELOW)] for the solution to the exercise.
-
+Download the solution workspace [LINK TO \code\module-03\m03-end] and open the file **module03.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
