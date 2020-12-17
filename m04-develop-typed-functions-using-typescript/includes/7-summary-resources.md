@@ -10,4 +10,3 @@ Use these resources to discover more.
 
 - See [TypeScript Handbook: Functions](https://www.typescriptlang.org/docs/handbook/functions.html) for more information about functions.
 - See [TypeScript Handbook: Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html) to learn more about function types.
-
