@@ -25,7 +25,7 @@ function getArray(items : any[] ) : any[] {
 }
 ```
 
-Then, the `numberArray` is declared by calling the `getArray` function, passing to it an array of numbers, and `stringArray` is declared with an array of strings. However, because the `any` type is used, there's nothing preventing the code from pushing a `string` to the `numberArray` or a `number` to the `stringArray`.
+Then, the `numberArray` variable is declared by calling the `getArray` function, passing to it an array of numbers, and the `stringArray` variable is declared with an array of strings. However, because the `any` type is used, there's nothing preventing the code from pushing a `string` to the `numberArray` or a `number` to the `stringArray`.
 
 ```typescript
 let numberArray = getArray([5, 10, 15, 20]);
