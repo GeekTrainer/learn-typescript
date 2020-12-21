@@ -45,19 +45,19 @@ if (a > b) {
 function buildArray(items, sortOrder) {
     let randomNumbers = [];
     let nextNumber;
-    for (let i = 0; i < items; i++) {
-        nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
+    for (let counter = 0; counter < items; counter++) {
+        nextNumber = Math.ceil(Math.random() * (100 - 1));
         if (randomNumbers.indexOf(nextNumber) === -1) {
-        randomNumbers.push(nextNumber);
+          randomNumbers.push(nextNumber);
         } else {
-        i--;
+          counter--;
         }
     }
 
     if (sortOrder === 'ascending') {
-    return randomNumbers.sort(sortAscending);
+      return randomNumbers.sort(sortAscending);
     } else {
-    return randomNumbers.sort(sortDescending);
+      return randomNumbers.sort(sortDescending);
     }
 }
 
@@ -69,9 +69,9 @@ let myArray2 = buildArray(8, 'descending');
     and return types. Make the numMonths parameter optional but assign it a default value of 12 
     months if omitted. */
 
-function LoanCalc (principle, interestRate, numMonths) {
-    let intr = interestRate / 1200;   // Calculates the monthly interest rate
-    let pmt;
-    pmt = principle * intr / (1 - (Math.pow(1/(1 + intr), numMonths)));
-    return pmt.toFixed(2);
+function loanCalculator (principle, interestRate, numMonths) {
+    let interest = interestRate / 1200;   // Calculates the monthly interest rate
+    let payment;
+    payment = principle * interest / (1 - (Math.pow(1/(1 + interest), numberOfMonths)));
+    return payment.toFixed(2);
 }
