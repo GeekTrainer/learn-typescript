@@ -22,7 +22,7 @@ The `--noImplicitAny` option instructs the compiler to raise errors on expressio
 
 `tsc utility_functions.ts --noImplicitAny`
 
-The `--target` option specifies the ECMAScript target version for the JavaScript file. This example compiles an ECMAScript 6-compliant JavaScript file: 
+The `--target` option specifies the ECMAScript target version for the JavaScript file. This example compiles an ECMAScript 6-compliant JavaScript file:
 
 `tsc utility_functions.ts --target "ES2015"`
 
