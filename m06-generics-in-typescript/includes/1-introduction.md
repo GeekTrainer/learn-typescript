@@ -3,13 +3,9 @@ While generics are supported by many programming languages, including TypeScript
 In this module, you will:
 
 - Identify use cases for generics.
-
 - Define a generic function.
-
 - Declare a generic interface.
-
 - Declare a generic class.
-
 - Implement generic constraints.
 
 ## Learning objectives
@@ -17,16 +13,11 @@ In this module, you will:
 After completing this module, you'll be able to:
 
 - Identify use cases for generics.
-
 - Define a generic function.
-
 - Declare a generic interface.
-
 - Declare a generic class.
-
 - Implement generic constraints.
 
 ## Prerequisites
 
 Familiarity with functions, interfaces, and classes in TypeScript.
-
