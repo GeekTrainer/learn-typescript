@@ -89,5 +89,5 @@ The function can now accept one or more values and return the result.
 ```typescript
 total3(1, 2, 3, 4, 5, 6, 7);  // returns 28
 total3(2);                    // returns 2
-total3(2, 3, "three");        // error due to data type
+total3(2, 3, "three");        // flags error due to data type at design time, returns 5
 ```
