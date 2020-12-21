@@ -54,12 +54,12 @@ class BuildArray {
     buildArray(): number[] {
         let randomNumbers: number[] = [];
         let nextNumber: number;
-        for (let i = 0; i < this.items; i++) {
-            nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
+        for (let counter = 0; counter < this.items; counter++) {
+            nextNumber = Math.ceil(Math.random() * (100 - 1));
             if (randomNumbers.indexOf(nextNumber) === -1) {
                 randomNumbers.push(nextNumber);
             } else {
-                i--;
+                counter--;
             }
         }
         if (this._sortOrder === 'ascending') {

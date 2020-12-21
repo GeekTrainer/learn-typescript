@@ -37,12 +37,12 @@ let sortAscending2 = (a: number, b: number) => {
 function buildArray2(items: number, sortOrder: 'ascending' | 'descending'): number[] {
     let randomNumbers: number[] = [];
     let nextNumber: number;
-    for (let i = 0; i < items; i++) {
-        nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
+    for (let counter = 0; counter < items; counter++) {
+        nextNumber = Math.ceil(Math.random() * (100 - 1));
         if (randomNumbers.indexOf(nextNumber) === -1) {
             randomNumbers.push(nextNumber);
         } else {
-            i--;
+            counter--;
         }
     }
     if (sortOrder === 'ascending') {
