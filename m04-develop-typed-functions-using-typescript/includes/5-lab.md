@@ -75,12 +75,12 @@ Convert the functions to TypeScript with strongly typed parameters and return ty
    function buildArray(items, sortOrder) {
        let randomNumbers = [];
        let nextNumber;
-       for (let i = 0; i < items; i++) {
+       for (let counter = 0; counter < items; counter++) {
            nextNumber = Math.ceil(Math.random() * (100 - 1));
            if (randomNumbers.indexOf(nextNumber) === -1) {
              randomNumbers.push(nextNumber);
            } else {
-             i--;
+             counter--;
            }
        }
    
@@ -112,10 +112,10 @@ This JavaScript function returns the payment amount for a loan.
     months if omitted. */
    
    function loanCalculator (principle, interestRate, numMonths) {
-       let intr = interestRate / 1200;   // Calculates the monthly interest rate
-       let pmt;
-       pmt = principle * intr / (1 - (Math.pow(1/(1 + intr), numberOfMonths)));
-       return pmt.toFixed(2);
+       let interest = interestRate / 1200;   // Calculates the monthly interest rate
+       let payment;
+       payment = principle * interest / (1 - (Math.pow(1/(1 + interest), numberOfMonths)));
+       return payment.toFixed(2);
    }
    ```
 
