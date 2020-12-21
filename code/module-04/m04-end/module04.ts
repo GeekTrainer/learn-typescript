@@ -74,10 +74,10 @@ console.log(myArray2);
     and return types. Make the numMonths parameter optional but assign it a default value of 12 
     months if omitted. */
 
-function loanCalculator (principle: number, interestRate: number, numMonths = 12): string {
+function loanCalculator (principle: number, interestRate: number, numberOfMonths = 12): string {
     let interest: number = interestRate / 1200;   // Calculates the monthly interest rate 
     let payment; Number;
-    payment = principle * interest / (1 - (Math.pow(1/(1 + interest), numMonths)));
+    payment = principle * interest / (1 - (Math.pow(1/(1 + interest), numberOfMonths)));
     return payment.toFixed(2);
 }
 
