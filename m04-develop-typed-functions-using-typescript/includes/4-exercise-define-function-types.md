@@ -33,8 +33,8 @@ Let's assume that you are creating a function that performs an add operation or 
    
    ```
 
-4. Try running the function by entering `console.log(doCalculation(add)(1, 2))` and you'll notice that TypeScript is able to provide Intellisense help based on the types defined in `doCalculation` and `calculator`.
-5. Now, comment out the `calculator` function type and declare a new one using an interface. Notice that the type signature is slightly different, with a colon (`:`) separating the parameter list and return type instead of the arrow operator. When you're done, the code should work the same.
+4. Try running the function by entering `console.log(doCalculation('add')(1, 2))` and you'll notice that TypeScript is able to provide Intellisense help based on the types defined in `doCalculation` and `calculator`.
+5. Now, comment out the `calculator` function type and declare a new one using an interface. Notice that the type signature is slightly different, with a colon (`:`) separating the parameter list and return type instead of the arrow operator. Replace the `calculator` function with the `Calculator` interface in the variable declarations. When you're done, the code should work the same.
 
    ```typescript
    // type calculator = (x: number, y: number) => number;
@@ -53,7 +53,7 @@ You can also leave off the parameter types and return type because TypeScript wi
 As far as TypeScript is concerned, these three statements are identical.
 
 ```typescript
-let addNumbers: calulator = (x: number, y: number): number => x + y;
-let addNumbers: calculator = (number1: number, number2: number): number => number1 + number2;
-let addNumbers: calculator = (num1, num2) => num1 + num2;
+let addNumbers: Calulator = (x: number, y: number): number => x + y;
+let addNumbers: Calculator = (number1: number, number2: number): number => number1 + number2;
+let addNumbers: Calculator = (num1, num2) => num1 + num2;
 ```
