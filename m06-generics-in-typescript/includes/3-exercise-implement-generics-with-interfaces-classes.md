@@ -113,7 +113,6 @@ You can also declare a generic class without an interface. This example declares
             return this._value
         }
     }
-
     let processor = new processIdentity<number, string>(100, 'Hello');
     processor.getIdentity();      // Displays 'Hello'
     ```
