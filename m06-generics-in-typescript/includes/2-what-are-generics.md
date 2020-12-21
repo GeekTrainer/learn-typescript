@@ -97,7 +97,7 @@ If you add the statement `let result: T = value + value` to the `identity` funct
 function identity<T, U> (value: T, message: U) : T {
     let result: T = value + value;    // Error
     console.log(message);
-    return x
+    return result
 }
 ```
 
