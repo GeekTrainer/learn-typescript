@@ -160,4 +160,4 @@ console.log(stringValue);       // Returns 100100
 ```
 
 > [!NOTE]
-> You can only use a typeof type guard to check the primitive types `string`, `number`, `bigint`, `function`, `boolean`, `symbol`, `object`, and undefined. To check the type of a class, use an `instanceof` type guard.
+> You can only use a `typeof` type guard to check the primitive types `string`, `number`, `bigint`, `function`, `boolean`, `symbol`, `object`, and undefined. To check the type of a class, use an `instanceof` type guard.
