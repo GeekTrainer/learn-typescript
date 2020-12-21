@@ -23,7 +23,7 @@ Let's assume that you are creating a function that performs an add operation or 
 3. You can also use the `calculator` function type to pass values from another function. Enter the `doCalculation` function, which returns the result of the `addNumbers` or `subtractNumbers` function based on the value passed to the `operation` parameter.
 
    ```typescript
-   let doCalculation = (operation: 'add' | 'subtract'): Calc => {
+   let doCalculation = (operation: 'add' | 'subtract'): calculator => {
        if (operation === 'add') {
            return addNumbers;
        } else {
