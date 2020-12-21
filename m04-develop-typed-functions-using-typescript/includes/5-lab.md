@@ -111,7 +111,7 @@ This JavaScript function returns the payment amount for a loan.
     and return types. Make the numMonths parameter optional but assign it a default value of 12 
     months if omitted. */
    
-   function loanCalculator (principle, interestRate, numMonths) {
+   function loanCalculator (principle, interestRate, numberOfMonths) {
        let interest = interestRate / 1200;   // Calculates the monthly interest rate
        let payment;
        payment = principle * interest / (1 - (Math.pow(1/(1 + interest), numberOfMonths)));
