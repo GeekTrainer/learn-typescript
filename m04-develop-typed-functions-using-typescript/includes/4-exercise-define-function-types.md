@@ -8,28 +8,26 @@ Let's assume that you are creating a function that performs an add operation or 
 
    ```typescript
    type Calc = (x: number, y: number) => number;
-   
    ```
 
 2. You can now use the function type as a type signature when declaring functions. Declare two variables of the function type `Calc`, one for the add operation and one for the subtract operation. Test the new functions by returning the result of each one to the console.
 
    ```typescript
-   let addNums: Calc = (x: number, y: number): number => x + y;
-   let subNums: Calc = (x: number, y: number): number => x - y;
+   let addNumbers: Calc = (x: number, y: number): number => x + y;
+   let subtractNumbers: Calc = (x: number, y: number): number => x - y;
    
-   console.log(addNums(1, 2));
-   console.log(subNums(1, 2));
-   
+   console.log(addNumbers(1, 2));
+   console.log(subtractNumbers(1, 2));
    ```
 
-3. You can also use the `Calc` function type to pass values from another function. Enter the `doCalc` function, which returns the result of the `addNums` or `subNums` function based on the value passed to the `operation` parameter.
+3. You can also use the `Calc` function type to pass values from another function. Enter the `doCalc` function, which returns the result of the `addNumbers` or `subtractNumbers` function based on the value passed to the `operation` parameter.
 
    ```typescript
    let doCalc = (operation: 'add' | 'subtract'): Calc => {
        if (operation === 'add') {
-           return addNums;
+           return addNumbers;
        } else {
-           return subNums;
+           return subtractNumbers;
        }
    }
    
@@ -55,9 +53,7 @@ You can also leave off the parameter types and return type because TypeScript wi
 As far as TypeScript is concerned, these three statements are identical.
 
 ```typescript
-let addNums: Calc = (x: number, y: number): number => x + y;
-let addNums: Calc = (number1: number, number2: number): number => number1 + number2;
-let addNums: Calc = (num1, num2) => num1 + num2;
-
+let addNumbers: Calc = (x: number, y: number): number => x + y;
+let addNumbers: Calc = (number1: number, number2: number): number => number1 + number2;
+let addNumbers: Calc = (num1, num2) => num1 + num2;
 ```
-

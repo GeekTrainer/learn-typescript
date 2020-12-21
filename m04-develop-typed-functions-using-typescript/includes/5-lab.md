@@ -25,7 +25,7 @@ For best results, follow the complete instructions for setting up your environme
 The following JavaScript code contains three functions:
 
 - `BuildArray` builds an array of unique random numbers. It accepts an `items` parameter that determines the number of items in the array and a `sortOrder` parameter that determines whether the array is sorted in ascending or descending order.
-- `sortDecending` and `sortAscending` are comparison functions that tell the `sort()` method how to sort numbers in ascending or descending order.
+- `sortDescending` and `sortAscending` are comparison functions that tell the `sort()` method how to sort numbers in ascending or descending order.
 
 Convert the functions to TypeScript with strongly typed parameters and return types.
 
@@ -45,9 +45,9 @@ Convert the functions to TypeScript with strongly typed parameters and return ty
        numbers in descending order */
    function sortDescending(a, b) {
      if (a > b) {
-       return -1;;
+       return -1;
      } else if (b > a) {
-       return 1;;
+       return 1;
      } else {
        return 0;
      }
@@ -76,7 +76,7 @@ Convert the functions to TypeScript with strongly typed parameters and return ty
        let randomNumbers = [];
        let nextNumber;
        for (let i = 0; i < items; i++) {
-           nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
+           nextNumber = Math.ceil(Math.random() * (100 - 1));
            if (randomNumbers.indexOf(nextNumber) === -1) {
              randomNumbers.push(nextNumber);
            } else {
@@ -107,20 +107,20 @@ This JavaScript function returns the payment amount for a loan.
 
    ```typescript
    /*  EXERCISE 2
-    TODO: Convert the LoanCalc function to TypeScript with strongly typed parameters, variables, 
+    TODO: Convert the loanCalculator function to TypeScript with strongly typed parameters, variables, 
     and return types. Make the numMonths parameter optional but assign it a default value of 12 
     months if omitted. */
    
-   function LoanCalc (principle, interestRate, numMonths) {
+   function loanCalculator (principle, interestRate, numMonths) {
        let intr = interestRate / 1200;   // Calculates the monthly interest rate
        let pmt;
-       pmt = principle * intr / (1 - (Math.pow(1/(1 + intr), numMonths)));
+       pmt = principle * intr / (1 - (Math.pow(1/(1 + intr), numberOfMonths)));
        return pmt.toFixed(2);
    }
    ```
 
-2. Convert the `LoanCalc` function to TypeScript with strongly typed parameters, variables, and return types.
-3. Make the `numMonths` parameter optional but assign it a default value of `12` months if omitted.
+2. Convert the `loanCalculator` function to TypeScript with strongly typed parameters, variables, and return types.
+3. Make the `numberOfMonths` parameter optional but assign it a default value of `12` months if omitted.
 
 ## Challenge yourself!
 
