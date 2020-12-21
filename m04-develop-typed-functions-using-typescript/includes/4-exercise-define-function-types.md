@@ -4,26 +4,26 @@ You can define a function type using a type alias or an interface. Both approach
 
 Let's assume that you are creating a function that performs an add operation or a subtract operation depending the value of a parameter that is passed to it. Both the add and subtract operations accept two numbers, `x` and `y`, and return the result as a number.
 
-1. Open the Playground and define a function type called `Calc` using a type alias. The type signature has a parameter list `(x: number, y: number)` and returns a `number`, separated by an arrow (`=>`) operator. (Notice that the syntax of the type signature is the same as an arrow function.)
+1. Open the Playground and define a function type called `calculator` using a type alias. The type signature has a parameter list `(x: number, y: number)` and returns a `number`, separated by an arrow (`=>`) operator. (Notice that the syntax of the type signature is the same as an arrow function.)
 
    ```typescript
-   type Calc = (x: number, y: number) => number;
+   type calculator = (x: number, y: number) => number;
    ```
 
-2. You can now use the function type as a type signature when declaring functions. Declare two variables of the function type `Calc`, one for the add operation and one for the subtract operation. Test the new functions by returning the result of each one to the console.
+2. You can now use the function type as a type signature when declaring functions. Declare two variables of the function type `calculator`, one for the add operation and one for the subtract operation. Test the new functions by returning the result of each one to the console.
 
    ```typescript
-   let addNumbers: Calc = (x: number, y: number): number => x + y;
-   let subtractNumbers: Calc = (x: number, y: number): number => x - y;
+   let addNumbers: calculator = (x: number, y: number): number => x + y;
+   let subtractNumbers: calculator = (x: number, y: number): number => x - y;
    
    console.log(addNumbers(1, 2));
    console.log(subtractNumbers(1, 2));
    ```
 
-3. You can also use the `Calc` function type to pass values from another function. Enter the `doCalc` function, which returns the result of the `addNumbers` or `subtractNumbers` function based on the value passed to the `operation` parameter.
+3. You can also use the `calculator` function type to pass values from another function. Enter the `doCalculation` function, which returns the result of the `addNumbers` or `subtractNumbers` function based on the value passed to the `operation` parameter.
 
    ```typescript
-   let doCalc = (operation: 'add' | 'subtract'): Calc => {
+   let doCalculation = (operation: 'add' | 'subtract'): Calc => {
        if (operation === 'add') {
            return addNumbers;
        } else {
@@ -33,12 +33,12 @@ Let's assume that you are creating a function that performs an add operation or 
    
    ```
 
-4. Try running the function by entering `console.log(doCalc(add)(1, 2))` and you'll notice that TypeScript is able to provide Intellisense help based on the types defined in `doCalc` and `Calc`.
-5. Now, comment out the `Calc` function type and declare a new one using an interface. Notice that the type signature is slightly different, with a colon (`:`) separating the parameter list and return type instead of the arrow operator. When you're done, the code should work the same.
+4. Try running the function by entering `console.log(doCalculation(add)(1, 2))` and you'll notice that TypeScript is able to provide Intellisense help based on the types defined in `doCalculation` and `calculator`.
+5. Now, comment out the `calculator` function type and declare a new one using an interface. Notice that the type signature is slightly different, with a colon (`:`) separating the parameter list and return type instead of the arrow operator. When you're done, the code should work the same.
 
    ```typescript
-   // type Calc = (x: number, y: number) => number;
-   interface Calc {
+   // type calculator = (x: number, y: number) => number;
+   interface Calculator {
        (x: number, y: number): number;
    }
    
@@ -53,7 +53,7 @@ You can also leave off the parameter types and return type because TypeScript wi
 As far as TypeScript is concerned, these three statements are identical.
 
 ```typescript
-let addNumbers: Calc = (x: number, y: number): number => x + y;
-let addNumbers: Calc = (number1: number, number2: number): number => number1 + number2;
-let addNumbers: Calc = (num1, num2) => num1 + num2;
+let addNumbers: calulator = (x: number, y: number): number => x + y;
+let addNumbers: calculator = (number1: number, number2: number): number => number1 + number2;
+let addNumbers: calculator = (num1, num2) => num1 + num2;
 ```
