@@ -40,7 +40,7 @@ console.log(stringArray);                   // ["Cats", "Dogs", "Birds", "Rabbit
 
 What if you want to determine the type of the values that the array will contain when you call the function and then have TypeScript do the work of type checking the values that you pass to it to ensure they are of that type? This is where generics come into play.
 
-This example rewrites the `getArray` function using generics. It can now accept any type that you pass to it.
+This example rewrites the `getArray` function using generics. It can now accept any type that you specify when calling the function.
 
 ```typescript
 function getArray<T>(items : T[] ) : T[] {
