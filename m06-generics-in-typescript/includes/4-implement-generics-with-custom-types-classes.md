@@ -16,7 +16,7 @@ class Truck extends Car {
     doors = 2
 }
 function accelerate<T extends Car> (car: T): T {
-    console.log(`All ${car.doors} are closed.`);
+    console.log(`All ${car.doors} doors are closed.`);
     console.log(`The ${car.make} is now accelerating!`)
     return car
 }
@@ -30,9 +30,9 @@ accelerate<Truck>(myTruck);
 The output to the console is:
 
 ```console
-"All 4 are closed."
+"All 4 doors are closed."
 "The Electric Car is now accelerating!"
-"All 2 are closed."
+"All 2 doors are closed."
 "The Truck is now accelerating!"
 ```
 
