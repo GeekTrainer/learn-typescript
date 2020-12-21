@@ -6,7 +6,7 @@
     using either a type alias or an interface. Then, apply the new function type 
     as the variable type. */
 
-    type CompFuncType = (a: number, b:number) => number;
+    type compareFunctionType = (a: number, b:number) => number;
 
 /*  TODO: Convert the sortDescending and sortAscending functions to anonymous 
     functions and assign them to variables of the same name. Add types to the 
@@ -14,7 +14,7 @@
 
 /*  sortDescending is a comparison function that tells the sort method how to sort 
     numbers in descending order */
-let sortDescending: CompFuncType = (a, b) => {
+let sortDescending: compareFunctionType = (a, b) => {
 if (a > b) {
     return -1;;
 } else if (b > a) {
@@ -26,7 +26,7 @@ if (a > b) {
 
 /*  sortDescending is a comparison function that tells the sort method how to sort 
     numbers in ascending order. */
-let sortAscending: CompFuncType = (a, b) => {
+let sortAscending: compareFunctionType = (a, b) => {
     if (a > b) {
       return 1;
     } else if (b > a) {
@@ -48,12 +48,12 @@ function buildArray(items: number, sortOrder: 'ascending' | 'descending'): numbe
     let randomNumbers: number[] = [];
     let nextNumber: number;
 
-    for (let i = 0; i < items; i++) {
-        nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
+    for (let counter = 0; counter < items; counter++) {
+        nextNumber = Math.ceil(Math.random() * (100 - 1));
         if (randomNumbers.indexOf(nextNumber) === -1) {
           randomNumbers.push(nextNumber);
         } else {
-          i--;
+          counter--;
         }
     }
     
@@ -74,12 +74,12 @@ console.log(myArray2);
     and return types. Make the numMonths parameter optional but assign it a default value of 12 
     months if omitted. */
 
-function LoanCalc (principle: number, interestRate: number, numMonths = 12): string {
-    let intr: number = interestRate / 1200;   // Calculates the monthly interest rate 
-    let pmt; Number;
-    pmt = principle * intr / (1 - (Math.pow(1/(1 + intr), numMonths)));
-    return pmt.toFixed(2);
+function loanCalculator (principle: number, interestRate: number, numMonths = 12): string {
+    let interest: number = interestRate / 1200;   // Calculates the monthly interest rate 
+    let payment; Number;
+    payment = principle * interest / (1 - (Math.pow(1/(1 + interest), numMonths)));
+    return payment.toFixed(2);
 }
 
-let myLoan = LoanCalc(1000, 5);
+let myLoan = loanCalculator(1000, 5);
 console.log(myLoan);
