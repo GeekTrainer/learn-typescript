@@ -91,11 +91,11 @@ returnString = returnString * 100;  // Error: Type 'number' not assignable to ty
 
 When using type variables to create generic components, you may only use the properties and methods of objects that are available for **every** type. This prevents errors from occurring when you try to perform an operation on a parameter value that is incompatible with the type that's being passed to it.
 
-If you add the statement `let x: T = value + value` to the `identity` function, TypeScript raises the error **The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type** because it doesn't know what value will be passed to it at runtime. If you were to pass a non-numeric value, the expression would generate an error, so TypeScript makes you aware of the problem at compile time.
+If you add the statement `let result: T = value + value` to the `identity` function, TypeScript raises the error **The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type** because it doesn't know what value will be passed to it at runtime. If you were to pass a non-numeric value, the expression would generate an error, so TypeScript makes you aware of the problem at compile time.
 
 ```typescript
 function identity<T, U> (value: T, message: U) : T {
-    let x: T = value + value;    // Error
+    let result: T = value + value;    // Error
     console.log(message);
     return x
 }
@@ -110,9 +110,9 @@ There are several ways to do this depending on the type variable. One way is to 
 ```typescript
 type ValidTypes = string | number;
 function identity<T extends ValidTypes, U> (value: T, message: U) : T {
-    let x: T = value + value;    // Error
+    let result: T = value + value;    // Error
     console.log(message);
-    return x
+    return result
 }
 let returnNumber = identity<number, string>(100, 'Hello!');  // Returns 200
 let returnString = identity<string, number>('Hello!', 100);  // Returns "Hello!Hello!"
@@ -142,15 +142,15 @@ You can use the `typeof` type guard in an `if` block to check the type of the `v
 ```typescript
 type ValidTypes = string | number;
 function identity<T extends ValidTypes, U> (value: T, message: U) {   // Return type is inferred
-    let x: ValidTypes = '';
+    let result: ValidTypes = '';
     let typeValue: string = typeof value;
     if (typeof value === 'number') {           // Is it a number?
-        x = value + value;                     // OK
+        result = value + value;                     // OK
     } else if (typeof value === 'string') {    // Is it a string?
-        x = value + value;                     // OK
+        result = value + value;                     // OK
     }
-    console.log(`The message is ${message} and the function returns a ${typeValue} value of ${x}`);
-    return x
+    console.log(`The message is ${message} and the function returns a ${typeValue} value of ${result}`);
+    return result
 }
 
 let numberValue = identity<number, string>(100, 'Hello');
