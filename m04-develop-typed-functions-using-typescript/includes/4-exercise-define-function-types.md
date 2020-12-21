@@ -53,7 +53,7 @@ You can also leave off the parameter types and return type because TypeScript wi
 As far as TypeScript is concerned, these three statements are identical.
 
 ```typescript
-let addNumbers: Calulator = (x: number, y: number): number => x + y;
+let addNumbers: Calculator = (x: number, y: number): number => x + y;
 let addNumbers: Calculator = (number1: number, number2: number): number => number1 + number2;
 let addNumbers: Calculator = (num1, num2) => num1 + num2;
 ```
