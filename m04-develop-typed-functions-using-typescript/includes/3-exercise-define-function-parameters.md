@@ -74,11 +74,11 @@ This example has one required parameter and an optional parameter called `restOf
 ```typescript
 let total3 = (firstNumber: number, ...restOfNumbers: number[]): number => {
    let total: number =  firstNumber;
-   for(let i = 0; i < restOfNumbers.length; i++) {
-      if(isNaN(restOfNumbers[i])){
+   for(let counter = 0; counter < restOfNumbers.length; counter++) {
+      if(isNaN(restOfNumbers[counter])){
          continue;
       }
-      total += Number(restOfNumbers[i]);
+      total += Number(restOfNumbers[counter]);
    }
    return total;
 }
