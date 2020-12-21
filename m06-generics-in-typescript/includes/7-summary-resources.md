@@ -10,5 +10,5 @@ Now that you have reviewed this module, you should be able to:
 
 Use these resources to discover more.
 
-•	See [TypeScript Handbook: Generics](https://www.typescriptlang.org/docs/handbook/generics.html) for more information about generics.
+- See [TypeScript Handbook: Generics](https://www.typescriptlang.org/docs/handbook/generics.html) for more information about generics.
 
