@@ -6,7 +6,7 @@ You can use interfaces that describe array types that you can index into.
 
 Indexable types have an *index signature* that describes the type you can use to index into the object, along with the corresponding return types when indexing.
 
-For example, the `IceCreamArray` interface declares an index signature as a `number` and returns a `string` type. This index signature states that `IceCreamArray `is indexed with a number and it will return a string.
+For example, the `IceCreamArray` interface declares an index signature as a `number` and returns a `string` type. This index signature states that `IceCreamArray`is indexed with a number and it will return a string.
 
 ```typescript
 interface IceCreamArray {
@@ -31,16 +31,16 @@ The `fetch` API is a native JavaScript function that you can use to interact wit
 const fetchURL = 'https://jsonplaceholder.typicode.com/posts'
 // Interface describing the shape of our json data
 interface Post {
-    userId: number;
-    id: number;
-    title: string;
-    body: string;
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
 }
 async function fetchPosts(url: string) {
   let response = await fetch(url);
   let body = await response.json();
   return body as Post[];
-  }
+}
 async function showPost() {
   let posts = await fetchPosts(fetchURL);
   // Display the contents of the first item in the response
@@ -50,11 +50,10 @@ async function showPost() {
   console.log('Author: ' + (post.userId == 1 ? "Administrator" : post.userId.toString()))
   console.log('Title: ' + post.title)
   console.log('Body: ' + post.body)
-  }
+}
 
 showPost();
-
 ```
 
 > [!TIP]
-> TIP A side note on using `fetch` with `async` and `await` in TypeScript. While ES3 doesn't support `async` and `await`, the TypeScript compiler is able to generate ES3 compatible code that implements this feature. This enables you to take advantage of the newer feature while still being able to target older browsers! In the Playground, copy and paste the example above, set the target to ES3, and check out the helper code that TypeScript generates to make this possible.
+> While earlier versions of ECMAScript, such as ES3, do not support `async` and `await`, the TypeScript compiler is able to generate compatible code to implement this feature. This enables you to take advantage of the newer feature while still being able to target older browsers! In the Playground, copy and paste the example above, set the target to ES3, and check out the helper code that TypeScript generates to make this possible.

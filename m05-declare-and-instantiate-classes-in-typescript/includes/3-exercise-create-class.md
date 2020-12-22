@@ -1,9 +1,9 @@
 To create a class, define its members: properties, a `constructor`, accessors, and methods.
 
-- Properties, also referred to as fields, are the data (or attributes) for the object. These are the defining characteristics of the object that you can set or return from your code.
+- **Properties**, also referred to as fields, are the data (or attributes) for the object. These are the defining characteristics of the object that you can set or return from your code.
 - The `constructor` is a special function used to create and initialize objects based on the class. When you create a new instance of the class, the constructor creates a new object with the class shape and initializes it with the values passed to it.
-- Accessors are a type of function that you use to `get` or `set` the value of properties. Properties can be read-only by simply omitting the `set` accessor in the class, or inaccessible by omitting the `get` accessor (the property will return `undefined` if you attempt to access it, even if it's assigned a value during initialization.)
-- Methods are functions that define the behaviors or actions that the object can do. You can call these methods to invoke the behavior of the object. You can also define methods that are only accessible from within the class itself and are typically called by other methods in the class to perform a task.
+- **Accessors** are a type of function that you use to `get` or `set` the value of properties. Properties can be read-only by simply omitting the `set` accessor in the class, or inaccessible by omitting the `get` accessor (the property will return `undefined` if you attempt to access it, even if it's assigned a value during initialization.)
+- **Methods** are functions that define the behaviors or actions that the object can do. You can call these methods to invoke the behavior of the object. You can also define methods that are only accessible from within the class itself and are typically called by other methods in the class to perform a task.
 
 Let's open the [Playground](https://www.typescriptlang.org/play) and create a new class called `Car`. You can use the `Car` class on its own to create basic `Car` objects, or you can extend the `Car` class to create new classes for specific types of cars, like a `GasCar` or an `ElectricCar` class. These properties will inherit the properties and methods of the `Car` class, as well as have their own properties and methods.
 
@@ -150,7 +150,7 @@ Continue working in the Playground.
 5. Although you passed an odd number to `doors`, it compiles and runs without errors because no data validation occurs in the `constructor`. Try setting the value of `doors` to another odd number (for example, `myCar2.doors = 5`) and test it. This should invoke the `set` block and throw an error. If you want to perform this validation step when the `Car` object is initialized, you should add a validation check to the `constructor`.
 
     ```typescript
-    constructor(make: string, color: string, doors?: number) {
+    constructor(make: string, color: string, doors = 4) {
         this._make = make;
         this._color = color;
         if ((doors % 2) === 0) {
@@ -179,13 +179,13 @@ Continue defining the `Car` class in the Playground.
     ```typescript
     // Methods
     accelerate(speed: number): string {
-        return this.worker() + " is accelerating to " + speed + " MPH."
+        return `${this.worker()} is accelerating to ${speed} MPH.`
     }
     brake(): string {
-        return this.worker() + " is braking with the standard braking system."
+        return `${this.worker()} is braking with the standard braking system.`
     }
     turn(direction: 'left' | 'right'): string {
-        return this.worker() + " is turning " + direction;
+        return `${this.worker()} is turning ${direction}`;
     }
     // This function performs work for the other method functions
     worker(): string {

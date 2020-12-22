@@ -1,4 +1,4 @@
-The TypeScript compiler assumes, by default, that all parameters defined in a function are required by it. When a function is called, the TypeScript compiler verifies that:
+The TypeScript compiler assumes, by default, that all parameters defined in a function are required. When a function is called, the TypeScript compiler verifies:
 
 - A value as been provided for each parameter.
 - Only parameters that the function requires are passed to it.
@@ -30,7 +30,7 @@ Continue the exercise in the Playground.
    let addThreeNumbers = (x: number, y?: number, z: number): number => x + y + z;
    ```
 
-2. TypeScript raises an error because the position of the optional parameters matter. In the parameter list, optional parameters must follow all required parameters. Try moving the `y` parameter to the end of the parameter list. Also, for the function to return the correct value, you must also update it to address the possibility that `y` may now be passed as `undefined`. You should now be able to call the function using `addThreeNumbers(10, 20)` or `addThreeNumbers(10, 20, 30`).
+2. TypeScript **raises an error** because the position of the optional parameters matter. In the parameter list, optional parameters must follow all required parameters. Try moving the `y` parameter to the end of the parameter list. Also, for the function to return the correct value, you must also update it to address the possibility that `y` may now be passed as `undefined`. You should now be able to call the function using `addThreeNumbers(10, 20)` or `addThreeNumbers(10, 20, 30`).
 
    ```typescript
    let addThreeNumbers = (x: number, z: number, y?: number): number => {
@@ -91,3 +91,4 @@ total3(1, 2, 3, 4, 5, 6, 7);  // returns 28
 total3(2);                    // returns 2
 total3(2, 3, "three");        // flags error due to data type at design time, returns 5
 ```
+

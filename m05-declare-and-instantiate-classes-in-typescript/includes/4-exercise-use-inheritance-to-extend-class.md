@@ -78,6 +78,7 @@ Continue working in the Playground and create a new `ElectricCar` class.
 7. In the `Car` class, change the access modifier of the `worker` function from `private` to `protected`. This allows subclasses of the `Car` class to use the function, while keeping it hidden from the members available to objects instantiated from the class. The error in the `charge` method should now resolve.
 8. Test the new `ElectricCar` class to verify that it's working as expected.
 
+
     ```typescript
     let i3 = new ElectricCar('BMW','silver', 124, 2);
     let model3 = new ElectricCar('Tesla', 'black', 263);

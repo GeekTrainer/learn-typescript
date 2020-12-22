@@ -14,4 +14,3 @@ A class **encapsulates** data for the object. Data and behavior are included in 
 
 > [!TIP]
 > If you want to dig into object-oriented programming concepts in more detail, see the [Fundamentals of Classes](https://channel9.msdn.com/series/software-development-fundamentals/03/) video.
-
