@@ -247,7 +247,7 @@ Continue defining the `Car` class in the Playground.
 
 The properties and methods of the classes defined so far are **instance properties**, meaning that they are instantiated and called on each instance of the class object. There is another type of property called a **static property**. Static properties and methods are shared by all instances of a class.
 
-To make a property static, use the `static` keyword before a property or a method. 
+To make a property static, use the `static` keyword before a property or method name. 
 
 For example, you can add a new `static` property to the `Car` class called `numberOfCars` that stores the number of times that the `Car` class is instantiated and set its initial value to 0. Then, in the constructor, increment the count by one.
 
@@ -280,10 +280,10 @@ public static getCars(): number {
 }
 ```
 
-To instantiate the `Car` class as usual and then use the syntax `Car.getCars()` to return the value number of instances.
+Instantiate the `Car` class as usual and then use the syntax `Car.getCars()` to return the number of instances.
 
 ```typescript
 let myCar1 = new Car('Cool Car Company', 'blue', 2);  // Instantiates the Car object with all parameters
-let myCar2 = new Car('Galaxy Motors', 'blue', 2);  // Instantiates the Car object with all parameters
+let myCar2 = new Car('Galaxy Motors', 'blue', 2);     // Instantiates the Car object with all parameters
 console.log(Car.getCars());  // Returns 2
 ```
