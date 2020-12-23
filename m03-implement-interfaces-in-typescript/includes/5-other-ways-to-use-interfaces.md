@@ -55,5 +55,7 @@ async function showPost() {
 showPost();
 ```
 
+Using the `fetch` API and `async` and `await` are beyond the scope of this learning path. If you want to learn more about it, see [LINK TO CHRISTOPHER'S VIDEOS HERE].
+
 > [!TIP]
 > While earlier versions of ECMAScript, such as ES3, do not support `async` and `await`, the TypeScript compiler is able to generate compatible code to implement this feature. This enables you to take advantage of the newer feature while still being able to target older browsers! In the Playground, copy and paste the example above, set the target to ES3, and check out the helper code that TypeScript generates to make this possible.
