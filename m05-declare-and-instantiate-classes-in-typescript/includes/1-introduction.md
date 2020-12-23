@@ -19,4 +19,3 @@ After completing this module, you'll be able to:
 ## Prerequisites
 
 Familiarity with TypeScript functions and interfaces.
-

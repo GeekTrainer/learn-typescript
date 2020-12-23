@@ -29,7 +29,7 @@ accelerate<Truck>(myTruck);
 
 The output to the console is:
 
-```console
+```bash
 "All 4 doors are closed."
 "The Electric Car is now accelerating!"
 "All 2 doors are closed."

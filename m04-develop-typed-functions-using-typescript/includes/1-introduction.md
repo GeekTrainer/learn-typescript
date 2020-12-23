@@ -17,4 +17,3 @@ After completing this module, you'll be able to:
 ## Prerequisites
 
 Familiarity with named and anonymous functions in JavaScript.
-

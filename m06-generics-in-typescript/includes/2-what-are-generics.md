@@ -20,7 +20,7 @@ To understand why you might use generics, it's helpful to see an example.
 The `getArray` function generates an array of items of `any` type.
 
 ```typescript
-function getArray(items : any[] ) : any[] {
+function getArray(items : any[]) : any[] {
     return new Array().concat(items);
 }
 ```
@@ -43,16 +43,16 @@ What if you want to determine the type of the values that the array will contain
 This example rewrites the `getArray` function using generics. It can now accept any type that you specify when calling the function.
 
 ```typescript
-function getArray<T>(items : T[] ) : T[] {
+function getArray<T>(items : T[]) : T[] {
     return new Array<T>().concat(items);
 }
 ```
 
-Generics define one or more **type variables** to identify the type or types that you will pass to the component, enclosed in angle brackets (`<>`). (You'll also see type variables referred to as type parameters or generic parameters.) In the example above, the type variable in the function is called `<T>`. `T` is a commonly used name for a generic, but you can name it however you wish.
+Generics define one or more **type variables** to identify the type or types that you will pass to the component, enclosed in angle brackets (`< >`). (You'll also see type variables referred to as type parameters or generic parameters.) In the example above, the type variable in the function is called `<T>`. `T` is a commonly used name for a generic, but you can name it however you wish.
 
 After you specify the type variable, you can use it in place of the type in parameters, the return type, or anywhere else in the function that you would add a type annotation.
 
-![The getArray function with the <T> type variable following the function name. The type variable T can be used wherever the type annotation is needed. In the getArray function, it is used to specify the type for the items parameter, the function return type, and to return a new Array of items.](../media/m06_generics.jpg)
+![The getArray function with the \<T\> type variable following the function name. The type variable T can be used wherever the type annotation is needed. In the getArray function, it is used to specify the type for the items parameter, the function return type, and to return a new Array of items.](../media/m06_generics.jpg)
 
 To call the function and pass a type to it, append `<type>` to the function name. For example, `getArray<number>` instructs the function to only accept an array of `number` values and return an array of `number` values. Because the type has been specified as a `number`, TypeScript will expect that `number` values will be passed to the function and will raise an error if it's something else.
 
@@ -76,6 +76,7 @@ You are not limited to using a single type variable in your generic components.
 
 For example, the `identity` function accepts two parameters, `value` and `message`, and returns the `value` parameter. You can use two generics, `T` and `U`, to assign different types to each parameter and to the return type. The variable `returnNumber` is initialized by calling the `identity` function with `<number, string>` as the types for the `value` and `message` arguments, while `returnString` is initialized by calling it with `<string, number>`. When using these variables, TypeScript can type check the values and return a compile time error if there is a conflict.
 
+
 ```typescript
 function identity<T, U> (value: T, message: U) : T {
     console.log(message);
@@ -86,6 +87,7 @@ let returnString = identity<string, number>('Hello World', 100);
 returnNumber = returnNumber * 100;  // OK
 returnString = returnString * 100;  // Error: Type 'number' not assignable to type 'string'
 ```
+
 
 ## Using the methods and properties of a generic type
 
@@ -106,6 +108,7 @@ function identity<T, U> (value: T, message: U) : T {
 The `identity` function can accept any type that you choose to pass to the type variables. But, in this case, you should constrain the types that the `value` parameter can accept to a range of types that you can perform an add operation on, rather than accepting any possible type. This is called a **generic constraint**.
 
 There are several ways to do this depending on the type variable. One way is to declare a custom `type` as a tuple and then `extend` the type variable with the custom type. The following example declares `ValidTypes` as a tuple with a `string` and a `number`. Then, it extends `T` with the new type. Now, you can only pass `number` or `string` types to the type variable.
+
 
 ```typescript
 type ValidTypes = string | number;
