@@ -74,7 +74,7 @@ stringArray.push(30);                      // Generates a compile time type chec
 
 You are not limited to using a single type variable in your generic components.
 
-For example, the `identity` function accepts two parameters, `value` and `message`, and returns the `value` parameter. You can use two generics, `T` and `U`, to assign different types to each parameter and to the return type. The variable `returnNumber` is initialized by calling the `identity` function with `<number, string>` as the types for the `value` and `message` arguments, while `returnString` is initialized by calling it with `<string, number>`. When using these variables, TypeScript can type check the values and return a compile time error if there is a conflict.
+For example, the `identity` function accepts two parameters, `value` and `message`, and returns the `value` parameter. You can use two generics, `T` and `U`, to assign different types to each parameter and to the return type. The variable `returnNumber` is initialized by calling the `identity` function with `<number, string>` as the types for the `value` and `message` arguments, `returnString` is initialized by calling it with `<string, string>`, and `returnBoolean` is initialized by calling it with `<boolean, string>`. When using these variables, TypeScript can type check the values and return a compile time error if there is a conflict.
 
 
 ```typescript
@@ -82,10 +82,12 @@ function identity<T, U> (value: T, message: U) : T {
     console.log(message);
     return value
 }
-let returnNumber = identity<number, string>(100, 'Hello, World!');
-let returnString = identity<string, number>('Hello World', 100);
-returnNumber = returnNumber * 100;  // OK
-returnString = returnString * 100;  // Error: Type 'number' not assignable to type 'string'
+let returnNumber = identity<number, string>(100, 'Hello!');
+let returnString = identity<string, string>('100', 'Hola!');
+let returnBoolean = identity<boolean, string>(true, 'Bonjour!');
+returnNumber = returnNumber * 100;   // OK
+returnString = returnString * 100;   // Error: Type 'number' not assignable to type 'string'
+returnBoolean = returnBoolean * 100; // Error: Type 'number' not assignable to type 'boolean'
 ```
 
 
