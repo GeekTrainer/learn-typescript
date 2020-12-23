@@ -150,9 +150,9 @@ function identity<T extends ValidTypes, U> (value: T, message: U) {   // Return 
     let result: ValidTypes = '';
     let typeValue: string = typeof value;
     if (typeof value === 'number') {           // Is it a number?
-        result = value + value;                     // OK
+        result = value + value;                // OK
     } else if (typeof value === 'string') {    // Is it a string?
-        result = value + value;                     // OK
+        result = value + value;                // OK
     }
     console.log(`The message is ${message} and the function returns a ${typeValue} value of ${result}`);
     return result
