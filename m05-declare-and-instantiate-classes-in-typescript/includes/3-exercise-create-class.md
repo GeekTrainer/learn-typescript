@@ -272,10 +272,10 @@ class Car {
 
 Notice that you use the syntax `className.propertyName` instead of `this.` when accessing the static property.
 
-You can also define static methods. You can call the `getCars` method to return the value of `numberOfCars`.
+You can also define static methods. You can call the `getNumberOfCars` method to return the value of `numberOfCars`.
 
 ```typescript
-public static getCars(): number {
+public static getNumberOfCars(): number {
         return Car.numberOfCars;
 }
 ```
@@ -285,5 +285,5 @@ Instantiate the `Car` class as usual and then use the syntax `Car.getCars()` to 
 ```typescript
 let myCar1 = new Car('Cool Car Company', 'blue', 2);  // Instantiates the Car object with all parameters
 let myCar2 = new Car('Galaxy Motors', 'blue', 2);     // Instantiates the Car object with all parameters
-console.log(Car.getCars());  // Returns 2
+console.log(Car.getNumberOfCars());                   // Returns 2
 ```
