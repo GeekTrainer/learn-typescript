@@ -130,7 +130,7 @@ Continue working in the Playground.
 1. Below the class declaration, declare a variable called `myCar1` and assign a new `Car` object to it, passing in values for the `make`, `color`, and `doors` parameters (make sure that the `doors` parameter is assigned an even number.)
 
     ```typescript
-    let myCar1 = new Car('Honda', 'blue', 2);  // Instantiates the Car object with all parameters
+    let myCar1 = new Car('Cool Car Company', 'blue', 2);  // Instantiates the Car object with all parameters
     ```
 
 2. You can now access the properties of the new `myCar1` object. Enter `myCar1.` and you should see a list of the members defined in the class, including `color` and `_color`. Return the value of both properties to the console. What happens? Why?
@@ -144,7 +144,7 @@ Continue working in the Playground.
 4. Recall that the `set` block for the `doors` parameter tests the value to determine if it is even or odd. Test this by declaring a variable called `myCar2` and assigning a new `Car` object to it, passing in values for the `make`, `color`, and `doors` parameters. This time set the value of the doors parameter to an odd number. Now, run the code. What happens? Why?
 
     ```typescript
-    let myCar2 = new Car('Toyota', 'red', 3);
+    let myCar2 = new Car('Galaxy Motors', 'red', 3);
     ```
 
 5. Although you passed an odd number to `doors`, it compiles and runs without errors because no data validation occurs in the `constructor`. Try setting the value of `doors` to another odd number (for example, `myCar2.doors = 5`) and test it. This should invoke the `set` block and throw an error. If you want to perform this validation step when the `Car` object is initialized, you should add a validation check to the `constructor`.
@@ -164,7 +164,7 @@ Continue working in the Playground.
 6. Finally, test the optional parameter `doors` by omitting it from the object initialization.
 
     ```typescript
-    let myCar3 = new Car('Ford', 'gray');
+    let myCar3 = new Car('Galaxy Motors', 'gray');
     console.log(myCar3.doors);  // returns 4, the default value
     ```
 
@@ -242,3 +242,48 @@ Continue defining the `Car` class in the Playground.
 
 > [!NOTE]
 > TypeScript is a structural type system. When you compare two different types, regardless of where they came from, if the types of all members are compatible, then we say the types themselves are compatible. However, when comparing types that have private and protected members, these types are treated differently. For two types to be considered compatible, if one of them has a private member, then the other must have a private member that originated in the same declaration. The same applies to protected members.
+
+### Static properties
+
+The properties and methods of the classes defined so far are **instance properties**, meaning that they are instantiated and called on each instance of the class object. There is another type of property called a **static property**. Static properties and methods are shared by all instances of a class.
+
+To make a property static, use the `static` keyword before a property or a method. 
+
+For example, you can add a new `static` property to the `Car` class called `numberOfCars` that stores the number of times that the `Car` class is instantiated and set its initial value to 0. Then, in the constructor, increment the count by one.
+
+```typescript
+class Car {
+    // Properties
+    private static numberOfCars: number = 0;  // New static property
+    private _make: string;
+    private _color: string;
+    private _doors: number;
+
+    // Constructor
+    constructor(make: string, color: string, doors = 4) {
+        this._make = make;
+        this._color = color;
+        this._doors = doors;
+        Car.numberOfCars++;                   // Increments the value of the static property
+    }
+    // ...
+}
+```
+
+Notice that you use the syntax `className.propertyName` instead of `this.` when accessing the static property.
+
+You can also define static methods. You can call the `getCars` method to return the value of `numberOfCars`.
+
+```typescript
+public static getCars(): number {
+        return Car.numberOfCars;
+    }
+```
+
+To instantiate the `Car` class as usual and then use the syntax `Car.getCars()` to return the value number of instances.
+
+```typescript
+let myCar1 = new Car('Cool Cars', 'blue', 2);  // Instantiates the Car object with all parameters
+let myCar2 = new Car('Galaxy Motors', 'blue', 2);  // Instantiates the Car object with all parameters
+console.log(Car.getCars());  // Returns 2
+```
