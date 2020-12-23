@@ -243,7 +243,7 @@ Continue defining the `Car` class in the Playground.
 > [!NOTE]
 > TypeScript is a structural type system. When you compare two different types, regardless of where they came from, if the types of all members are compatible, then we say the types themselves are compatible. However, when comparing types that have private and protected members, these types are treated differently. For two types to be considered compatible, if one of them has a private member, then the other must have a private member that originated in the same declaration. The same applies to protected members.
 
-### Static properties
+## Static properties
 
 The properties and methods of the classes defined so far are **instance properties**, meaning that they are instantiated and called on each instance of the class object. There is another type of property called a **static property**. Static properties and methods are shared by all instances of a class.
 
@@ -277,13 +277,13 @@ You can also define static methods. You can call the `getCars` method to return 
 ```typescript
 public static getCars(): number {
         return Car.numberOfCars;
-    }
+}
 ```
 
 To instantiate the `Car` class as usual and then use the syntax `Car.getCars()` to return the value number of instances.
 
 ```typescript
-let myCar1 = new Car('Cool Cars', 'blue', 2);  // Instantiates the Car object with all parameters
+let myCar1 = new Car('Cool Car Company', 'blue', 2);  // Instantiates the Car object with all parameters
 let myCar2 = new Car('Galaxy Motors', 'blue', 2);  // Instantiates the Car object with all parameters
 console.log(Car.getCars());  // Returns 2
 ```
