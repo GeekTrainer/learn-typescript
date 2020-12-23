@@ -61,20 +61,20 @@ You can also declare a generic interface as a function type.
 
 You can also declare a generic interface and implement it in a class.
 
-1. Declare an interface called `ProcessIdentity2` that has two properties, `value` and `message`, and two generic type variables, `T` and `U`, for the property types. Then, add a generic signature of a method called `process` that returns a value of type `T`.
+1. In a new Playground window, declare an interface called `ProcessIdentity` that has two properties, `value` and `message`, and two generic type variables, `T` and `U`, for the property types. Then, add a generic signature of a method called `process` that returns a value of type `T`.
 
     ```typescript
-    interface ProcessIdentity2<T, U> {
+    interface ProcessIdentity<T, U> {
         value: T;
         message: U;
         process(): T;
     }
     ```
 
-2. Define a generic class called `processIdentity` that implements the `ProcessIdentity2` interface. In this case, name the variable types in the `processIdentity` class `X` and `Y`. You can use different variable names in the interface and the class because the type value propagates up the chain and the variable name doesn't matter.
+2. Define a generic class called `processIdentity` that implements the `ProcessIdentity` interface. In this case, name the variable types in the `processIdentity` class `X` and `Y`. You can use different variable names in the interface and the class because the type value propagates up the chain and the variable name doesn't matter.
 
     ```typescript
-    class processIdentity<X, Y> implements ProcessIdentity2<X, Y> {
+    class processIdentity<X, Y> implements ProcessIdentity<X, Y> {
         value: X;
         message: Y;
         constructor(val: X, msg: Y) {
