@@ -80,10 +80,10 @@ Continue working in the Playground and create a new `ElectricCar` class.
 
 
     ```typescript
-    let i3 = new ElectricCar('BMW','silver', 124, 2);
-    let model3 = new ElectricCar('Tesla', 'black', 263);
-    console.log(model3.doors);    // returns the default, 2
-    i3.charge();                  // returns "BMW is charging"
+    let spark = new ElectricCar('Spark Motors','silver', 124, 2);
+    let eCar = new ElectricCar('Electric Car Co.', 'black', 263);
+    console.log(eCar.doors);         // returns the default, 2
+    spark.charge();                  // returns "Spark Motors is charging"
     ```
 
 ## Override a method
@@ -106,5 +106,5 @@ Continue working in the Playground.
 2. Test the new method and verify that it works as expected.
 
     ```typescript
-    console.log(i3.brake());  // returns "BMW is braking with the regenerative braking system"
+    console.log(spark.brake());  // returns "Spark Motors is braking with the regenerative braking system"
     ```
