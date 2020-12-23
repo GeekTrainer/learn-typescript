@@ -119,9 +119,9 @@ function identity<T extends ValidTypes, U> (value: T, message: U) : T {
     console.log(message);
     return result
 }
-let returnNumber = identity<number, string>(100, 'Hello!');  // Returns 200
-let returnString = identity<string, number>('Hello!', 100);  // Returns "Hello!Hello!"
-let returnBoolean = identity<boolean, number>(true, 100);    // Error - Type 'boolean' does not satisfy the constraint 'ValidTypes'.
+let returnNumber = identity<number, string>(100, 'Hello!');      // OK
+let returnString = identity<string, string>('100', 'Hola!');     // OK
+let returnBoolean = identity<boolean, string>(true, 'Bonjour!'); // Error: Type 'boolean' does not satisfy the constraint 'ValidTypes'.
 ```
 
 You can also constrain a type to the property of another object. This example uses `extends` with the `keyof` operator, which takes an object type and produces a string or numeric literal union of its keys. Here, `K extends keyof T`, ensuring that the key parameter is of the correct type for type assigned to `pet`.
