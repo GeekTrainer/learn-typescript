@@ -55,12 +55,12 @@ The `DataStore` class contains utility functions that can store up to ten `strin
     console.log(cities.GetData(12));        // returns 'undefined'
     ```
 
-1. Rewrite the `DataStore` class so it can store `items` of any type.
+2. Rewrite the `DataStore` class so it can store `items` of any type.
    1. Add a type variable called `T` to the class declaration.
-   1. Add the type variable to the `_data` property declaration.
-   1. Update the type of the `item` parameter in the `AddOrUpdate` function to use the type variable.
-1. Test that type variable can accept numbers. Declare a new variable called `empIDs` and assign a new `DataStore` object to it. Call the `AddOrUpdate` function and assign number type items to it.
-1. Test that the type variable can accept a custom object. Declare a `type` called `Pets` that contains three properties: `name` as a `string`, `breed` as a `string`, and `age` as a `number`. Declare a new variable called `pets` and assign a new `DataStore` object to it. Call the `AddOrUpdate` function and assign `Pet` objects to it.
+   2. Add the type variable to the `_data` property declaration.
+   3. Update the type of the `item` parameter in the `AddOrUpdate` function to use the type variable.
+3. Test that type variable can accept numbers. Declare a new variable called `empIDs` and assign a new `DataStore` object to it. Call the `AddOrUpdate` function and assign number type items to it.
+4. Test that the type variable can accept a custom object. Declare a `type` called `Pets` that contains three properties: `name` as a `string`, `breed` as a `string`, and `age` as a `number`. Declare a new variable called `pets` and assign a new `DataStore` object to it. Call the `AddOrUpdate` function and assign `Pet` objects to it.
 
 ## Lab solution
 
