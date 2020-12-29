@@ -99,7 +99,7 @@ In this exercise, you'll reorganize the namespaces into multiple TypeScript file
 3. Move the `Loans` namespace from **module07_main.ts** to **module07_loans.ts**.
 4. Move the `LoanPrograms` namespace from **module07_main.ts** to **module07_loan-programs.ts**.
 5. Add the required `reference` statements to describe the relationship between the **module07_loan-programs.ts** and **module07_main.ts** files.
-6. At the command prompt, run the `tsc` command to compile all the `.ts` files, and then run the `tsc --outFile main.js module07_main.ts` command to create a single JavaScript file named **main.js**.
+6. At the command prompt, run the `tsc` command to compile all the **.ts** files, and then run the `tsc --outFile main.js module07_main.ts` command to create a single JavaScript file named **main.js**.
 7. Test your work by running the **main.js** file.
 
 ## Exercise 3
