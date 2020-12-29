@@ -18,7 +18,7 @@ You can implement namespaces within a single TypeScript file or across multiple 
 
 Open the [Playground](https://www.typescriptlang.org/play) and define a single file namespace.
 
-1. Define a new `namespace` by using the namespace keyword followed by the namespace name. You can define as many namespaces as needed within a single TypeScript file. Define two namespaces named `Greetings` and `GreetingsWithLength`.
+1. Define a new namespace by using the `namespace` keyword followed by the namespace name. You can define as many namespaces as needed within a single TypeScript file. Define two namespaces named `Greetings` and `GreetingsWithLength`.
 
     ```typescript
     namespace Greetings {
@@ -51,10 +51,7 @@ Open the [Playground](https://www.typescriptlang.org/play) and define a single f
     }
     ```
 
-4. If you want to make a function or class available to code outside of the namespace, add the `export` keyword before its name. If you omit the `export` keyword, the component is only available inside the namespace. You can do this if defining components that should only be directly accessible to other components within the namespace.
-
-   1. Add the `export` keyword to the `returnGreeting` function in both namespaces.
-   2. The `getLength` function should not be accessible outside of the `GreetingsWithLength` namespace so omit the `export` keyword.
+4. If you want to make a function or class available to code outside of the namespace, add the `export` keyword before its name. If you omit the `export` keyword, the component is only available inside the namespace. You can do this if defining components that should only be directly accessible to other components within the namespace. Add the `export` keyword to the `returnGreeting` function in both namespaces. The `getLength` function should not be accessible outside of the `GreetingsWithLength` namespace so omit the `export` keyword.
 
     ```typescript
     namespace Greetings {
@@ -73,7 +70,7 @@ Open the [Playground](https://www.typescriptlang.org/play) and define a single f
     }
     ```
 
-3. To use a class or function within a namespace, prefix the component name with the namespace name. Try calling the `returnGreeting` function without specifying the namespace. This returns an error because both `returnGreeting` functions are out of scope in the global namespace. Now, try prefixing `Greetings` or `GreetingsWithLength` to the returnGreeting function. This provides access to the function within each respective namespace.
+3. To use a class or function within a namespace, prefix the component name with the namespace name. Try calling the `returnGreeting` function without specifying the namespace. This returns an error because both `returnGreeting` functions are out of scope in the global namespace. Now, try prefixing `Greetings` or `GreetingsWithLength` to the `returnGreeting` function. This provides access to the function within each respective namespace.
 
     ```typescript
     returnGreeting('Hello');                     // Returns error
