@@ -75,6 +75,6 @@ To compile a module, specify a `--module` target on the command line. In the pre
 
 `tsc --module commonjs Main.ts`
 
-As with `reference` tags, the compiler follows `import `statements to compile dependent files. When compiled, each module will become a separate **.js** file.
+As with `reference` tags, the compiler follows `import` statements to compile dependent files. When compiled, each module will become a separate **.js** file.
 
 [REVIEWER NOTE - All this works when I run Main.js with node at the command line. However, I get an error that says " Uncaught ReferenceError: exports is not defined at Main.js:2 " when I try to load Main.js from an HTML page in the browser. Do you know why?]
