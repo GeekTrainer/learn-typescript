@@ -73,7 +73,7 @@ Modules import one another using a module loader. At runtime, the module loader 
 
 To compile a module, specify a `--module` target on the command line. In the previous example, you can compile the **Main.ts** module for Node.js with the following command:
 
-tsc --module commonjs Main.ts
+`tsc --module commonjs Main.ts`
 
 As with `reference` tags, the compiler follows `import `statements to compile dependent files. When compiled, each module will become a separate **.js** file.
 
