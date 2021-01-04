@@ -14,6 +14,7 @@ Returning to the greetings example in the earlier units, how can this scenario b
 > [!NOTE]
 > To implement modules, you need to use an IDE. This is not possible to do this in the Playground. See the Lab setup section later in this module for more information about setting up a development environment in Visual Studio Code.
 
+
 ## Exercise - Export a module component
 
 In this exercise, you'll organize related functions into separate modules and then export the function declarations.

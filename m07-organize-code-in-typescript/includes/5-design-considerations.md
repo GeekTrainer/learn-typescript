@@ -29,4 +29,3 @@ The following table summarizes and compares modules and namespaces.
 | It is not possible to have multi-file modules compiled to a single module.| To compile all TypeScript files containing namespaces into a single JavaScript file, use the `tsc --outFile` command.|
 | Modules import another module by using a module loader API. You specify the API when you compile the module.| Namespaces are loaded by specifying the **.js** file names (in order) using the `<script>` tag in the HTML page.|
 | In modules, you can re-export the components either using their original name or rename it.| In namespaces, you cannot re-export components or rename them.|
-

@@ -10,7 +10,7 @@ If you’re using the Playground, copy and paste the starting code into it as di
 
 ### Visual Studio Code
 
-If you’re using an existing Visual Studio Code workspace, add a new file named **module05.ts** to your project and copy and paste the starting code into it as directed in the lab instructions. 
+If you’re using an existing Visual Studio Code workspace, add a new file named **module05.ts** to your project and copy and paste the starting code into it as directed in the lab instructions.
 
 You can also download the starting workspace at [LINK TO \code\module-05\m05-start] and edit the file **module05.ts**. To run the solution, you must first set up your development environment by installing the following software on your machine:
 

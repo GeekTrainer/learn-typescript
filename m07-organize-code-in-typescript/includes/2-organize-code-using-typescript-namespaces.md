@@ -1,4 +1,4 @@
-**Namespaces** (referred to as "internal modules" in earlier versions of TypeScript) are a TypeScript-specific way to organize and categorize your code, enabling you to group related code together. For example, you could put variables, functions, interfaces, or classes related to business rules in one namespace and security in another.
+**Namespaces** (referred to as "internal modules" in earlier versions of TypeScript) are a TypeScript-specific way to organize and categorize your code, enabling you to group related code together. With namespaces you can group variables, functions, interfaces, or classes related to business rules in one namespace and security in another.
 
 When code is inside a namespace, it is pulled from the global scope and into the scope of the namespace. This can help you avoid naming conflicts between components in the global namespace and can be beneficial when working with distributed development teams that may use similar component names.
 
@@ -11,6 +11,7 @@ You can use namespaces to:
 - Reduce the amount of code in the global scope, limiting "global scope pollution."
 - Provide a context for names, which helps reduce naming collisions.
 - Enhance reusability.
+
 
 ## Exercise - Organize code using a single file namespace
 
