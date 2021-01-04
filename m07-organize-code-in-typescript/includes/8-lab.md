@@ -2,11 +2,7 @@ In this lab, you'll try out different ways to organize your code using TypeScrip
 
 ## Lab setup
 
-While you can use the TypeScript [Playground](https://www.typescriptlang.org/play) or Visual Studio Code to complete Exercise 1 of this lab, you must use Visual Studio Code to complete Exercise 2 and Exercise 3 because the solution requires multiple TypeScript files. For this reason, it is recommended that you use Visual Studio Code for the entire Lab.
-
-### Playground
-
-If you’re using the Playground, copy and paste the starting code into it as directed in the lab instructions.
+You must use Visual Studio Code to complete this lab because the solution requires multiple TypeScript files. It is not possible to complete the lab using the TypeScript [Playground](https://www.typescriptlang.org/play).
 
 ### Visual Studio Code
 
