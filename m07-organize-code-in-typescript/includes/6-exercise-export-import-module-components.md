@@ -7,8 +7,8 @@ Returning to the greetings example in the earlier units, how can this scenario b
 
 In this part of the exercise, you'll organize related functions into separate modules and then export the function declarations.
 
-1. Download a new copy of the starting workspace for the exercise at [LINK TO \code\module-07\m07-exercise-start] and edit the file module07_exercise.ts. This file contains three functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into modules.
-1. Create a new file called **Greetings_module.ts** that contains the first `returnGreeting` function, with the `export` keyword added before the function name so it is available to other modules.
+1. Download a new copy of the starting workspace for the exercise at [LINK TO \code\module-07\m07-exercise-start] and edit the file **module07_exercise.ts**. This file contains three functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into modules.
+2. Create a new file called **Greetings_module.ts** and then move the first `returnGreeting` function from **module07_exercise.ts** into it. Add the `export` keyword before the function name so it is available to other modules.
 
     ```typescript
     export function returnGreeting (greeting: string) {
@@ -16,7 +16,7 @@ In this part of the exercise, you'll organize related functions into separate mo
     }
     ```
 
-2. Create a second file called **GreetingsLength_module.ts** that contains the second `returnGreeting` function and the `getLength` function. (This eliminates the naming conflict that you would have if both `returnGreeting` functions were in the same module.) Add `export` before the `returnGreeting` function so it is available to other modules. It is not necessary to export the `getLength` function because it is only used within the scope of the module.
+3. Create a second file called **GreetingsLength_module.ts** and then move the second `returnGreeting` function and the `getLength` function from **module07_exercise.ts** into it. (This eliminates the naming conflict that you had with both `returnGreeting` functions were in the same file.) Add `export` before the `returnGreeting` function so it is available to other modules. It is not necessary to export the `getLength` function because it is only used within the scope of the module.
 
     ```typescript
     export function returnGreeting (greeting: string) {
@@ -28,9 +28,9 @@ In this part of the exercise, you'll organize related functions into separate mo
     }
     ```
 
-## Exercise - Import a module component
+## Import a module component
 
-In this exercise, you'll import components from each of the two modules into a new module.
+In next part of the exercise, you'll import components from each of the two modules into a new module.
 
 1. Create a new file called **Main.ts**. This file contains the main code of the application, including the `import` statements.
 2. Import the `returnGreeting` function from **Greetings_module.ts** using the `import` keyword. The first statement below imports a single function. If **Greetings_module.ts** had contained multiple components, you could import the entire module into a single variable (for example, `allGreetingFunctions`), as shown in the second statement. You can then use the variable to access the module exports.
