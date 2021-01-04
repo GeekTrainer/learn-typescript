@@ -1,6 +1,4 @@
-You can extend namespaces by sharing them across multiple TypeScript files.
-
-When you have namespaces in multiple files that relate to each other, you must add `reference` tags to tell the TypeScript compiler about the relationships between the files. For example, assume that you have three Typescript files:
+You can extend namespaces by sharing them across multiple TypeScript files. When you have namespaces in multiple files that relate to each other, you must add `reference` tags to tell the TypeScript compiler about the relationships between the files. For example, assume that you have three Typescript files:
 
 - **interfaces.ts**, which declares a namespace that contains some interface definitions.
 - **functions.ts**, which declares a namespace with functions that implement the interfaces in **interfaces.ts**.
