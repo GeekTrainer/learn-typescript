@@ -3,7 +3,7 @@ You can implement namespaces within a single TypeScript file or across multiple 
 > [!NOTE]
 > You must use an IDE, such as Visual Studio Code, to implement multi-file namespaces and modules. It is not possible to do this in the TypeScript Playground. Before completing the exercise, see the **Lab setup** section later in this module for more information about setting up a development environment in Visual Studio Code.
 
-To define a single file namespace:
+Complete the steps to define a single file namespace:
 
 1. Download the starting workspace for the exercise at [LINK TO \code\module-07\m07-exercise-start] and edit the file **module07_exercise.ts**. This file contains three functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into namespaces.
 2. Define a new namespace by using the `namespace` keyword followed by the namespace name. You can define as many namespaces as needed within a single TypeScript file. Define two namespaces named `Greetings` and `GreetingsWithLength`.
