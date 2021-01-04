@@ -6,7 +6,7 @@ You must use Visual Studio Code to complete this lab because the solution requir
 
 ### Visual Studio Code
 
-Download the starting workspace at [LINK TO \code\module-07\m07-start] and edit the file **module07_main.ts**. To run the solution, you must first set up your development environment by installing the following software on your machine:
+Download the starting workspace at [LINK TO \code\module-07\m07-start]. To run the solution, you must first set up your development environment by installing the following software on your machine:
 
 - Visual Studio Code (or IDE of your choice)
 - Node Package Manager (npm)
@@ -32,7 +32,7 @@ The `interestOnlyLoan` and `conventionalLoan` functions accept `principle` and `
 
 In this exercise, you'll organize the code using namespaces in a single TypeScript file.
 
-1. Open the file **module07_main.ts** your TypeScript editor.
+1. In the starting workspace, open the file **module07_main.ts** the TypeScript editor.
 2. Encapsulate the `Loan` and `ConventionalLoan` interfaces into a namespace called `Loans`.
 3. Update the `Loan` and `ConventionalLoan` interfaces so they are visible outside of the `Loans` namespace.
 4. Encapsulate the three functions into a namespace called `LoanPrograms`.
