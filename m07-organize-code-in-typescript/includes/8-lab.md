@@ -6,9 +6,7 @@ You must use Visual Studio Code to complete this lab because the solution requir
 
 ### Visual Studio Code
 
-If you’re using an existing Visual Studio Code workspace, add a new file named **module07_main.ts** to your project and copy and paste the starting code into it as directed in the lab instructions.
-
-You can also download the starting workspace at [LINK TO \code\module-07\m07-start] and edit the file **module07_main.ts**. To run the solution, you must first set up your development environment by installing the following software on your machine:
+Download the starting workspace at [LINK TO \code\module-07\m07-start] and edit the file **module07_main.ts**. To run the solution, you must first set up your development environment by installing the following software on your machine:
 
 - Visual Studio Code (or IDE of your choice)
 - Node Package Manager (npm)
@@ -34,49 +32,7 @@ The `interestOnlyLoan` and `conventionalLoan` functions accept `principle` and `
 
 In this exercise, you'll organize the code using namespaces in a single TypeScript file.
 
-1. Copy and paste the following JavaScript code your TypeScript editor.
-
-   ```typescript
-   /* TODO: Encapsulate the Loan and ConventionalLoan interfaces into a namespace called Loans.
-      Update the Loan and ConventionalLoan interfaces so they are visible outside of the Loans
-      namespace. *
-   interface Loan {
-       principle: number,
-       interestRate: number        //* Interest rate percentage (eg. 14 is 14%)
-   }
-   interface ConventionalLoan extends Loan {
-       numberOfMonths: number      //* Total number of months
-   }
-   /* TODO: Encapsulate the three functions into a namespace called LoanPrograms.
-      In the interestOnlyLoan and conventionalLoan functions:
-      - Update the references to the Loan and ConventionalLoan interfaces so the functions can implement them.
-      - Make them visible outside of the LoanPrograms namespace. */
-
-   // Calculates the monthly payment of an interest only loan
-   function interestOnlyLoan(loanTerms: Loan): string {
-       let payment: number;
-       payment = loanTerms.principle * calculateInterestRate(loanTerms.interestRate);
-       return 'The interest only loan payment is ' + payment.toFixed(2);
-   }
-   // Calculates the monthly payment of a conventional loan
-   function conventionalLoan(loanTerms: ConventionalLoan): string {
-       let interest: number = calculateInterestRate(loanTerms.interestRate);
-       let payment: number;
-       payment = loanTerms.principle * interest / (1 - (Math.pow(1/(1 + interest), loanTerms.numberOfMonths)));
-       return 'The conventional loan payment is ' + payment.toFixed(2);
-   }
-   function calculateInterestRate (interestRate: number): number {
-       let interest: number = interestRate / 1200;
-       return interest
-   }
-
-   /* TODO: Update function calls in the loanA and loanB variable declarations. */
-   let loanA = interestOnlyLoan({principle: 30000, interestRate: 5});
-   let loanB = conventionalLoan({principle: 30000, interestRate: 5, numberOfMonths: 180});
-   console.log(loanA);     //* Returns "The interest only loan payment is 125.00"
-   console.log(loanB);     //* Returns "The conventional loan payment is 237.24"
-   ```
-
+1. Open the file **module07_main.ts** your TypeScript editor.
 2. Encapsulate the `Loan` and `ConventionalLoan` interfaces into a namespace called `Loans`.
 3. Update the `Loan` and `ConventionalLoan` interfaces so they are visible outside of the `Loans` namespace.
 4. Encapsulate the three functions into a namespace called `LoanPrograms`.
