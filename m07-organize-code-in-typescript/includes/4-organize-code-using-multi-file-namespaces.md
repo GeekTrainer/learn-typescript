@@ -10,9 +10,6 @@ To inform TypeScript of the relationship between **interfaces.ts** and **functio
 
 When there is a reference to more than one file, start with the highest-level namespace and then work your way down. TypeScript will use this order when compiling the files.
 
-> [!NOTE]
-> To implement multi-file namespaces, you need to use an IDE. It is not possible to do this in the Playground. See the **Lab setup** section later in this module for more information about setting up a development environment in Visual Studio Code.
-
 ## Compiling multi-file namespaces
 
 There are two ways to compile multiple file namespaces: per-file compilation and single file compilation.
