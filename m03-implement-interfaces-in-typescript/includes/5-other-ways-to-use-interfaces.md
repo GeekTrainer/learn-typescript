@@ -55,7 +55,7 @@ async function showPost() {
 showPost();
 ```
 
-Using the `fetch` API and `async` and `await` are beyond the scope of this learning path. If you want to learn more about it, see these videos from the Beginner's Series to JavaScript course:
+Using the `fetch` API and `async` and `await` are beyond the scope of this learning path. If you want to learn more about it, see these videos from the [Beginner's Series to JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript?WT.mc_id=beginner-c9-niner) course:
 
 - [async/await for managing promises](https://youtu.be/YwmlRkrxvkk)
 - [Demo: async/await for managing promises](https://youtu.be/XLxIqq3HlL8)
