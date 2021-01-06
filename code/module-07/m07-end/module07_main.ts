@@ -5,7 +5,7 @@
 
 //  Functions moved to module07_loan-programs.ts
 
-import * as LoanPrograms from './module07_loan-programs'; // imports all the functions from the modules
+import * as LoanPrograms from './module07_loan-programs.js'; // imports all the functions from the modules
 
 let loanA = LoanPrograms.interestOnlyLoan({principle: 30000, interestRate: 5});
 let loanB = LoanPrograms.conventionalLoan({principle: 30000, interestRate: 5, numberOfMonths: 180});
