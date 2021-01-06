@@ -70,3 +70,9 @@ To compile the file for use in a web browser, use this command:
 `tsc --module es6 Main.ts`
 
 As with `reference` tags, the compiler follows `import` statements to compile dependent files. When compiled, each module will become a separate **.js** file.
+
+## Running modules from a web page
+
+To run a modules from a web page, remember to set the `type` option to `"module"`:
+
+`<script type="module" src=".\Main.js"></script>`
