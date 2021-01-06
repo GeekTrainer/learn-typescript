@@ -61,7 +61,7 @@ In next part of the exercise, you'll import components from each of the two modu
 
 Modules import one another using a module loader. At runtime, the module loader locates and executes all dependencies of a module before executing it. Depending on the module target that you specify during compilation, the compiler will generate appropriate code for Node.js ([CommonJS](https://nodejs.org/api/modules.html)), require.js ([AMD](https://github.com/amdjs/amdjs-api/wiki/AMD)), [UMD](https://github.com/umdjs/umd), [SystemJS](https://github.com/systemjs/systemjs), or [ECMAScript 2015 native modules](https://www.ecma-international.org/ecma-262/6.0/) (ES6) module-loading systems. 
 
-To compile a module, specify a `--module` target on the command line. In the previous example, you can compile the **Main.ts** module for Node.js with the following command:
+To compile modules, specify a `--module` target on the command line or in the **tsconfig.json** file for the project. In the previous example, you can compile the **Main.ts** module for Node.js with the following command:
 
 `tsc --module commonjs Main.ts`
 
