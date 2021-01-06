@@ -73,6 +73,6 @@ As with `reference` tags, the compiler follows `import` statements to compile d
 
 ## Running modules from a web page
 
-To run a modules from a web page, remember to set the `type` option to `"module"`:
+To run a module from a web page, remember to set the `type` option to `"module"`:
 
 `<script type="module" src=".\Main.js"></script>`
