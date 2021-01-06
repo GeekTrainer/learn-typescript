@@ -69,7 +69,7 @@ In this exercise, you'll convert the multi-file namespace solution in the previo
    3. Retain the `export` keyword on the two function declarations.
 7. In **module07_main.ts**, replace the two `reference` statements with one `import` statement that imports the `interestOnlyLoan` and `conventionalLoan` functions from **module07_loan-programs.ts**. For convenience, assign the functions to a variable called `LoanPrograms`.
 8. At the command prompt, run the `tsc` command using the `--module commonjs` option to compile **module07_main.ts**.
-9. Test your work by running the **module07_main.js** file.
+9. Test your work in node by running the **module07_main.js** file.
 
 ## Lab solution
 
