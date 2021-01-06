@@ -36,14 +36,17 @@ In next part of the exercise, you'll import components from each of the two modu
 2. Import the `returnGreeting` function from **Greetings_module.ts** using the `import` keyword. The first statement below imports a single function. If **Greetings_module.ts** had contained multiple components, you could import the entire module into a single variable (for example, `allGreetingFunctions`), as shown in the second statement. You can then use the variable to access the module exports.
 
     ```typescript
-    import { returnGreeting } from './Greetings_module';         // imports a single function in the module
-    import * as allGreetingFunctions from './Greetings_module';  // imports all exported components in the module
+    import { returnGreeting } from './Greetings_module.js';         // imports a single function in the module
+    import * as allGreetingFunctions from './Greetings_module.js';  // imports all exported components in the module
     ```
+
+> [!IMPORTANT]
+> If you want to run the resulting JavaScript in a web browser, you must append the `.js` file extension to the file name in the `import` statement. To learn more, see [Compiled JavaScript import is missing file extension](https://github.com/microsoft/TypeScript/issues/40878).
 
 3. Try importing the `returnGreeting` function from **GreetingsLength_module.ts** using the statement `import { returnGreeting } from './GreetingsLength_module'`. You'll notice an error because both files contain a `returnGreeting` function and you now have a naming conflict in the global scope of **Main.ts**. You can correct the issue by assigning the second instance of `returnGreeting` a new name. Replace `{ returnGreeting }` with `{ returnGreeting as returnGreetingLength }`. You can now use `returnGreetingLength` in place of the function name in your code.
 
     ```typescript
-    import { returnGreeting as returnGreetingLength } from './GreetingsLength_module';
+    import { returnGreeting as returnGreetingLength } from './GreetingsLength_module.js';
     ```
 
 4. Now, you can use the `returnGreetings` functions in your code.
@@ -58,13 +61,12 @@ In next part of the exercise, you'll import components from each of the two modu
 
 Modules import one another using a module loader. At runtime, the module loader locates and executes all dependencies of a module before executing it. Depending on the module target that you specify during compilation, the compiler will generate appropriate code for Node.js ([CommonJS](https://nodejs.org/api/modules.html)), require.js ([AMD](https://github.com/amdjs/amdjs-api/wiki/AMD)), [UMD](https://github.com/umdjs/umd), [SystemJS](https://github.com/systemjs/systemjs), or [ECMAScript 2015 native modules](https://www.ecma-international.org/ecma-262/6.0/) (ES6) module-loading systems. 
 
-> [!TIP]
-> You can use CommonJS in most scenarios.
-
 To compile a module, specify a `--module` target on the command line. In the previous example, you can compile the **Main.ts** module for Node.js with the following command:
 
 `tsc --module commonjs Main.ts`
 
-As with `reference` tags, the compiler follows `import` statements to compile dependent files. When compiled, each module will become a separate **.js** file.
+To compile the file for use in a web browser, use this command:
 
-[REVIEWER NOTE - All this works when I run Main.js with node at the command line. However, I get an error that says " Uncaught ReferenceError: exports is not defined at Main.js:2 " when I try to load Main.js from an HTML page in the browser. Do you know why?]
+`tsc --module es6 Main.ts`
+
+As with `reference` tags, the compiler follows `import` statements to compile dependent files. When compiled, each module will become a separate **.js** file.
