@@ -10,7 +10,6 @@ A Union type uses the vertical bar (`|`) to separate each type. In the following
 
 ```typescript
 let multiType: number | boolean;
-
 multiType = 20;         //* Valid
 multiType = true;       //* Valid
 multiType = "twenty";   //* Invalid
