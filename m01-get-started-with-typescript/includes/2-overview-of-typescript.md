@@ -21,7 +21,6 @@ Writing types can be optional in TypeScript, because *type inference* allows you
 Let's look at a simple example to demonstrate the use of types.
 
 1. Open the TypeScript [Playground](https://www.typescriptlang.org/play). (You'll learn more about the Playground later in this module.)
-
 2. Copy and paste the following JavaScript code sample into the TypeScript (left) pane of the Playground:
 
     ```javascript
@@ -33,19 +32,12 @@ Let's look at a simple example to demonstrate the use of types.
     ```
 
 3. Notice that the same code appears in the **JS** pane on the right side. This is the JavaScript code that TypeScript will generate after it's compiled.
-
 4. Select **Run** to execute the JavaScript code. Then, select the **Logs** tab and notice that the value `9` is logged to the console. JavaScript has assigned the `number` type to the parameters `num1` and `num2` and the function returned a number.
-
 5. Now, replace `3` with `"three"` in the TypeScript code and then run it. JavaScript now assigns the `string` type to the `num1` parameter and returns "three6", a string type, to the console. You've probably run into this situation before and, as you know, it can cause some unexpected results.
-
 6. In the TypeScript pane, notice the red squiggly lines under the parameter names in the `addNumbers` function. This indicates that the type checker identified errors. Position your mouse pointer over one of the parameters and read the description of the error. TypeScript has implicitly assigned a type of `any`, which is the broadest type because it can essentially contain anything.
-
 7. Now, update the TypeScript code to specify a type for each parameter. Replace `num1` with `num1: number` and `num2` with `num2: number`.
-
 8. You'll notice that the errors are now gone from the parameters, but a new one has appeared under the first argument in the function call: **Argument of type 'string' is not assignable to parameter of type 'number'**.
-
 9. Replace `"three"` with a number to correct the error. You could pass in a literal value, a variable, or any other data and, because TypeScript understands the shape of your object, it can notify you of the type conflict at development time.
-
 10. Review the JavaScript and notice that there are no changes to it. TypeScript was able to provide type checking during development, but this has had no impact on the resulting JavaScript code because it doesn't support types.
 
 ### Other code features of TypeScript
