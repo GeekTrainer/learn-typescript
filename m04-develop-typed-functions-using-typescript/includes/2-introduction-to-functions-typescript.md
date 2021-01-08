@@ -134,4 +134,4 @@ let total2 = (input: number[]): number => {
 ```
 
 > [!TIP]
-> TIP Arrow functions were introduced in ES2015 so not all browsers support them. By using TypeScript, you can take advantage of these function types and then transpile down to earlier JavaScript versions, if necessary, so your code will work with older browsers.
+> Arrow functions were introduced in ES2015 so not all browsers support them. By using TypeScript, you can take advantage of these function types and then transpile down to earlier JavaScript versions, if necessary, so your code will work with older browsers.
