@@ -39,8 +39,8 @@ You can use the `init` option of the TypeScript compiler to generate a TSConfig 
 7. Save **tsconfig.json**.
 8. At the command prompt, enter `tsc`. This reads the 'jsconfig.json` file and resets the options for the project.
 
-<[!TIP]
-<To learn more about the **tsconfig.json** file, visit the [TSConfig Reference](https://www.staging-typescript.org/tsconfig).
+< [!TIP]
+< To learn more about the **tsconfig.json** file, visit the [TSConfig Reference](https://www.staging-typescript.org/tsconfig).
 
 ## Step 3: Compile TypeScript to JavaScript
 
