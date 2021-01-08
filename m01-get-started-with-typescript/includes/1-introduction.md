@@ -3,11 +3,8 @@ This module introduces you to the TypeScript language, why it was created, and h
 In this module, you will:
 
 - Explain how TypeScript improves your web development over using JavaScript.
-
 - Select a TypeScript editor.
-
 - Install TypeScript.
-
 - Set up a TypeScript project in Visual Studio Code.
 
 ## Learning objectives
@@ -15,11 +12,8 @@ In this module, you will:
 After completing this module, you'll be able to:
 
 - Explain how TypeScript improves your web development over using JavaScript.
-
 - Select a TypeScript editor.
-
 - Install TypeScript.
-
 - Set up a TypeScript project in Visual Studio Code.
 
 ## Prerequisites
