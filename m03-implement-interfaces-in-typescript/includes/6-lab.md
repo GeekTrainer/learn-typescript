@@ -48,7 +48,6 @@ For best results, follow the complete instructions for setting up your environme
        additional property required for a conventional loan, numMonths, as a number. */
 
 
-
    /*  TODO: Replace the two parameters in the intOnlyLoan function with an object of 
        type Loan (for example, loanTerms: Loan) and type the return value of the function 
        as a string. 
