@@ -11,7 +11,7 @@ TypeScript, like JavaScript, allows you to work with arrays of values. Array typ
 let list: number[] = [1, 2, 3];
 ```
 
-The second way uses a generic `Array` type, using the syntax `Array<elemType`>:
+The second way uses a generic `Array` type, using the syntax `Array<elemType>`:
 
 ```typescript
 let list: Array<number> = [1, 2, 3];
@@ -74,7 +74,6 @@ let myResult: testResult;
 myResult = "incomplete";    //* Valid
 myResult = "pass";          //* Valid
 myResult = "failure";       //* Invalid
-
 ```
 
 When setting the value of the variable `myResult`, `"incomplete"` and `"pass"` are valid entries, while `"failure"` is not because it is not one of the items in the `testResult` type definition.
@@ -89,7 +88,6 @@ let diceRoll: dice;
 diceRoll = 1;    //* Valid
 diceRoll = 2;    //* Valid
 diceRoll = 7;    //* Invalid
-
 ```
 
 You can also use `boolean` values when defining literal types, as well as a combination of types.
