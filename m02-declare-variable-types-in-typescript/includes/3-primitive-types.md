@@ -37,7 +37,7 @@ let empty = "";
 let abc = 'abc';
 ```
 
-In TypeScript, you can also use template strings, which can span multiple lines and have embedded expressions. These strings are surrounded by the backtick/backquote (`\`` ) character, and embedded expressions are of the form `${ expr }`.
+In TypeScript, you can also use template strings, which can span multiple lines and have embedded expressions. These strings are surrounded by the backtick/backquote ( \` ) character, and embedded expressions are of the form `${ expr }`.
 
 For example:
 
