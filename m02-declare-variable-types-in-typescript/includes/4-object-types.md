@@ -68,9 +68,7 @@ The best way to demonstrate the use of literal types is with an example. This ty
 
 ```typescript
 type testResult = "pass" | "fail" | "incomplete";
-
 let myResult: testResult;
-
 myResult = "incomplete";    //* Valid
 myResult = "pass";          //* Valid
 myResult = "failure";       //* Invalid
@@ -82,9 +80,7 @@ TypeScript also has numeric literal types, which act the same as the string lite
 
 ```typescript
 type dice = 1 | 2 | 3 | 4 | 5 | 6;
-
 let diceRoll: dice;
-
 diceRoll = 1;    //* Valid
 diceRoll = 2;    //* Valid
 diceRoll = 7;    //* Invalid
