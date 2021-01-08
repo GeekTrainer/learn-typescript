@@ -18,4 +18,14 @@ After completing this module, you will be able to:
 
 ## Prerequisites
 
-Familiarity with functions and arrays in JavaScript ES6/2015. 
+- Knowledge of TypeScript
+- Familiarity with JavaScript
+- Familiarity with functions and arrays in JavaScript
+- [Visual Studio Code](https://code.visualstudio.com)
+- [Node.js](https://nodejs.org/)
+- TypeScript
+  - TypeScript can be installed after installing Node.js after running the following in a terminal or command window:
+
+    ```bash
+    npm install -g typescript
+    ```

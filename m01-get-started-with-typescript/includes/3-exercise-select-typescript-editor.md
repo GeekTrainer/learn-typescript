@@ -16,7 +16,7 @@ In this course, we'll occasionally visit the Playground to try out new TypeScrip
 
 For more full-featured TypeScript editing and tools, there are [many IDEs that support TypeScript](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support) or have plugins or tooling packages developed to support it. In this module we will use [Visual Studio Code](https://code.visualstudio.com), however you are free to use whatever editor you prefer.
 
-### Step 1: Install Visual Studio Code
+### Install Visual Studio Code
 
 Visual Studio Code (VS Code) is a free, lightweight source code editor that runs on your desktop on the macOS, Linux, and Windows operating systems. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages and runtimes.
 
