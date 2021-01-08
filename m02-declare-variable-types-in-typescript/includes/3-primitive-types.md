@@ -93,7 +93,6 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define an `
     ```
 
 3. Log the value of `empStatus` to the console. What does it return?
-
 4. By default, `enum` values begin with a value of 0, so `Permanent` is 0, `Temp` is 1, and `Apprentice` is 2. If you want the values to start with a different value, in this case 1, specify that in the `enum` declaration. Make the following edits to have the `enum` start the values at 1.
 
     ```typescript
@@ -105,7 +104,6 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define an `
     ```
 
 5. When you log the value of `empStatus` to the console, it should now return 2. (You can also manually set all the values in the `enum` if they are not sequential.)
-
 6. Finally, you can go from a numeric value to the name of that value in the `enum`. This is helpful if you need to remember what it is. Enter the following to return the name associated with the value 2, in this case `"Temp"`:
 
     ```typescript
@@ -132,7 +130,6 @@ Let's open the [Playground](https://www.typescriptlang.org/play) and define a va
     ```
 
 2. Notice that the compiler doesn't throw an error because the `any` type encompasses values of every possible type.
-
 3. The `any` type opts out of type checking and doesn't force you to do any checking before you call, construct, or access properties on these values. To test this, enter the following statements, which attempt to call:
 
       - A property that doesn't exist for the type.
