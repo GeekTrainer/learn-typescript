@@ -36,7 +36,7 @@ For best results, follow the complete instructions for setting up your environme
    ```
 
 1. Open the file **module03.ts**.
-1. Locate `TODO: Declare the Loan interface.`. Declare an interface called `Loan` that defines two properties, `principle` and `interestRate`, each as a `number`.
+1. Locate `TODO: Declare the Loan interface`. Declare an interface called `Loan` that defines two properties, `principle` and `interestRate`, each as a `number`.
 
    ```typescript
    interface Loan {
@@ -44,7 +44,7 @@ For best results, follow the complete instructions for setting up your environme
        interestRate: number    //* Interest rate percentage (eg. 14 is 14%)
    }
    ```
-1. Locate `TODO: Declare the ConventionalLoan interface.` Declare an interface called `ConventionalLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numberOfMonths`, as a `number`.
+1. Locate `TODO: Declare the ConventionalLoan interface`. Declare an interface called `ConventionalLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numberOfMonths`, as a `number`.
 
    ```typescript
    interface ConventionalLoan extends Loan {
@@ -54,7 +54,7 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 2 - Implement the interfaces
 
-1. Locate `TODO: Update the interestOnlyLoan function.`. Replace the two parameters in the `interestOnlyLoan` function with an object of type `Loan` (for example, `loanTerms: Loan`) and type the return value of the function as a `string`.
+1. Locate `TODO: Update the interestOnlyLoan function`. Replace the two parameters in the `interestOnlyLoan` function with an object of type `Loan` (for example, `loanTerms: Loan`) and type the return value of the function as a `string`.
 
    ```typescript
    function interestOnlyLoan(loanTerms: Loan): string {
