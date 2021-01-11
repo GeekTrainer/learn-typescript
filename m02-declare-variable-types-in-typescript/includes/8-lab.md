@@ -14,11 +14,11 @@ For best results, follow the complete instructions for setting up your environme
 
 1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-02\m02-start] 
 
-```bash
-git clone <url>
-cd <folder name>
-code .
-```
+    ```bash
+    git clone <url>
+    cd <folder name>
+    code .
+    ```
 
 1. Open the file **module02.ts** and locate **Exercise 1**.
 1. Modify the code to add types to the variable declarations. The compiled JavaScript code should look the same as the original example when you're done.
