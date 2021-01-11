@@ -1,4 +1,4 @@
-Union and Intersection types help you handle situations where a type is composed of two or more possible types.
+TypeScript provides more advanced options for declaring types. Union and Intersection types help you handle situations where a type is composed of two or more possible types, while literal types enable you to constrain the values assigned to a type to a narrow list of options.
 
 ## Union types
 
