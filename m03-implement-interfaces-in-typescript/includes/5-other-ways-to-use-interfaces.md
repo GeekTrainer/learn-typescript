@@ -4,7 +4,7 @@ Now that you know the basics of declaring and implementing an interface, let's l
 
 You can use interfaces that describe array types that you can index into.
 
-Indexable types have an *index signature* that describes the type you can use to index into the object, along with the corresponding return types when indexing.
+Indexable types have an **index signature** that describes the type you can use to index into the object, along with the corresponding return types when indexing.
 
 For example, the `IceCreamArray` interface declares an index signature as a `number` and returns a `string` type. This index signature states that `IceCreamArray`is indexed with a number and it will return a string.
 
