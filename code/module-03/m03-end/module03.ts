@@ -10,43 +10,43 @@ interface Loan {
     interestRate: number    //* Interest rate percentage (eg. 14 is 14%)
 }
 
-/*  TODO: Declare an interface called ConvLoan that extends Loan, and defines the 
-    additional property required for a conventional loan, numMonths, as a number. */
+/*  TODO: Declare an interface called ConventionalLoan that extends Loan, and defines the 
+    additional property required for a conventional loan, numberOfMonths, as a number. */
 
-interface ConvLoan extends Loan {
-    numMonths: number      //* Total number of months
+interface ConventionalLoan extends Loan {
+    numberOfMonths: number      //* Total number of months
 }
 
-/*  TODO: Replace the two parameters in the intOnlyLoan function with an object of 
+/*  TODO: Replace the two parameters in the interestOnlyLoan function with an object of 
     type Loan (for example, loanTerms: Loan) and type the return value of the function 
     as a string. 
     
     Replace the parameter names in the function with properties of the Loan object. 
     (For example, loanTerms.interestRate).
     
-    Type the intr and pmt variables as numbers.*/
+    Type the interest and payment variables as numbers.*/
 
-function intOnlyLoan(loanTerms: Loan): string {
+function interestOnlyLoan(loanTerms: Loan): string {
     // Calculates the monthly payment of an interest only loan
-    let intr: number = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
-    let pmt: number;
-    pmt = loanTerms.principle * intr;
-    return 'The interest only loan payment is ' + pmt.toFixed(2);
+    let interest: number = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
+    let payment: number;
+    payment = loanTerms.principle * interest;
+    return 'The interest only loan payment is ' + payment.toFixed(2);
 }
 
-/*  TODO: Update the convLoan function, this time replacing the three parameters with an 
-    object of type ConvLoan and type the return value of the function as a string. */
+/*  TODO: Update the conventionalLoan function, this time replacing the three parameters with an 
+    object of type ConventionalLoan and type the return value of the function as a string. */
 
-function convLoan(loanTerms: ConvLoan): string {
+function conventionalLoan(loanTerms: ConventionalLoan): string {
     // Calculates the monthly payment of a conventional loan
-    let intr: number = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
-    let pmt: number;
-    pmt = loanTerms.principle * intr / (1 - (Math.pow(1/(1 + intr), loanTerms.numMonths)));
-    return 'The conventional loan payment is ' + pmt.toFixed(2);
+    let interest: number = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
+    let payment: number;
+    payment = loanTerms.principle * interest / (1 - (Math.pow(1/(1 + interest), loanTerms.numberOfMonths)));
+    return 'The conventional loan payment is ' + payment.toFixed(2);
 }
 
-let loan1 = intOnlyLoan({principle: 30000, interestRate: 5});
-let loan2 = convLoan({principle: 30000, interestRate: 5, numMonths: 180});
+let loan1 = interestOnlyLoan({principle: 30000, interestRate: 5});
+let loan2 = conventionalLoan({principle: 30000, interestRate: 5, numberOfMonths: 180});
 
 console.log(loan1);     //* Returns "The interest only loan payment is 125.00" 
 console.log(loan2);     //* Returns "The conventional loan payment is 237.24" 
