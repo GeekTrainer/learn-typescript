@@ -1,13 +1,13 @@
 
 In this lab, you'll convert some JavaScript code to strongly typed code using interfaces.
 
-The JavaScript code contains two functions: `interestOnlyLoan`, which calculates the payment for an interest only loan, and `conventionalLoan`, which calculates the payment for a conventional loan. As with most loan calculations, both functions accept `principle` and `interestRate` parameters. The difference between them is that the `conventionalLoan` function accepts a third property, `numberOfMonths` that the `interestOnlyLoan` function does not.
+The JavaScript code contains two functions: `calculateInterestOnlyLoanPayment`, which calculates the payment for an interest only loan, and `calculateConventionalLoanPayment`, which calculates the payment for a conventional loan. As with most loan calculations, both functions accept `principle` and `interestRate` parameters. The difference between them is that the `calculateConventionalLoanPayment` function accepts a third property, `months` that the `interestOnlyLoan` function does not.
 
 | Property| Description|
 | :--- | :--- |
 | `principle`| The principle amount of the loan.|
 | `interestRate`| The annual interest rate of the loan. For example, 5% is specified as 5.|
-| `numberOfMonths`| The term of the loan specified in months. An interest only loan does not require this property because the number of months is irrelevant (the loan will never be repaid when an interest only payment is made each month.)|
+| `months`| The term of the loan specified in months. An interest only loan does not require this property because the number of months is irrelevant (the loan will never be repaid when an interest only payment is made each month.)|
 
 In this exercise, you will:
 
@@ -54,10 +54,10 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 2 - Implement the interfaces
 
-1. Locate `TODO: Update the interestOnlyLoan function`. Replace the two parameters in the `interestOnlyLoan` function with an object of type `Loan` (for example, `loanTerms: Loan`) and type the return value of the function as a `string`.
+1. Locate `TODO: Update the calculateInterestOnlyLoanPayment function`. Replace the two parameters in the `calculateInterestOnlyLoanPayment` function with an object of type `Loan` (for example, `loanTerms: Loan`) and type the return value of the function as a `string`.
 
    ```typescript
-   function interestOnlyLoan(loanTerms: Loan): string {
+   function calculateInterestOnlyLoanPayment(loanTerms: Loan): string {
       // ...
    }
    ```
@@ -65,7 +65,7 @@ For best results, follow the complete instructions for setting up your environme
 1. You'll notice a couple of errors because TypeScript does not recognize the parameters `interestRate` and `principle`. Replace the parameter names in the function with properties of the `Loan` object. (For example, `loanTerms.interestRate`).
 
    ```typescript
-   function interestOnlyLoan(loanTerms: Loan): string {
+   function calculateInterestOnlyLoanPayment(loanTerms: Loan): string {
        // Calculates the monthly payment of an interest only loan
        let interest = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
        let payment;
@@ -75,17 +75,17 @@ For best results, follow the complete instructions for setting up your environme
    ```
 
 1. Type the `interest` and `payment` variables in the `interestOnlyLoan` function as `numbers`.
-1. Test the `interestOnlyLoan` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `Loan` object.
+1. Test the `calculateInterestOnlyLoanPayment` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `Loan` object.
 
    ```typescript
-   let loan1 = interestOnlyLoan({principle: 30000, interestRate: 5});
-   console.log(loan1);     //* Returns "The interest only loan payment is 125.00" 
+   let interestOnlyPayment = calculateInterestOnlyLoanPayment({principle: 30000, interestRate: 5});
+   console.log(interestOnlyPayment);     //* Returns "The interest only loan payment is 125.00" 
    ```
 
-1. Locate `TODO: Update the conventionalLoan function`. Update the `conventionalLoan` function, this time replacing the three parameters with an object of type `ConventionalLoan` and type the return value of the function as a `string`. Make any remaining updates to the implementation of the `conventionalLoan` function.
+1. Locate `TODO: Update the calculateConventionalLoanPayment function`. Update the `calculateConventionalLoanPayment` function, this time replacing the three parameters with an object of type `ConventionalLoan` and type the return value of the function as a `string`. Make any remaining updates to the implementation of the `calculateConventionalLoanPayment` function.
 
    ```typescript
-   function conventionalLoan(loanTerms: ConventionalLoan): string {
+   function calculateConventionalLoanPayment(loanTerms: ConventionalLoan): string {
       // Calculates the monthly payment of a conventional loan
       let interest: number = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
       let payment: number;
@@ -94,11 +94,11 @@ For best results, follow the complete instructions for setting up your environme
    }
    ```
    
-1. Test the `conventionalOnlyLoan` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `ConventionalLoan` object.
+1. Test the `calculateConventionalLoanPayment` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `ConventionalLoan` object.
 
    ```typescript
-   let loan2 = conventionalLoan({principle: 30000, interestRate: 5, numberOfMonths: 180});
-   console.log(loan2);     //* Returns "The conventional loan payment is 237.24" 
+   let conventionalPayment = calculateConventionalLoanPayment({principle: 30000, interestRate: 5, numberOfMonths: 180});
+   console.log(conventionalPayment);     //* Returns "The conventional loan payment is 237.24" 
    ```
 
 ## Lab solution
