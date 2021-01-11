@@ -38,6 +38,24 @@ Intersection types are closely related to union types, but they are used very di
 
 An Intersection type uses the ampersand (`&`) to separate each type.
 
+Intersection types are most often used with interfaces. The following example defines two interfaces, `Employee` and `Manager`, and then creates a new intersection type called `ManagementEmployee` that combines the properties in both interfaces.
+
+```typescript
+interface Employee {
+  employeeID: number;
+  age: number;
+}
+interface Manager {
+  stockPlan: boolean;
+}
+type ManagementEmployee = Employee & Manager;
+let newManager: ManagementEmployee = {
+    employeeID: 12345,
+    age: 34,
+    stockPlan: true
+};
+```
+
 ## Literal types
 
 A literal is a more concrete sub-type of a collective type. What this means is that `"Hello World"` is a `string`, but a `string` is not `"Hello World"` inside the type system.
