@@ -74,7 +74,7 @@ For best results, follow the complete instructions for setting up your environme
    }
    ```
 
-1. Type the `interest` and `payment` variables in the `interestOnlyLoan` function as `numbers`.
+1. Type the `interest` and `payment` variables in the `calculateInterestOnlyLoanPayment` function as `numbers`.
 1. Test the `calculateInterestOnlyLoanPayment` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `Loan` object.
 
    ```typescript
