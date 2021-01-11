@@ -23,4 +23,4 @@ After completing this module, you'll be able to:
 - Familiarity with JavaScript
 - Familiarity with declaring variables using `let` and `const` in JavaScript.
 - Basic knowledge of TypeScript
-- [Git](https://git-scm.com/)
+- [Git](https://git-scm.com/) install
