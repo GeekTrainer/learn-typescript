@@ -20,7 +20,7 @@ There is no advantage to using one over the other so it's up to you to decide wh
 
 Having an array of the same value types is useful, but sometimes you have an array that contains values of mixed types. For that purpose, TypeScript provides the Tuple type. To declare a Tuple, use the syntax `variableName: [type, type, ...]`.
 
-1. Open the [Playground](https://www.typescriptlang.org/play).
+1. Open the [Playground](https://www.typescriptlang.org/play) and remove any existing code.
 1. Enter the following code to create a Tuple that contains a `string` and a `number`:
 
     ```typescript
