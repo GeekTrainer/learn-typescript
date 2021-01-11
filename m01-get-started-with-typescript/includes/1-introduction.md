@@ -18,5 +18,4 @@ After completing this module, you'll be able to:
 
 ## Prerequisites
 
-None.
-
+- Knowledge of JavaScript

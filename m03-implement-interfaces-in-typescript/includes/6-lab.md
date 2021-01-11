@@ -1,3 +1,4 @@
+
 In this lab, you'll convert some JavaScript code to strongly typed code using interfaces.
 
 The JavaScript code contains two functions: `intOnlyLoan`, which calculates the payment for an interest only loan, and `convLoan`, which calculates the payment for a conventional loan. As with most loan calculations, both functions accept `principle` and `interestRate` parameters. The difference between them is that the `convLoan` function accepts a third property, `numMonths` that the `intOnlyLoan` function does not.

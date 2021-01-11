@@ -1,6 +1,6 @@
 In this exercise, you'll create a new TypeScript project. You'll then confirm that your development environment is set up correctly by running the compiler and verifying that the JavaScript file is generated.
 
-## Step 1: Set up a new TypeScript project in VS Code
+## Set up a new TypeScript project in VS Code
 
 Create a new project workspace in VS Code and initialize the project.
 
@@ -22,7 +22,7 @@ Create a new project workspace in VS Code and initialize the project.
 
    ![Visual Studio Code with the new TypeScript file displayed in the code editor.](../media/m01_vscode_4.jpg)
 
-## Step 2: Generate a tsconfig.json file
+## Generate a tsconfig.json file
 
 The TypeScript compiler applies default behavior when you compile TypeScript source code. But you can modify the TypeScript compiler options by adding a **tsconfig.json** file to the root of your TypeScript project folder. This file defines the TypeScript project settings, such as the compiler options and the files that should be included.
 
@@ -42,15 +42,15 @@ You can use the `init` option of the TypeScript compiler to generate a TSConfig 
 > [!TIP]
 > To learn more about the **tsconfig.json** file, visit the [TSConfig Reference](https://www.staging-typescript.org/tsconfig).
 
-## Step 3: Compile TypeScript to JavaScript
+## Compile TypeScript to JavaScript
 
 Let's add some JavaScript code to the TypeScript file and then compile it.
 
 1. Copy and paste the following JavaScript code into the **module01.ts** editor.
 
    ```javascript
-   function addNumbers(num1, num2) {
-     return num1 + num2;
+   function addNumbers(x, y) {
+     return x + y;
    }
    console.log(addNumbers(3, 6));
    ```
@@ -59,15 +59,15 @@ Let's add some JavaScript code to the TypeScript file and then compile it.
 
    ![Visual Studio Code editor with Intellisense  indicating that there is a type checking error on the first parameter of the addNumbers function.](../media/m01_vscode_5.jpg)
 
-3. Update the TypeScript code to specify a type for each parameter. Replace `num1` with `num1: number` and `num2` with `num2: number`.
+3. Update the TypeScript code to specify a type for each parameter. Replace `x` with `x: number` and `y` with `y: number`.
 4. Save the TypeScript file. The TypeScript compiler only works on the saved version of the file.
 5. At the Terminal command prompt, enter **tsc module01.ts**. The compiler should run without errors.
-6. Notice that a new JavaScript file has been added, but it is not in the **build** folder in the Explorer. (You may need to refresh the Explorer to see the file.) When you run the `tsc` command on a single file, the compiler ignores the `tsconfig.json` file. 
+6. Notice that a new JavaScript file has been added, but it is not in the **build** folder in the Explorer. (You may need to refresh the Explorer to see the file.) When you run the `tsc` command on a single file, the compiler ignores the `tsconfig.json` file.
 7. To load the config file and compile all the .ts files in the folder, run `tsc` without a filename. This should add the .js file to the `build` folder. (Remember to delete the extra .js file in the root folder.)
 8. Open the **module01.js** file and then select the **Split Editor Right** icon in the upper right corner of VS Code to open a new editor view. You should now be able to see the .ts and .js files side by side and that they are identical, except that the .js files does not include the new type annotations.
 9. At the Terminal command prompt, enter `node .\build\module01.js`. This will run the JavaScript and display the result in the console log.
 
-## Step 4: Add an HTML file
+## Add an HTML file
 
 As a final step, add an HTML file to the project so you can run and test the JavaScript code.
 
@@ -86,7 +86,7 @@ As a final step, add an HTML file to the project so you can run and test the Jav
       <h1>Test JavaScript</h1>
       <p id="date"></p>
       <p>This page calls the script module01.js and is used for testing.</p>
-      <script src=".\build\module01.js"></script>
+      <script src="./build/module01.js"></script>
    </body>
    </html>
    ```
@@ -95,6 +95,7 @@ As a final step, add an HTML file to the project so you can run and test the Jav
 5. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
 
 ## Exercise solution
+
 You can download the completed Visual Studio Code workspace at [LINK TO \code\module-01\m01-end]. To run the solution, you must first install the following software on your machine:
 
 1. Visual Studio Code (or IDE of your choice)
@@ -102,4 +103,3 @@ You can download the completed Visual Studio Code workspace at [LINK TO \code\mo
 3. TypeScript Compiler (tsc)
 
 For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in this module. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.
-

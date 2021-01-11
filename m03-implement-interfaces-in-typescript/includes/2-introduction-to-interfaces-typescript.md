@@ -1,4 +1,4 @@
-One of TypeScript’s core principles is that type checking focuses on the shape that values have. This is sometimes called "duck typing" or "structural subtyping". In TypeScript, interfaces fill the role of naming these types, and are a powerful way of defining a "code contract" within your code as well as contracts with code outside of your project.
+One of TypeScript's core principles is that type checking focuses on the shape that values have. This is sometimes called "duck typing" or "structural subtyping". In TypeScript, interfaces fill the role of naming these types, and are a powerful way of defining a "code contract" within your code as well as contracts with code outside of your project.
 
 Let's start with an overview of interfaces, including what they are and how you can use them in your TypeScript code.
 
@@ -31,15 +31,14 @@ let employee: Employee = {
     }
 }
 
-employee.firstName = 10;             //* Error - Type 'number' is not assignable to type 'string'
-console.log(employee.fullName());    //* Returns "Emil Andersson"
+employee.firstName = 10;  //* Error - Type 'number' is not assignable to type 'string'
 ```
 
 Type checking ensures that the number `10` is not assignable to `employee.firstName` because it is expecting a `string`.
 
 Because TypeScript has a structural type system, an interface type with a particular set of members is considered identical to, and can be substituted for, another interface type or object type literal with an identical set of members. If an interface and a class implement the same structure, they can be used interchangeably. See [Structural Typing](https://www.typescriptlang.org/play#example/structural-typing) in the Playground for an example.
 
-Interfaces have no run-time representation—they are purely a compile-time construct. Interfaces are particularly useful for documenting and validating the required shape of properties, objects passed as parameters, and objects returned from functions. This enables you to catch errors and make sure you’re passing the right parameters at compile time, rather than waiting to find out about them at runtime.
+Interfaces have no run-time representation; they are purely a compile-time construct. Interfaces are particularly useful for documenting and validating the required shape of properties, objects passed as parameters, and objects returned from functions. This enables you to catch errors and make sure you’re passing the right parameters at compile time, rather than waiting to find out about them at runtime.
 
 ## Reasons for using an interface in TypeScript
 
@@ -48,7 +47,7 @@ Interfaces are often the key point of contact between any two pieces of TypeScri
 You can use an interface to:
 
 - Create shorthand names for commonly used types. With even a simple interface like the one declared in the earlier example, you still get the benefit of Intellisense and type checking.
-- Drive consistency across a set of objects because every object that implements the interface operates under the same type definitions. This can be useful when you're working with a team of developers and you want to ensure that proper values are being passed into properties, constructors, or functions. For example, objects that implement an interface must implement all the *required* members of the interface. So, if you don't pass all the required parameters of the correct type, the TypeScript compiler will throw an error.
+- Drive consistency across a set of objects because every object that implements the interface operates under the same type definitions. This can be useful when you're working with a team of developers and you want to ensure that proper values are being passed into properties, constructors, or functions. For example, objects that implement an interface must implement all the **required** members of the interface. So, if you don't pass all the required parameters of the correct type, the TypeScript compiler will throw an error.
 - Describe existing JavaScript APIs and clarify function parameters and return types. This is especially useful when you're working with JavaScript libraries like jQuery. An interface can provide you with a clear understanding of what a function is expecting and what it will return without repeat visits to the documentation.
 
 ## How is an interface different from a type alias?
@@ -63,4 +62,4 @@ type Employee = {
 }
 ```
 
-A type alias is a definition of a type of data, for example, a union, primitive, intersection, tuple, or any other type. Interfaces, on the other hand, are a way to describe data shapes, for example, an object. Type aliases can act like interfaces; however, there are some subtle differences. The key distinction is that a type alias cannot be re-opened to add new properties whereas an interface is always extendable. Also, you can only describe a union or tuple using a type alias. You'll learn more about extending an interface later in the module.
+A type alias is a definition of a type of data, for example, a union, primitive, intersection, tuple, or any other type. Interfaces, on the other hand, are a way to describe data shapes, for example, an object. Type aliases can act like interfaces; however, there are some subtle differences. The key distinction is that a type alias cannot be re-opened to add new properties whereas an interface is always extendable. Also, you can only describe a union or tuple using a type alias.
