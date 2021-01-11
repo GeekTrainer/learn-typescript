@@ -20,4 +20,15 @@ After completing this module, you'll be able to:
 
 ## Prerequisites
 
-Familiarity with functions, interfaces, and classes in TypeScript.
+- Knowledge of TypeScript
+- Familarity with JavaScript
+- Familiarity with TypeScript functions, interfaces, and classes.
+- Installed software:
+  - [Git](https://git-scm.com/)
+  - [Visual Studio Code](https://code.visualstudio.com)
+  - [Node.js](https://nodejs.org/)
+  - TypeScript - TypeScript can be installed after installing Node.js after running the following in a terminal or command window:
+
+      ```bash
+      npm install -g typescript
+      ```
