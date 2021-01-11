@@ -1,4 +1,4 @@
-There are times when you'll need to work with values that are unknown to you at the time you develop your code, or are of a narrow possible range of value types. In these cases, you can use the 'any' and 'unknown' types and use type assertion and type guards to maintain control over what your code is allowed to do with the values that are passed.
+There are times when you'll need to work with values that are unknown to you at the time you develop your code, or are of a narrow possible range of value types. In these cases, you can use the `any` and `unknown` types and use type assertion and type guards to maintain control over what your code is allowed to do with the values that are passed.
 
 ## Any type
 
