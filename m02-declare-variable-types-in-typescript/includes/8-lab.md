@@ -12,7 +12,7 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 1
 
-1. Download the starting workspace at [LINK TO \code\module-02\m02-start] and open the file **module02.ts**. 
+1. Clone the starting repository at [LINK TO \code\module-02\m02-start] and open the file **module02.ts**. 
 2. Locate **Exercise 1**.
 3. Modify the code to add types to the variable declarations. The compiled JavaScript code should look the same as the original example when you're done.
 
