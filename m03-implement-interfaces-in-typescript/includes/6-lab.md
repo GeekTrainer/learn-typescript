@@ -62,7 +62,7 @@ For best results, follow the complete instructions for setting up your environme
    }
    ```
 
-1. You'll notice a couple of errors because TypeScript does not recognize the type of the parameters `interestRate` and `principle`. Replace the parameter names in the function with properties of the `Loan` object. (For example, `loanTerms.interestRate`).
+1. You'll notice a couple of errors because TypeScript does not recognize the type parameters `interestRate` and `principle`. Replace the parameter names in the function with properties of the `Loan` object. (For example, `loanTerms.interestRate`).
 
    ```typescript
    function interestOnlyLoan(loanTerms: Loan): string {
