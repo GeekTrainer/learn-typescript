@@ -121,7 +121,7 @@ While flexible, the `any` type can cause unexpected errors. To address this, Typ
 
 The `unknown` type is similar to the `any` type in that any value is assignable to type `unknown`. However, you can't access any properties of an `unknown` type, nor can you call or construct them.
 
-This example changes the `any` type in the previous example to `unknown`. It will now raise type check errors in the code so you can take appropriate action to resolve them.
+This example changes the `any` type in the previous example to `unknown`. It will now raise type check errors and prevent you from compiling the code until you take appropriate action to resolve them.
 
 ```typescript
 let randomValue: unknown = 10;
