@@ -9,9 +9,9 @@
 
 
 
-/*  TODO: Update the interestOnlyLoan function. */
+/*  TODO: Update the calculateInterestOnlyLoanPayment function. */
 
-function interestOnlyLoan(principle, interestRate) {
+function calculateInterestOnlyLoanPayment(principle, interestRate) {
     // Calculates the monthly payment of an interest only loan
     let interest = interestRate / 1200; // Calculates the Monthly Interest Rate of the loan
     let payment;
@@ -19,18 +19,18 @@ function interestOnlyLoan(principle, interestRate) {
     return 'The interest only loan payment is ' + payment.toFixed(2);
 }
 
-/*  TODO: Update the conventionalLoan function. */
+/*  TODO: Update the calculateConventionalLoanPayment function. */
 
-function conventionalLoan(principle, interestRate, numberOfMonths) {
+function calculateConventionalLoanPayment(principle, interestRate, months) {
     // Calculates the monthly payment of a conventional loan
     let interest = interestRate / 1200; // Calculates the Monthly Interest Rate of the loan
     let payment;
-    payment = principle * interest / (1 - (Math.pow(1 / (1 + interest), numberOfMonths)));
+    payment = principle * interest / (1 - (Math.pow(1 / (1 + interest), months)));
     return 'The conventional loan payment is ' + payment.toFixed(2);
 }
 
-let loan1 = interestOnlyLoan(30000, 5);
-let loan2 = conventionalLoan(30000, 5, 180);
+let interestOnlyPayment = calculateInterestOnlyLoanPayment(30000, 5);
+let conventionalPayment = calculateConventionalLoanPayment(30000, 5, 180);
 
-console.log(loan1);     //* Returns "The interest only loan payment is 125.00" 
-console.log(loan2);     //* Returns "The conventional loan payment is 237.24" 
+console.log(interestOnlyPayment);     //* Returns "The interest only loan payment is 125.00" 
+console.log(conventionalPayment);     //* Returns "The conventional loan payment is 237.24" 
