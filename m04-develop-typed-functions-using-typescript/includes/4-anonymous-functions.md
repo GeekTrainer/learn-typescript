@@ -1,4 +1,4 @@
-A **function expression** or **anonymous function** is a function that is not pre-loaded into the execution context, and only runs when the code encounters it. Function expressions are created at runtime and must be declared before they can be called. (This means that they are not hoisted, unlike named function declarations that are hoisted as soon as program execution begins and can be called before its declaration.)
+A **function expression** (or **anonymous function**) is a function that is not pre-loaded into the execution context, and only runs when the code encounters it. Function expressions are created at runtime and must be declared before they can be called. (This means that they are not hoisted, unlike named function declarations that are hoisted as soon as program execution begins and can be called before its declaration.)
 
 Function expressions represent values so they are usually assigned to a variable or passed to other functions, and can be anonymous, meaning the function has no name.
 
