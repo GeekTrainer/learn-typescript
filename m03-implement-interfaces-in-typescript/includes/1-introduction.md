@@ -22,6 +22,7 @@ After completing this module, you will be able to:
 - Familiarity with JavaScript
 - Familiarity with functions and arrays in JavaScript
 - Installed software:
+  - [Git](https://git-scm.com/)
   - [Visual Studio Code](https://code.visualstudio.com)
   - [Node.js](https://nodejs.org/)
   - TypeScript - TypeScript can be installed after installing Node.js after running the following in a terminal or command window:
