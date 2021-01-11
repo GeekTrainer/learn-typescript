@@ -12,7 +12,7 @@ The JavaScript code contains two functions: `calculateInterestOnlyLoanPayment`, 
 In this exercise, you will:
 
 1. Declare an interface called `Loan` that defines two properties, `principle` and `interestRate`.
-2. Declare an interface called `ConventionalLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numberOfMonths`.
+2. Declare an interface called `ConventionalLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `months`.
 3. Update the two functions to implement the new interfaces and strongly type the parameters.
 
 ## Lab setup
@@ -44,11 +44,11 @@ For best results, follow the complete instructions for setting up your environme
        interestRate: number    //* Interest rate percentage (eg. 14 is 14%)
    }
    ```
-1. Locate `TODO: Declare the ConventionalLoan interface`. Declare an interface called `ConventionalLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numberOfMonths`, as a `number`.
+1. Locate `TODO: Declare the ConventionalLoan interface`. Declare an interface called `ConventionalLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `months`, as a `number`.
 
    ```typescript
    interface ConventionalLoan extends Loan {
-       numberOfMonths: number      //* Total number of months
+       months: number      //* Total number of months
    }
    ```
 
@@ -89,7 +89,7 @@ For best results, follow the complete instructions for setting up your environme
       // Calculates the monthly payment of a conventional loan
       let interest: number = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
       let payment: number;
-      payment = loanTerms.principle * interest / (1 - (Math.pow(1/(1 + interest), loanTerms.numberOfMonths)));
+      payment = loanTerms.principle * interest / (1 - (Math.pow(1/(1 + interest), loanTerms.months)));
       return 'The conventional loan payment is ' + payment.toFixed(2);
    }
    ```
@@ -97,7 +97,7 @@ For best results, follow the complete instructions for setting up your environme
 1. Test the `calculateConventionalLoanPayment` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `ConventionalLoan` object.
 
    ```typescript
-   let conventionalPayment = calculateConventionalLoanPayment({principle: 30000, interestRate: 5, numberOfMonths: 180});
+   let conventionalPayment = calculateConventionalLoanPayment({principle: 30000, interestRate: 5, months: 180});
    console.log(conventionalPayment);     //* Returns "The conventional loan payment is 237.24" 
    ```
 
