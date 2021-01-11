@@ -2,15 +2,7 @@ In this lab, you'll write the JavaScript in each of the exercises below in TypeS
 
 ## Lab setup
 
-You can use the TypeScript [Playground](https://www.typescriptlang.org/play) or Visual Studio Code to complete this lab.
-
-### Playground
-
-If you’re using the Playground, copy and paste the starting code into it as directed in the lab instructions.
-
-### Visual Studio Code
-
-Download the starting workspace at [LINK TO \code\module-02\m02-start] and edit the file **module02.ts**. To run the solution, you must first set up your development environment by installing the following software on your machine:
+To complete the lab, you must first set up your development environment by installing the following software on your machine:
 
 1. Visual Studio Code (or IDE of your choice)
 2. Node Package Manager (npm)
@@ -18,10 +10,12 @@ Download the starting workspace at [LINK TO \code\module-02\m02-start] and edit 
 
 For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in [LINK TO Module 01: Get started with TypeScript ]. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.
 
+Download the starting workspace at [LINK TO \code\module-02\m02-start] and edit the file **module02.ts** to complete the exercises. 
+
 ## Exercise 1
 
-1. Copy and paste the following JavaScript code your TypeScript editor.
-2. Modify the code to add types to the variable declarations. The resulting JavaScript should look the same as the original example when you're done.
+1. Locate **Exercise 1** in **module02.ts**.
+2. Modify the code to add types to the variable declarations. The compiled JavaScript code should look the same as the original example when you're done.
 
     ```javascript
     /*  EXERCISE 1
@@ -49,7 +43,7 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 2
 
-1. Copy and paste the following JavaScript code your TypeScript editor.
+1. Locate **Exercise 2** in **module02.ts**.
 2. You can use types to ensure operation outcomes. Run the code as is and then modify it to have strongly typed variables.
 3. Address any errors you find so that the result returned to a is `12`.
 
@@ -71,7 +65,7 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 3
 
-1. Copy and paste the following JavaScript code your TypeScript editor.
+1. Locate **Exercise 3** in **module02.ts**.
 2. Implement an `enum` type called `Season` that represents the constants `"Fall"`, `"Winter`", `"Spring`", and `"Summer`".
 3. Update the function so you can pass in the season by referencing an item in the `enum`, for example `Season.Fall`, instead of the literal string `"Fall"`.
 
@@ -105,7 +99,7 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 4
 
-1. Copy and paste the following JavaScript code your TypeScript editor.
+1. Locate **Exercise 4** in **module02.ts**.
 2. Declare the array as the type to match the type of the items in the array.
 
     ```javascript
