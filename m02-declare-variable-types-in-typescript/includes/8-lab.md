@@ -10,12 +10,11 @@ To complete the lab, you must first set up your development environment by insta
 
 For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in [LINK TO Module 01: Get started with TypeScript ]. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.
 
-Download the starting workspace at [LINK TO \code\module-02\m02-start] and edit the file **module02.ts** to complete the exercises. 
-
 ## Exercise 1
 
-1. Locate **Exercise 1** in **module02.ts**.
-2. Modify the code to add types to the variable declarations. The compiled JavaScript code should look the same as the original example when you're done.
+1. Download the starting workspace at [LINK TO \code\module-02\m02-start] and open the file **module02.ts**. 
+2. Locate **Exercise 1**.
+3. Modify the code to add types to the variable declarations. The compiled JavaScript code should look the same as the original example when you're done.
 
     ```javascript
     /*  EXERCISE 1
