@@ -1,7 +1,7 @@
 
 In this lab, you'll convert some JavaScript code to strongly typed code using interfaces.
 
-The JavaScript code contains two functions: `calculateInterestOnlyLoanPayment`, which calculates the payment for an interest only loan, and `calculateConventionalLoanPayment`, which calculates the payment for a conventional loan. As with most loan calculations, both functions accept `principle` and `interestRate` parameters. The difference between them is that the `calculateConventionalLoanPayment` function accepts a third property, `months` that the `interestOnlyLoan` function does not.
+The JavaScript code contains two functions: `calculateInterestOnlyLoanPayment`, which calculates the payment for an interest only loan, and `calculateConventionalLoanPayment`, which calculates the payment for a conventional loan. As with most loan calculations, both functions accept `principle` and `interestRate` parameters. The difference between them is that the `calculateConventionalLoanPayment` function accepts a third property, `months` that the `calculateInterestOnlyLoanPayment` function does not.
 
 | Property| Description|
 | :--- | :--- |
