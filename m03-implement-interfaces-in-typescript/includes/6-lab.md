@@ -1,33 +1,23 @@
 
 In this lab, you'll convert some JavaScript code to strongly typed code using interfaces.
 
-The JavaScript code contains two functions: `intOnlyLoan`, which calculates the payment for an interest only loan, and `convLoan`, which calculates the payment for a conventional loan. As with most loan calculations, both functions accept `principle` and `interestRate` parameters. The difference between them is that the `convLoan` function accepts a third property, `numMonths` that the `intOnlyLoan` function does not.
+The JavaScript code contains two functions: `interestOnlyLoan`, which calculates the payment for an interest only loan, and `conventionalLoan`, which calculates the payment for a conventional loan. As with most loan calculations, both functions accept `principle` and `interestRate` parameters. The difference between them is that the `conventionalLoan` function accepts a third property, `numberOfMonths` that the `interestOnlyLoan` function does not.
 
 | Property| Description|
 | :--- | :--- |
 | `principle`| The principle amount of the loan.|
 | `interestRate`| The annual interest rate of the loan. For example, 5% is specified as 5.|
-| `numMonths`| The term of the loan specified in months. An interest only loan does not require this property because the number of months is irrelevant (the loan will never be repaid when an interest only payment is made each month.)|
+| `numberOfMonths`| The term of the loan specified in months. An interest only loan does not require this property because the number of months is irrelevant (the loan will never be repaid when an interest only payment is made each month.)|
 
 In this exercise, you will:
 
 1. Declare an interface called `Loan` that defines two properties, `principle` and `interestRate`.
-2. Declare an interface called `ConvLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numMonths`.
+2. Declare an interface called `ConventionalLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numberOfMonths`.
 3. Update the two functions to implement the new interfaces and strongly type the parameters.
 
 ## Lab setup
 
-You can use the TypeScript [Playground](https://www.typescriptlang.org/play) or Visual Studio Code to complete this lab.
-
-### Playground
-
-If you’re using the Playground, copy and paste the starting code into it as directed in the lab instructions.
-
-### Visual Studio Code
-
-If you’re using an existing Visual Studio Code workspace, add a new file named **module03.ts** to your project and copy and paste the starting code into it as directed in the lab instructions. 
-
-You can also download the starting workspace at [LINK TO \code\module-03\m03-start] and edit the file **module03.ts**. To run the solution, you must first set up your development environment by installing the following software on your machine:
+To complete the lab, you must first set up your development environment by installing the following software on your machine:
 
 1. Visual Studio Code (or IDE of your choice)
 2. Node Package Manager (npm)
@@ -37,62 +27,88 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 1 - Declare the interfaces
 
-1. Copy and paste the following JavaScript code your TypeScript editor.
+1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-03\m03-start] 
 
-   ```javascript
-   /*  EXERCISE 1
-       TODO: Declare an interface called Loan that defines two properties, principle 
-       and interestRate, as a number. */
+```bash
+git clone <url>
+cd <folder name>
+code .
+```
 
+1. Open the file **module03.ts**.
+1. Locate `TODO: Declare the Loan interface.`. Declare an interface called `Loan` that defines two properties, `principle` and `interestRate`, each as a `number`.
 
-   /*  TODO: Declare an interface called ConvLoan that extends Loan, and defines the 
-       additional property required for a conventional loan, numMonths, as a number. */
-
-
-   /*  TODO: Replace the two parameters in the intOnlyLoan function with an object of 
-       type Loan (for example, loanTerms: Loan) and type the return value of the function 
-       as a string. 
-       
-       Replace the parameter names in the function with properties of the Loan object.
-       (For example, loanTerms.interestRate).
-    
-       Type the intr and pmt variables as numbers.*/   
-    
-   function intOnlyLoan(principle, interestRate) {
-       // Calculates the monthly payment of an interest only loan
-       let intr = interestRate / 1200; // Calculates the Monthly Interest Rate of the loan
-       let pmt;
-       pmt = principle * intr;
-       return 'The interest only loan payment is ' + pmt.toFixed(2);
+   ```typescript
+   interface Loan {
+       principle: number,
+       interestRate: number    //* Interest rate percentage (eg. 14 is 14%)
    }
-   
-   function convLoan(principle, interestRate, numMonths) {
-       // Calculates the monthly payment of a conventional loan
-       let intr = interestRate / 1200; // Calculates the Monthly Interest Rate of the loan
-       let pmt;
-       pmt = principle * intr / (1 - (Math.pow(1 / (1 + intr), numMonths)));
-       return 'The conventional loan payment is ' + pmt.toFixed(2);
-   }
-   
-   let loan1 = intOnlyLoan(30000, 5);
-   let loan2 = convLoan({30000, 5, 180);
-   
-   console.log(loan1);     //* Returns "The interest only loan payment is 125.00" 
-   console.log(loan2);     //* Returns "The conventional loan payment is 237.24" 
    ```
+1. Locate `TODO: Declare the ConventionalLoan interface.` Declare an interface called `ConventionalLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numberOfMonths`, as a `number`.
 
-2. Declare an interface called `Loan` that defines two properties, `principle` and `interestRate`, as a `number`.
-3. Declare an interface called `ConvLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `numMonths`, as a `number`.
+   ```typescript
+   interface ConventionalLoan extends Loan {
+       numberOfMonths: number      //* Total number of months
+   }
+   ```
 
 ## Exercise 2 - Implement the interfaces
 
-1. Replace the two parameters in the `intOnlyLoan` function with an object of type `Loan` (for example, `loanTerms: Loan`) and type the return value of the function as a `string`.
-2. You'll notice a couple of errors because TypeScript does not recognize the type of the parameters `interestRate` and `principle`. Replace the parameter names in the function with properties of the `Loan` object. (For example, `loanTerms.interestRate`).
-3. Type the `intr` and `pmt` variables as `numbers`.
-4. Test the `intOnlyLoan` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `Loan` object.
-5. Update the `convLoan` function, this time replacing the three parameters with an object of type `ConvLoan` and type the return value of the function as a `string`.
-6. Make any remaining updates to the implementation of the `convLoan` function and test your work.
+1. Locate `TODO: Update the interestOnlyLoan function.`. Replace the two parameters in the `interestOnlyLoan` function with an object of type `Loan` (for example, `loanTerms: Loan`) and type the return value of the function as a `string`.
+
+   ```typescript
+   function interestOnlyLoan(loanTerms: Loan): string {
+      // ...
+   }
+   ```
+
+1. You'll notice a couple of errors because TypeScript does not recognize the type of the parameters `interestRate` and `principle`. Replace the parameter names in the function with properties of the `Loan` object. (For example, `loanTerms.interestRate`).
+
+```typescript
+function interestOnlyLoan(loanTerms: Loan): string {
+    // Calculates the monthly payment of an interest only loan
+    let interest = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
+    let payment;
+    payment = loanTerms.principle * interest;
+    return 'The interest only loan payment is ' + payment.toFixed(2);
+}
+```
+
+1. Type the `interest` and `payment` variables in the `interestOnlyLoan` function as `numbers`.
+1. Test the `interestOnlyLoan` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `Loan` object.
+
+   ```typescript
+   let loan1 = interestOnlyLoan({principle: 30000, interestRate: 5});
+   console.log(loan1);     //* Returns "The interest only loan payment is 125.00" 
+   ```
+
+1. Locate `TODO: Update the conventionalLoan function`. Update the `conventionalLoan` function, this time replacing the three parameters with an object of type `ConventionalLoan` and type the return value of the function as a `string`. Make any remaining updates to the implementation of the `conventionalLoan` function.
+
+   ```typescript
+   function conventionalLoan(loanTerms: ConventionalLoan): string {
+      // Calculates the monthly payment of a conventional loan
+      let interest: number = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
+      let payment: number;
+      payment = loanTerms.principle * interest / (1 - (Math.pow(1/(1 + interest), loanTerms.numberOfMonths)));
+      return 'The conventional loan payment is ' + payment.toFixed(2);
+   }
+   ```
+   
+1. Test the `conventionalOnlyLoan` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `ConventionalLoan` object.
+
+   ```typescript
+   let loan2 = conventionalLoan({principle: 30000, interestRate: 5, numberOfMonths: 180});
+   console.log(loan2);     //* Returns "The conventional loan payment is 237.24" 
+   ```
 
 ## Lab solution
 
-Download the solution workspace [LINK TO \code\module-03\m03-end] and open the file **module03.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
+Clone the ending repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-03\m03-end] 
+
+```bash
+git clone <url>
+cd <folder name>
+code .
+```
+
+Open the file **module03.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
