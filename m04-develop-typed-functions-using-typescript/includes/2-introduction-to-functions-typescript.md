@@ -12,21 +12,20 @@ A named function is a function declaration written with the `function` keyword a
 
 The syntax for declaring a named function in TypeScript is the same as defining one in JavaScript. The only difference with TypeScript that you can now provide a type annotation for the function's parameters and return value.
 
-Open the [Playground](https://www.typescriptlang.org/play) to try it out.
-
-1. Start by copying the following JavaScript function into the Playground. Notice that the parameter `msg` implicitly has an `any` type.
+1. Open the [Playground](https://www.typescriptlang.org/play) and remove any existing code.
+1. Copy the following JavaScript function into the Playground. Notice that the parameter `message` implicitly has an `any` type.
 
     ```javascript
-    function displayAlert(msg) {
-        alert('The message is ' + msg);
+    function displayAlert(message) {
+        alert('The message is ' + message);
     }
     ```
 
-1. Now, assign the `string` type to the `msg` parameter. This named function does not return a value so you can leave off the return type (you can also pass back `void` as the return type, but it is not necessary to do so.)
+1. Now, assign the `string` type to the `message` parameter. This named function does not return a value so you can leave off the return type (you can also pass back `void` as the return type, but it is not necessary to do so.)
 
     ```typescript
-    function displayAlert(msg: string) {
-        alert('The message is ' + msg);
+    function displayAlert(message: string) {
+        alert('The message is ' + message);
     }
     ```
 
@@ -36,11 +35,11 @@ Open the [Playground](https://www.typescriptlang.org/play) to try it out.
    ```javascript
    function sum(input) {
        let total =  0;
-       for(let i = 0; i < input.length; i++) {
-           if(isNaN(input[i])){
+       for(let count = 0; count < input.length; count++) {
+           if(isNaN(input[count])){
                continue;
            }
-            total += Number(input[i]);
+            total += Number(input[count]);
         }
         return total;
     }
@@ -52,11 +51,11 @@ Open the [Playground](https://www.typescriptlang.org/play) to try it out.
    ```typescript
    function sum(input: number[]): number {        
        let total: number =  0;
-       for(let i = 0; i < input.length; i++) {
-           if(isNaN(input[i])){
+       for(let count = 0; count < input.length; count++) {
+           if(isNaN(input[count])){
                continue;
            }
-            total += Number(input[i]);
+            total += Number(input[count]);
         }
     return total;
     }
