@@ -64,15 +64,15 @@ For best results, follow the complete instructions for setting up your environme
 
 1. You'll notice a couple of errors because TypeScript does not recognize the type of the parameters `interestRate` and `principle`. Replace the parameter names in the function with properties of the `Loan` object. (For example, `loanTerms.interestRate`).
 
-```typescript
-function interestOnlyLoan(loanTerms: Loan): string {
-    // Calculates the monthly payment of an interest only loan
-    let interest = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
-    let payment;
-    payment = loanTerms.principle * interest;
-    return 'The interest only loan payment is ' + payment.toFixed(2);
-}
-```
+   ```typescript
+   function interestOnlyLoan(loanTerms: Loan): string {
+       // Calculates the monthly payment of an interest only loan
+       let interest = loanTerms.interestRate / 1200;   // Calculates the Monthly Interest Rate of the loan
+       let payment;
+       payment = loanTerms.principle * interest;
+       return 'The interest only loan payment is ' + payment.toFixed(2);
+   }
+   ```
 
 1. Type the `interest` and `payment` variables in the `interestOnlyLoan` function as `numbers`.
 1. Test the `interestOnlyLoan` function to verify that it is working correctly. Remember that you must now pass the parameters to the function in the form of a `Loan` object.
