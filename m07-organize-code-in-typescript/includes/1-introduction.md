@@ -16,4 +16,15 @@ In this module, you will:
 
 ## Prerequisites
 
-Familiarity with modules in JavaScript ES6/2015.
+- Knowledge of TypeScript
+- Familiarity with JavaScript
+- Familiarity with modules in JavaScript
+- Installed software:
+  - [Git](https://git-scm.com/)
+  - [Visual Studio Code](https://code.visualstudio.com)
+  - [Node.js](https://nodejs.org/)
+  - TypeScript - TypeScript can be installed after installing Node.js after running the following in a terminal or command window:
+
+      ```bash
+      npm install -g typescript
+      ```
