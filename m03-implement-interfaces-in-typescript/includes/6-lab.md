@@ -29,11 +29,11 @@ For best results, follow the complete instructions for setting up your environme
 
 1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-03\m03-start] 
 
-```bash
-git clone <url>
-cd <folder name>
-code .
-```
+   ```bash
+   git clone <url>
+   cd <folder name>
+   code .
+   ```
 
 1. Open the file **module03.ts**.
 1. Locate `TODO: Declare the Loan interface.`. Declare an interface called `Loan` that defines two properties, `principle` and `interestRate`, each as a `number`.
