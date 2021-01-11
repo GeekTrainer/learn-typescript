@@ -59,31 +59,6 @@ My name is Mateo.
 
 JavaScript and TypeScript have two primitive values used to signal absent or uninitialized value: `null` and `undefined`. These types are most useful in the context of functions, so we'll discuss them in more detail in a later module.
 
-## The enum type
-
-A helpful addition to the standard set of datatypes from JavaScript is the enumeration type, or `enum`.
-
-Enumerations offer an easy way to work with sets of related constants. An `enum`, is a symbolic name for a set of values. Enumerations are treated as data types, and you can use them to create sets of constants for use with variables and properties.
-
-Whenever a procedure accepts a limited set of variables, consider using an enumeration. Enumerations make for clearer and more readable code, particularly when meaningful names are used.
-
-Using enumerations:
-
-- Helps reduce errors caused by transposing or mistyping numbers.
-- Makes it easy to change values in the future.
-- Makes code easier to read, which means it is less likely that errors will creep into it.
-- Ensures forward compatibility. With enumerations, your code is less likely to fail if in the future someone changes the values corresponding to the member names.
-
-This example defines an `enum` called `responses` that represents the values `Yes`, `No`, and `Maybe`.
-
-```typescript
-enum responses {
-    Yes,
-    No,
-    Maybe
-};
-```
-
 ## Any type
 
 The `any` type is the one type that can represent any JavaScript value with no constraints. This can be useful when you're expecting a value from a third-party library or user inputs where the value is dynamic because the `any` type will allow you to reassign different types of values. And, as mentioned earlier, using the `any` type allows you to gradually migrate your JavaScript code to use static types in TypeScript.
