@@ -27,7 +27,7 @@ There are several types of desserts you can create from the `IceCream` interface
    ```
 
 1. You should notice an error in the new interface. TypeScript has found that both the `IceCream` and `Sundae` interfaces have a property called `instructions`, but they are of different types. To resolve this error, let's make both `instructions` properties of the same type, `string`.
-1. Let's try out the new interface by changing the `myIceCream` variable to type ``Sundae``. This generates an error stating that **Property '`sauce`' is missing in type '{ flavor: string; scoops: number; }' but required in type 'Sundae'**. You added four new properties to the Sundae interface but only the sauce property was required.
+1. Let's try out the new interface by changing the `myIceCream` variable to type ``Sundae``. This generates an error stating that **Property 'sauce' is missing in type '{ flavor: string; scoops: number; }' but required in type 'Sundae'**. You added four new properties to the Sundae interface but only the sauce property was required.
 
    ```typescript
    let myIceCream: Sundae = {
