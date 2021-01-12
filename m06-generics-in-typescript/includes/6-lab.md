@@ -49,7 +49,7 @@ The `DataStore` class contains utility functions that can store up to ten `strin
     ```
 
 1. Locate `TODO Test items as numbers`.
-1. Test that type variable can accept numbers. Declare a new variable called `empIDs` and assign a new `DataStore` object to it. Call the `AddOrUpdate` function and assign number type items to it.
+1. Test that the type variable can accept numbers. Declare a new variable called `empIDs` and assign a new `DataStore` object to it. Call the `AddOrUpdate` function and assign number type items to it.
 
     ```typescript
     let empIDs = new DataStore<number>();
