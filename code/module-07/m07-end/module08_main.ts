@@ -1,13 +1,13 @@
-/*  Module 7: Namespaces in TypeScript
+/*  Module 8: Organize code using Typescript namespaces
     Lab End */
 
-//  Interfaces moved to module07_loans.ts
+//  Interfaces moved to module08_loans.ts
 
-//  Functions moved to module07_loan-programs.ts
+//  Functions moved to module08_loan-programs.ts
 
 /*  TODO Add reference paths. */
-/// <reference path="module07_loans.ts" />
-/// <reference path="module07_loan-programs.ts" />
+/// <reference path="module08_loans.ts" />
+/// <reference path="module08_loan-programs.ts" />
 
 let interestOnlyPayment = calculateInterestOnlyLoanPayment({principle: 30000, interestRate: 5});
 let conventionalLoanPayment = calculateConventionalLoanPayment({principle: 30000, interestRate: 5, months: 180});
