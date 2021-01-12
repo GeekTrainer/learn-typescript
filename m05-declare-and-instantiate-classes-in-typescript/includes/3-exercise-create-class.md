@@ -146,11 +146,3 @@ Continue defining the `Car` class in the Playground.
         return this._make;
     }
     ```
-
-1. Test the methods by sending the return value to the console.
-
-    ```typescript
-    console.log(myCar1.accelerate(35));
-    console.log(myCar1.brake());
-    console.log(myCar1.turn('right'));
-    ```
