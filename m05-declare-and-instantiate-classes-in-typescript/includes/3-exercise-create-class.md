@@ -5,8 +5,9 @@ To create a class, define its members: properties, a `constructor`, accessors, a
 - **Accessors** are a type of function that you use to `get` or `set` the value of properties. Properties can be read-only by simply omitting the `set` accessor in the class, or inaccessible by omitting the `get` accessor (the property will return `undefined` if you attempt to access it, even if it's assigned a value during initialization.)
 - **Methods** are functions that define the behaviors or actions that the object can do. You can call these methods to invoke the behavior of the object. You can also define methods that are only accessible from within the class itself and are typically called by other methods in the class to perform a task.
 
-Let's open the [Playground](https://www.typescriptlang.org/play) and create a new class called `Car`. You can use the `Car` class on its own to create basic `Car` objects, or you can extend the `Car` class to create new classes for specific types of cars, like a `GasCar` or an `ElectricCar` class. These properties will inherit the properties and methods of the `Car` class, as well as have their own properties and methods.
+Let's create a new class called `Car`. You can use the `Car` class on its own to create basic `Car` objects, or you can extend the `Car` class to create new classes for specific types of cars, like a `GasCar` or an `ElectricCar` class. These properties will inherit the properties and methods of the `Car` class, as well as have their own properties and methods.
 
+1. Open the [Playground](https://www.typescriptlang.org/play) and remove any existing code.
 1. Create a new `class` by using the `class` keyword followed by the class name, `Car`. By convention, class names are PascalCase. Let's also add some comments to make it easier to add the class members in the correct places.
 
     ```typescript
