@@ -4,11 +4,11 @@
 /*  DataStore is a utility function that can store up to 10 string values in an array. 
     Rewrite the DataStore class so the array can store items of any type. */
 
-// TODO: Add a type variable called T to the class declaration.
+// TODO: Add and apply a type variable.
 class DataStore<T> {
-    //TODO: Add the type variable to the _data property declaration.
+
     private _data: Array<T> = new Array(10);
-    //TODO: Update the type of the item parameter in the AddOrUpdate function to use the type variable.
+
     AddOrUpdate(index: number, item: T) {
         if(index >=0 && index <10) {
             this._data[index] = item;
@@ -31,14 +31,14 @@ cities.AddOrUpdate(2, "London");
 cities.AddOrUpdate(11, "New York");
 console.log(cities.GetData(11));        // returns 'undefined'
 
-// TODO Test items as numbers
+// TODO Test items as numbers.
 let empIDs = new DataStore<number>();
 empIDs.AddOrUpdate(0, 50);
 empIDs.AddOrUpdate(1, 65);
 empIDs.AddOrUpdate(2, 89);                  
 console.log(empIDs.GetData(0));         // returns 50
 
-// TODO Test items as objects
+// TODO Test items as objects.
 type Pets = {
     name: string;
     breed: string;
