@@ -8,7 +8,7 @@ Continue working in the Playground.
     let myCar1 = new Car('Cool Car Company', 'blue', 2);  // Instantiates the Car object with all parameters
     ```
 
-1. You can now access the properties of the new `myCar1` object. Enter `myCar1.` and you should see a list of the members defined in the class, including `color` and `_color`. Return the value of both properties to the console. What happens? Why?
+1. You can now access the properties of the new `myCar1` object. Enter `myCar1.` and you should see a list of the members defined in the class, including `color` and `_color`. Select **Run** to return the value of both properties to the console. What happens? Why?
 
     ```typescript
     console.log(myCar1.color);
@@ -16,7 +16,7 @@ Continue working in the Playground.
     ```
 
 1. The member `_color` represents the property defined in the class, while `color` is the parameter that you pass to the constructor. When you refer to `_color`, you're accessing the raw data for the property, which returns `'blue'`. When you refer to `color`, you're accessing the property through the `get` or `set` accessor, which returns `'The color of the car is blue'`. It's important to understand the difference between the two because you often do not want to allow direct access to the property without doing some validation or other work on the data before getting or setting it. You'll learn about using access modifiers to control the visibility of class members later in the unit.
-1. Recall that the `set` block for the `doors` parameter tests the value to determine if it is even or odd. Test this by declaring a variable called `myCar2` and assigning a new `Car` object to it, passing in values for the `make`, `color`, and `doors` parameters. This time set the value of the doors parameter to an odd number. Now, run the code. What happens? Why?
+1. Recall that the `set` block for the `doors` parameter tests the value to determine if it is even or odd. Test this by declaring a variable called `myCar2` and assigning a new `Car` object to it, passing in values for the `make`, `color`, and `doors` parameters. This time set the value of the doors parameter to an odd number. Now, select **Run**. What happens? Why?
 
     ```typescript
     let myCar2 = new Car('Galaxy Motors', 'red', 3);
