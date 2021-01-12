@@ -78,7 +78,7 @@ Complete the steps to define a single file namespace:
 
 You can also nest namespaces within namespaces, providing even more options for organizing your code.
 
-Continue working in VSCode.
+Continue working in the code editor.
 
 1. Create a new namespace called `AllGreetings` and then move the `Greetings` and `GreetingsWithLength` namespaces inside it. Add the `export` keyword before both namespace names. This allows the namespace to be accessible outside of the `AllGreetings` namespace.
 
@@ -112,7 +112,7 @@ Continue working in VSCode.
 
 TypeScript creates an easy-to-navigate hierarchy of nested namespaces. But, as your nested namespaces become more complex, you may want to create an alias to shorten and simplify your code. To do this, use the `import` keyword.
 
-Continue working in the TypeScript editor.
+Continue working in the code editor.
 
 1. Type `import greet = AllGreetings.Greetings`. This defines a new alias called `greet` that represents `AllGreetings.Greetings`. You can now use `greet` in place of `AllGreetings.Greetings` in your code.
 
