@@ -63,7 +63,7 @@ Continue the exercise in the Playground.
    let subtractThreeNumbers = (x: number, y: number, z = 100): number => x - y - z;
    ```
 
-1. Try running the function with two and three arguments to test the result.
+1. Try calling the function with two and three arguments to test the result.
 
    ```typescript
    subtractThreeNumbers(10, 20);       // returns -100 because 'z' has been assigned the value 100
