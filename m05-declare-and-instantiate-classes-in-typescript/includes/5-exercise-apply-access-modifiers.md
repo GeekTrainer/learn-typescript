@@ -18,7 +18,7 @@ Continue defining the `Car` class in the Playground.
 
     ![Intellisense showing all of the public members of the Car class: _color, _doors, _make, accelerate, brake, color, doors, make, turn, and worker.](../media/m05_public_private.jpg)
 
-2. Set the access modifier of the `_color`, `_doors`, and `_make` properties and the `worker` function to `private`.
+1. Set the access modifier of the `_color`, `_doors`, and `_make` properties and the `worker` function to `private`.
 
     ```typescript
     // Properties
@@ -31,7 +31,7 @@ Continue defining the `Car` class in the Playground.
     }
     ```
 
-3. Test the access of the class members again by typing `myCar1.` and notice that the properties and the `worker` function are now unavailable. Any attempt to use these class members will raise an error at compile time.
+1. Test the access of the class members again by typing `myCar1.` and notice that the properties and the `worker` function are now unavailable. Any attempt to use these class members will raise an error at compile time.
 
     ![Intellisense showing all of the public members of the Car class with properties and the worker method set to private: accelerate, brake, color, doors, make, and turn.](../media/m05_public_private_2.jpg)
 
