@@ -1,21 +1,20 @@
 /*  Module 5: Declare and instantiate classes in TypeScript
     Lab End  */
 
-/*  EXERCISE 1
-    TODO: Convert the three functions to a new class called BuildArray by defining the 
-    properties, constructor, and accessors, converting the sortAscending2 and sortDescending2
-    functions to private methods of the class, and converting the buildArray2 function to
-    a public method of the class. */
+/*  EXERCISE 1 */
 
 class BuildArray {
+    // TODO Define the properties
     private _items: number;
     private _sortOrder: 'ascending' | 'descending';
 
+    // TODO Define the constructor
     constructor (items: number, sortOrder: 'ascending' | 'descending') {
         this._items = items;
         this._sortOrder = sortOrder;
     }
 
+    // TODO Define the accessors
     get items() {
         return this._items;
     }
@@ -29,28 +28,23 @@ class BuildArray {
         this._sortOrder = sortOrder;
     }
 
-    // Comparison function that tells the sort method how to sort numbers in ascending order
+    // Define the methods
     private sortDescending = (a: number, b: number) => {
         if (a > b) {
-            return -1;;
+            return -1;
         } else if (b > a) {
-            return 1;;
+            return 1;
         } else {
-            return 0;
+            return 0;}
         }
-        }
-        // Comparison function that tells the sort method how to sort numbers in ascending order
-    private sortAscending = (a: number, b: number) => {
+          private sortAscending = (a: number, b: number) => {
         if (a > b) {
             return 1;
         } else if (b > a) {
             return -1;
         } else {
-            return 0;
+            return 0; }
         }
-        }
-    // This function builds an array of unique random numbers containing the number of items based on the number passed to it.
-    // The sortOrder parameter determines whether to sort the array in ascending or descending order.
     buildArray(): number[] {
         let randomNumbers: number[] = [];
         let nextNumber: number;
@@ -70,9 +64,7 @@ class BuildArray {
     }
 }
 
-/*  TODO: Update the testArray1 and testArray2 variable declarations to instantiate 
-    new BuildArray objects. Call the buildArray2 method on the objects and return the 
-    result to the console. */
+/*  TODO: Instantiate the BuildArray objects. */
 
     let testArray1 = new BuildArray(12, 'ascending');
     let testArray2 = new BuildArray(8, 'descending');
