@@ -2,17 +2,7 @@ In this lab, you will convert some JavaScript functions to TypeScript.
 
 ## Lab setup
 
-You can use the TypeScript [Playground](https://www.typescriptlang.org/play) or Visual Studio Code to complete this lab.
-
-### Playground
-
-If you’re using the Playground, copy and paste the starting code into it as directed in the lab instructions.
-
-### Visual Studio Code
-
-If you’re using an existing Visual Studio Code workspace, add a new file named **module04.ts** to your project and copy and paste the starting code into it as directed in the lab instructions.
-
-You can also download the starting workspace at [LINK TO \code\module-04\m04-start] and edit the file **module04.ts**. To run the solution, you must first set up your development environment by installing the following software on your machine:
+To complete the lab, you must first set up your development environment by installing the following software on your machine:
 
 1. Visual Studio Code (or IDE of your choice)
 2. Node Package Manager (npm)
@@ -29,52 +19,23 @@ The following JavaScript code contains three functions:
 
 Convert the functions to TypeScript with strongly typed parameters and return types.
 
-1. Copy and paste the following JavaScript code your TypeScript editor.
+1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-04\m04-start] 
 
-   ```javascript
-   /*  EXERCISE 1
-       TODO: Declare a new function type for the sortDescending and sortAscending functions 
-       using either a type alias or an interface. Then, apply the new function type 
-       as the variable type. */
-    
-   /*  TODO: Convert the sortDescending and sortAscending functions to anonymous 
-       functions and assign them to variables of the same name. Add types to the 
-       parameter lists and return values for each function. */
+   ```bash
+   git clone <url>
+   cd <folder name>
+   code .
+   ```
 
-   /*  sortDescending is a comparison function that tells the sort method how to sort 
-       numbers in descending order */
-   function sortDescending(a, b) {
-     if (a > b) {
-       return -1;
-     } else if (b > a) {
-       return 1;
-     } else {
-       return 0;
-     }
-   }
-   
-   /*  sortDescending is a comparison function that tells the sort method how to sort 
-    numbers in ascending order. */
-   function sortAscending(a, b) {
-     if (a > b) {
-       return 1;
-     } else if (b > a) {
-       return -1;
-     } else {
-       return 0;
-     }
-   }
-   
-   /*  The buildArray function builds an array of unique random numbers containing the number 
-    of items based on the number passed to it. The sortOrder parameter determines 
-    whether to sort the array in ascending or descending order. */
-   
-   /*  TODO: In the BuildArray function, add types to parameter list, 
-       return value, and variables. */
-   
-   function buildArray(items, sortOrder) {
-       let randomNumbers = [];
-       let nextNumber;
+1. Open the file **module04.ts**.
+1. Locate `TODO: Update the BuildArray function`. 
+1. In the `BuildArray` function, add types to parameter list, return value, and variables.
+
+    ```typescript
+    function buildArray(items: number, sortOrder: 'ascending' | 'descending'): number[] {
+       let randomNumbers: number[] = [];
+       let nextNumber: number;
+
        for (let counter = 0; counter < items; counter++) {
            nextNumber = Math.ceil(Math.random() * (100 - 1));
            if (randomNumbers.indexOf(nextNumber) === -1) {
@@ -83,44 +44,102 @@ Convert the functions to TypeScript with strongly typed parameters and return ty
              counter--;
            }
        }
-   
+
        if (sortOrder === 'ascending') {
          return randomNumbers.sort(sortAscending);
        } else {
          return randomNumbers.sort(sortDescending);
        }
    }
-   
-   let myArray1 = buildArray(12, 'ascending');
-   let myArray2 = buildArray(8, 'descending');
    ```
 
-2. In the `BuildArray` function, add types to parameter list, return value, and variables.
-3. Convert the `sortDescending` and `sortAscending` functions to anonymous functions and assign them to variables of the same name. Add types to the parameter lists and return values for each function.
-4. Declare a new function type for the `sortDescending` and `sortAscending` functions using either a type alias or an interface. Then, apply the new function type as the variable type.
+1. Locate to `TODO: Convert the sortDescending and sortAscending functions to anonymous functions`. 
+1. Convert the `sortDescending` and `sortAscending` functions to anonymous functions and assign them to variables of the same name. Add types to the parameter lists and return values for each function.
+
+   ```typescript
+   let sortDescending = (a, b) => {
+   if (a > b) {
+       return -1;;
+   } else if (b > a) {
+       return 1;;
+   } else {
+       return 0;
+   }
+   }
+
+   let sortAscending = (a, b) => {
+       if (a > b) {
+         return 1;
+       } else if (b > a) {
+         return -1;
+       } else {
+         return 0;
+       }
+     }
+   ```
+
+1. Locate `TODO: Declare a new function type for the sortDescending and sortAscending functions.`.
+1. Declare a new function type for the `sortDescending` and `sortAscending` functions using either a type alias or an interface. 
+
+   ```typescript
+   type compareFunctionType = (a: number, b:number) => number;
+   ```
+
+1. In the variable declarations for `sortDescending` and `sortAscending`, apply the new function type as the variable type.
+
+   ```typescript
+   let sortDescending: compareFunctionType = (a, b) => {
+   if (a > b) {
+       return -1;;
+   } else if (b > a) {
+       return 1;;
+   } else {
+       return 0;
+   }
+   }
+
+   let sortAscending: compareFunctionType = (a, b) => {
+       if (a > b) {
+         return 1;
+       } else if (b > a) {
+         return -1;
+       } else {
+         return 0;
+       }
+     }
+   ```
+
+1. Test your work by calling the `buildArray` function.
+
+   ```typescript
+   let myArray1 = buildArray(12, 'ascending');
+   let myArray2 = buildArray(8, 'descending');
+   console.log(myArray1);
+   console.log(myArray2);
+   ```
 
 ## Exercise 2
 
 This JavaScript function returns the payment amount for a loan.
 
-1. Copy and paste the following JavaScript code your TypeScript editor.
+1. Locate `TODO: Update the LoanCalculator function`.
+1. Convert the `loanCalculator` function to TypeScript with strongly typed parameters, variables, and return types.
+1. Make the `months` parameter optional but assign it a default value of `12` months if omitted.
 
    ```typescript
-   /*  EXERCISE 2
-    TODO: Convert the loanCalculator function to TypeScript with strongly typed parameters, variables, 
-    and return types. Make the numMonths parameter optional but assign it a default value of 12 
-    months if omitted. */
-   
-   function loanCalculator (principle, interestRate, numberOfMonths) {
-       let interest = interestRate / 1200;   // Calculates the monthly interest rate
-       let payment;
-       payment = principle * interest / (1 - (Math.pow(1/(1 + interest), numberOfMonths)));
+   function loanCalculator (principle: number, interestRate: number, months = 12): string {
+       let interest: number = interestRate / 1200;   // Calculates the monthly interest rate 
+       let payment; Number;
+       payment = principle * interest / (1 - (Math.pow(1/(1 + interest), months)));
        return payment.toFixed(2);
    }
    ```
+1. Test your work by calling the `loanCalculator` function with only the required parameters.
 
-2. Convert the `loanCalculator` function to TypeScript with strongly typed parameters, variables, and return types.
-3. Make the `numberOfMonths` parameter optional but assign it a default value of `12` months if omitted.
+   ```typescript
+   let myLoan = loanCalculator(1000, 5);
+   console.log(myLoan);
+   ```
 
 ## Challenge yourself!
 
@@ -128,4 +147,12 @@ For an added challenge, take some existing JavaScript that you may have written 
 
 ## Lab solution
 
-Download the solution workspace [LINK TO \code\module-04\m04-end] and open the file **module04.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
+Clone the ending repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-04\m04-end] 
+
+```bash
+git clone <url>
+cd <folder name>
+code .
+```
+
+Open the file **module04.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
