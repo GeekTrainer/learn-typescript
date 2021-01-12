@@ -12,7 +12,7 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 1
 
-The `DataStore` class contains utility functions that can store up to ten `string` items in an array and return the value stored in each item. In this exercise, you will rewrite the `DataStore` class so it can store items of any type.
+The `DataStore` class contains utility functions that can store up to ten `string` items in an array and return the value stored in each item. In this exercise, you will rewrite the `DataStore` class using a generic so it can store items of any type that you specify when it is instantiated.
 
 1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-06\m06-start] 
 
