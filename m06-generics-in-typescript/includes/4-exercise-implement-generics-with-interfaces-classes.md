@@ -1,6 +1,6 @@
 Generics are just a way to pass types to a component, so you can not only apply native types to generic type variables, but also interfaces, functions, and classes. In this unit, you'll see some different ways to use generics with these complex types.
 
-Open the [Playground](https://www.typescriptlang.org/play) and try using generics with interfaces, functions, and classes. All the code samples perform essentially the same tasks using different approaches.
+Try using generics with interfaces, functions, and classes. All the code samples perform essentially the same tasks using different approaches.
 
 ## Declare a generic interface
 
@@ -33,6 +33,7 @@ You can use generics in an interface declaration by replacing the type annotatio
 
 You can also declare a generic interface as a function type.
 
+1. Continue working in the Playground.
 1. Declare a generic interface called `ProcessIdentity` that includes the generic signature of a method, `(value: T, message: U): T`. Notice that the method doesn't have a name. By doing this, you can apply it to any function with a matching type signature.
 
     ```typescript
@@ -62,7 +63,8 @@ You can also declare a generic interface as a function type.
 
 You can also declare a generic interface and implement it in a class.
 
-1. In a new Playground window, declare an interface called `ProcessIdentity` that has two properties, `value` and `message`, and two generic type variables, `T` and `U`, for the property types. Then, add a generic signature of a method called `process` that returns a value of type `T`.
+1. Continue working in the Playground.
+1. Declare an interface called `ProcessIdentity` that has two properties, `value` and `message`, and two generic type variables, `T` and `U`, for the property types. Then, add a generic signature of a method called `process` that returns a value of type `T`.
 
 
     ```typescript
@@ -100,7 +102,7 @@ You can also declare a generic interface and implement it in a class.
 
 ## Define a generic class
 
-You can also declare a generic class without an interface. This example declares `processIdentity` as a generic class without implementing the `ProcessIdentity2` class.
+You can also declare a generic class without an interface. This example declares `processIdentity` as a generic class without implementing the `ProcessIdentity` class.
 
 ```typescript
 class processIdentity<T, U> {
