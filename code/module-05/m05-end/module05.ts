@@ -36,15 +36,15 @@ class BuildArray {
             return 1;
         } else {
             return 0;}
-        }
-          private sortAscending = (a: number, b: number) => {
+     }
+    private sortAscending = (a: number, b: number) => {
         if (a > b) {
             return 1;
         } else if (b > a) {
             return -1;
         } else {
             return 0; }
-        }
+    }
     buildArray(): number[] {
         let randomNumbers: number[] = [];
         let nextNumber: number;
