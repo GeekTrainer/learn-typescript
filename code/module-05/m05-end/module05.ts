@@ -28,7 +28,7 @@ class BuildArray {
         this._sortOrder = sortOrder;
     }
 
-    // Define the methods
+    // TODO Define the methods.
     private sortDescending = (a: number, b: number) => {
         if (a > b) {
             return -1;
