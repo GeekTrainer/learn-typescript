@@ -2,14 +2,11 @@
    Lab Start  */
 
 /*  EXERCISE 1
-    TODO: Declare a new function type for the sortDescending and sortAscending functions 
-    using either a type alias or an interface. Then, apply the new function type 
-    as the variable type. */
+    TODO: Declare a new function type for the sortDescending and sortAscending functions. */
     
 
 /*  TODO: Convert the sortDescending and sortAscending functions to anonymous 
-    functions and assign them to variables of the same name. Add types to the 
-    parameter lists and return values for each function. */
+    functions. */
 
 /*  sortDescending is a comparison function that tells the sort method how to sort 
     numbers in descending order */
@@ -39,8 +36,7 @@ if (a > b) {
     of items based on the number passed to it. The sortOrder parameter determines 
     whether to sort the array in ascending or descending order. */
 
-/*  TODO: In the BuildArray function, add types to parameter list, 
-    return value, and variables. */
+/*  TODO: Update the BuildArray function. */
 
 function buildArray(items, sortOrder) {
     let randomNumbers = [];
@@ -53,7 +49,6 @@ function buildArray(items, sortOrder) {
           counter--;
         }
     }
-
     if (sortOrder === 'ascending') {
       return randomNumbers.sort(sortAscending);
     } else {
@@ -65,13 +60,11 @@ let myArray1 = buildArray(12, 'ascending');
 let myArray2 = buildArray(8, 'descending');
 
 /*  EXERCISE 2
-    TODO: Convert the LoanCalc function to TypeScript with strongly typed parameters, variables, 
-    and return types. Make the numMonths parameter optional but assign it a default value of 12 
-    months if omitted. */
+    TODO: Update the LoanCalculator function. */
 
-function loanCalculator (principle, interestRate, numberOfMonths) {
+function loanCalculator (principle, interestRate, months) {
     let interest = interestRate / 1200;   // Calculates the monthly interest rate
     let payment;
-    payment = principle * interest / (1 - (Math.pow(1/(1 + interest), numberOfMonths)));
+    payment = principle * interest / (1 - (Math.pow(1/(1 + interest), months)));
     return payment.toFixed(2);
 }
