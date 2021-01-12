@@ -53,8 +53,8 @@ Convert the functions to TypeScript with strongly typed parameters and return ty
    }
    ```
 
-1. Locate to `TODO: Convert the sortDescending and sortAscending functions to anonymous functions`. 
-1. Convert the `sortDescending` and `sortAscending` functions to anonymous functions and assign them to variables of the same name. Add types to the parameter lists and return values for each function.
+1. Locate `TODO: Convert the sortDescending and sortAscending functions to anonymous functions`. 
+1. Convert the `sortDescending` and `sortAscending` functions to anonymous functions and assign them to variables of the same name.
 
    ```typescript
    let sortDescending = (a, b) => {
@@ -78,7 +78,7 @@ Convert the functions to TypeScript with strongly typed parameters and return ty
      }
    ```
 
-1. Locate `TODO: Declare a new function type for the sortDescending and sortAscending functions.`.
+1. Locate `TODO: Declare a new function type for the sortDescending and sortAscending functions`.
 1. Declare a new function type for the `sortDescending` and `sortAscending` functions using either a type alias or an interface. 
 
    ```typescript
