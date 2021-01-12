@@ -32,7 +32,9 @@ function calculateInterestRate (interestRate: number): number {
     let interest: number = interestRate / 1200;
     return interest
 }
-/*  TODO Update the function calls. */
+
+/*  TODO Add reference paths. */
+
 let interestOnlyPayment = calculateInterestOnlyLoanPayment({principle: 30000, interestRate: 5});
 let conventionalLoanPayment = calculateConventionalLoanPayment({principle: 30000, interestRate: 5, months: 180});
 console.log(interestOnlyPayment);         //* Returns "The interest only loan payment is 125.00" 
