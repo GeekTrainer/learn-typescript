@@ -7,7 +7,7 @@ To create a class, define its members: properties, a `constructor`, accessors, a
 
 Let's open the [Playground](https://www.typescriptlang.org/play) and create a new class called `Car`. You can use the `Car` class on its own to create basic `Car` objects, or you can extend the `Car` class to create new classes for specific types of cars, like a `GasCar` or an `ElectricCar` class. These properties will inherit the properties and methods of the `Car` class, as well as have their own properties and methods.
 
-1. Create a new `class` by using the `class` keyword followed by the class name, `Car`. By convention, class names are CamelCase. Let's also add some comments to make it easier to add the class members in the correct places.
+1. Create a new `class` by using the `class` keyword followed by the class name, `Car`. By convention, class names are PascalCase. Let's also add some comments to make it easier to add the class members in the correct places.
 
     ```typescript
     class Car {
