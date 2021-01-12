@@ -1,4 +1,4 @@
-/// <reference path="module07_loans.ts" />
+/// <reference path="module08_loans.ts" />
 
 namespace LoanPrograms {
     // Calculates the monthly payment of an interest only loan
