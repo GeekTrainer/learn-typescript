@@ -5,6 +5,7 @@
 
 //  Functions moved to module07_loan-programs.ts
 
+/*  TODO Add reference paths. */
 /// <reference path="module07_loans.ts" />
 /// <reference path="module07_loan-programs.ts" />
 
