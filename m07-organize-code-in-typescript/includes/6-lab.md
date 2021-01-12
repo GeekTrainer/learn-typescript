@@ -38,7 +38,7 @@ In this exercise, you'll organize the code using namespaces in a single TypeScri
 
 1. In the starting workspace, open the file **module08_main.ts** the TypeScript editor.
 1. Locate `TODO Create a the Loans namespace`.
-1. Create a new interface called `Loans`.
+1. Create a new namespace called `Loans`.
 1. Move the `Loan` and `ConventionalLoan` interfaces into the `Loans` namespace.
 1. Update the `Loan` and `ConventionalLoan` interfaces so they are visible outside of the `Loans` namespace.
 
@@ -55,7 +55,7 @@ In this exercise, you'll organize the code using namespaces in a single TypeScri
    ```
 
 1. Locate `TODO Create LoanPrograms namespace`.
-1. Create a new interface called `LoanPrograms`.
+1. Create a new namespace called `LoanPrograms`.
 1. Move the three functions into the `LoanPrograms` namespace.
 
    ```typescript
