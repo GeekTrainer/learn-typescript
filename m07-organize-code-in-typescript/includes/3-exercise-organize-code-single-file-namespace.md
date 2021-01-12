@@ -5,8 +5,16 @@ You can implement namespaces within a single TypeScript file or across multiple 
 
 Complete the steps to define a single file namespace:
 
-1. Download the starting workspace for the exercise at [LINK TO \code\module-07\m07-exercise-start] and edit the file **module07_exercise.ts**. This file contains three functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into namespaces.
-2. Define a new namespace by using the `namespace` keyword followed by the namespace name. You can define as many namespaces as needed within a single TypeScript file. Define two namespaces named `Greetings` and `GreetingsWithLength`.
+1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-08\m07-exercise-start] 
+
+   ```bash
+   git clone <url>
+   cd <folder name>
+   code .
+   ```
+
+1. Open the file **module08_exercise.ts**. This file contains three functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into namespaces.
+1. You define a new namespace by using the `namespace` keyword followed by the namespace name. You can define as many namespaces as needed within a single TypeScript file. At the top of the file, define two namespaces named `Greetings` and `GreetingsWithLength`.
 
     ```typescript
     namespace Greetings {
@@ -15,7 +23,7 @@ Complete the steps to define a single file namespace:
     }
     ```
 
-3. You can then define functions and classes inside of the namespace definition. All components defined within the namespace are scoped to the namespace and removed from the global scope. Move the first function called `returnGreeting` into the `Greetings` namespace. This function returns the value of a parameter to the console.
+1. You can then define functions and classes inside of the namespace definition. All components defined within the namespace are scoped to the namespace and removed from the global scope. Move the first function called `returnGreeting` into the `Greetings` namespace. This function returns the value of a parameter to the console.
 
     ```typescript
     namespace Greetings {
@@ -25,7 +33,7 @@ Complete the steps to define a single file namespace:
     }
     ```
 
-4. Move the remaining two functions, `returnGreeting` and `getLength`, into the `GreetingsWithLength` namespace. This `returnGreeting` function uses the helper function `getLength` to determine the length of the greeting before returning the message to the console.
+1. Move the remaining two functions, `returnGreeting` and `getLength`, into the `GreetingsWithLength` namespace. The `returnGreeting` function uses the helper function `getLength` to determine the length of the greeting before returning the message to the console.
 
     ```typescript
     namespace GreetingsWithLength {
@@ -39,7 +47,7 @@ Complete the steps to define a single file namespace:
     }
     ```
 
-5. If you want to make a function or class available to code outside of the namespace, add the `export` keyword before its name. If you omit the `export` keyword, the component is only available inside the namespace. You can do this if defining components that should only be directly accessible to other components within the namespace. Add the `export` keyword to the `returnGreeting` function in both namespaces. The `getLength` function should not be accessible outside of the `GreetingsWithLength` namespace so omit the `export` keyword.
+1. If you want to make a function or class available to code outside of the namespace, add the `export` keyword before its name. If you omit the `export` keyword, the component is only available inside the namespace. You can do this if defining components that should only be directly accessible to other components within the namespace. Add the `export` keyword to the `returnGreeting` function in both namespaces. The `getLength` function should not be accessible outside of the `GreetingsWithLength` namespace so omit the `export` keyword.
 
     ```typescript
     namespace Greetings {
@@ -58,7 +66,7 @@ Complete the steps to define a single file namespace:
     }
     ```
 
-6. To use a class or function within a namespace, prefix the component name with the namespace name. Try calling the `returnGreeting` function without specifying the namespace. This returns an error because both `returnGreeting` functions are out of scope in the global namespace. Now, try prefixing `Greetings` or `GreetingsWithLength` to the `returnGreeting` function. This provides access to the function within each respective namespace.
+1. To use a class or function within a namespace, prefix the component name with the namespace name. Try calling the `returnGreeting` function without specifying the namespace. This returns an error because both `returnGreeting` functions are out of scope in the global namespace. Now, try prefixing `Greetings` or `GreetingsWithLength` to the `returnGreeting` function. This provides access to the function within each respective namespace.
 
     ```typescript
     returnGreeting('Hello');                     // Returns error
@@ -70,7 +78,7 @@ Complete the steps to define a single file namespace:
 
 You can also nest namespaces within namespaces, providing even more options for organizing your code.
 
-Continue working in the TypeScript editor.
+Continue working in VSCode.
 
 1. Create a new namespace called `AllGreetings` and then move the `Greetings` and `GreetingsWithLength` namespaces inside it. Add the `export` keyword before both namespace names. This allows the namespace to be accessible outside of the `AllGreetings` namespace.
 
@@ -93,7 +101,7 @@ Continue working in the TypeScript editor.
     }
     ```
 
-2. To call the functions, start by typing the outermost namespace name, `AllGreetings`, a period, and then the next level in the namespace hierarchy, `Greetings` or `GreetingsWithLength`. Continue down the hierarchy until you reach the function name.
+1. To call the functions, start by typing the outermost namespace name, `AllGreetings`, a period, and then the next level in the namespace hierarchy, `Greetings` or `GreetingsWithLength`. Continue down the hierarchy until you reach the function name.
 
     ```typescript
     AllGreetings.Greetings.returnGreeting('Bonjour');        // OK
