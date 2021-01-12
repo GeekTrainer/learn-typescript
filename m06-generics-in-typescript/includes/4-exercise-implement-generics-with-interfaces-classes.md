@@ -6,6 +6,7 @@ Open the [Playground](https://www.typescriptlang.org/play) and try using generic
 
 You can use generics in an interface declaration by replacing the type annotations with type variables.
 
+1. Open the [Playground](https://www.typescriptlang.org/play) and remove any existing code.
 1. Declare a simple interface called `Identity` that has two properties, `value` and `message`, and two generic type variables, `T` and `U`, for the property types.
 
     ```typescript
@@ -15,7 +16,7 @@ You can use generics in an interface declaration by replacing the type annotatio
     }
     ```
 
-2. Declare two variables, using the `Identity` interface as an object type.
+1. Declare two variables, using the `Identity` interface as an object type.
 
     ```typescript
     let returnNumber: Identity<number, string> = {
@@ -40,7 +41,7 @@ You can also declare a generic interface as a function type.
     }
     ```
 
-2. Declare a function called `processIdentity` that has the same type signature as the `ProcessIdentity` interface.
+1. Declare a function called `processIdentity` that has the same type signature as the `ProcessIdentity` interface.
 
     ```typescript
     function processIdentity<T, U> (value: T, message: U) : T {
@@ -49,7 +50,7 @@ You can also declare a generic interface as a function type.
     }
     ```
 
-3. Declare a function type variable called `processor` with the `ProcessIdentity` interface as the variable type, passing in `number` for the `T` type and `string` for the `U` type. Then, assign the `processIdentity` function to it. You can now use this variable as a function in your code and TypeScript will verify the types.
+1. Declare a function type variable called `processor` with the `ProcessIdentity` interface as the variable type, passing in `number` for the `T` type and `string` for the `U` type. Then, assign the `processIdentity` function to it. You can now use this variable as a function in your code and TypeScript will verify the types.
 
     ```typescript
     let processor: ProcessIdentity<number, string> = processIdentity;
@@ -72,7 +73,7 @@ You can also declare a generic interface and implement it in a class.
     }
     ```
 
-2. Define a generic class called `processIdentity` that implements the `ProcessIdentity` interface. In this case, name the variable types in the `processIdentity` class `X` and `Y`. You can use different variable names in the interface and the class because the type value propagates up the chain and the variable name doesn't matter.
+1. Define a generic class called `processIdentity` that implements the `ProcessIdentity` interface. In this case, name the variable types in the `processIdentity` class `X` and `Y`. You can use different variable names in the interface and the class because the type value propagates up the chain and the variable name doesn't matter.
 
     ```typescript
     class processIdentity<X, Y> implements ProcessIdentity<X, Y> {
@@ -89,7 +90,7 @@ You can also declare a generic interface and implement it in a class.
     }
     ```
 
-3. Declare a new variable and assign a new `processIdentity` object to it, passing in `number` and `string` for the `X` and `Y` variable types, and a `number` and `string` as the argument values.
+1. Declare a new variable and assign a new `processIdentity` object to it, passing in `number` and `string` for the `X` and `Y` variable types, and a `number` and `string` as the argument values.
 
     ```typescript
     let processor = new processIdentity<number, string>(100, 'Hello');
