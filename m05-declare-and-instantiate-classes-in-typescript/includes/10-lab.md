@@ -2,17 +2,7 @@ In this lab, you'll apply what you've learned about classes to convert a TypeScr
 
 ## Lab setup
 
-You can use the TypeScript [Playground](https://www.typescriptlang.org/play) or Visual Studio Code to complete this lab.
-
-### Playground
-
-If you’re using the Playground, copy and paste the starting code into it as directed in the lab instructions.
-
-### Visual Studio Code
-
-If you’re using an existing Visual Studio Code workspace, add a new file named **module05.ts** to your project and copy and paste the starting code into it as directed in the lab instructions.
-
-You can also download the starting workspace at [LINK TO \code\module-05\m05-start] and edit the file **module05.ts**. To run the solution, you must first set up your development environment by installing the following software on your machine:
+To complete the lab, you must first set up your development environment by installing the following software on your machine:
 
 1. Visual Studio Code (or IDE of your choice)
 2. Node Package Manager (npm)
@@ -24,51 +14,89 @@ For best results, follow the complete instructions for setting up your environme
 
 The following TypeScript code contains three functions:
 
-- `BuildArray2` builds an array of unique random numbers. It accepts an `items` parameter that determines the number of items in the array and a `sortOrder` parameter that determines whether the array is sorted in ascending or descending order.
-- `sortDecending2` and `sortAscending2` are comparison functions that tell the `sort()` method how to sort numbers in ascending or descending order.
+- `buildArray` builds an array of unique random numbers. It accepts an `items` parameter that determines the number of items in the array and a `sortOrder` parameter that determines whether the array is sorted in ascending or descending order.
+- `sortDecending` and `sortAscending` are comparison functions that tell the `sort()` method how to sort numbers in ascending or descending order.
 
 Convert the functions to a TypeScript class.
 
-1. Copy and paste the following JavaScript code your TypeScript editor.
+1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-05\m05-start] 
+
+   ```bash
+   git clone <url>
+   cd <folder name>
+   code .
+   ```
+
+1. Open the file **module05.ts**. This file contains an empty class named `BuildArray` and the `buildArray`, `sortDecending`, and `sortAscending` functions.
+1. Locate `TODO Define the properties`. 
+1. Define the properties in the class: `_items` and `_sortOrder`.
 
     ```typescript
-    /*  EXERCISE 1
-        TODO: Convert the three functions to a new class called BuildArray by defining the 
-        properties, constructor, and accessors, converting the sortAscending2 and sortDescending2
-        functions to private methods of the class, and converting the buildArray2 function to
-        a public method of the class. */
+    // TODO Define the properties
+    private _items: number;
+    private _sortOrder: 'ascending' | 'descending';
+    ```
 
-    /*  sortDescending2 is a comparison function that tells the sort method how to sort numbers
-        in descending order. */
-    let sortDescending2 = (a: number, b: number) => {
-        if (a > b) {
-            return -1;;
-        } else if (b > a) {
-            return 1;;
-        } else {
-            return 0;
-        }
+1. Locate `TODO Define the constructor`.
+1. Define the `constructor` for the properties.
+
+    ```typescript
+    // TODO Define the constructor
+    constructor (items: number, sortOrder: 'ascending' | 'descending') {
+        this._items = items;
+        this._sortOrder = sortOrder;
     }
-    
-    /*  sortAscending2 is a comparison function that tells the sort method how to sort numbers 
-        in ascending order. */
-    let sortAscending2 = (a: number, b: number) => {
+    ```
+
+1. Locate `TODO Define the accessors`.
+1. Define the accessors that `get` and `set` the value of the `items` and `sortOrder` parameters.
+
+    ```typescript
+    // TODO Define the accessors
+    get items() {
+        return this._items;
+    }
+    set items(items) {
+        this._items = items;
+    }
+    get sortOrder() {
+        return this._sortOrder;
+    }
+    set sortOrder(sortOrder) {
+        this._sortOrder = sortOrder;
+    }
+    ```
+
+1. Locate `TODO Define the methods`.
+1. Move the `sortAscending` and `sortDescending` functions into the class and make them both `private` methods of the class.
+
+    ```typescript
+    // TODO Define the methods.
+    private sortDescending = (a: number, b: number) => {
+        if (a > b) {
+            return -1;
+        } else if (b > a) {
+            return 1;
+        } else {
+            return 0;}
+        }
+     private sortAscending = (a: number, b: number) => {
         if (a > b) {
             return 1;
         } else if (b > a) {
             return -1;
         } else {
-            return 0;
+            return 0; }
         }
-    }
-    
-    /*  buildArray2 builds an array of unique random numbers containing the number of items 
-        based on the number passed to it. The sortOrder parameter determines whether to sort 
-        the array in ascending or descending order. */
-    function buildArray2(items: number, sortOrder: 'ascending' | 'descending'): number[] {
+    ```
+
+1. Move the `buildArray` function into the class and make it a `public` method of the class.
+
+    ```typescript
+    buildArray(): number[] {
         let randomNumbers: number[] = [];
         let nextNumber: number;
-        for (let counter = 0; counter < items; counter++) {
+        for (let counter = 0; counter < this.items; counter++) {
             nextNumber = Math.ceil(Math.random() * (100 - 1));
             if (randomNumbers.indexOf(nextNumber) === -1) {
                 randomNumbers.push(nextNumber);
@@ -76,30 +104,28 @@ Convert the functions to a TypeScript class.
                 counter--;
             }
         }
-        if (sortOrder === 'ascending') {
-            return randomNumbers.sort(sortAscending2);
+        if (this._sortOrder === 'ascending') {
+            return randomNumbers.sort(this.sortAscending);
         } else {
-            return randomNumbers.sort(sortDescending2);
-        }
+            return randomNumbers.sort(this.sortDescending);
+        } 
     }
-    
-    /*  TODO: Update the testArray1 and testArray2 variable declarations to instantiate 
-        new BuildArray objects. Call the buildArray2 method on the objects and return the 
-        result to the console. */
-    let testArray1 = buildArray2(12, 'ascending');
-    let testArray2 = buildArray2(8, 'descending');
-    console.log(testArray1);
-    console.log(testArray2);
     ```
 
-2. Create a new class called `BuildArray`.
-3. Define the properties in the class: `_items` and `_sortOrder`.
-4. Define the class `constructor` for the properties.
-5. Define the accessors for the `items` and `sortOrder` parameters.
-6. Convert the `sortAscending2` and `sortDescending2` functions to `private` methods in the class.
-7. Convert the `buildArray2` function to a `public` method in the class.
-8. Update the `testArray1` and `testArray2` variable declarations to instantiate new `BuildArray` objects.
-9. Call the `buildArray2` method on the objects and return the result to the console.
+1. Locate `TODO: Instantiate the BuildArray objects`.
+1. Update the `testArray1` and `testArray2` variable declarations to instantiate new `BuildArray` objects.
+
+    ```typescript
+    let testArray1 = new BuildArray(12, 'ascending');
+    let testArray2 = new BuildArray(8, 'descending');
+    ```
+
+1. Test your work by calling the `buildArray` method on the objects and return the results to the console.
+
+    ```typescript
+    console.log(testArray1.buildArray());
+    console.log(testArray2.buildArray());
+    ```
 
 ## Challenge yourself!
 
@@ -107,4 +133,12 @@ For an added challenge, take some existing JavaScript that you may have written 
 
 ## Lab solution
 
-Download the solution workspace [LINK TO \code\module-05\m05-end] and open the file **module05.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
+Clone the ending repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-05\m05-end] 
+
+```bash
+git clone <url>
+cd <folder name>
+code .
+```
+
+Open the file **module05.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
