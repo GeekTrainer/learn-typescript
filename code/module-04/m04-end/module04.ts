@@ -40,10 +40,8 @@ let sortAscending: compareFunctionType = (a, b) => {
 /*  TODO: Update the BuildArray function. */
 
 function buildArray(items: number, sortOrder: 'ascending' | 'descending'): number[] {
-
     let randomNumbers: number[] = [];
     let nextNumber: number;
-
     for (let counter = 0; counter < items; counter++) {
         nextNumber = Math.ceil(Math.random() * (100 - 1));
         if (randomNumbers.indexOf(nextNumber) === -1) {
@@ -52,7 +50,6 @@ function buildArray(items: number, sortOrder: 'ascending' | 'descending'): numbe
           counter--;
         }
     }
-    
     if (sortOrder === 'ascending') {
       return randomNumbers.sort(sortAscending);
     } else {
