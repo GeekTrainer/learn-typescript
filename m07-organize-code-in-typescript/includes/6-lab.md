@@ -134,9 +134,9 @@ In this exercise, you'll reorganize the namespaces into multiple TypeScript file
 
 1. At the command prompt, run the following command to compile all the dependent **.ts** files and create a single JavaScript file named **main.js**.
 
-```bash
-tsc --outFile main.js module07_main.ts
-```
+   ```bash
+   tsc --outFile main.js module07_main.ts
+   ```
 
 1. Test your work by running the **main.js** file.
 
