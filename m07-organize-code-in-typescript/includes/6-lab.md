@@ -80,7 +80,7 @@ In this exercise, you'll organize the code using namespaces in a single TypeScri
    }
    ```
 
-1. Locate `TODO Update the calculateInterestOnlyLoanPayment function.`.
+1. Locate `TODO Update the calculateInterestOnlyLoanPayment function`.
 1. In the `calculateInterestOnlyLoanPayment` function:
    1. Update the reference to the `Loan` interface so it includes the `Loans` namespace.
    1. Make the function visible outside of the `LoanPrograms` namespace.
@@ -93,7 +93,7 @@ In this exercise, you'll organize the code using namespaces in a single TypeScri
    }
    ```
 
-1. Locate `TODO Update the calculateConventionalLoanPayment function.`.
+1. Locate `TODO Update the calculateConventionalLoanPayment function`.
 1. In the `calculateConventionalLoanPayment` function:
    1. Update the reference to the `ConventionalLoan` interface so it includes the `Loans` namespace.
    1. Make the function visible outside of the `LoanPrograms` namespace.
