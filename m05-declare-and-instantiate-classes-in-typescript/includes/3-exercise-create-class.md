@@ -57,7 +57,7 @@ A class may contain at most one `constructor` declaration. If a class contains n
 Continue defining the `Car` class in the Playground.
 
 1. Create the `constructor` for the `Car` class. Start with the `constructor` keyword and then define the parameters and types that will be passed to the new `Car` object when a new instance is created. For the `Car` class, define one parameter for each of the three properties and annotate it with the type. Make the `doors` parameter optional with a default value of `4`.
-2. Inside the code block for the `constructor`, assign a parameter value to each property (for example, `this._make = make`). In this case, you'll just set it to the value of the associated parameter but note that you can assign any expression that returns the required type.
+1. Inside the code block for the `constructor`, assign a parameter value to each property (for example, `this._make = make`). In this case, you'll just set it to the value of the associated parameter but note that you can assign any expression that returns the required type.
 
     ```typescript
     // Constructor
@@ -88,7 +88,7 @@ Continue defining the `Car` class in the Playground.
     }
     ```
 
-2. Define a `set` block for the `make` parameter that sets the value of the `_make` property to the value of the `make` parameter.
+1. Define a `set` block for the `make` parameter that sets the value of the `_make` property to the value of the `make` parameter.
 
     ```typescript
     set make(make) {
@@ -96,7 +96,7 @@ Continue defining the `Car` class in the Playground.
     }
     ```
 
-3. You can also use `get` and `set` blocks to validate data, impose constraints, or perform other manipulation of the data before you return it to the program. Define `get` and `set` blocks for the `color` parameter, but this time, return a string concatenated to the value of the `_color` property.
+1. You can also use `get` and `set` blocks to validate data, impose constraints, or perform other manipulation of the data before you return it to the program. Define `get` and `set` blocks for the `color` parameter, but this time, return a string concatenated to the value of the `_color` property.
 
     ```typescript
     get color() {
@@ -107,7 +107,7 @@ Continue defining the `Car` class in the Playground.
     }
     ```
 
-4. Define `get` and `set` blocks for the `doors` parameter. Before returning the value of the `_doors` property, verify that the value of the `doors` parameter is an even number. If not, throw an error.
+1. Define `get` and `set` blocks for the `doors` parameter. Before returning the value of the `_doors` property, verify that the value of the `doors` parameter is an even number. If not, throw an error.
 
     ```typescript
     get doors() {
@@ -146,7 +146,7 @@ Continue defining the `Car` class in the Playground.
     }
     ```
 
-2. Test the methods by sending the return value to the console.
+1. Test the methods by sending the return value to the console.
 
     ```typescript
     console.log(myCar1.accelerate(35));
