@@ -120,17 +120,17 @@ In this exercise, you'll reorganize the namespaces into multiple TypeScript file
 1. Move the `LoanPrograms` namespace from **module08_main.ts** to **module08_loan-programs.ts**.
 1. At the top of **module08_loan-programs.ts**, add a `reference` statement that describes the relationship between the interfaces in **module08_loans.ts** and **module08_loan-programs.ts**.
 
-```typescript
-/// <reference path="module08_loans.ts" />
-```
+   ```typescript
+   /// <reference path="module08_loans.ts" />
+   ```
 
 1. In **module08_main.ts**, locate `TODO Add reference paths`.
 1. Add the `reference` statements that describe the relationship between **module08_loans.ts**, **module08_loan-programs.ts**, and **module08_main.ts**.
 
-```typescript
-/// <reference path="module08_loans.ts" />
-/// <reference path="module08_loan-programs.ts" />
-```
+   ```typescript
+   /// <reference path="module08_loans.ts" />
+   /// <reference path="module08_loan-programs.ts" />
+   ```
 
 1. At the command prompt, run the following command to compile all the dependent **.ts** files and create a single JavaScript file named **main.js**.
 
