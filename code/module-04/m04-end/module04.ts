@@ -2,15 +2,12 @@
     Lab End  */
 
 /*  EXERCISE 1
-    TODO: Declare a new function type for the sortDescending and sortAscending functions 
-    using either a type alias or an interface. Then, apply the new function type 
-    as the variable type. */
+    TODO: Declare a new function type for the sortDescending and sortAscending functions. */
 
     type compareFunctionType = (a: number, b:number) => number;
 
 /*  TODO: Convert the sortDescending and sortAscending functions to anonymous 
-    functions and assign them to variables of the same name. Add types to the 
-    parameter lists and return values for each function. */
+    functions. */
 
 /*  sortDescending is a comparison function that tells the sort method how to sort 
     numbers in descending order */
