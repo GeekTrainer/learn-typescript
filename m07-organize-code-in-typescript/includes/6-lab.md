@@ -28,7 +28,7 @@ The `calculateInterestOnlyLoanPayment` and `calculateConventionalLoanPayment` fu
 
 In this exercise, you'll organize the code using namespaces in a single TypeScript file.
 
-1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-start] 
+1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-08\m08-start] 
 
    ```bash
    git clone <url>
@@ -36,47 +36,109 @@ In this exercise, you'll organize the code using namespaces in a single TypeScri
    code .
    ```
 
-1. Open the file **module07.ts**. 
-1. Locate `TODO: UPDATE TEXT`.
+1. In the starting workspace, open the file **module08_main.ts** the TypeScript editor.
+1. Locate `TODO Create a the Loans namespace`.
+1. Create a new interface called `Loans`.
+1. Move the `Loan` and `ConventionalLoan` interfaces into the `Loans` namespace.
+1. Update the `Loan` and `ConventionalLoan` interfaces so they are visible outside of the `Loans` namespace.
 
-1. In the starting workspace, open the file **module07_main.ts** the TypeScript editor.
-2. Encapsulate the `Loan` and `ConventionalLoan` interfaces into a namespace called `Loans`.
-3. Update the `Loan` and `ConventionalLoan` interfaces so they are visible outside of the `Loans` namespace.
-4. Encapsulate the three functions into a namespace called `LoanPrograms`.
-5. In the `calculateInterestOnlyLoanPayment` and `calculateConventionalLoanPayment` functions:
-   1. Update the references to the `Loan` and `ConventionalLoan` interfaces so the functions can implement them.
-   2. Make the functions visible outside of the `LoanPrograms` namespace.
-6. Update function calls in the `interestOnlyPayment` and `conventionalLoanPayment` variable declarations.
-7. Compile and test your work.
+   ```typescript
+   namespace Loans {
+      export interface Loan {
+          principle: number,
+          interestRate: number        //* Interest rate percentage (eg. 14 is 14%)
+      }
+      export interface ConventionalLoan extends Loan {
+          numberOfMonths: number      //* Total number of months
+      }
+   }
+   ```
+
+1. Locate `TODO Create LoanPrograms namespace`.
+1. Create a new interface called `LoanPrograms`.
+1. Move the three functions into the `LoanPrograms` namespace.
+
+   ```typescript
+   namespace LoanPrograms {
+      /*  TODO Update the calculateInterestOnlyLoanPayment function. */
+      function calculateInterestOnlyLoanPayment(loanTerms: Loan): string {
+          let payment: number;
+          payment = loanTerms.principle * calculateInterestRate(loanTerms.interestRate);
+          return 'The interest only loan payment is ' + payment.toFixed(2);
+      }
+      /*  TODO Update the calculateConventionalLoanPayment function. */     
+      function calculateConventionalLoanPayment(loanTerms: ConventionalLoan): string {
+          let interest: number = calculateInterestRate(loanTerms.interestRate);
+          let payment: number;
+          payment = loanTerms.principle * interest / (1 - (Math.pow(1/(1 + interest), loanTerms.months)));
+          return 'The conventional loan payment is ' + payment.toFixed(2);
+      }
+      function calculateInterestRate (interestRate: number): number {
+          let interest: number = interestRate / 1200;
+          return interest
+      }
+   }
+   ```
+
+1. Locate `TODO Update the calculateInterestOnlyLoanPayment function.`.
+1. In the `calculateInterestOnlyLoanPayment` function:
+   1. Update the reference to the `Loan` interface so it includes the `Loans` namespace.
+   1. Make the function visible outside of the `LoanPrograms` namespace.
+
+   ```typescript
+   export function calculateInterestOnlyLoanPayment(loanTerms: Loans.Loan): string {
+       let payment: number;
+       payment = loanTerms.principle * calculateInterestRate(loanTerms.interestRate);
+       return 'The interest only loan payment is ' + payment.toFixed(2);
+   }
+   ```
+
+1. Locate `TODO Update the calculateConventionalLoanPayment function.`.
+1. In the `calculateConventionalLoanPayment` function:
+   1. Update the reference to the `ConventionalLoan` interface so it includes the `Loans` namespace.
+   1. Make the function visible outside of the `LoanPrograms` namespace.
+
+   ```typescript
+    // Calculates the monthly payment of a conventional loan      
+    export function calculateConventionalLoanPayment(loanTerms: Loans.ConventionalLoan): string {
+        let interest: number = calculateInterestRate(loanTerms.interestRate);
+        let payment: number;
+        payment = loanTerms.principle * interest / (1 - (Math.pow(1/(1 + interest), loanTerms.months)));
+        return 'The conventional loan payment is ' + payment.toFixed(2);
+    }
+   ```
+
+1. Save, compile, and test your work.
 
 ## Exercise 2
 
 In this exercise, you'll reorganize the namespaces into multiple TypeScript files.
 
 1. Continue your project from Exercise 1.
-2. Create two new TypeScript files in your workspace, **module07_loans.ts** and **module07_loan-programs.ts**.
-3. Move the `Loans` namespace from **module07_main.ts** to **module07_loans.ts**.
-4. Move the `LoanPrograms` namespace from **module07_main.ts** to **module07_loan-programs.ts**.
-5. Add the required `reference` statements to describe the relationship between the **module07_loan-programs.ts** and **module07_main.ts** files.
-6. At the command prompt, run the `tsc` command to compile all the **.ts** files, and then run the `tsc --outFile main.js module07_main.ts` command to create a single JavaScript file named **main.js**.
-7. Test your work by running the **main.js** file.
+1. Create two new TypeScript files in your workspace, **module08_loans.ts** and **module08_loan-programs.ts**.
+1. Move the `Loans` namespace from **module08_main.ts** to **module08_loans.ts**.
+1. Move the `LoanPrograms` namespace from **module08_main.ts** to **module08_loan-programs.ts**.
+1. At the top of **module08_loan-programs.ts**, add a `reference` statement that describes the relationship between the interfaces in **module08_loans.ts** and **module08_loan-programs.ts**.
 
-## Exercise 3
+```typescript
+/// <reference path="module08_loans.ts" />
+```
 
-In this exercise, you'll convert the multi-file namespace solution in the previous exercise to a module-based solution.
+1. In **module08_main.ts**, locate `TODO Add reference paths`.
+1. Add the `reference` statements that describe the relationship between **module08_loans.ts**, **module08_loan-programs.ts**, and **module08_main.ts**.
 
-1. Continue your project from Exercise 2.
-2. Create a new folder called **Namespace** in your project folder.
-3. Copy **module07_main.ts**, **module07_loans.ts,** and **module07_loan-programs.ts** from the root folder and paste them into the **Namespaces** folder. This retains a copy of your work from Exercise 2.
-4. Return to the root folder.
-5. In **module07_loans.ts**, remove the `namespace` declaration and retain the `export` keyword on the interface declarations.
-6. In **module07_loan-programs.ts**:
-   1. Remove the `namespace` declaration.
-   2. Remove the `reference` statement and replace it with an `import` statement that imports the `Loan` and `ConventionalLoan` interfaces from **module07_loans.ts**. For convenience, you can import both interfaces using one import statement and assign them to a variable called `Loans`.
-   3. Retain the `export` keyword on the two function declarations.
-7. In **module07_main.ts**, replace the two `reference` statements with one `import` statement that imports the `interestOnlyLoan` and `conventionalLoan` functions from **module07_loan-programs.ts**. For convenience, assign the functions to a variable called `LoanPrograms`.
-8. At the command prompt, run the `tsc` command using the `--module commonjs` option to compile **module07_main.ts**.
-9. Test your work in node by running the **module07_main.js** file.
+```typescript
+/// <reference path="module08_loans.ts" />
+/// <reference path="module08_loan-programs.ts" />
+```
+
+1. At the command prompt, run the following command to compile all the dependent **.ts** files and create a single JavaScript file named **main.js**.
+
+```bash
+tsc --outFile main.js module07_main.ts
+```
+
+1. Test your work by running the **main.js** file.
 
 ## Lab solution
 
