@@ -142,7 +142,7 @@ In this exercise, you'll reorganize the namespaces into multiple TypeScript file
 
 ## Lab solution
 
-Clone the ending repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-end] 
+Clone the ending repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-08\m08-end] 
 
 ```bash
 git clone <url>
@@ -150,4 +150,4 @@ cd <folder name>
 code .
 ```
 
-Open the file **module05.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
+Open each **.ts** file to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
