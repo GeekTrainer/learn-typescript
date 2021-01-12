@@ -76,4 +76,12 @@ The `DataStore` class contains utility functions that can store up to ten `strin
 
 ## Lab solution
 
-Download the solution workspace [LINK TO \code\module-06\m06-end] and open the file **module06.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
+Clone the ending repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-06\m06-end] 
+
+```bash
+git clone <url>
+cd <folder name>
+code .
+```
+
+Open the file **module05.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
