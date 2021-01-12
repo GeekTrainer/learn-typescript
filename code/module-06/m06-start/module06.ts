@@ -34,4 +34,7 @@ cities.AddOrUpdate(11, "London");       // item not added
 console.log(cities.GetData(1));         // returns 'Chicago'
 console.log(cities.GetData(12));        // returns 'undefined'
 
-// TODO Test items as numbers and objects.
+// TODO Test items as numbers.
+
+
+// TODO Test items as objects.
