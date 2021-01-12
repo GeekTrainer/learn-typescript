@@ -1,4 +1,4 @@
-/*  Module 8: Organize code in TypeScript
+/*  Module 8: Organize code using TypeScript namespaces
     Lab Start */
 
 /*  TODO Create a the Loans namespace. */
