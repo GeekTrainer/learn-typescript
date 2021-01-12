@@ -4,7 +4,7 @@ You can define a function type using a type alias or an interface. Both approach
 
 Let's assume that you are creating a function that performs an add operation or a subtract operation depending the value of a parameter that is passed to it. Both the add and subtract operations accept two numbers, `x` and `y`, and return the result as a number.
 
-1. Open the Playground and remove any existing code. 
+1. Open the [Playground](https://www.typescriptlang.org/play) and remove any existing code. 
 1. Define a function type called `calculator` using a type alias. The type signature has a parameter list `(x: number, y: number)` and returns a `number`, separated by an arrow (`=>`) operator. (Notice that the syntax of the type signature is the same as an arrow function.)
 
    ```typescript
