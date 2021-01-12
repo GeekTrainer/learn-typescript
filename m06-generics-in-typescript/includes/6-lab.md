@@ -2,65 +2,77 @@ In this lab, you will extend the functionality of a class by using generics.
 
 ## Lab setup
 
-You can use the TypeScript [Playground](https://www.typescriptlang.org/play) or Visual Studio Code to complete this lab.
+To complete the lab, you must first set up your development environment by installing the following software on your machine:
 
-### Playground
-
-If you’re using the Playground, copy and paste the starting code into it as directed in the lab instructions.
-
-### Visual Studio Code
-
-If you’re using an existing Visual Studio Code workspace, add a new file named **module06.ts** to your project and copy and paste the starting code into it as directed in the lab instructions.
-
-You can also download the starting workspace at [LINK TO \code\module-06\m06-start] and edit the file **module06.ts**. To run the solution, you must first set up your development environment by installing the following software on your machine:
-
-- Visual Studio Code (or IDE of your choice)
-- Node Package Manager (npm)
-- TypeScript Compiler (tsc)
+1. Visual Studio Code (or IDE of your choice)
+2. Node Package Manager (npm)
+3. TypeScript Compiler (tsc)
 
 For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in [LINK TO Module 01: Get started with TypeScript ]. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.
 
 ## Exercise 1
 
-The `DataStore` class contains utility functions that can store up to ten `string` items in an array and return the value stored in each item.
+The `DataStore` class contains utility functions that can store up to ten `string` items in an array and return the value stored in each item. In this exercise, you will rewrite the `DataStore` class so it can store items of any type.
 
-1. Copy and paste the following JavaScript code your TypeScript editor.
+1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-06\m06-start] 
+
+   ```bash
+   git clone <url>
+   cd <folder name>
+   code .
+   ```
+
+1. Open the file **module06.ts**. 
+1. Locate `TODO: Add and apply a type variable`.
+1. In the `DataStore` class declaration, add a type variable called `T`.
 
     ```typescript
-    // TODO: Add a type variable called T to the class declaration.
-    class DataStore {
-        //TODO: Add the type variable to the _data property declaration.
-        private _data = new Array(10);
-        //TODO: Update the type of the item parameter in the AddOrUpdate function to use the type variable.
-        AddOrUpdate(index: number, item: string) {
-            if(index >=0 && index <10) {
-                this._data[index] = item;
-            } else {
-                alert('Index is greater than 10')
-            }
-        }
-        GetData(index: number) {
-            if(index >=0 && index < 10) {
-                return this._data[index];
-            } else {
-                return
-            }
-        }
+    class DataStore<T> {
+        \\ ...
     }
-    let cities = new DataStore();
-    cities.AddOrUpdate(0, "Mumbai");
-    cities.AddOrUpdate(1, "Chicago");
-    cities.AddOrUpdate(11, "London");       // item not added
-    console.log(cities.GetData(1));         // returns 'Chicago'
-    console.log(cities.GetData(12));        // returns 'undefined'
     ```
 
-2. Rewrite the `DataStore` class so it can store `items` of any type.
-   1. Add a type variable called `T` to the class declaration.
-   2. Add the type variable to the `_data` property declaration.
-   3. Update the type of the `item` parameter in the `AddOrUpdate` function to use the type variable.
-3. Test that type variable can accept numbers. Declare a new variable called `empIDs` and assign a new `DataStore` object to it. Call the `AddOrUpdate` function and assign number type items to it.
-4. Test that the type variable can accept a custom object. Declare a `type` called `Pets` that contains three properties: `name` as a `string`, `breed` as a `string`, and `age` as a `number`. Declare a new variable called `pets` and assign a new `DataStore` object to it. Call the `AddOrUpdate` function and assign `Pet` objects to it.
+1. Add the type variable `T` to the `_data` property declaration.
+
+    ```typescript
+    private _data: Array<T> = new Array(10);
+    ```
+
+1. In the `AddOrUpdate` function, update the type of the `item` parameter to the type variable `T`.
+
+    ```typescript
+    AddOrUpdate(index: number, item: T) {
+        if(index >=0 && index <10) {
+            this._data[index] = item;
+        }
+    }
+    ```
+
+1. Locate `TODO Test items as numbers`.
+1. Test that type variable can accept numbers. Declare a new variable called `empIDs` and assign a new `DataStore` object to it. Call the `AddOrUpdate` function and assign number type items to it.
+
+    ```typescript
+    let empIDs = new DataStore<number>();
+    empIDs.AddOrUpdate(0, 50);
+    empIDs.AddOrUpdate(1, 65);
+    empIDs.AddOrUpdate(2, 89);                  
+    console.log(empIDs.GetData(0));         // returns 50
+    ```
+
+1. Locate `TODO Test items as objects`.
+1. Test that the type variable can accept a custom object. Declare a `type` called `Pets` that contains three properties: `name` as a `string`, `breed` as a `string`, and `age` as a `number`. Declare a new variable called `pets` and assign a new `DataStore` object to it. Call the `AddOrUpdate` function and assign `Pet` objects to it.
+
+    ```typescript
+    type Pets = {
+        name: string;
+        breed: string;
+        age: number
+    }
+    let pets = new DataStore<Pets>();
+    pets.AddOrUpdate(0, { name: 'Rex', breed: 'Golden Retriever', age: 5});
+    pets.AddOrUpdate(1, { name: 'Sparky', breed: 'Jack Russell Terrier', age: 3});
+    console.log(pets.GetData(1));         // returns { name: 'Sparky', breed: 'Jack Russell Terrier', age: 3 }
+    ```
 
 ## Lab solution
 
