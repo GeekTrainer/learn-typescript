@@ -37,8 +37,7 @@ let sortAscending: compareFunctionType = (a, b) => {
     of items based on the number passed to it. The sortOrder parameter determines 
     whether to sort the array in ascending or descending order. */
 
-/*  TODO: In the BuildArray function, add types to parameter list, 
-    return value, and variables. */
+/*  TODO: Update the BuildArray function. */
 
 function buildArray(items: number, sortOrder: 'ascending' | 'descending'): number[] {
 
@@ -67,14 +66,12 @@ console.log(myArray1);
 console.log(myArray2);
 
 /*  EXERCISE 2
-    TODO: Convert the LoanCalc function to TypeScript with strongly typed parameters, variables, 
-    and return types. Make the numMonths parameter optional but assign it a default value of 12 
-    months if omitted. */
+    TODO: Update the LoanCalculator function. */
 
-function loanCalculator (principle: number, interestRate: number, numberOfMonths = 12): string {
+function loanCalculator (principle: number, interestRate: number, months = 12): string {
     let interest: number = interestRate / 1200;   // Calculates the monthly interest rate 
     let payment; Number;
-    payment = principle * interest / (1 - (Math.pow(1/(1 + interest), numberOfMonths)));
+    payment = principle * interest / (1 - (Math.pow(1/(1 + interest), months)));
     return payment.toFixed(2);
 }
 
