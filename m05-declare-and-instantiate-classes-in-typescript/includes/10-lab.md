@@ -79,15 +79,15 @@ Convert the functions to a TypeScript class.
             return 1;
         } else {
             return 0;}
-        }
-     private sortAscending = (a: number, b: number) => {
+    }
+    private sortAscending = (a: number, b: number) => {
         if (a > b) {
             return 1;
         } else if (b > a) {
             return -1;
         } else {
             return 0; }
-        }
+    }
     ```
 
 1. Move the `buildArray` function into the class and make it a `public` method of the class.
