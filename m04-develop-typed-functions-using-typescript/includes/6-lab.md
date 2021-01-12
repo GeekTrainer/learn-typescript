@@ -58,13 +58,13 @@ Convert the functions to TypeScript with strongly typed parameters and return ty
 
    ```typescript
    let sortDescending = (a, b) => {
-   if (a > b) {
-       return -1;;
-   } else if (b > a) {
-       return 1;;
-   } else {
-       return 0;
-   }
+      if (a > b) {
+          return -1;;
+      } else if (b > a) {
+          return 1;;
+      } else {
+          return 0;
+      }
    }
 
    let sortAscending = (a, b) => {
@@ -89,13 +89,13 @@ Convert the functions to TypeScript with strongly typed parameters and return ty
 
    ```typescript
    let sortDescending: compareFunctionType = (a, b) => {
-   if (a > b) {
-       return -1;;
-   } else if (b > a) {
-       return 1;;
-   } else {
-       return 0;
-   }
+      if (a > b) {
+          return -1;;
+      } else if (b > a) {
+          return 1;;
+      } else {
+          return 0;
+      }
    }
 
    let sortAscending: compareFunctionType = (a, b) => {
