@@ -31,20 +31,20 @@ Continue working in the Playground and create a new `ElectricCar` class.
     }
     ```
 
-2. Declare the property that is unique to the `ElectricCar` class, `_range`, as a `private` property of type `number`.
+1. Declare the property that is unique to the `ElectricCar` class, `_range`, as a `private` property of type `number`.
 
     ```typescript
     // Properties
     private _range: number;
     ```
 
-3. The `constructor` for the subclass is different from the `constructor` for the base class in a few ways.
+1. The `constructor` for the subclass is different from the `constructor` for the base class in a few ways.
 
       - The parameter list can include any of the properties of both the base class and the subclass. (As with all parameter lists in TypeScript, remember that required parameters must appear before optional parameters.)
       - In the body of the `constructor`, you must add the `super()` keyword to include the parameters from the base class. The `super` keyword executes the `constructor` of the base class when it runs.
       - The `super` keyword must appear before any references to `this.` when referring to properties in the subclass.
 
-4. Define the class `constructor` for `ElectricCar`, including the `_make`, `_color`, and `_doors` properties of the base class and the `_range` property of the subclass. In this `constructor`, set the default value of the `doors` parameter to `2`.
+1. Define the class `constructor` for `ElectricCar`, including the `_make`, `_color`, and `_doors` properties of the base class and the `_range` property of the subclass. In this `constructor`, set the default value of the `doors` parameter to `2`.
 
     ```typescript
     // Constructor
@@ -54,7 +54,7 @@ Continue working in the Playground and create a new `ElectricCar` class.
     }
     ```
 
-5. Define the `get` and `set` accessors for the `range` parameter.
+1. Define the `get` and `set` accessors for the `range` parameter.
 
     ```typescript
     // Accessors
@@ -66,7 +66,7 @@ Continue working in the Playground and create a new `ElectricCar` class.
     }
     ```
 
-6. Enter the following `charge` method that returns a message to the console. This method includes a call to the `worker` function that you defined in the `Car` class. But it raises the error **Property 'worker' is private and only accessible within class 'Car'**. Do you know how to correct this problem?
+1. Enter the following `charge` method that returns a message to the console. This method includes a call to the `worker` function that you defined in the `Car` class. But it raises the error **Property 'worker' is private and only accessible within class 'Car'**. Do you know how to correct this problem?
 
     ```typescript
     // Methods
@@ -75,8 +75,8 @@ Continue working in the Playground and create a new `ElectricCar` class.
     }
     ```
 
-7. In the `Car` class, change the access modifier of the `worker` function from `private` to `protected`. This allows subclasses of the `Car` class to use the function, while keeping it hidden from the members available to objects instantiated from the class. The error in the `charge` method should now resolve.
-8. Test the new `ElectricCar` class to verify that it's working as expected.
+1. In the `Car` class, change the access modifier of the `worker` function from `private` to `protected`. This allows subclasses of the `Car` class to use the function, while keeping it hidden from the members available to objects instantiated from the class. The error in the `charge` method should now resolve.
+1. Test the new `ElectricCar` class to verify that it's working as expected.
 
     ```typescript
     let spark = new ElectricCar('Spark Motors','silver', 124, 2);
@@ -102,7 +102,7 @@ Continue working in the Playground.
     }
     ```
 
-2. Test the new method and verify that it works as expected.
+1. Test the new method and verify that it works as expected.
 
     ```typescript
     console.log(spark.brake());  // returns "Spark Motors is braking with the regenerative braking system"
