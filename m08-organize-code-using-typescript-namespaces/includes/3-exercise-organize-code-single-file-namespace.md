@@ -13,7 +13,7 @@ Complete the steps to define a single file namespace:
    code .
    ```
 
-1. Open the file **module08_exercise.ts**. This file contains three functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into namespaces.
+1. Open the file **module08_exercise.ts**. This file includes two functions called `returnGreeting` that each perform different tasks, plus a helper function called `getLength` that's used by one of the `returnGreeting` functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into namespaces.
 1. You define a new namespace by using the `namespace` keyword followed by the namespace name. You can define as many namespaces as needed within a single TypeScript file. At the top of the file, define two namespaces named `Greetings` and `GreetingsWithLength`.
 
     ```typescript
