@@ -1,14 +1,22 @@
-Returning to the greetings example in the earlier units, how can this scenario be implemented as modules instead of namespaces? Recall that the example includes two functions called `returnGreeting` that each perform different tasks, plus a helper function called `getLength` that's used by one of the `returnGreeting` functions. Let's see what this scenario looks like implemented as modules.
+Let's see how to organize some functions into muliple modules and then use the functions in the new modules in code.
 
 > [!NOTE]
-> You must use an IDE, such as Visual Studio Code, to implement multi-file namespaces and modules. It is not possible to do this in the TypeScript Playground. Before completing the exercise, see the **Lab setup** section later in this module for more information about setting up a development environment in Visual Studio Code.
+> You must use an IDE, such as Visual Studio Code, to implement modules. It is not possible to do this in the TypeScript Playground. Before completing the exercise, see the **Lab setup** section later in this module for more information about setting up a development environment in Visual Studio Code.
 
 ## Export a module component
 
 In this part of the exercise, you'll organize related functions into separate modules and then export the function declarations.
 
-1. Download a new copy of the starting workspace for the exercise at [LINK TO \code\module-07\m07-exercise-start] and edit the file **module07_exercise.ts**. This file contains three functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into modules.
-2. Create a new file called **Greetings_module.ts** and then move the first `returnGreeting` function from **module07_exercise.ts** into it. Add the `export` keyword before the function name so it is available to other modules.
+1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-exercise-start] 
+
+   ```bash
+   git clone <url>
+   cd <folder name>
+   code .
+   ```
+
+1. Open the file **module07_exercise.ts**. This file includes two functions called `returnGreeting` that each perform different tasks, plus a helper function called `getLength` that's used by one of the `returnGreeting` functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into modules.
+1. Create a new file called **Greetings_module.ts** and then move the first `returnGreeting` function from **module07_exercise.ts** into it. Add the `export` keyword before the function name so it is available to other modules.
 
     ```typescript
     export function returnGreeting (greeting: string) {
@@ -16,7 +24,7 @@ In this part of the exercise, you'll organize related functions into separate mo
     }
     ```
 
-3. Create a second file called **GreetingsLength_module.ts** and then move the second `returnGreeting` function and the `getLength` function from **module07_exercise.ts** into it. (This eliminates the naming conflict that you had with both `returnGreeting` functions were in the same file.) Add `export` before the `returnGreeting` function so it is available to other modules. It is not necessary to export the `getLength` function because it is only used within the scope of the module.
+1. Create a second file called **GreetingsLength_module.ts** and then move the second `returnGreeting` function and the `getLength` function from **module07_exercise.ts** into it. (This eliminates the naming conflict that you had with both `returnGreeting` functions were in the same file.) Add `export` before the `returnGreeting` function so it is available to other modules. It is not necessary to export the `getLength` function because it is only used within the scope of the module.
 
     ```typescript
     export function returnGreeting (greeting: string) {
@@ -30,10 +38,17 @@ In this part of the exercise, you'll organize related functions into separate mo
 
 ## Import a module component
 
+To use the variables, classes, interfaces, and functions declared in a module, use the `import` statement. The `import` statement can take several forms depending on your objectives:
+
+- To import a single component from a module, use `import { <component name> } from '<module name>'`.
+- To import several components from a module, use `import { <component name, component name, ...> } from '<module name>'`.
+- To import all components from a module, use `import * from '<module name>'`.
+- To import one or more components and assign an alias to the imported component(s), use `import { <component name, component name, ...> } as <alias name> from '<module name>'`.
+
 In next part of the exercise, you'll import components from each of the two modules into a new module.
 
-1. Create a new file called **Main.ts**. This file contains the main code of the application, including the `import` statements.
-2. Import the `returnGreeting` function from **Greetings_module.ts** using the `import` keyword. The first statement below imports a single function. If **Greetings_module.ts** had contained multiple components, you could import the entire module into a single variable (for example, `allGreetingFunctions`), as shown in the second statement. You can then use the variable to access the module exports.
+1. Create a new file called **Main.ts**. This file will contain the main code of the application, including the `import` statements.
+1. Import the `returnGreeting` function from **Greetings_module.ts** using the `import` keyword. The first statement below imports a single function. If **Greetings_module.ts** had contained multiple components, you could import the entire module into a single variable (for example, `allGreetingFunctions`), as shown in the second statement. You can then use the variable to access the module exports.
 
     ```typescript
     import { returnGreeting } from './Greetings_module.js';         // imports a single function in the module
@@ -43,13 +58,13 @@ In next part of the exercise, you'll import components from each of the two modu
     > [!IMPORTANT]
     > If you want to run the resulting JavaScript in a web browser, you must append the **.js** file extension to the file name in the `import` statement. To learn more, see [Compiled JavaScript import is missing file extension](https://github.com/microsoft/TypeScript/issues/40878).
 
-3. Try importing the `returnGreeting` function from **GreetingsLength_module.ts** using the statement `import { returnGreeting } from './GreetingsLength_module'`. You'll notice an error because both files contain a `returnGreeting` function and you now have a naming conflict in the global scope of **Main.ts**. You can correct the issue by assigning the second instance of `returnGreeting` a new name. Replace `{ returnGreeting }` with `{ returnGreeting as returnGreetingLength }`. You can now use `returnGreetingLength` in place of the function name in your code.
+1. Try importing the `returnGreeting` function from **GreetingsLength_module.ts** using the statement `import { returnGreeting } from './GreetingsLength_module'`. You'll notice an error because both files contain a `returnGreeting` function and you now have a naming conflict in the global scope of **Main.ts**. You can correct the issue by assigning the second instance of `returnGreeting` a new name. Replace `{ returnGreeting }` with `{ returnGreeting as returnGreetingLength }`. You can now use `returnGreetingLength` in place of the function name in your code.
 
     ```typescript
     import { returnGreeting as returnGreetingLength } from './GreetingsLength_module.js';
     ```
 
-4. Now, you can use the `returnGreetings` functions in your code.
+1. Now, you can use the `returnGreetings` functions in your code.
 
     ```typescript
     returnGreeting("Hola!")  // Displays 'The message from Greetings_module is Hola!'
@@ -69,7 +84,7 @@ To compile the file for use in a web browser, use this command:
 
 `tsc --module es6 Main.ts`
 
-As with `reference` tags, the compiler follows `import` statements to compile dependent files. When compiled, each module will become a separate **.js** file.
+The compiler follows `import` statements to compile all dependent files. When compiled, each module will become a separate **.js** file.
 
 ## Running modules from a web page
 
