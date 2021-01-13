@@ -4,30 +4,30 @@ Choose the best response for each of the questions below. Then select **Check yo
 
 ## Multiple Choice
 
-Which of the following is possible when using namespaces but not when using modules?
+What happens when you add code to a namespace?
 
-(x)Compile multiple TypeScript files into a single JavaScript file.{{The `--outFile` compiler option combines mutliple namespace files to a single JavaScript file.}}
+(x)Declarations are removed from the global namespace.{{Namespaces remove declarations form the global namespace, providing a context for names and helping to reduce naming collisions.}}
 
-()Designate a component as available outside of the scope of the namespace using the `export` keyword.{{Both namespaces and modules use the `export` keyword to designate a component as available outside of the scope of the namespace or module.}}
+()Declarations removed from the global namespace only if the namespace is in a separate file.{{Namespaces don’t have to be in separate files to be removed from the global namespace.}}
 
-()Declaring dependencies.{{Namespaces cannot declaire their dependencies.}}
-
-## Multiple Choice
-
-How do you use use a component from one module file in another module file?
-
-(x)Use the `import` keyword.{{To use a component from one module in another module, use the `import` keyword.}}
-
-()Use a `reference` statement.{{A `reference` statement informs TypeScript of the relationship between diffent files that contain namespaces.}}
-
-()Prepend the module name to the component name.{{Once a relationship between namespaces is established, you can refer to the components of the namespace by prepending the namespace name to the component.}}
+()Declarations contribute to "global scope pollution."{{Namespaces help avoid this problem rather than contributing to it.}}
 
 ## Multiple Choice
 
-What is the recommended code-organizing mechanism for new ES6-compliant projects?
+How do you make a component available outside the scope of a namespace?
 
-(x)Modules.{{Modules are the recommended code-organizing mechanism for ES6-compliant projects because they offer benefits that namespaces do not have.}}
+(x)Add the export keyword to the declaration.{{Adding the export keyword makes the component available for use outside of the namespace.}}
 
-()Namespaces.{{While you can use namespaces or modules in your ES6-compliant projects, namespaces do not offer all the benefits of modules.}}
+()Add the import keyword to the file that will use the component.{{The import keyword can be used to create an alias that describes nested namespaces.}}
 
-()It doesn't matter which one you choose.{{There are differences between modules and namespaces that make one preferred over the other for modern applications.}}
+()Add a reference statement to the file that will use the component.{{Reference statements describe the relationship between TypeScript files that contain namespaces and those that will use them.}}
+
+## Multiple Choice
+
+What is the option that tells the TypeScript compiler to output multiple files using and containing namespaces into a single JavaScript file?
+
+(x)--outfile{{The --outfile option instructs the compiler to output a single JavaScript file.}}
+
+()--multifile{{This is not the correct option to use in this situation.}}
+
+()No option is required. The Typescript compiler does this by default.{{By default, the TypeScript compiler produces on JavaScript file for each input file.}}
