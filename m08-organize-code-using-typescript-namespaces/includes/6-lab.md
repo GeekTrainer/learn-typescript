@@ -12,7 +12,7 @@ For best results, follow the complete instructions for setting up your environme
 
 ## Exercise 1
 
-The TypeScript code below contains two interfaces: `Loan` and `ConventionalLoan`. It also contains three functions:
+The TypeScript code in the project contains two interfaces: `Loan` and `ConventionalLoan`. It also contains three functions:
 
 - `calculateInterestOnlyLoanPayment`, which calculates the payment for an interest only loan.
 - `calculateConventionalLoanPayment`, which calculates the payment for a  conventional loan.
