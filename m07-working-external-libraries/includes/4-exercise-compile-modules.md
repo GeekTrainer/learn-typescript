@@ -6,9 +6,9 @@ Continue your project from the previous exercise.
 
 1. Open the terminal and compile the **Main.ts** module for Node.js by typing the following command:
 
-  ```bash
-  tsc --module commonjs Main.ts
-  ```
+    ```bash
+    tsc --module commonjs Main.ts
+    ```
 
 1. The compiler follows `import` statements to compile all dependent files. Notice that when **Main.ts** is compiled, each module will become a separate **.js** file.
 1. Type `node Main` to test the file.
