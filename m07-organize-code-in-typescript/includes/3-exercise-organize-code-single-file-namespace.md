@@ -5,7 +5,7 @@ You can implement namespaces within a single TypeScript file or across multiple 
 
 Complete the steps to define a single file namespace:
 
-1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-08\m07-exercise-start] 
+1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-08\m08-exercise-start] 
 
    ```bash
    git clone <url>
