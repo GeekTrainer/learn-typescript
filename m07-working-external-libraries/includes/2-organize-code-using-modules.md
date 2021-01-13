@@ -1,4 +1,4 @@
-Like namespaces, **modules** provide a way to organize and categorize your code, enabling you to group related code together. Also, when code is inside a module, it is pulled from the global scope and into the scope of the module. This can help you avoid naming conflicts between components in the global namespace.
+**Modules** provide a way to organize and categorize your code, enabling you to group related code together. Also, when code is inside a module, it is pulled from the global scope and into the scope of the module. This can help you avoid naming conflicts between components in the global namespace.
 
 > [!TIP]
 > Modules have been a feature of JavaScript since ES6, so they are also supported by TypeScript. Before ES6, earlier versions of TypeScript referred to modules as "external modules".
