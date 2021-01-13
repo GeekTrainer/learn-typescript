@@ -42,20 +42,23 @@ In this part of the exercise, you'll organize related functions into separate mo
 
 To use the exported components from a module, use the `import` statement. The `import` statement can take several forms depending on your objectives.
 
-To import a single component from a module:
+To import a single export from a module:
 
    ```typescript
-   `import { <component name> } from '<module name>'`
+   import { <component name> } from '<module name>'
    ```
 
-To import several components from a module:
-   `import { <component name, component name, ...> } from '<module name>'`
+To rename an import, use the as keyword:
 
-To import all components from a module:
-   `import * from '<module name>'`
+   ```typescript
+   import { <component name> as <new name> } from '<module name>'
+   ```
 
-To import one or more components and assign an alias to the imported component(s) (useful when multiple imported modules components have the same name or to shorten the name):
-   `import { <component name, component name, ...> } as <alias name> from '<module name>'`
+To import the entire module into a single variable, and use it to access the module exports:
+
+   ```typescript
+   import * as <variable name> from '<module name>'
+   ```
 
 In next part of the exercise, you'll import components from each of the two modules into a new module.
 
