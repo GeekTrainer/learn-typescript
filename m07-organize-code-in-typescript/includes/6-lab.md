@@ -108,6 +108,14 @@ In this exercise, you'll organize the code using namespaces in a single TypeScri
     }
    ```
 
+1. Locate `TODO Update the function calls`. ADD THIS TO THE START AND END CODE.
+1. Add the namespace `LoanPrograms` to the name of the functions.
+
+```typescript
+let interestOnlyPayment = LoanPrograms.calculateInterestOnlyLoanPayment({principle: 30000, interestRate: 5});
+let conventionalLoanPayment = LoanPrograms.calculateConventionalLoanPayment({principle: 30000, interestRate: 5, months: 180});
+```
+
 1. Save, compile, and test your work.
 
 ## Exercise 2
