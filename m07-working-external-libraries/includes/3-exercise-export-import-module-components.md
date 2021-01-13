@@ -5,6 +5,8 @@ Let's see how to organize some functions into muliple modules and then use the f
 
 ## Export a module component
 
+To export the variables, classes, interfaces, and functions declared in a module, use the `export` keyword. 
+
 In this part of the exercise, you'll organize related functions into separate modules and then export the function declarations.
 
 1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-exercise-start] 
@@ -38,12 +40,16 @@ In this part of the exercise, you'll organize related functions into separate mo
 
 ## Import a module component
 
-To use the variables, classes, interfaces, and functions declared in a module, use the `import` statement. The `import` statement can take several forms depending on your objectives:
+To use the exported variables, classes, interfaces, and functions declared in a module, use the `import` statement. The `import` statement can take several forms depending on your objectives:
 
-- To import a single component from a module, use `import { <component name> } from '<module name>'`.
-- To import several components from a module, use `import { <component name, component name, ...> } from '<module name>'`.
-- To import all components from a module, use `import * from '<module name>'`.
-- To import one or more components and assign an alias to the imported component(s), use `import { <component name, component name, ...> } as <alias name> from '<module name>'`.
+- To import a single component from a module:
+   `import { <component name> } from '<module name>'`
+- To import several components from a module:
+   `import { <component name, component name, ...> } from '<module name>'`
+- To import all components from a module:
+   `import * from '<module name>'`
+- To import one or more components and assign an alias to the imported component(s) (useful when multiple imported modules components have the same name or to shorten the name):
+   `import { <component name, component name, ...> } as <alias name> from '<module name>'`
 
 In next part of the exercise, you'll import components from each of the two modules into a new module.
 
