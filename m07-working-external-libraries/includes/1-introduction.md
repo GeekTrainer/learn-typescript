@@ -1,18 +1,16 @@
-TypeScript provides two ways to organize code: Namespaces and modules. While both provide a way to categorize related code in meaningful ways and help you control which code is exposed to the global namespace of your applications, there are some differences between them.
+TypeScript provides two ways to organize you code: Namespaces and modules. While both provide a way to categorize related code in meaningful ways and help you control which code is exposed to the global namespace of your applications, there are some differences between them. This module introduces you to modules in TypeScript (referred to as external modules in previous versions.) 
+
+In addition to modules, you can import other external libraries containing type defintions that you can take advantage of in your code.
 
 In this module, you will:
 
-- Implement single-file namespaces.
-- Implement multi-file namespaces.
-- Implement a module.
-- Explain the design considerations for using namespaces and modules.
+- Organize code using modules.
+- Import an external type library.
 
 ## Learning objectives
 
-- Implement single-file namespaces.
-- Implement multi-file namespaces.
-- Implement modules.
-- Explain the design considerations for using namespaces and modules.
+- Organize code using modules.
+- Import an external type library.
 
 ## Prerequisites
 
