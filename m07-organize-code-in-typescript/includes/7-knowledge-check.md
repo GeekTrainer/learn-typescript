@@ -16,18 +16,18 @@ What happens when you add code to a namespace?
 
 How do you make a component available outside the scope of a namespace?
 
-(x)Add the export keyword to the declaration.{{Adding the export keyword makes the component available for use outside of the namespace.}}
+(x)Add the `export` keyword to the declaration.{{Adding the `export` keyword makes the component available for use outside of the namespace.}}
 
-()Add the import keyword to the file that will use the component.{{The import keyword can be used to create an alias that describes nested namespaces.}}
+()Add the `import` keyword to the file that will use the component.{{The `import` keyword can be used to create an alias that describes nested namespaces.}}
 
-()Add a reference statement to the file that will use the component.{{Reference statements describe the relationship between TypeScript files that contain namespaces and those that will use them.}}
+()Add a `reference` statement to the file that will use the component.{{A `reference` statement describes the relationship between TypeScript files that contain namespaces and those that will use them.}}
 
 ## Multiple Choice
 
 What is the option that tells the TypeScript compiler to output multiple files using and containing namespaces into a single JavaScript file?
 
-(x)--outfile{{The --outfile option instructs the compiler to output a single JavaScript file.}}
+(x)`--outfile`{{The `--outfile` option instructs the compiler to output a single JavaScript file.}}
 
-()--multifile{{This is not the correct option to use in this situation.}}
+()`--multifile`{{This is not the correct option to use in this situation.}}
 
 ()No option is required. The Typescript compiler does this by default.{{By default, the TypeScript compiler produces on JavaScript file for each input file.}}
