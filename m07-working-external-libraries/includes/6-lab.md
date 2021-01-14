@@ -122,4 +122,4 @@ cd <folder name>
 code .
 ```
 
-Open the file **module05.ts** to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
+Open the files **module07_main.ts**, **module07_loans.ts**, and **module07_loan-programs.ts**  to see the solution to this lab. See the **Lab setup** section above for more information about setting up your development environment to run the solution.
