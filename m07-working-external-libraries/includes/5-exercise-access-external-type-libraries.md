@@ -79,8 +79,10 @@ This exercise provides a simple example of using **dotenv**. See [dotenv](https:
 
 To see the solution to this exercise, clone the repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-exercise-end]
 
+```bash
 git clone <url>
 cd <folder name>
 code .
+```
 
 See the Lab setup section above for more information about setting up your development environment to run the solution.
