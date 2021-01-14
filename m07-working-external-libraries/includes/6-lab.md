@@ -39,21 +39,74 @@ Add the required code to define the relationships between the modules.
    code .
    ```
 
-1. Open the file **module07.ts**. 
-1. Locate `TODO: UPDATE TEXT`.
+1. Open the file **module07_loans.ts** and add the `export` keyword on the interface declarations.
 
-1. Continue your project from Exercise 2.
-2. Create a new folder called **Namespace** in your project folder.
-3. Copy **module07_main.ts**, **module07_loans.ts,** and **module07_loan-programs.ts** from the root folder and paste them into the **Namespaces** folder. This retains a copy of your work from Exercise 2.
-4. Return to the root folder.
-5. In **module07_loans.ts**, remove the `namespace` declaration and retain the `export` keyword on the interface declarations.
-6. In **module07_loan-programs.ts**:
-   1. Remove the `namespace` declaration.
-   2. Remove the `reference` statement and replace it with an `import` statement that imports the `Loan` and `ConventionalLoan` interfaces from **module07_loans.ts**. For convenience, you can import both interfaces using one import statement and assign them to a variable called `Loans`.
-   3. Retain the `export` keyword on the two function declarations.
-7. In **module07_main.ts**, replace the two `reference` statements with one `import` statement that imports the `interestOnlyLoan` and `conventionalLoan` functions from **module07_loan-programs.ts**. For convenience, assign the functions to a variable called `LoanPrograms`.
-8. At the command prompt, run the `tsc` command using the `--module commonjs` option to compile **module07_main.ts**.
-9. Test your work in node by running the **module07_main.js** file.
+   ```typescript
+   export interface Loan {
+       principle: number,
+       interestRate: number        //* Interest rate percentage (eg. 14 is 14%)
+   }
+   export interface ConventionalLoan extends Loan {
+       months: number      //* Total number of months
+   }
+   ```
+
+1. Open the file **module07_loan-programs.ts**.
+1. At the top of the file, add an `import` statement that imports the `Loan` and `ConventionalLoan` interfaces from **module07_loans.ts**. Import both interfaces using one `import` statement and assign them to a variable called `Loans`.
+
+   ```typescript
+   import * as Loans from './module07_loans.js';
+   ```
+
+1. Locate `TODO Update the calculateInterestOnlyLoanPayment function`.
+1. Add the `export` keyword to the `calculateInterestOnlyLoanPayment` function declaration.
+1. Update the type of the function parameter `loanTerms` to the interface `Loans.Loan`.
+
+   ```typescript
+   export function calculateInterestOnlyLoanPayment(loanTerms: Loans.Loan): string {
+       let payment: number;
+       payment = loanTerms.principle * calculateInterestRate(loanTerms.interestRate);
+       return 'The interest only loan payment is ' + payment.toFixed(2);
+   }
+   ```
+
+1. Locate `TODO Update the calculateConventionalLoanPayment function`.
+1. Add the `export` keyword to the `calculateConventionalLoanPayment` function declaration.
+1. Update the type of the function parameter `loanTerms` to the interface `Loans.ConventionalLoan`.
+
+   ```typescript
+   export function calculateConventionalLoanPayment(loanTerms: Loans.ConventionalLoan): string {
+       let interest: number = calculateInterestRate(loanTerms.interestRate);
+       let payment: number;
+       payment = loanTerms.principle * interest / (1 - (Math.pow(1/(1 + interest), loanTerms.months)));
+       return 'The conventional loan payment is ' + payment.toFixed(2);
+   }
+   ```
+
+1. Open the file **module07_main.ts**.
+1. Locate `TODO Add the import statement`.
+1. Add an `import` statement that imports the `interestOnlyLoan` and `conventionalLoan` functions from **module07_loan-programs.ts**. Assign the functions to a variable called `LoanPrograms`.
+
+   ```typescript
+   import * as LoanPrograms from './module07_loan-programs.js';
+   ```
+
+1. Locate `TODO Update the function calls`.
+1. In the two variable declarations, update the function calls to reference the `LoanPrograms` variable from the `import` statement.
+
+   ```typescript
+   let interestOnlyPayment = LoanPrograms.calculateInterestOnlyLoanPayment({principle: 30000, interestRate: 5});
+   let conventionalLoanPayment = LoanPrograms.calculateConventionalLoanPayment({principle: 30000, interestRate: 5, months: 180});
+   ```
+
+1. Save the files.
+1. At the command prompt, run the `tsc` command using the `--module commonjs` option to compile **module07_main.ts**.
+
+```bash
+tsc --module commonjs module07_main.ts
+```
+
+1. Test your work in `node` by running the **module07_main.js** file.
 
 ## Lab solution
 
