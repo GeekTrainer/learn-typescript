@@ -29,6 +29,8 @@ The `calculateInterestOnlyLoanPayment` and `calculateConventionalLoanPayment` fu
 | `interestRate`| The annual interest rate of the loan. For example, 5% is specified as 5.|
 | `months`| The term of the loan specified in months. An interest only loan does not require this property because the number of months is irrelevant (the loan will never be repaid when an interest only payment is made each month.)|
 
+Add the required code to define the relationships between the modules.
+
 1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-start] 
 
    ```bash
