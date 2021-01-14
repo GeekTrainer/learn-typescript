@@ -102,11 +102,15 @@ Add the required code to define the relationships between the modules.
 1. Save the files.
 1. At the command prompt, run the `tsc` command using the `--module commonjs` option to compile **module07_main.ts**.
 
-```bash
-tsc --module commonjs module07_main.ts
-```
+   ```bash
+   tsc --module commonjs module07_main.ts
+   ```
 
 1. Test your work in `node` by running the **module07_main.js** file.
+
+## Challenge
+
+Select a JavaScript library that you are familiar with and try importing it into a TypeScript file using the `import` statement. After it is imported, it should work exactly the same as it does in JavaScript.
 
 ## Lab solution
 
