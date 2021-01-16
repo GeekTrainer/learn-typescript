@@ -47,7 +47,7 @@ async function showPost() {
     let post = posts[0];
     console.log('Post #' + post.id)
     // If the userId is 1, then display a note that it's an administrator
-    console.log('Author: ' + (post.userId == 1 ? "Administrator" : post.userId.toString()))
+    console.log('Author: ' + (post.userId === 1 ? "Administrator" : post.userId.toString()))
     console.log('Title: ' + post.title)
     console.log('Body: ' + post.body)
 }
