@@ -2,14 +2,6 @@ In this lab, you will extend the functionality of a class by using generics.
 
 ## Lab setup
 
-To complete the lab, you must first set up your development environment by installing the following software on your machine:
-
-1. Visual Studio Code (or IDE of your choice)
-2. Node Package Manager (npm)
-3. TypeScript Compiler (tsc)
-
-For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in [LINK TO Module 01: Get started with TypeScript ]. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.
-
 ## Exercise 1
 
 The `DataStore` class contains utility functions that can store up to ten `string` items in an array and return the value stored in each item. In this exercise, you will rewrite the `DataStore` class using a generic so it can store items of any type that you specify when it is instantiated.

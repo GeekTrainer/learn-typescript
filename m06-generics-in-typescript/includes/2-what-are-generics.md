@@ -63,10 +63,11 @@ In this example, with the variable declarations for `numberArray` and `stringArr
 
 ```typescript
 let numberArray = getArray<number>([5, 10, 15, 20]);
-let stringArray = getArray<string>(['Cats', 'Dogs', 'Birds']);
 numberArray.push(25);                      // OK
-stringArray.push('Rabbits');               // OK
 numberArray.push('This is not a number');  // Generates a compile time type check error
+
+let stringArray = getArray<string>(['Cats', 'Dogs', 'Birds']);
+stringArray.push('Rabbits');               // OK
 stringArray.push(30);                      // Generates a compile time type check error
 ```
 
@@ -76,15 +77,16 @@ You are not limited to using a single type variable in your generic components.
 
 For example, the `identity` function accepts two parameters, `value` and `message`, and returns the `value` parameter. You can use two generics, `T` and `U`, to assign different types to each parameter and to the return type. The variable `returnNumber` is initialized by calling the `identity` function with `<number, string>` as the types for the `value` and `message` arguments, `returnString` is initialized by calling it with `<string, string>`, and `returnBoolean` is initialized by calling it with `<boolean, string>`. When using these variables, TypeScript can type check the values and return a compile time error if there is a conflict.
 
-
 ```typescript
 function identity<T, U> (value: T, message: U) : T {
     console.log(message);
     return value
 }
+
 let returnNumber = identity<number, string>(100, 'Hello!');
 let returnString = identity<string, string>('100', 'Hola!');
 let returnBoolean = identity<boolean, string>(true, 'Bonjour!');
+
 returnNumber = returnNumber * 100;   // OK
 returnString = returnString * 100;   // Error: Type 'number' not assignable to type 'string'
 returnBoolean = returnBoolean * 100; // Error: Type 'number' not assignable to type 'boolean'
