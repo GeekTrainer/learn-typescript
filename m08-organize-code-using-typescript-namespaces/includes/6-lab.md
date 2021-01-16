@@ -2,6 +2,7 @@ In this lab, you'll try out different ways to organize your code using TypeScrip
 
 ## Lab setup
 
+
 To complete the lab, you must first set up your development environment by installing the following software on your machine:
 
 1. Visual Studio Code (or IDE of your choice)

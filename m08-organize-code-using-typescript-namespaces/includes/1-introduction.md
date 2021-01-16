@@ -2,9 +2,9 @@ TypeScript provides two ways to organize code: Namespaces and modules. This modu
 
 In this module, you will:
 
-- Implement single-file namespaces.
-- Implement multi-file namespaces.
-- Explain the design considerations for using namespaces and modules.
+- Implement single-file namespaces
+- Implement multi-file namespaces
+- Explain the design considerations for using namespaces and modules
 
 ## Learning objectives
 
