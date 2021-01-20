@@ -1,4 +1,4 @@
-In this exercise, you'll extend the `Car` class to create a new class called `ElectricCar`.
+In this exercise, you'll extend the `Car` class to create a new class called `ElectricCar` and override a method.
 
 1. Continue working in the Playground.
 1. Below the `Car` class, create a new class called `ElectricCar` that `extends Car`.
@@ -69,14 +69,6 @@ In this exercise, you'll extend the `Car` class to create a new class called `El
     console.log(eCar.doors);         // returns the default, 2
     spark.charge();                  // returns "Spark Motors is charging"
     ```
-
-## Override a method
-
-When a derived class has a different definition for one of the member functions of the base class, the base function is said to be **overridden**. Overriding is what happens when you create a function in a subclass with the same name as the function in the base class but, it has different functionality.
-
-For example, assume that electric cars use a different type of braking system than traditional cars called regenerative braking. So, you may want to override the `brake` method in the `Car` base class with a method that is specialized for the `ElectricCar` subclass.
-
-Continue working in the Playground.
 
 1. Define a new `brake` method in the `ElectricCar` class that has different implementation details. Note that the parameter signature and return type for the `brake` method must be the same as the `brake` method in the `Car` class.
 
