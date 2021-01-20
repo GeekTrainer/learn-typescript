@@ -1,9 +1,8 @@
-In JavaScript, you use external libraries in your code by using the `requires` statement. You can also use external libraries in TypeScript, but you gain access to them by using the `import` statement. 
-
+Static typing is a primary reason to use TypeScript. External type libraries are available for almost all common libraries, providing this information for libraries that don't contain it (such as those written in JavaScript). The TypeScript compiler raises an error message if you attempt to use a library that doesn't have type definitions. You’ll also notice that Intellisense is not available. 
 
 The open-source project [DefinitelyTyped](https://definitelytyped.org/) is a repository of TypeScript type definitions for most existing JavaScript libraries. Some packages include the library and its type declaration file, while others require you to install the type definition as a separate step. See the installation details for the library you want to use to determine if you need to also download the corresponding @types package.
 
-After importing a library and its type definition, you can use it in your code and gain the benefits of Intellisense and type checking.
+In JavaScript, you use external libraries in your code by using the `requires` statement. In TypeScript, you gain access to them by using the `import` statement. After importing a library and its type definition, you can use it in your code and gain the benefits of Intellisense and type checking.
 
 > [!NOTE]
 > You must use an IDE, such as Visual Studio Code, to implement external type libraries. It is not possible to do this in the TypeScript Playground. Before completing the exercise, see the Lab setup section later in this module for more information about setting up a development environment in Visual Studio Code.
@@ -23,6 +22,12 @@ In this exercise, you'll install and implement a type library called [dotenv](ht
 
     ```bash
     npm install dotenv
+    ```
+    
+1. The **dotenv** type definition also requires you to install the **node** type definition. **node** provides access to `process.env` so you can access it from your code.
+
+    ```bash
+    npm install @types/node
     ```
 
 1. Create a new file in the root directory of your project called **.env**. This file will contain environment-specific variables for the project.
