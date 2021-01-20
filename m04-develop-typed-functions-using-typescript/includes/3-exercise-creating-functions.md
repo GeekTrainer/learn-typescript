@@ -1,4 +1,4 @@
-## Creating named functions
+In this exercise, you'll create two named functions with strongly typed parameters and return values.
 
 1. Open the [Playground](https://www.typescriptlang.org/play) and remove any existing code.
 1. Copy the following JavaScript function into the Playground. Notice that the parameter `message` implicitly has an `any` type.
