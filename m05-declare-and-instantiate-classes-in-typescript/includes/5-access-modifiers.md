@@ -11,3 +11,6 @@ In TypeScript, you can control the visibility of class members by adding the `pu
 | `protected`| The `protected` modifier acts much like the `private` modifier with the exception that members declared `protected` can also be accessed within deriving classes. (You'll learn more about this later in the module.)|
 
 In addition, properties can be made `readonly` by using the readonly modifier. Readonly properties may only be set when initialized at their declaration or in the `constructor`.
+
+> [!NOTE]
+> TypeScript is a structural type system. When you compare two different types, regardless of where they came from, if the types of all members are compatible, then we say the types themselves are compatible. However, when comparing types that have private and protected members, these types are treated differently. For two types to be considered compatible, if one of them has a private member, then the other must have a private member that originated in the same declaration. The same applies to protected members.
