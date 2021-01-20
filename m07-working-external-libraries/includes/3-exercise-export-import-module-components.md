@@ -18,7 +18,7 @@ In this part of the exercise, you'll organize related functions into separate mo
    ```
 
 1. Open the file **module07_exercise.ts**. This file includes two functions called `returnGreeting` that each perform different tasks, plus a helper function called `getLength` that's used by one of the `returnGreeting` functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into modules.
-1. Create a new file called **Greetings_module.ts** and then move the first `returnGreeting` function from **module07_exercise.ts** into it. Add the `export` keyword before the function name so it is available to other modules.
+1. Create a new file called **greetings_module.ts** and then move the first `returnGreeting` function from **module07_exercise.ts** into it. Add the `export` keyword before the function name so it is available to other modules.
 
     ```typescript
     export function returnGreeting (greeting: string) {
@@ -26,7 +26,7 @@ In this part of the exercise, you'll organize related functions into separate mo
     }
     ```
 
-1. Create a second file called **GreetingsLength_module.ts** and then move the second `returnGreeting` function and the `getLength` function from **module07_exercise.ts** into it. (This eliminates the naming conflict that you had with both `returnGreeting` functions were in the same file.) Add `export` before the `returnGreeting` function so it is available to other modules. It is not necessary to export the `getLength` function because it is only used within the scope of the module.
+1. Create a second file called **greetings-utilities_module.ts** and then move the second `returnGreeting` function and the `getLength` function from **module07_exercise.ts** into it. (This eliminates the naming conflict that you had with both `returnGreeting` functions were in the same file.) Add `export` before the `returnGreeting` function so it is available to other modules. It is not necessary to export the `getLength` function because it is only used within the scope of the module.
 
     ```typescript
     export function returnGreeting (greeting: string) {
@@ -62,24 +62,24 @@ To import the entire module into a single variable, and use it to access the mod
 
 In next part of the exercise, you'll import components from each of the two modules into a new module.
 
-1. Create a new file called **Main.ts**. This file will contain the main code of the application, including the `import` statements.
-1. Import the `returnGreeting` function from **Greetings_module.ts** using the `import` keyword.
+1. Create a new file called **main.ts**. This file will contain the main code of the application, including the `import` statements.
+1. Import the `returnGreeting` function from **greetings_module.ts** using the `import` keyword.
 
     ```typescript
-    import { returnGreeting } from './Greetings_module.js';         // imports a single function in the module
+    import { returnGreeting } from './greetings_module.js';         // imports a single function in the module
     ```
 
-1. If **Greetings_module.ts** had contained multiple components, you could import the entire module into a single variable (for example, `allGreetingFunctions`), as shown in the following statement. You can then use the variable to access all the module exports.
+1. If **greetings_module.ts** had contained multiple components, you could import the entire module into a single variable (for example, `allGreetingFunctions`), as shown in the following statement. You can then use the variable to access all the module exports.
 
     ```typescript
-    import * as allGreetingFunctions from './Greetings_module.js';  // imports all exported components in the module
+    import * as allGreetingFunctions from './greetings_module.js';  // imports all exported components in the module
     ```
 
-1. Try importing the `returnGreeting` function from **GreetingsLength_module.ts** using the statement `import { returnGreeting } from './GreetingsLength_module'`. You'll notice an error because both files contain a `returnGreeting` function and you now have a naming conflict in the global scope of **Main.ts**.
+1. Try importing the `returnGreeting` function from **greetings-utilities_module.ts** using the statement `import { returnGreeting } from './greetings-utilities_module.js'`. You'll notice an error because both files contain a `returnGreeting` function and you now have a naming conflict in the global scope of **main.ts**.
 1. Correct the naming conflict by assigning the second instance of `returnGreeting` a new name. Replace `{ returnGreeting }` with `{ returnGreeting as returnGreetingLength }`. You can now use `returnGreetingLength` in place of the function name in your code.
 
     ```typescript
-    import { returnGreeting as returnGreetingLength } from './GreetingsLength_module.js';
+    import { returnGreeting as returnGreetingLength } from './greetings-utilities_module.js';
     ```
 
     > [!IMPORTANT]
