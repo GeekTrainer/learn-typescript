@@ -70,7 +70,7 @@ This exercise provides an example of using **dotenv**. See [dotenv](https://www.
 
 ## Exercise solution
 
-To see the solution to this exercise, clone the repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-exercise-end]
+To see the solution to this exercise, clone the repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-exercise-02-end]
 
 ```bash
 git clone <url>
