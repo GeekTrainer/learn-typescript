@@ -2,8 +2,11 @@ The TypeScript compiler assumes, by default, that all parameters defined in a fu
 
 - A value as been provided for each parameter.
 - Only parameters that the function requires are passed to it.
+- The parameters are passed in the order in which they are defined in the function.
 
 This is different from JavaScript, which assumes that all parameters are optional and allows you to pass more (or fewer) arguments to the function than are defined by it.
+
+In addition to required parameters, you can define functions with optional, default, and rest parameters, as well as deconstructed object parameters.
 
 ## Required parameters
 
@@ -15,6 +18,7 @@ In this example, all parameters are required.
 function addNumbers (x: number, y: number): number {
    return x + y;
 }
+
 addNumbers(1, 2); // Returns 3
 addNumbers(1);    // Returns an error
 ```
@@ -29,6 +33,7 @@ In this example, `x` is required and `y` is optional.
 function addNumbers (x: number, y?: number): number {
    return x + y;
 }
+
 addNumbers(1, 2); // Returns 3
 addNumbers(1);    // Returns 1
 ```
@@ -43,6 +48,7 @@ In this example, `x` is required and `y` is optional. If value is not passed to 
 function addNumbers (x: number, y: 25): number {
    return x + y;
 }
+
 addNumbers(1, 2);  // Returns 3
 addNumbers(1);     // Returns 26
 ```
@@ -72,4 +78,23 @@ The function can now accept one or more values and return the result.
 addAllNumbers(1, 2, 3, 4, 5, 6, 7);  // returns 28
 addAllNumbers(2);                    // returns 2
 addAllNumbers(2, 3, "three");        // flags error due to data type at design time, returns 5
+```
+
+## Deconstructed object parameters
+
+Function parameters are positional and must be passed in the order in which they are defined in the function. However, you can use a technique called deconstructed object parameters that enable you to use an interface to defined named, rather than positional, parameters in your functions. 
+
+The following example defines an interface called `Message` that defines two properties. In the `displayMessage` function, the `Message` object is passed as parameter, providing access to the properties as if they are normal parameters. 
+
+```typescript
+interface Message {
+   text: string;
+   sender: string;
+}
+
+function displayMessage({text, sender}: Message) {
+    console.log(`Message from ${sender}: ${text}`);
+}
+
+displayMessage({sender: 'Christopher', text: 'hello, world'});
 ```
