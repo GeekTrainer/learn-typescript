@@ -9,7 +9,7 @@ To export a module component, use the `export` keyword.
 
 In this part of the exercise, you'll organize related functions into separate modules and then export the function declarations.
 
-1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-exercise-start] 
+1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-exercise-01-start] 
 
    ```bash
    git clone <url>
