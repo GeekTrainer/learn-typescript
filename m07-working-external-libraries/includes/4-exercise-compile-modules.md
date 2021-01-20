@@ -4,23 +4,23 @@ To compile modules, specify a `--module` target on the command line or in the **
 
 Continue your project from the previous exercise.
 
-1. Open the terminal and compile the **Main.ts** module for Node.js by typing the following command:
+1. Open the terminal and compile the **main.ts** module for Node.js by typing the following command:
 
     ```bash
-    tsc --module commonjs Main.ts
+    tsc --module commonjs main.ts
     ```
 
-1. The compiler follows `import` statements to compile all dependent files. Notice that when **Main.ts** is compiled, each module will become a separate **.js** file.
-1. Type `node Main` to test the file.
+1. The compiler follows `import` statements to compile all dependent files. Notice that when **main.ts** is compiled, each module will become a separate **.js** file.
+1. Type `node main` to test the file.
 
 ## Running modules from a web page
 
 If you want to instead compile the TypeScript file for ES6 for use in a web browser, type the following command:
 
 ```bash
-tsc --module es6 Main.ts
+tsc --module es6 main.ts
 ```
 
 To run a module from a web page, remember to set the `type` option to `"module"`:
 
-`<script type="module" src=".\Main.js"></script>`
+`<script type="module" src=".\main.js"></script>`
