@@ -12,6 +12,7 @@ Some reasons to use inheritance include:
 - You can use one base to derive any number of subclasses in a hierarchy. For example, the subclasses in the `Car` hierarchy could also include an `SUV` class or a `Convertible` class.
 - Instead of having to make code changes in many different classes that have similar functionality, you just need to make the changes once in the base class.
 
+
 ## Extend a class
 
 Continue working in the Playground and create a new `ElectricCar` class.

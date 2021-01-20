@@ -1,8 +1,9 @@
 The properties and methods of the classes defined so far are **instance properties**, meaning that they are instantiated and called on each instance of the class object. There is another type of property called a **static property**. Static properties and methods are shared by all instances of a class.
 
-To make a property static, use the `static` keyword before a property or method name. 
+To make a property static, use the `static` keyword before a property or method name.
 
 For example, you can add a new `static` property to the `Car` class called `numberOfCars` that stores the number of times that the `Car` class is instantiated and set its initial value to 0. Then, in the constructor, increment the count by one.
+
 
 ```typescript
 class Car {

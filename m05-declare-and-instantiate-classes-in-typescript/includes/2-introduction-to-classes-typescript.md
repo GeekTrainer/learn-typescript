@@ -14,3 +14,17 @@ A class **encapsulates** data for the object. Data and behavior are included in 
 
 > [!TIP]
 > If you want to dig into object-oriented programming concepts in more detail, see the [Fundamentals of Classes](https://channel9.msdn.com/series/software-development-fundamentals/03/) video.
+
+## Class components
+
+- **Properties**, also referred to as fields, are the data (or attributes) for the object. These are the defining characteristics of the object that you can set or return from your code.
+- The `constructor` is a special function used to create and initialize objects based on the class. When you create a new instance of the class, the constructor creates a new object with the class shape and initializes it with the values passed to it.
+- **Accessors** are a type of function that you use to `get` or `set` the value of properties. Properties can be read-only by simply omitting the `set` accessor in the class, or inaccessible by omitting the `get` accessor (the property will return `undefined` if you attempt to access it, even if it's assigned a value during initialization.)
+- **Methods** are functions that define the behaviors or actions that the object can do. You can call these methods to invoke the behavior of the object. You can also define methods that are only accessible from within the class itself and are typically called by other methods in the class to perform a task.
+
+## Design notes
+
+You can create classes to model data, encapsulate functionality, provide templates, and numerous other uses. As such, the components listed above are **not** required in every class you create. You may only need methods and a constructor for a utility object, or solely properties to manage data.
+
+> ![NOTE]
+> Accessors typically only used when you need to control access to values, such as implementing validation, or to calculate values dynamically. If your class is strictly storing values and does not need the additional functionality provided by accessors you can use properties.

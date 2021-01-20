@@ -16,14 +16,15 @@ The `identity` function can accept any type that you choose to pass to the type 
 
 There are several ways to do this depending on the type variable. One way is to declare a custom `type` as a tuple and then `extend` the type variable with the custom type. The following example declares `ValidTypes` as a tuple with a `string` and a `number`. Then, it extends `T` with the new type. Now, you can only pass `number` or `string` types to the type variable.
 
-
 ```typescript
 type ValidTypes = string | number;
+
 function identity<T extends ValidTypes, U> (value: T, message: U) : T {
     let result: T = value + value;    // Error
     console.log(message);
     return result
 }
+
 let returnNumber = identity<number, string>(100, 'Hello!');      // OK
 let returnString = identity<string, string>('100', 'Hola!');     // OK
 let returnBoolean = identity<boolean, string>(true, 'Bonjour!'); // Error: Type 'boolean' does not satisfy the constraint 'ValidTypes'.
@@ -35,8 +36,10 @@ You can also constrain a type to the property of another object. This example us
 function getPets<T, K extends keyof T>(pet: T, key: K) {
   return pet[key];
 }
+
 let pets1 = { cats: 4, dogs: 3, parrots: 1, fish: 6 };
 let pets2 = { 1: "cats", 2: "dogs", 3: "parrots", 4: "fish"}
+
 console.log(getPets(pets1, "fish"));  // Returns 6
 console.log(getPets(pets2, "3"));     // Error
 ```
@@ -54,17 +57,21 @@ type ValidTypes = string | number;
 function identity<T extends ValidTypes, U> (value: T, message: U) {   // Return type is inferred
     let result: ValidTypes = '';
     let typeValue: string = typeof value;
+
     if (typeof value === 'number') {           // Is it a number?
         result = value + value;                // OK
     } else if (typeof value === 'string') {    // Is it a string?
         result = value + value;                // OK
     }
+
     console.log(`The message is ${message} and the function returns a ${typeValue} value of ${result}`);
+
     return result
 }
 
 let numberValue = identity<number, string>(100, 'Hello');
 let stringValue = identity<string, string>('100', 'Hello');
+
 console.log(numberValue);       // Returns 200
 console.log(stringValue);       // Returns 100100
 ```

@@ -66,7 +66,6 @@ You can also declare a generic interface and implement it in a class.
 1. Continue working in the Playground.
 1. Declare an interface called `ProcessIdentity` that has two properties, `value` and `message`, and two generic type variables, `T` and `U`, for the property types. Then, add a generic signature of a method called `process` that returns a value of type `T`.
 
-
     ```typescript
     interface ProcessIdentity<T, U> {
         value: T;

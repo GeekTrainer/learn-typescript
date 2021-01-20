@@ -1,7 +1,7 @@
 You can implement namespaces within a single TypeScript file or across multiple TypeScript files.
 
 > [!NOTE]
-> You must use an IDE, such as Visual Studio Code, to implement multi-file namespaces. It is not possible to do this in the TypeScript Playground. Before completing the exercise, see the **Lab setup** section later in this module for more information about setting up a development environment in Visual Studio Code.
+> You must use an IDE, such as Visual Studio Code, to implement multi-file namespaces. It is not possible to do this in the TypeScript Playground. Before completing the exercise, see the **Lab setup** section later in this module for more information about setting up a development environment in Visual Studio Code. 
 
 Complete the steps to define a single file namespace:
 
@@ -33,7 +33,7 @@ Complete the steps to define a single file namespace:
     }
     ```
 
-1. Move the remaining two functions, `returnGreeting` and `getLength`, into the `GreetingsWithLength` namespace. The `returnGreeting` function uses the helper function `getLength` to determine the length of the greeting before returning the message to the console.
+1. **Create** the remaining two functions, `returnGreeting` and `getLength`, into the `GreetingsWithLength` namespace. The `returnGreeting` function uses the helper function `getLength` to determine the length of the greeting before returning the message to the console.
 
     ```typescript
     namespace GreetingsWithLength {

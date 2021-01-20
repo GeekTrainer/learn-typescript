@@ -1,11 +1,11 @@
-Let's see how to organize variable, class, interface, and function declarations into muliple modules and then use these components in code.
+Let's see how to organize variable, class, interface, and function declarations into multiple modules and then use these components in code.
 
 > [!NOTE]
 > You must use an IDE, such as Visual Studio Code, to implement modules. It is not possible to do this in the TypeScript Playground. Before completing the exercise, see the **Lab setup** section later in this module for more information about setting up a development environment in Visual Studio Code.
 
 ## Export a module component
 
-To export a module component, use the `export` keyword. 
+To export a module component, use the `export` keyword.
 
 In this part of the exercise, you'll organize related functions into separate modules and then export the function declarations.
 
@@ -75,19 +75,20 @@ In next part of the exercise, you'll import components from each of the two modu
     import * as allGreetingFunctions from './Greetings_module.js';  // imports all exported components in the module
     ```
 
-1. Try importing the `returnGreeting` function from **GreetingsLength_module.ts** using the statement `import { returnGreeting } from './GreetingsLength_module'`. You'll notice an error because both files contain a `returnGreeting` function and you now have a naming conflict in the global scope of **Main.ts**. 
+1. Try importing the `returnGreeting` function from **GreetingsLength_module.ts** using the statement `import { returnGreeting } from './GreetingsLength_module'`. You'll notice an error because both files contain a `returnGreeting` function and you now have a naming conflict in the global scope of **Main.ts**.
 1. Correct the naming conflict by assigning the second instance of `returnGreeting` a new name. Replace `{ returnGreeting }` with `{ returnGreeting as returnGreetingLength }`. You can now use `returnGreetingLength` in place of the function name in your code.
 
     ```typescript
     import { returnGreeting as returnGreetingLength } from './GreetingsLength_module.js';
     ```
+
     > [!IMPORTANT]
     > If you want to run the resulting JavaScript in a web browser, you must append the **.js** file extension to the file name in the `import` statement. To learn more, see [Compiled JavaScript import is missing file extension](https://github.com/microsoft/TypeScript/issues/40878).
 
 1. Now, you can use the `returnGreetings` functions in your code.
 
     ```typescript
-    returnGreeting("Hola!")  // Displays 'The message from Greetings_module is Hola!'
+    returnGreeting('Hola!')  // Displays 'The message from Greetings_module is Hola!'
     allGreetingFunctions.returnGreeting('Bonjour');  // Displays 'The message from Greetings_module is Bonjour!'
     returnGreetingLength('Ciao!');  // Displays 'The message from GreetingsWithLength_module is Ciao! It is 5 characters long.'
     ```

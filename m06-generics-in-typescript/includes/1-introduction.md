@@ -21,7 +21,7 @@ After completing this module, you'll be able to:
 ## Prerequisites
 
 - Knowledge of TypeScript
-- Familarity with JavaScript
+- Familiarity with JavaScript
 - Familiarity with TypeScript functions, interfaces, and classes.
 - Installed software:
   - [Git](https://git-scm.com/)

@@ -12,6 +12,7 @@ In TypeScript, you can control the visibility of class members by adding the `pu
 
 In addition, properties can be made `readonly` by using the readonly modifier. Readonly properties may only be set when initialized at their declaration or in the `constructor`.
 
+
 Continue defining the `Car` class in the Playground.
 
 1. Test the access of the class members by typing `myCar1.` and notice that all the members appear in the list, including the properties, the `constructor` parameters, the methods, and the `worker` function.

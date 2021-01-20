@@ -56,7 +56,7 @@ Continue the exercise in the Playground.
    ```typescript
    let subtractThreeNumbers = (x: number, y: number, z: number): number => x - y - z;
    ```
-   
+
 1. Assign a default value of `100` to the `z` parameter by replacing `z: number` with `z = 100`.
 
    ```typescript

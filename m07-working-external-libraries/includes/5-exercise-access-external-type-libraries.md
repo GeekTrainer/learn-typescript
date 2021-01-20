@@ -1,13 +1,14 @@
 In JavaScript, you use external libraries in your code by using the `requires` statement. You can also use external libraries in TypeScript, but you gain access to them by using the `import` statement. 
 
-The open-source project [DefinitelyTyped](https://definitelytyped.org/) is a repository of TypeScript type definitions for most existing JavaScript libraries. Some packages include the library and its type declaration file, while others require you to install the @types as a separate step. See the installation details for the library you want to use to determine if you need to also download the corresponding @types package.
+
+The open-source project [DefinitelyTyped](https://definitelytyped.org/) is a repository of TypeScript type definitions for most existing JavaScript libraries. Some packages include the library and its type declaration file, while others require you to install the type definition as a separate step. See the installation details for the library you want to use to determine if you need to also download the corresponding @types package.
 
 After importing a library and its type definition, you can use it in your code and gain the benefits of Intellisense and type checking.
 
 > [!NOTE]
 > You must use an IDE, such as Visual Studio Code, to implement external type libraries. It is not possible to do this in the TypeScript Playground. Before completing the exercise, see the Lab setup section later in this module for more information about setting up a development environment in Visual Studio Code.
 
-In this exercise, you'll install and implement a type library called [dotenv](https://www.npmjs.com/package/dotenv). This commonly used library loads environment variables from a **.env** file into `process.env`, enabling you to store configuration details in the environment separate from your code and access them.
+In this exercise, you'll install and implement a type library called [dotenv](https://www.npmjs.com/package/dotenv). This commonly used library loads environment variables from a **.env** file into `process.env`, enabling you to store configuration details in separate from your code and access them. You can use **dotenv** to manage things like connection strings and other values which may need to change depending on where your code is executing.
 
 1. Open a new workspace in Visual Studio Code.
 1. Add a new file called **Main.ts**.
@@ -24,22 +25,15 @@ In this exercise, you'll install and implement a type library called [dotenv](ht
     npm install dotenv
     ```
 
-1. The **dotenv** type definition also requires you to install the **node** type definition. **node** provides access to `process.env` so you can access it from your code.
-
-    ```bash
-    npm install @types/node
-    ```
-
 1. Create a new file in the root directory of your project called **.env**. This file will contain environment-specific variables for the project.
 1. In **.env**, add the variables on new lines in the form of `NAME=VALUE`. For this example, define three variables:
 
     ```typescript
     DB_HOST=localhost
-    DB_USER=root
-    DB_PASS=P@ssw0rd
+    WEB_HOST=staging.adventure-works.com
     ```
 
-1. In **Main.ts**, import the **dotevn** type library.
+1. In **Main.ts**, import the **dotenv** type library.
 
     ```typescript
     import dotenv from 'dotenv';
@@ -62,18 +56,17 @@ In this exercise, you'll install and implement a type library called [dotenv](ht
 1. Return the contents of the `parsed` property to the console.
 
     ```typescript
-    console.log(result.parsed);  // Returns { DB_HOST: 'localhost', DB_USER: 'root', DB_PASS: 'P@ssw0rd' }
+    console.log(result.parsed);  // Returns { DB_HOST: 'localhost', WEB_HOST: 'staging.adventure-works.com' }
     ```
 
 1. Access the values contains in each key in `process.env` and return the value to the console.
 
-    ```Choose a language.
+    ```typescript
     console.log(process.env.DB_HOST);
-    console.log(process.env.DB_USER);
-    console.log(process.env.DB_PASS);
+    console.log(process.env.WEB_HOST);
     ```
 
-This exercise provides a simple example of using **dotenv**. See [dotenv](https://www.npmjs.com/package/dotenv) to learn more about using it in your code.
+This exercise provides an example of using **dotenv**. See [dotenv](https://www.npmjs.com/package/dotenv) to learn more about using it in your code.
 
 ## Exercise solution
 
