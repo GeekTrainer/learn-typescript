@@ -1,5 +1,6 @@
-Continue working in the Playground and create a new `ElectricCar` class.
+In this exercise, you'll extend the `Car` class to create a new class called `ElectricCar`.
 
+1. Continue working in the Playground.
 1. Below the `Car` class, create a new class called `ElectricCar` that `extends Car`.
 
     ```typescript
