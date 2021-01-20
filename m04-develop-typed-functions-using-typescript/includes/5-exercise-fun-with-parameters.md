@@ -1,4 +1,4 @@
-In this exercise, you'll create functions that have required, optional, default, and rest parameters.
+In this exercise, you'll create functions that have required, optional, and default parameters.
 
 ## Required parameters
 
