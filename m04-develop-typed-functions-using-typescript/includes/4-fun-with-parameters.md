@@ -9,14 +9,67 @@ This is different from JavaScript, which assumes that all parameters are optiona
 
 All function parameters are required, unless otherwise specified, and the number of arguments passed to a function must match the number of required parameters the function expects.
 
+In this example, all parameters are required.
+
+```typescript
+function addNumbers (x: number, y: number): number {
+   return x + y;
+}
+addNumbers(1, 2); // Returns 3
+addNumbers(1);    // Returns an error
+```
+
 ## Optional parameters
 
 You can also define optional parameters by appending a question mark (?) to the end of the parameter name.
+
+In this example, `x` is required and `y` is optional.
+
+```typescript
+function addNumbers (x: number, y?: number): number {
+   return x + y;
+}
+addNumbers(1, 2); // Returns 3
+addNumbers(1);    // Returns 1
+```
 
 ## Default parameters
 
 You can also assign default values to optional parameters. If a value is passed as an argument to the optional parameter, that value will be assigned to it. Otherwise, the default value will be assigned to it. As with optional parameters, default parameters must come after required parameters in the parameter list.
 
+In this example, `x` is required and `y` is optional. If value is not passed to `y`, the default value is `25`.
+
+```typescript
+function addNumbers (x: number, y: 25): number {
+   return x + y;
+}
+addNumbers(1, 2);  // Returns 3
+addNumbers(1);     // Returns 26
+```
+
 ## Rest Parameters
 
 If you want to work with multiple parameters as a group (in an array) or don't know how many parameters a function will ultimately take, you can use rest parameters. Rest parameters are treated as a boundless number of optional parameters. You may leave them off or have as many as you want.
+
+This example has one required parameter and an optional parameter called `restOfNumbers` that can accept any number of additional numbers. The ellipsis (`...`) before `restOfNumbers` tells the compiler to build an array of the arguments passed to the function and assigns the name that follows to it so you can use it in your function.
+
+```typescript
+let addAllNumbers = (firstNumber: number, ...restOfNumbers: number[]): number => {
+   let total: number =  firstNumber;
+   for(let counter = 0; counter < restOfNumbers.length; counter++) {
+      if(isNaN(restOfNumbers[counter])){
+         continue;
+      }
+      total += Number(restOfNumbers[counter]);
+   }
+   return total;
+}
+```
+
+The function can now accept one or more values and return the result.
+
+```typescript
+addAllNumbers(1, 2, 3, 4, 5, 6, 7);  // returns 28
+addAllNumbers(2);                    // returns 2
+addAllNumbers(2, 3, "three");        // flags error due to data type at design time, returns 5
+```
