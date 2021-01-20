@@ -11,3 +11,9 @@ Some reasons to use inheritance include:
 - Code reusability. You can develop once and reuse it in many places. This also helps you avoid redundancy in your code.
 - You can use one base to derive any number of subclasses in a hierarchy. For example, the subclasses in the `Car` hierarchy could also include an `SUV` class or a `Convertible` class.
 - Instead of having to make code changes in many different classes that have similar functionality, you just need to make the changes once in the base class.
+
+## Override a method
+
+When a derived class has a different definition for one of the member functions of the base class, the base function is said to be **overridden**. Overriding is what happens when you create a function in a subclass with the same name as the function in the base class but, it has different functionality.
+
+For example, assume that electric cars use a different type of braking system than traditional cars called regenerative braking. So, you may want to override the `brake` method in the `Car` base class with a method that is specialized for the `ElectricCar` subclass.
