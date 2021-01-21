@@ -15,16 +15,6 @@ In this exercise, you will:
 2. Declare an interface called `ConventionalLoan` that extends `Loan`, and defines the additional property required for a conventional loan, `months`.
 3. Update the two functions to implement the new interfaces and strongly type the parameters.
 
-## Lab setup
-
-To complete the lab, you must first set up your development environment by installing the following software on your machine:
-
-1. Visual Studio Code (or IDE of your choice)
-2. Node Package Manager (npm)
-3. TypeScript Compiler (tsc)
-
-For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in [LINK TO Module 01: Get started with TypeScript ]. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.
-
 ## Exercise 1 - Declare the interfaces
 
 1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-03\m03-start] 
