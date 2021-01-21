@@ -5,20 +5,20 @@ In this exercise, you'll create a new TypeScript project. You'll then confirm th
 Create a new project workspace in VS Code and initialize the project.
 
 1. Open VS Code.
-2. On the Welcome screen, select **Add workspace folder**.
+1. On the Welcome screen, select **Add workspace folder**.
 
    ![Visual Studio Code Welcome screen with the Add workspace folder highlighted.](../media/m01_vscode_1.jpg)
 
-3. Create a new project folder and then select **Add**.
-4. Select the **Explorer** icon.
+1. Create a new project folder and then select **Add**.
+1. Select the **Explorer** icon.
 
    ![Visual Studio Code with the Explorer icon highlighted.](../media/m01_vscode_2.jpg)
 
-5. In the Explorer, select the **New File** icon.
+1. In the Explorer, select the **New File** icon.
 
    ![Visual Studio Code with the New File icon highlighted.](../media/m01_vscode_3.jpg)
 
-6. Type the file name **module01.ts** and press **Enter**. The TypeScript file appears in a new code editor.
+1. Type the file name **module01.ts** and press **Enter**. The TypeScript file appears in a new code editor.
 
    ![Visual Studio Code with the new TypeScript file displayed in the code editor.](../media/m01_vscode_4.jpg)
 
@@ -29,15 +29,15 @@ The TypeScript compiler applies default behavior when you compile TypeScript sou
 You can use the `init` option of the TypeScript compiler to generate a TSConfig file with default options.
 
 1. In VS Code, open a new terminal window by selecting **Terminal** > **New Terminal**.
-2. At the command prompt, enter `tsc --init`.
-3. Notice that the new **tsconfig.json** file has been added to the Explorer. (You may need to refresh the Explorer to see the file.)
-4. Open the **tsconfig.json** file in the code window. You'll see it has many options, most of which are commented out. Review the description of each enabled option.
-5. In the `tsconfig.json` file, locate the target option and change it to `"ES2015"`.
-6. Update the **tsconfig.json** file so the compiler saves all JavaScript files to a new folder.
+1. At the command prompt, enter `tsc --init`.
+1. Notice that the new **tsconfig.json** file has been added to the Explorer. (You may need to refresh the Explorer to see the file.)
+1. Open the **tsconfig.json** file in the code window. You'll see it has many options, most of which are commented out. Review the description of each enabled option.
+1. In the `tsconfig.json` file, locate the target option and change it to `"ES2015"`.
+1. Update the **tsconfig.json** file so the compiler saves all JavaScript files to a new folder.
    1. In the Explorer, create a new folder in your project called **build**.
-   2. In the **tsconfig.json** file, locate the `outDir` option, remove the comment, and set the parameter to **build**.
-7. Save **tsconfig.json**.
-8. At the command prompt, enter `tsc`. This reads the 'jsconfig.json` file and resets the options for the project.
+   1. In the **tsconfig.json** file, locate the `outDir` option, remove the comment, and set the parameter to **build**.
+1. Save **tsconfig.json**.
+1. At the command prompt, enter `tsc`. This reads the 'jsconfig.json` file and resets the options for the project.
 
 > [!TIP]
 > To learn more about the **tsconfig.json** file, visit the [TSConfig Reference](https://www.staging-typescript.org/tsconfig).
@@ -55,25 +55,25 @@ Let's add some JavaScript code to the TypeScript file and then compile it.
    console.log(addNumbers(3, 6));
    ```
 
-2. Notice that even though you haven't yet compiled the code, VS Code has used its built-in TypeScript support to type check it. As before, there are type errors in the two parameters of the `addNumbers` function.
+1. Notice that even though you haven't yet compiled the code, VS Code has used its built-in TypeScript support to type check it. As before, there are type errors in the two parameters of the `addNumbers` function.
 
    ![Visual Studio Code editor with Intellisense  indicating that there is a type checking error on the first parameter of the addNumbers function.](../media/m01_vscode_5.jpg)
 
-3. Update the TypeScript code to specify a type for each parameter. Replace `x` with `x: number` and `y` with `y: number`.
-4. Save the TypeScript file. The TypeScript compiler only works on the saved version of the file.
-5. At the Terminal command prompt, enter **tsc module01.ts**. The compiler should run without errors.
-6. Notice that a new JavaScript file has been added, but it is not in the **build** folder in the Explorer. (You may need to refresh the Explorer to see the file.) When you run the `tsc` command on a single file, the compiler ignores the `tsconfig.json` file.
-7. To load the config file and compile all the .ts files in the folder, run `tsc` without a filename. This should add the .js file to the `build` folder. (Remember to delete the extra .js file in the root folder.)
-8. Open the **module01.js** file and then select the **Split Editor Right** icon in the upper right corner of VS Code to open a new editor view. You should now be able to see the .ts and .js files side by side and that they are identical, except that the .js files does not include the new type annotations.
-9. At the Terminal command prompt, enter `node .\build\module01.js`. This will run the JavaScript and display the result in the console log.
+1. Update the TypeScript code to specify a type for each parameter. Replace `x` with `x: number` and `y` with `y: number`.
+1. Save the TypeScript file. The TypeScript compiler only works on the saved version of the file.
+1. At the Terminal command prompt, enter **tsc module01.ts**. The compiler should run without errors.
+1. Notice that a new JavaScript file has been added, but it is not in the **build** folder in the Explorer. (You may need to refresh the Explorer to see the file.) When you run the `tsc` command on a single file, the compiler ignores the `tsconfig.json` file.
+1. To load the config file and compile all the .ts files in the folder, run `tsc` without a filename. This should add the .js file to the `build` folder. (Remember to delete the extra .js file in the root folder.)
+1. Open the **module01.js** file and then select the **Split Editor Right** icon in the upper right corner of VS Code to open a new editor view. You should now be able to see the .ts and .js files side by side and that they are identical, except that the .js files does not include the new type annotations.
+1. At the Terminal command prompt, enter `node .\build\module01.js`. This will run the JavaScript and display the result in the console log.
 
 ## Add an HTML file
 
 As a final step, add an HTML file to the project so you can run and test the JavaScript code.
 
 1. In the Explorer, select the **New File** icon.
-2. Type the file name **module01.html** and press **Enter**. The HTML file appears in a new code editor.
-3. Copy and paste the following HTML into the editor and then save the file.
+1. Type the file name **module01.html** and press **Enter**. The HTML file appears in a new code editor.
+1. Copy and paste the following HTML into the editor and then save the file.
 
    ```html
    <!DOCTYPE html>
@@ -91,15 +91,15 @@ As a final step, add an HTML file to the project so you can run and test the Jav
    </html>
    ```
 
-4. In the Explorer, right-click **module01.html** and select **Open in Default Browser**.
-5. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
+1. In the Explorer, right-click **module01.html** and select **Open in Default Browser**.
+1. Activate the Developer Tools for your browser and you are ready to start coding in TypeScript!
 
 ## Exercise solution
 
 You can download the completed Visual Studio Code workspace at [LINK TO \code\module-01\m01-end]. To run the solution, you must first install the following software on your machine:
 
 1. Visual Studio Code (or IDE of your choice)
-2. Node Package Manager (npm)
-3. TypeScript Compiler (tsc)
+1. Node Package Manager (npm)
+1. TypeScript Compiler (tsc)
 
 For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in this module. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.

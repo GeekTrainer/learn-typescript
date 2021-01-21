@@ -38,7 +38,7 @@ For best results, follow the complete instructions for setting up your environme
     lastName = 'Smith';
     age = 42;
     ukCitizen = false;
-    fullName = firstname + " " + lastname;
+    fullName = firstName + " " + firstName;
     
     if (ukCitizen) {
         console.log("My name is " + fullName + ", I'm " + age + ", and I'm a citizen of the United Kingdom.");

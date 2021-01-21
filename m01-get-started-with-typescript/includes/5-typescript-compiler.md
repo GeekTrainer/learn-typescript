@@ -16,6 +16,15 @@ If the compiler finds errors in the code, it will display them in the command wi
 
 ## Compiler options
 
+Compiler options allow you to control how the JavaScript will be generated from the source TypeScript. You can either set the options at the command-line as you would with many CLIs, or set the options in a JSON file named **tsconfig.json**.
+
+There are numerous options available. You can find a [complete list of compiler options in the documentation](https://www.typescriptlang.org/docs/handbook/compiler-options.html). Below are a few of the most common:
+
+- `noImplicitAny`
+- `noEmitOnError`
+- `target`
+- the directory options
+
 There are many compiler options that you can use with the `tsc` command to control the compilation to your preference.
 
 The `--noImplicitAny` option instructs the compiler to raise errors on expressions and declarations with an implied `any` type. For example:
@@ -26,4 +35,4 @@ The `--target` option specifies the ECMAScript target version for the JavaScript
 
 `tsc utility_functions.ts --target "ES2015"`
 
-You'll learn about other compiler options in later modules. See [tsc CLI Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) for the complete list of options.
+You'll learn about other compiler options in later modules. See  for the complete list of options.

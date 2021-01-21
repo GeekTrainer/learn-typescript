@@ -10,7 +10,7 @@ The `Car` class can be reused to create any number of new `Car` objects, each wi
 
 ![The Car class includes the properties make, color and, doors and the methods accelerate, brake, and turn. When the ElectricCar class extends Car, it includes all of the properties and methods of Car, plus a new property called range and a new method called charge.](../media/m05_car_class.jpg)
 
-A class **encapsulates** data for the object. Data and behavior are included in the class but the details of both can be hidden from the person who is working with the object in code. For example, if you call the `Turn` method of a `Car` object, you don't need to know exactly how the steering wheel works, you just need to know that the car will turn left when you tell it to. The class serves as a black box where all the attributes and behaviors are only exposed through the properties and methods, limiting what a coder can do with it.
+A class **encapsulates** data for the object. Data and behavior are included in the class but the details of both can be hidden from the person who is working with the object in code. For example, if you call the `turn` method of a `Car` object, you don't need to know exactly how the steering wheel works, you just need to know that the car will turn left when you tell it to. The class serves as a black box where all the attributes and behaviors are only exposed through the properties and methods, limiting what a coder can do with it.
 
 > [!TIP]
 > If you want to dig into object-oriented programming concepts in more detail, see the [Fundamentals of Classes](https://channel9.msdn.com/series/software-development-fundamentals/03/) video.

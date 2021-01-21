@@ -114,6 +114,7 @@ Continue defining the `Car` class in the Playground.
             this._doors = doors;
         } else {
             throw new Error('Doors must be an even number');
+        }
     }
     ```
 

@@ -20,13 +20,13 @@ In this exercise, you'll create two named functions with strongly typed paramete
 1. Try calling the function, passing in a `string` as a parameter. Now, try passing in a `number`. TypeScript type checks the parameter and notifies you of the conflict. Depending on what you're trying to accomplish with this function, you can either put the number in quotes, expand the types of values accepted by the parameter with a union type (for example `msg: string | number`), or add some logic to your function to handle the different types of values passed into it.
 1. Here's another example. The `sum` function totals the numbers in an array and returns the result. Copy the JavaScript code into the Playground.
 
-   ```javascript
-   function sum(input) {
-       let total =  0;
-       for(let count = 0; count < input.length; count++) {
-           if(isNaN(input[count])){
-               continue;
-           }
+    ```javascript
+    function sum(input) {
+        let total =  0;
+        for(let count = 0; count < input.length; count++) {
+            if(isNaN(input[count])){
+                continue;
+            }
             total += Number(input[count]);
         }
         return total;
@@ -36,13 +36,13 @@ In this exercise, you'll create two named functions with strongly typed paramete
 1. Try calling the function with a single number as a parameter, for example, `sum(5)`. It accepts the value but doesn't return the correct result because the parameter is not passed as an array.
 1. Now, set the type of the `input` parameter to an array of `number` values, set the return type of the function to a `number`, and then type the `total` variable.
 
-   ```typescript
-   function sum(input: number[]): number {        
-       let total: number =  0;
-       for(let count = 0; count < input.length; count++) {
-           if(isNaN(input[count])){
-               continue;
-           }
+    ```typescript
+    function sum(input: number[]): number {        
+        let total: number =  0;
+        for(let count = 0; count < input.length; count++) {
+            if(isNaN(input[count])){
+                continue;
+            }
             total += Number(input[count]);
         }
     return total;

@@ -82,9 +82,11 @@ addAllNumbers(2, 3, "three");        // flags error due to data type at design t
 
 ## Deconstructed object parameters
 
-Function parameters are positional and must be passed in the order in which they are defined in the function. However, you can use a technique called deconstructed object parameters that enable you to use an interface to defined named, rather than positional, parameters in your functions. 
+Function parameters are positional and must be passed in the order in which they are defined in the function. This can make your code less-readable when calling a function with multiple parameters which are optional or the same data type.
 
-The following example defines an interface called `Message` that defines two properties. In the `displayMessage` function, the `Message` object is passed as parameter, providing access to the properties as if they are normal parameters. 
+To enable named parameters you can use a technique called deconstructed object parameters. This enables you to use an interface to defined named, rather than positional, parameters in your functions.
+
+The following example defines an interface called `Message` that defines two properties. In the `displayMessage` function, the `Message` object is passed as parameter, providing access to the properties as if they are normal parameters.
 
 ```typescript
 interface Message {

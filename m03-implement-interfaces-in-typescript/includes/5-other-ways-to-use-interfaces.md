@@ -10,7 +10,7 @@ For example, the `IceCreamArray` interface declares an index signature as a `num
 
 ```typescript
 interface IceCreamArray {
-  [index: number]: string;
+    [index: number]: string;
 }
 
 let myIceCream: IceCreamArray;

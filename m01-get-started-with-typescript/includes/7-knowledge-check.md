@@ -23,7 +23,7 @@ Why is it necessary to compile (or transpile) TypeScript code to JavaScript befo
 
 ## Multiple Choice
 
-What does the comand `npm install -g typescript` do?
+What does the command `npm install -g typescript` do?
 
 (x)Installs the TypeScript compiler globally on the machine.{{The npm command provides the way to install the TypeScript package on the machine. The -g parameter installs it globally.}}
 
