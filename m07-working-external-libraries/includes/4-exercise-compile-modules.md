@@ -23,4 +23,6 @@ tsc --module es6 main.ts
 
 To run a module from a web page, remember to set the `type` option to `"module"`:
 
-`<script type="module" src=".\main.js"></script>`
+```html
+<script type="module" src=".\main.js"></script>
+```
