@@ -1,7 +1,5 @@
 In this lab, you will extend the functionality of a class by using generics.
 
-## Lab setup
-
 ## Exercise 1
 
 The `DataStore` class contains utility functions that can store up to ten `string` items in an array and return the value stored in each item. In this exercise, you will rewrite the `DataStore` class using a generic so it can store items of any type that you specify when it is instantiated.
