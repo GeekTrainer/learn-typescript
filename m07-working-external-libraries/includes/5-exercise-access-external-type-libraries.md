@@ -96,5 +96,3 @@ git clone <url>
 cd <folder name>
 code .
 ```
-
-See the **Lab setup** section in the lab for more information about setting up your development environment to run the solution.
