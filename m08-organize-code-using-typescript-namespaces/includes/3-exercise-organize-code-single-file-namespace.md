@@ -117,3 +117,13 @@ Continue working in the code editor.
 ## Compiling single file namespaces
 
 You compile a single file namespace the same way that you compile any other TypeScript file. Because namespaces are a TypeScript-only construct, they are removed from the resulting JavaScript code and converted into variables that nest as necessary to form namespace-like objects.
+
+## Exercise solution
+
+To see the solution to this exercise, clone the repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-08\m08-exercise-01-end]
+
+```bash
+git clone <url>
+cd <folder name>
+code .
+```
