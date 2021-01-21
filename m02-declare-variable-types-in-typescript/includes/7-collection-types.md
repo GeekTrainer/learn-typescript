@@ -16,9 +16,11 @@ let list: Array<number> = [1, 2, 3];
 
 There is no advantage to using one over the other so it's up to you to decide which syntax to use.
 
-## Exercise - Tuples
+## Tuples
 
 Having an array of the same value types is useful, but sometimes you have an array that contains values of mixed types. For that purpose, TypeScript provides the Tuple type. To declare a Tuple, use the syntax `variableName: [type, type, ...]`.
+
+### Exercise - Tuples
 
 1. Open the [Playground](https://www.typescriptlang.org/play) and remove any existing code.
 1. Enter the following code to create a Tuple that contains a `string` and a `number`:
@@ -26,13 +28,13 @@ Having an array of the same value types is useful, but sometimes you have an arr
     ```typescript
     let person1: [string, number] = ['Marcia', 35];
     ```
-    
+
 1. Try to add another item to the array. For example:
 
     ```typescript
     let person1: [string, number] = ['Marcia', 35, true];
     ```
-    
+
 1. You'll see that an error is raised because the elements in the Tuple `array` are fixed. The `person1` Tuple is an array that contains exactly one `string` value and one `numeric` value.
 1. Try switching the order of the items in the array. For example:
 

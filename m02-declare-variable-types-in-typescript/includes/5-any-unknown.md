@@ -12,7 +12,7 @@ randomValue = true;      // OK
 randomValue = 'Mateo';   // OK
 ```
 
-When this example is compiled, it doesn't throw an error because the `any` type encompasses values of every possible type. The `any` type opts out of type checking and doesn't force you to do any checking before you call, construct, or access properties on these values. 
+When this example is compiled, it doesn't throw an error because the `any` type encompasses values of every possible type. The `any` type opts out of type checking and doesn't force you to do any checking before you call, construct, or access properties on these values.
 
 Using the `any` type in this example allows you to call:
 
@@ -20,7 +20,7 @@ Using the `any` type in this example allows you to call:
 - `randomValue` as a function.
 - A method that only applies to a `string` type.
 
-The following statements all generate errors or unexpected behavior at runtime. 
+The following statements all generate errors or unexpected behavior at runtime.
 
 ```typescript
 console.log(randomValue.name);  // Logs "undefined" to the console
@@ -48,6 +48,9 @@ console.log(randomValue.name);  // Error: Object is of type unknown
 randomValue();                  // Error: Object is of type unknown
 randomValue.toUpperCase();      // Error: Object is of type unknown
 ```
+
+> ![NOTE]
+> The core difference between `any` and `unknown` is you are unable to interact with a variable of type `unknown`; doing so generates a **compiler** error. `any` bypasses any compile-time checks, and the object is evaluated at runtime; if the method or property exists it will behave as expected.
 
 ## Type assertion
 
