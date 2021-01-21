@@ -26,3 +26,13 @@ To run a module from a web page, remember to set the `type` option to `"module"`
 ```html
 <script type="module" src=".\main.js"></script>
 ```
+
+## Exercise solution
+
+To see the solution to this exercise, clone the repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-exercise-01-end]
+
+```bash
+git clone <url>
+cd <folder name>
+code .
+```
