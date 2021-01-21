@@ -124,6 +124,7 @@ This JavaScript function returns the payment amount for a loan.
        return payment.toFixed(2);
    }
    ```
+
 1. Test your work by calling the `loanCalculator` function with only the required parameters.
 
    ```typescript
