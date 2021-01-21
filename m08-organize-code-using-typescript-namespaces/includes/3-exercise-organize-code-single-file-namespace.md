@@ -16,7 +16,7 @@ Complete the steps to define a single file namespace:
     }
     ```
 
-1. You can then define functions and classes inside of the namespace definition. All components defined within the namespace are scoped to the namespace and removed from the global scope. Add a new function called `returnGreeting` to the `Greetings` namespace. This function returns the value of a parameter to the console.
+1. You can now define functions and classes inside of the namespace definition. All components defined within the namespace are scoped to the namespace and removed from the global scope. Add a new function called `returnGreeting` to the `Greetings` namespace. This function returns the value of a parameter to the console.
 
     ```typescript
     namespace Greetings {
