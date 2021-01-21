@@ -9,16 +9,8 @@ To export a module component, use the `export` keyword.
 
 In this part of the exercise, you'll organize related functions into separate modules and then export the function declarations.
 
-1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-07\m07-exercise-01-start] 
-
-   ```bash
-   git clone <url>
-   cd <folder name>
-   code .
-   ```
-
-1. Open the file **module07_exercise.ts**. This file includes two functions called `returnGreeting` that each perform different tasks, plus a helper function called `getLength` that's used by one of the `returnGreeting` functions. You'll notice that there is a naming conflict because two of the functions have the same name. You'll solve this problem by organizing the functions into modules.
-1. Create a new file called **greetings_module.ts** and then move the first `returnGreeting` function from **module07_exercise.ts** into it. Add the `export` keyword before the function name so it is available to other modules.
+1. Open a new Visual Studio Code workspace.
+1. Create a new file called **greetings_module.ts** and then add the the following function called `returnGreeting` to it. Add the `export` keyword before the function name so it is available to other modules.
 
     ```typescript
     export function returnGreeting (greeting: string) {
@@ -26,7 +18,7 @@ In this part of the exercise, you'll organize related functions into separate mo
     }
     ```
 
-1. Create a second file called **greetings-utilities_module.ts** and then move the second `returnGreeting` function and the `getLength` function from **module07_exercise.ts** into it. (This eliminates the naming conflict that you had with both `returnGreeting` functions were in the same file.) Add `export` before the `returnGreeting` function so it is available to other modules. It is not necessary to export the `getLength` function because it is only used within the scope of the module.
+1. Create a second file called **greetings-utilities_module.ts** and then add the following two functions, `returnGreeting` and `getLength`, to the new file. Add `export` before the `returnGreeting` function so it is available to other modules. It is not necessary to export the `getLength` function because it is only used within the scope of the module.
 
     ```typescript
     export function returnGreeting (greeting: string) {
