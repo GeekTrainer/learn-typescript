@@ -105,7 +105,7 @@ Continue working in the code editor.
 
     ```typescript
     AllGreetings.Greetings.returnGreeting('Bonjour');        // OK
-    AllGreetings.GreetingsWithLenth.returnGreeting('Hola');  // OK
+    AllGreetings.GreetingsWithLength.returnGreeting('Hola');  // OK
     ```
 
 ### Defining a namespace alias
