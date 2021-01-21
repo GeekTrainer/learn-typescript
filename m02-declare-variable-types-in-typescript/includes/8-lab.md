@@ -1,15 +1,5 @@
 In this lab, you'll write the JavaScript in each of the exercises below in TypeScript, strongly typing each of the variables.
 
-## Lab setup
-
-To complete the lab, you must first set up your development environment by installing the following software on your machine:
-
-1. Visual Studio Code (or IDE of your choice)
-2. Node Package Manager (npm)
-3. TypeScript library (tsc)
-
-For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in [LINK TO Module 01: Get started with TypeScript ]. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.
-
 ## Exercise 1
 
 1. Clone the starting repository by entering the following at the command prompt. [REPLACE THE URL PLACEHOLDER WITH A LINK TO \code\module-02\m02-start] 
