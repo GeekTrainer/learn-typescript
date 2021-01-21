@@ -23,4 +23,14 @@ After completing this module, you'll be able to:
 - Familiarity with JavaScript
 - Familiarity with declaring variables using `let` and `const` in JavaScript.
 - Basic knowledge of TypeScript
-- [Git](https://git-scm.com/) install
+- Installed software:
+  - [Git](https://git-scm.com/)
+  - [Visual Studio Code](https://code.visualstudio.com)
+  - [Node.js](https://nodejs.org/)
+  - TypeScript - TypeScript can be installed after installing Node.js after running the following in a terminal or command window:
+
+      ```bash
+      npm install -g typescript
+      ```
+
+For best results, follow the complete instructions for setting up your environment and using the TypeScript compiler in [LINK TO Module 01: Get started with TypeScript ]. After setting up your environment, you can run any of the Lab setup or solution files in the "Developing JavaScript applications using TypeScript" [LINK TO the Developing JavaScript applications using TypeScript] learning path.
