@@ -4,7 +4,6 @@ To make a property static, use the `static` keyword before a property or method 
 
 For example, you can add a new `static` property to the `Car` class called `numberOfCars` that stores the number of times that the `Car` class is instantiated and set its initial value to 0. Then, in the constructor, increment the count by one.
 
-
 ```typescript
 class Car {
     // Properties
@@ -18,7 +17,7 @@ class Car {
         this._make = make;
         this._color = color;
         this._doors = doors;
-        Car.numberOfCars++;                   // Increments the value of the static property
+        Car.numberOfCars++; // Increments the value of the static property
     }
     // ...
 }
@@ -30,14 +29,17 @@ You can also define static methods. You can call the `getNumberOfCars` method to
 
 ```typescript
 public static getNumberOfCars(): number {
-        return Car.numberOfCars;
+    return Car.numberOfCars;
 }
 ```
 
 Instantiate the `Car` class as usual and then use the syntax `Car.getCars()` to return the number of instances.
 
 ```typescript
-let myCar1 = new Car('Cool Car Company', 'blue', 2);  // Instantiates the Car object with all parameters
-let myCar2 = new Car('Galaxy Motors', 'blue', 2);     // Instantiates the Car object with all parameters
-console.log(Car.getNumberOfCars());                   // Returns 2
+// Instantiate the Car object with all parameters
+let myCar1 = new Car('Cool Car Company', 'blue', 2);
+// Instantiates the Car object with all parameters
+let myCar2 = new Car('Galaxy Motors', 'blue', 2);
+// Returns 2
+console.log(Car.getNumberOfCars());
 ```
