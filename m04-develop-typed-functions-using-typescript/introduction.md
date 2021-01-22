@@ -42,8 +42,8 @@ Identify the subtasks of *module title*
 
 | Subtask | What part of the introduction scenario does this subtask satisfy? | How will you assess it: **Exercise or Knowledge check**? | Which learning objective(s) does this help meet? | Does the subtask have enough learning content to justify an entire unit? If not, which other subtask will you combine it with? |
 | ---- | ---- | ---- | ---- | ---- |
-| Explain the benefits of using types in functions | Developing TypeScript functions using new capabilities | Knowledge check | Explain the benefits of using types in functions | Yes |
-| Write functions that have required, optional, default, and rest parameters | Developing TypeScript functions using new capabilities | Exercise | Write functions that have required, optional, default, and rest parameters | Yes |
+| Explain the benefits of using types in functions | Developing TypeScript functions using new capabilities | Knowledge check | Explain the benefits of using types in functions | No - Combine with **Exercise: Creating function** |
+| Write functions that have required, optional, default, and rest parameters | Developing TypeScript functions using new capabilities | Exercise | Write functions that have required, optional, default, and rest parameters | No - Combine with **Exercise: Fun with parameters**  |
 | Define function types using type aliases or interfaces | Developing TypeScript functions using new capabilities | Exercise | Define function types using type aliases | Yes |
 
 ## Outline the units
