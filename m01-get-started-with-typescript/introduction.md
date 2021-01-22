@@ -47,8 +47,6 @@ Identify the subtasks of *Get started with TypeScript*
 
 1. **Introduction**
 
-    Provide a scenario of a real-world job-task that shows how the technology is used in practice:
-
     Every JavaScript project is subject to the same limitations with regard to type checking. TypeScript is able to overcome this limitation, making it the ideal choice for any project that requires JavaScript.
 
 1. **Overview of TypeScript**
