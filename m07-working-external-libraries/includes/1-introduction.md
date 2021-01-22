@@ -2,11 +2,6 @@ TypeScript provides two ways to organize you code: Namespaces and modules. While
 
 In addition to modules, you can import other external libraries containing type definitions that you can take advantage of in your code.
 
-In this module, you will:
-
-- Organize code using modules.
-- Import an external type library.
-
 ## Learning objectives
 
 - Organize code using modules.
