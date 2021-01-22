@@ -87,10 +87,6 @@ Identify the subtasks of *Organize code using TypeScript namespaces*
     - Identify scenarios for using namespaces
     - Identify scenarios for using modules
 
-    **Knowledge check**
-
-   - Mutliple choice
-
 1. **Lab**
 
     1. Organize code using namespaces in a single TypeScript file
