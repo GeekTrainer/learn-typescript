@@ -9,7 +9,7 @@ Implement interfaces in TypeScript
 
 ## Level
 
-- intermedia
+- intermediate
 
 ## Product(s)
 
