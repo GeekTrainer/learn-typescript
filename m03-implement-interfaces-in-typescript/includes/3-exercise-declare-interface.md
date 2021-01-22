@@ -11,7 +11,7 @@ Then, define the properties (or members) of the interface and their type. Proper
 | Optional| Add a question mark (`?`) to the end of the property name. Use this for properties that are not required. This prevents the type system from raising an error if the property is omitted.| `firstName?: string;`|
 | Read only| Add the readonly keyword in front of the property name. Use this for properties that should only be modified when an object is first created.| `readonly firstName: string;`|
 
-## Exercise - Declare an interface with members
+## Declare an interface with members
 
 1. Open the [Playground](https://www.typescriptlang.org/play) and remove any existing code.
 1. Declare an interface named `IceCream` that includes two properties: `flavor` as a `string` and `scoops` as a `number.`
