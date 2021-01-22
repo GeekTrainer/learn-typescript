@@ -1,5 +1,6 @@
 Now that you have reviewed this module, you should be able to:
 
+- Explain the purpose of namespaces.
 - Implement single-file namespaces.
 - Implement multi-file namespaces.
 - Explain the design considerations for using namespaces and modules.
