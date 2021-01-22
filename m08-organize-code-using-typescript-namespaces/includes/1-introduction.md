@@ -2,6 +2,7 @@ TypeScript provides two ways to organize code: Namespaces and modules. This modu
 
 ## Learning objectives
 
+- Explain the purpose of namespaces.
 - Implement single-file namespaces.
 - Implement multi-file namespaces.
 - Explain the design considerations for using namespaces and modules.
