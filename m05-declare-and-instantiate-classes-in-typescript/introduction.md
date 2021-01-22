@@ -47,40 +47,32 @@ Identify the subtasks of *Declare and instantiate classes in TypeScript*
 
 | Subtask | What part of the introduction scenario does this subtask satisfy? | How will you assess it: **Exercise or Knowledge check**? | Which learning objective(s) does this help meet? | Does the subtask have enough learning content to justify an entire unit? If not, which other subtask will you combine it with? |
 | ---- | ---- | ---- | ---- | ---- |
-| TODO | TODO | TODO | TODO | TODO |
-| TODO | TODO | TODO | TODO | TODO |
-| TODO | TODO | TODO | TODO | TODO |
+| Explain how you can use TypeScript classes describe the shape of objects | Explain the benefits of using classes in TypeScript | Knowledge check | Explain how you can use TypeScript classes describe the shape of objects | Yes |
+| Declare a class using TypeScript | Using additional features of TypeScript | Exercise | Declare a class using TypeScript | Yes |
+| Instantiate a class using TypeScript | Using additional features of TypeScript | Exercise | Instantiate a class using TypeScript | Yes |
+| Apply access modifiers to a class | Using additional features of TypeScript | Exercise | Apply access modifiers to a class | No - Combine **Access modifiers** and **Exercise: Apply access modifiers** |
+| Define static properties in a class | Using additional features of TypeScript | Knowledge check | Define static properties in a class | Yes |
+| Declare a class that extends another class | Using additional features of TypeScript | Exercise | Declare a class that extends another class | No - Combine **Use inheritance to extend a class** and **Exercise: Use inheritance to extend a class** |
+| Declare an interface to ensure class shape | Using additional features of TypeScript | Exercise | Declare an interface to ensure class shape | Yes |
+| Determine when to use an interface or a class to define the structure of an object | Determining when to use classes | Knowledge check | Determine when to use an interface or a class to define the structure of an object | Yes |
 
 ## Outline the units
 
-*Add more units as needed for your content*
-
 1. **Introduction**
 
-    Provide a scenario of a real-world job-task that shows how the technology is used in practice:
+    Classes enable you to express common object-oriented patterns in a standard way, making features like inheritance more readable and interoperable. In TypeScript, classes are yet are another way to define the shape of an object, in addition to describing object types with interfaces and functions.
 
-    *Add your scenario [(Scenario guidance)](https://review.docs.microsoft.com/en-us/learn-docs/docs/id-guidance-scenarios)*
+1. **Introduction to classes in TypeScript**
 
-1. **Learning-content unit title**
-
-    List the content that will enable the learner to *subtask*:
-
-    - Enabling objective
-        - Information needed to accomplish the enabling objective
-        - Information needed to accomplish the enabling objective
-    - Enabling objective
-        - Information needed to accomplish the enabling objective
-        - Information needed to accomplish the enabling objective
-    - Enabling objective
-        - Information needed to accomplish the enabling objective
-        - Information needed to accomplish the enabling objective
+    - Describe the components of a class
+      - Properties
+      - Methods
+      - Constructor
+      - Accessors
 
     **Knowledge check**
 
-    What types of questions will test *learning objective*? *[(Knowledge check guidance)](https://review.docs.microsoft.com/en-us/learn-docs/docs/id-guidance-knowledge-check)*
-
-    - Question type
-    - Question type
+    - Mutliple choice
 
 1. **Exercise - exercise unit title**
 
