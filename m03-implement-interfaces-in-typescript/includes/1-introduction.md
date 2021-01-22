@@ -3,8 +3,8 @@ JavaScript doesn't support interfaces so, as a JavaScript developer, you may or 
 In this module, you will:
 
 - Explain the reasons for using an interface in TypeScript.
-- Declare an interface.
-- Implement an interface.
+- Declare and instantiate an interface.
+- Extend an interface.
 - Declare an interface with custom array types.
 
 ## Learning objectives
