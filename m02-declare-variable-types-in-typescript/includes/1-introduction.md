@@ -2,13 +2,6 @@ JavaScript is a dynamically typed language. While this makes declaring variables
 
 This module introduces some of the available types and shows how to associate them with variables. Later modules examine how interfaces, functions, and classes use static typing.
 
-In this module, you will:
-
-- Explain the advantages of declaring typed variables in TypeScript.
-- Declare variables using primitive types.
-- Declare variables using object types.
-- Declare variables using union and intersection types.
-
 ## Learning objectives
 
 After completing this module, you'll be able to:
