@@ -74,20 +74,78 @@ Identify the subtasks of *Declare and instantiate classes in TypeScript*
 
     - Mutliple choice
 
-1. **Exercise - exercise unit title**
+1. **Exercise - Create a class**
 
-    List the steps which apply the learning content from previous unit:
+    1. Create a class using the class keyword
+    1. Declare the class properties
+    1. Define the class constructor
+    1. Define the class accessors
+    1. Define the class methods
 
-    1. Step
-    1. Step
-    1. Step
+1. **Exercise - Instantiate a class**
 
+    1. Instantiate a class using the new keyword
+
+1. **Access modifiers**
+
+    - Explain the difference between public, private, and protected access modifiers
+    - Explain the purpose of the readonly access modifier
+
+    **Knowledge check**
+
+    - Mutliple choice
+
+1. **Exercise - Apply access modifiers to a class**
+
+    1. Apply the private access modifier to class properties
+
+1. **Define static properties**
+
+    - Explain the difference between instance properties and static properties
+    - Apply the static keyword to a property
+
+    **Knowledge check**
+
+    - Mutliple choice
+
+1. **Use inheritance to extend a class**
+
+    - Explain how inheritance can establish relationships between classes
+    - Identify the difference between the base class and a subclass
+    - Explain the purpose of a method override
+
+    **Knowledge check**
+
+    - Mutliple choice
+
+1. **Exercise - Use inheritance to extend a class**
+
+    1. Extend a class to create a new class that inherits its properties
+    1. Override a method in a subclass
+
+1. **Exercise - Declare an interface to ensure class shape**
+
+    1. Define an interface that describes the properties and methods of a class
+    1. Implement the interface in a class definition
+
+1. **Design considerations**
+
+    - Identify reasons for using an interface
+    - Identify reasons for using a class
+    - Determine when to use an interface or a class in code
+
+    **Knowledge check**
+
+    - Mutliple choice
+
+1. **Lab**
+
+    1. Exercise 1: Convert three TypeScript functions to a class definition
+    
 1. **Summary**
 
-    How did you solve the problem in the initial scenario with the knowledge learned in the module? 
-    
-    *Add your summary [(Summary guidance)](https://review.docs.microsoft.com/en-us/learn-docs/docs/id-guidance-module-summary-unit)*
+    While newer versions of JavaScript support classes, you can define TypeScript classes that have additional features that make you code more robust, less error prone, and easier to develop.
 
 ## Notes
 
-Note any additional information that may be beneficial to this content such as links, reference material, etc.
+- See [TypeScript Handbook: Classes](https://www.typescriptlang.org/docs/handbook/classes.html) to learn more about using classes.
