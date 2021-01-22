@@ -43,54 +43,51 @@ Identify the subtasks of *Working with external libraries in TypeScript*
 
 | Subtask | What part of the introduction scenario does this subtask satisfy? | How will you assess it: **Exercise or Knowledge check**? | Which learning objective(s) does this help meet? | Does the subtask have enough learning content to justify an entire unit? If not, which other subtask will you combine it with? |
 | ---- | ---- | ---- | ---- | ---- |
-| Organize code using modules | Organize code using modules | Exercise | Organize code using modules | No - Combine **Organize coding using modules*, *Exercise: Export and import module components**, and **Exercise: Compile modules** |
+| Organize code using modules | Organize code using modules | Exercise | Organize code using modules | No - Combine **Organize coding using modules**, **Exercise: Export and import module components**, and **Exercise: Compile modules** |
 | Import an external type library | Import an external type library | Exercise | Import an external type library | Yes |
 
 ## Outline the units
 
-*Add more units as needed for your content*
-
 1. **Introduction**
 
-    Provide a scenario of a real-world job-task that shows how the technology is used in practice:
+    Virtually all JavaScript and TypeScript projects make use of modules and external type libraries. While both JavaScript and TypeScript support these, the implementation details are different. This module explains the difference.
 
-    *Add your scenario [(Scenario guidance)](https://review.docs.microsoft.com/en-us/learn-docs/docs/id-guidance-scenarios)*
+1. **Organize code using modules**
 
-1. **Learning-content unit title**
-
-    List the content that will enable the learner to *subtask*:
-
-    - Enabling objective
-        - Information needed to accomplish the enabling objective
-        - Information needed to accomplish the enabling objective
-    - Enabling objective
-        - Information needed to accomplish the enabling objective
-        - Information needed to accomplish the enabling objective
-    - Enabling objective
-        - Information needed to accomplish the enabling objective
-        - Information needed to accomplish the enabling objective
+    - Explain what happens when code is contained in a module
+    - Explain how the export and import keywords work to define the relationship between modules
 
     **Knowledge check**
 
-    What types of questions will test *learning objective*? *[(Knowledge check guidance)](https://review.docs.microsoft.com/en-us/learn-docs/docs/id-guidance-knowledge-check)*
+    - Multiple choice
 
-    - Question type
-    - Question type
+1. **Exercise - Export and import module components**
 
-1. **Exercise - exercise unit title**
+    1. Export a module component
+    1. Import a module component
 
-    List the steps which apply the learning content from previous unit:
+1. **Exercise - Compile modules**
 
-    1. Step
-    1. Step
-    1. Step
+    1. Compile a module using the --module compiler option
+    
+1. **Exercise - Access external type libraries**
+
+    1. Install an external type library
+    1. Access an external type library from code
+
+1. **Lab**
+
+    1. Export module components
+    1. Import module components
 
 1. **Summary**
 
-    How did you solve the problem in the initial scenario with the knowledge learned in the module? 
-    
-    *Add your summary [(Summary guidance)](https://review.docs.microsoft.com/en-us/learn-docs/docs/id-guidance-module-summary-unit)*
+    This module showed you two ways to use external libraries in your projects: modules and external type libraries. 
 
 ## Notes
 
-Note any additional information that may be beneficial to this content such as links, reference material, etc.
+- See [TypeScript Handbook: Modules](https://www.typescriptlang.org/docs/handbook/modules.html) for more information about exporting and importing modules.
+- See [TypeScript Handbook: Module Resolution](https://www.typescriptlang.org/docs/handbook/module-resolution.html) for more information about the process the compiler uses to figure out what a module import refers to.
+- See [TypeScript Handbook: Namespaces and Modules](https://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html) to learn more about the differences between namespaces and modules.
+- See [Declaration Files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) for more information on developing your own type definition files. 
+- See [DefinitelyTyped](https://definitelytyped.org/) for repository for TypeScript type definitions.
