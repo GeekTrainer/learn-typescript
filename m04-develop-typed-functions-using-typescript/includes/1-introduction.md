@@ -6,7 +6,7 @@ After completing this module, you'll be able to:
 
 - Explain the benefits of using types in functions.
 - Write functions that have required, optional, default, and rest parameters.
-- Define function types using type aliases.
+- Define function types using type aliases or interfaces.
 
 ## Prerequisites
 
