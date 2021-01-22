@@ -6,9 +6,14 @@ Classes in TypeScript extend the ES6 functionality by adding TypeScript-specific
 
 After completing this module, you'll be able to:
 
-- Declare and instantiate a class using TypeScript.
-- Declare a class that inherits the properties of another class.
-- Utilize function overloads and overrides.
+- Explain how you can use TypeScript classes describe the shape of objects. 
+- Declare a class using TypeScript.
+- Instantiate a class using TypeScript.
+- Apply access modifiers to a class.
+- Define static properties in a class.
+- Declare a class that extends another class.
+- Declare an interface to ensure class shape.
+- Determine when to use an interface or a class to define the structure of an object.
 
 ## Prerequisites
 
