@@ -52,7 +52,7 @@ Identify the subtasks of *module title*
 
     TypeScript simplifies the development of functions and makes them easier to troubleshoot by enabling you to type parameters and return values. TypeScript also adds new options for parameters. 
 
-1. **Creating functions using TypeScript**
+1. **Create functions in TypeScript**
 
     - Explain how functions in TypeScript are different from functions in JavaScript
     - Identify the syntax for defining named functions
