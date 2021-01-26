@@ -1,6 +1,6 @@
 # Title
 
-Working with external libraries in TypeScript
+Access external libraries from TypeScript
 
 ## Role(s)
 
