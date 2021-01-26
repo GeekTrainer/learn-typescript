@@ -56,7 +56,7 @@ Identify the subtasks of *Define generics in TypeScript*
 
     Generics enable you to create a function, class, or interface that can work with any type that you pass to it, rather than just one. Using generics you can build these components once and reuse them with a variety of types.
 
-1. **What are generics?**
+1. **Introduction to generics**
 
     - Explain when to use generics
     - Explain the purpose of type variables
@@ -82,7 +82,7 @@ Identify the subtasks of *Define generics in TypeScript*
     1. Declare a generic interface as a class type
     1. Define a generic class
 
-1. **Implement generics with customer types and classes**
+1. **Implement generics with custom types and classes**
 
     - Declare a generic with custom types and classes
     - Using generic constraints with custom types and classes
