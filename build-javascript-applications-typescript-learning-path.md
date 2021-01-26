@@ -14,6 +14,7 @@ After completing this learning path, you'll be able to:
 - Develop typed functions.
 - Declare and instantiate classes.
 - Apply generic types to functions, interfaces, and classes.
+- Work with external libraries.
 - Organize TypeScript code using namespaces and modules.
 
 ## Prerequisites
