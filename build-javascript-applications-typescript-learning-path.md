@@ -62,23 +62,25 @@ Identify the subtasks of *module title*
 
 1. **Get started with TypeScript**
 
-  This module introduces you to the TypeScript language, why it was created, and how you can benefit by using it for JavaScript development. You'll also set up a TypeScript development environment to prepare you to complete future exercises.
+    This module introduces you to the TypeScript language, why it was created, and how you can benefit by using it for JavaScript development. You'll also set up a TypeScript development environment to prepare you to complete future exercises.
 
-  - Introduction
-  - Overview of TypeScript
-  - Exercise: Select a TypeScript editor
-  - Exercise: Install the TypeScript compiler
-  - Compiling a TypeScript file
-  - Exercise: Set up a TypeScript project
-  - Knowledge Check
-  - Summary
+    - Introduction
+    - Overview of TypeScript
+    - Exercise: Select a TypeScript editor
+    - Exercise: Install the TypeScript compiler
+    - Compiling a TypeScript file
+    - Exercise: Set up a TypeScript project
+    - Knowledge Check
+    - Summary
 
 1. **Title**
 
-  - Introduction
-  - Topics
-  - Knowledge Check
-  - Summary
+      intro
+
+    - Introduction
+    - Topics
+    - Knowledge Check
+    - Summary
 
 ## Notes
 
