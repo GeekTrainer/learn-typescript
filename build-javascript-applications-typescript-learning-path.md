@@ -68,17 +68,108 @@ Identify the subtasks of *module title*
     - Overview of TypeScript
     - Exercise: Select a TypeScript editor
     - Exercise: Install the TypeScript compiler
-    - Compiling a TypeScript file
+    - Compile a TypeScript file
     - Exercise: Set up a TypeScript project
     - Knowledge Check
     - Summary
 
-1. **Title**
+1. **Declare variable types in TypeScript**
 
-      intro
+      The static type system in TypeScript enables you to describe the shape of an object, providing better documentation, and allowing TypeScript to validate that your code is working correctly. In TypeScript, declarations of namespaces, classes, properties, functions, variables, and other language entities associate types with those entities. This module introduces some of the available types and shows how to associate them with variables.
 
     - Introduction
-    - Topics
+    - Overview of types
+    - Primitive types
+    - Exercise: Enums
+    - Any and unknown types
+    - Union and intersection types
+    - Collection types
+    - Lab
+    - Knowledge Check
+    - Summary
+
+1. **Implement interfaces in TypeScript**
+
+      In TypeScript, you can use interfaces as you would in traditional object-oriented programming. You can also use interfaces to define object types and this is the primary focus of this module.
+
+    - Introduction
+    - Introduction to interfaces in TypeScript
+    - Exercise: Declare and instantiate an interface
+    - Exercise: Extend an interface
+    - Other ways to use interfaces
+    - Lab
+    - Knowledge Check
+    - Summary
+
+1. **Develop typed functions using TypeScript**
+
+      If you know how to write functions in JavaScript, you know how to write functions in TypeScript. In this module, you'll learn about the new capabilities that TypeScript add to the standard JavaScript functions to make them easier to work with.
+
+    - Introduction
+    - Create functions in TypeScript
+    - Exercise: Create functions
+    - Fun with parameters
+    - Exercise: Fun with parameters
+    - Exercise: Define function types
+    - Lab
+    - Knowledge Check
+    - Summary
+
+1. **Declare and instantiate classes in TypeScript**
+
+      In this modules, you'll learn how TypeScript type annotations for class members, access modifiers, and the ability to specify required or optional parameters extend ES6 class functionality and provide additional benefits.
+
+    - Introduction
+    - Introduction to classes in TypeScript
+    - Exercise: Create a class
+    - Exercise: Instantiate a class
+    - Access modifiers
+    - Exercise: Apply access modifiers
+    - Define static properties
+    - Extend a class using inheritance
+    - Exercise: Extend a class
+    - Exercise: Declare an interface to ensure class shape
+    - Design considerations
+    - Lab
+    - Knowledge Check
+    - Summary
+
+1. **Work with generics in TypeScript**
+
+      While generics are supported by many programming languages, including TypeScript, they are not currently available in JavaScript. In this module, you'll learn how to apply generics to functions, interfaces, and classes.
+
+    - Introduction
+    - Introduction to generics
+    - Using methods and properties of a generic type
+    - Exercise: Implement generics with interfaces and classes
+    - Implement generics with custom types and classes
+    - Lab
+    - Knowledge Check
+    - Summary
+
+1. **Access external libraries from TypeScript**
+
+      This module introduces you to organzing code in TypeScript using modules and accessing external type libraries.
+
+    - Introduction
+    - Organize code using modules
+    - Exercise: Export and import module components
+    - Exercise: Compile modules
+    - Exercise: Access external type libraries
+    - Lab
+    - Knowledge Check
+    - Summary
+
+1. **Organize code using TypeScript namespaces**
+
+      TypeScript provides two ways to organize code: Namespaces and modules. This module explains how to organize TypeScript code using namespaces. While both namespaces and modules provide a way to categorize related code in meaningful ways and help you control which code is exposed to the global namespace of your applications, there are some differences between them.
+
+    - Introduction
+    - Introduction to TypeScript namespaces
+    - Exercise: Organize code using a single file namespace
+    - Organize code using multi-file namespaces
+    - Design considerations
+    - Lab
     - Knowledge Check
     - Summary
 
