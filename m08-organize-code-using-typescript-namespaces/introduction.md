@@ -53,7 +53,7 @@ Identify the subtasks of *Organize code using TypeScript namespaces*
 
     Namespaces are a TypeScript-specific way to organize code, either within a single file or across mutliple files. Organizing code using namespaces can help you group related components together and can also help you solve naming conflicts between components.
     
-1. **Organize code using TypeScript namespaces**
+1. **Introduction to TypeScript namespaces**
 
     - Explain the relationship between namespaces and the global namespace
     - Identify uses for namespaces
