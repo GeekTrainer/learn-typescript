@@ -104,13 +104,13 @@ Identify the subtasks of *Declare and instantiate classes in TypeScript*
     - Explain the difference between instance properties and static properties
     - Apply the static keyword to a property
 
-1. **Use inheritance to extend a class**
+1. **Extend a class using inheritance**
 
     - Explain how inheritance can establish relationships between classes
     - Identify the difference between the base class and a subclass
     - Explain the purpose of a method override
 
-1. **Exercise - Use inheritance to extend a class**
+1. **Exercise - Extend a class**
 
     1. Extend a class to create a new class that inherits its properties
     1. Override a method in a subclass
