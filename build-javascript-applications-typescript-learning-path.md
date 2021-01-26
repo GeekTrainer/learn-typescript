@@ -66,10 +66,10 @@ Identify the subtasks of *module title*
 
     - Introduction
     - Overview of TypeScript
-    - Exercise: Select a TypeScript editor
-    - Exercise: Install the TypeScript compiler
+    - Exercise - Select a TypeScript editor
+    - Exercise - Install the TypeScript compiler
     - Compile a TypeScript file
-    - Exercise: Set up a TypeScript project
+    - Exercise - Set up a TypeScript project
     - Knowledge Check
     - Summary
 
@@ -80,7 +80,7 @@ Identify the subtasks of *module title*
     - Introduction
     - Overview of types
     - Primitive types
-    - Exercise: Enums
+    - Exercise - Enums
     - Any and unknown types
     - Union and intersection types
     - Collection types
@@ -94,8 +94,8 @@ Identify the subtasks of *module title*
 
     - Introduction
     - Introduction to interfaces in TypeScript
-    - Exercise: Declare and instantiate an interface
-    - Exercise: Extend an interface
+    - Exercise - Declare and instantiate an interface
+    - Exercise - Extend an interface
     - Other ways to use interfaces
     - Lab
     - Knowledge Check
@@ -107,10 +107,10 @@ Identify the subtasks of *module title*
 
     - Introduction
     - Create functions in TypeScript
-    - Exercise: Create functions
+    - Exercise - Create functions
     - Fun with parameters
-    - Exercise: Fun with parameters
-    - Exercise: Define function types
+    - Exercise - Fun with parameters
+    - Exercise - Define function types
     - Lab
     - Knowledge Check
     - Summary
@@ -121,27 +121,27 @@ Identify the subtasks of *module title*
 
     - Introduction
     - Introduction to classes in TypeScript
-    - Exercise: Create a class
-    - Exercise: Instantiate a class
+    - Exercise - Create a class
+    - Exercise - Instantiate a class
     - Access modifiers
-    - Exercise: Apply access modifiers
+    - Exercise - Apply access modifiers
     - Define static properties
     - Extend a class using inheritance
-    - Exercise: Extend a class
-    - Exercise: Declare an interface to ensure class shape
+    - Exercise - Extend a class
+    - Exercise - Declare an interface to ensure class shape
     - Design considerations
     - Lab
     - Knowledge Check
     - Summary
 
-1. **Work with generics in TypeScript**
+1. **Define generics in TypeScript**
 
       While generics are supported by many programming languages, including TypeScript, they are not currently available in JavaScript. In this module, you'll learn how to apply generics to functions, interfaces, and classes.
 
     - Introduction
     - Introduction to generics
     - Using methods and properties of a generic type
-    - Exercise: Implement generics with interfaces and classes
+    - Exercise - Implement generics with interfaces and classes
     - Implement generics with custom types and classes
     - Lab
     - Knowledge Check
@@ -153,9 +153,9 @@ Identify the subtasks of *module title*
 
     - Introduction
     - Organize code using modules
-    - Exercise: Export and import module components
-    - Exercise: Compile modules
-    - Exercise: Access external type libraries
+    - Exercise - Export and import module components
+    - Exercise - Compile modules
+    - Exercise - Access external type libraries
     - Lab
     - Knowledge Check
     - Summary
@@ -166,7 +166,7 @@ Identify the subtasks of *module title*
 
     - Introduction
     - Introduction to TypeScript namespaces
-    - Exercise: Organize code using a single file namespace
+    - Exercise - Organize code using a single file namespace
     - Organize code using multi-file namespaces
     - Design considerations
     - Lab
