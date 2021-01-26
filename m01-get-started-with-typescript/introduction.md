@@ -70,7 +70,7 @@ Identify the subtasks of *Get started with TypeScript*
     1. Install Node Package Manager (npm)
     1. Install TypeScript
 
-1. **The TypeScript compiler**
+1. **Compile a TypeScript file**
 
     - Explain how the compiler transforms TypeScript code to JavaScript
     - Identify the compiler options
